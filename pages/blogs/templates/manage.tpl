@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Project Nightlife | Manage Content</title>
+<link rel="shortcut icon" href="images/core/icons/favicon.ico" type="image/x-icon" />
+<link rel="icon" type="image/png" href="images/core/icons/favicon.png" />
+<link rel="apple-touch-icon" href="images/core/icons/favicon.png" />
+<!-- Framework CSS -->
+  <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+  <!--[if lte IE 7]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+  <!--[if IE]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+  <link rel="stylesheet" href="css/core.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
+</head>
+
+<body id="blogs">
+  <div class="wrapper">
+    {include file='../../includes/templates/header.tpl'}
+    <div class="container">
+      
+      <div class="masthead">
+ 	    <div class="heading">
+          <h1 class="left">{$blog->name}</h1><h1 class="right">Manage Content</h1>
+        </div>
+        <hr />
+      </div>
+      
+      <div class="canvas">
+         
+        <div class="span180">
+          {include file='../../includes/templates/blogs/editblog_nav.tpl'}
+        </div> <!-- span200 -->
+          
+        <div class="span600 leftspcr">
+          <div class="UIpanel">
+            <div class="UIheading">
+              <h3>Manage your content</h3>
+              <div class="UIcontrol">
+                <ul class="filter" id="postFilter">
+                  <li class="spinner">loading icon</li>
+                  <li class="selected rnd8px"><a onclick="return false;" href="#">Posts</a></li>
+                  <!--<li class="last"><a onclick="return transition();" href="#">Charts</a></li>-->
+                </ul>
+              </div>
+            </div>
+              
+            <ul id="posts" class="UIobjectlist listw580 condensed">
+            
+              {foreach from=$posts item=post name=posts}
+              
+              <li id="post[{$post->id}]" {if $smarty.foreach.posts.first && $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 10}class="first last"{else}{if $smarty.foreach.posts.first}class="first"{elseif $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 10}class="last"{/if}{/if}>
+                <div class="thumb"><a class="thumb" href="pages/blogs/post.php?id={$post->id}"><img src="pages/getphoto/GetPhoto.php?id={$post->thumbnail}&size=80x80" width="80" height="80" /></a></div>
+                <div class="description">
+                  <div class="heading">
+                    <h4 class="left text-overflow"><a href="pages/blogs/post.php?id={$post->id}">{$post->title}</a></h4>
+                    <span class="datetime right">{$post->created}</span>
+                  </div>
+                  <p class="word-wrap">{$post->excerpt}</p>
+                  <ul class="inline-links"><li><i>Live</i></li><li><a href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit</a></li><li><a href="#" onclick="api.launchConfirmDialog(&quot;Do you wish to delete this post?&quot;, &quot;removePost&quot;, &quot;{$post->id}&quot;); return false;">Delete</a></li><li><div class="ajaxSpinner" id="postSpinner{$post->id}"></div></li></ul>
+                </div>
+              </li>
+              {/foreach}
+              {if $smarty.foreach.posts.total eq 10}
+              <li class="last">
+                <div style="width: 500px; margin: 0 auto; padding: 5px; text-align: center;">
+                  <a href="backend/ajax.php?service=blog&method=GetPostsByBlog&id={$blog->id}&amount=10&start=10" ajaxify="1" callback="injectPosts" onclick="this.style.display = 'none'; document.getElementById('morePostsSpinner').style.display = 'inline-block';" spinner="morePostsSpinner" offset="10" pagesize="10">View more</a>
+                  <div id="morePostsSpinner" class="ajaxSpinner" style="display: none; float: none; margin: 1px;"></div>
+                </div> 
+              </li>
+              {/if}
+               
+            </ul>
+              
+          </div>
+        </div> <!-- span600 -->
+        
+        <div class="span160 leftspcr">
+          <div class="UIpanel">
+            <div class="UIheading">
+              <h3>Sponsored</h3>
+            </div>
+          </div>
+        </div> <!-- span160 -->
+        
+      </div> <!-- canvas -->
+    </div> <!-- container -->
+    <div class="push"></div>
+  </div> <!-- wrapper -->
+  {include file='../../includes/templates/footer.tpl'}
+  <div id="fb-root"></div>
+</body>
+</html>
+{include file='../../includes/templates/js.tpl'}
+<script type="text/javascript" src="js/corners.js"></script>
+<script type="text/javascript" src="js/blogs/manage.js"></script>

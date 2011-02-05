@@ -1,0 +1,50 @@
+#blogs .leftColumn { width: 630px; float: left; }
+
+#blogs .leftColumn .section { padding: 10px; background: url(../images/core/gradients/blogpost.png) top repeat-x #030303; }
+
+#blogs .leftColumn .section h1.title { color: #ABA0C0; font-family: arial; font-size: 27px; }
+
+#blogs .leftColumn .section .postMeta { padding-bottom: 4px; overflow: auto; }
+
+#blogs .leftColumn .section .postMeta .posted { display: block; float: left; }
+
+#blogs .leftColumn .section .postMeta .numComments { display: block; float: right; background: url(../images/core/icons/comments.png) left no-repeat; padding-left: 19px; }
+
+#blogs .leftColumn .section img.outline { border: 1px solid #555; margin: 0 auto; display: block; }
+
+#blogs .leftColumn .section .post { margin: 15px 0; }
+
+#blogs .leftColumn .section .comments { overflow: auto; margin: 20px auto 15px; width: 530px; font-family: Tahoma, Geneva, sans-serif; overflow: auto; }
+
+#blogs .leftColumn .section .comments .viewAll { padding: 10px; color: #bbb; font-size: 11px; background: #111; margin-bottom: 2px; border: #0f0f0f solid 1px; overflow: auto; }
+
+#blogs .leftColumn .section .comments textarea { background: #0b0b0b; border: #333 1px solid; color: #ccc; height: 60px; width: 518px; padding: 5px; font-family: Tahoma, Geneva, sans-serif; margin: 10px 0 10px; }
+
+#blogs .leftColumn .section .comment { padding: 10px; color: #bbb; background: #111; margin-bottom: 2px; border: #0f0f0f solid 1px; }
+
+#blogs .leftColumn .section .comment .meta { font-weight: bold; display: block; width: 200px; float: left; line-height: normal; margin-bottom: 2px; }
+
+#blogs .leftColumn .section .comment .remove { font-size: 11px; float: right; display: block; width: 100px; line-height: normal; }
+
+#blogs .leftColumn .section .comment .remove a { padding-left: 10px; }
+
+#blogs .leftColumn .section .comment .user { color: #a56efd; }
+
+#blogs .leftColumn .section .comment .posted { display: block; color: #666; font-size: 11px; clear: both; }
+
+#blogs .leftColumn .section .comment .body { display: block; margin-top: 10px; }
+
+
+#blogs .rightColumn { width: 320px; float: right; }
+
+#blogs .rightColumn .about img { border: 1px solid #222; margin: 0 8px 2px 0; }
+
+#blogs .rightColumn .subscribe ul { list-style: none; padding-left: 10px; margin-right: 0px; }
+
+#blogs .rightColumn .subscribe ul li { background: url(../images/core/icons/rss.gif) no-repeat left; padding-left: 23px; margin-top: 2px; }
+
+#blogs .rightColumn .subscribe ul li.follow { background: url(../images/core/icons/follow.gif) no-repeat left; padding-left: 23px; margin-top: 2px; }
+
+#blogs .advert { width: 300px; margin: 15px auto; background: #444; height: 250px; }
+
+#blogs .rightColumn .relatedPosts ul { padding-left: 25px; margin-bottom: 0; margin-right: 0; }

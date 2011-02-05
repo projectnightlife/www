@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Project Nightlife</title>
+  <!-- Framework CSS -->
+  <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+  <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+  <link rel="stylesheet" href="css/theme.css" type="text/css">
+  <link rel="stylesheet" href="css/navigation.css" type="text/css">
+  
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/cycle.js"></script>
+  <script type="text/javascript" src="js/corners.js"></script>
+  <script type="text/javascript" src="js/jquery.textarea-expander.js"></script>
+  <script  type="text/javascript">
+    DD_roundies.addRule('.rounded', '8px', true);
+	DD_roundies.addRule('.rounded2', '6px', true);
+	DD_roundies.addRule('.rounded3', '6px 6px 0px 0px', true);
+	DD_roundies.addRule('.rounded4', '0px 0px 6px 6px', true);
+	$(document).ready(function(){
+		
+		// hero cycle
+		
+	  	$('#hero').cycle({ 
+		    fx:    'fade', 
+		    speed:  1100,
+			timeout:  10000,
+		 });
+		
+		$('#hero').mouseenter(function() { 
+          $('#hero').cycle('pause'); 
+        });
+		
+		$('#hero').mouseleave(function() { 
+          $('#hero').cycle('resume'); 
+        });
+	});
+	var N = 8;
+	var i = 1;
+	function cycleHeader()
+	{
+	  i = (i % N) + 1;
+	  switch (i)
+	  {
+		  case 1: document.getElementById('header').src = 'images/headers/black.png';
+		          break;
+	      case 2: document.getElementById('header').src = 'images/headers/blue.png';
+		          break;
+		  case 3: document.getElementById('header').src = 'images/headers/blue2.png';
+		          break;
+		  case 4: document.getElementById('header').src = 'images/headers/green.png';
+		          break;
+		  case 5: document.getElementById('header').src = 'images/headers/pink.png';
+		          break;
+	      case 6: document.getElementById('header').src = 'images/headers/purple.png';
+		          break;
+		  case 7: document.getElementById('header').src = 'images/headers/turquoise.png';
+		          break;
+		  case 8: document.getElementById('header').src = 'images/headers/violet.png';
+		          break;
+		  default: break;
+	  }
+	}
+	function editText(node)
+	{
+	  var p = node.getElementsByTagName('p');
+	  var textBox = node.getElementsByTagName('div').item(0);
+	  var textArea = ''; 
+	  var height = textBox.offsetHeight;
+	  for (var j = 0; j < p.length; j++) {
+        textArea += p.item(j).innerHTML; //innerHTML replaces firstChild.nodeValue
+		if (j != p.length - 1) {
+		  textArea += "\n\n";
+		}
+	  }
+	  // removing an element removes it from both the dom structure and from the collection you're storing a reference,
+	  // so we record the original length and use that instead as p.length changes with each iteration.
+	  var lengthOfP = p.length;
+	  for (var j = 0; j < lengthOfP; j++) {
+        textBox.removeChild(p.item(0));
+	  }
+	  x = document.createElement('textarea');
+	  x.className = "expand";
+	  x.style.background = "transparent";
+	  x.style.border = "none";
+	  x.style.width = "100%";
+	  x.style.color = "#bbb";
+	  x.style.font = "12px arial";
+	  x.style.margin = "0";
+	  x.style.padding = "0";
+	  x.style.lineHeight = "16px";
+	  x.style.height = height+"px";
+	  x.value = textArea;
+	  textBox.appendChild(x);
+	  $('.expand').TextAreaExpander();
+	  x.focus();
+	  x.addEventListener('blur',function (e) {
+        var paragraphs = x.value.split("\n\n"); // needs to be more advanced to strip more combinations of \n
+		textBox.removeChild(x);
+		var k = 0;
+		var pattern = /\s+/g; // all white space characters (selecting consecutive as one) not stopping at the first (\n \t space etc...)
+		  var pattern2 = /^\s/; // leading white space
+		for (var j = 0; j < paragraphs.length; j++) {
+		  var cleanedText = paragraphs[j].replace(pattern, " ");
+		  cleanedText = cleanedText.replace(pattern2, "");
+		  if(cleanedText.length != 0) {
+		    var element = document.createElement('p');
+		    if (j == k) { // ensures the first non empty paragraph is bold
+			  element.style.fontWeight = "bold";
+		    }
+			element.innerHTML = cleanedText;
+		    textBox.appendChild(element);
+		  }
+		  else { k++; }
+		}
+      },false);
+	}
+	</script>
+  
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container"> <!-- inner framework wrapper -->
+      <div class="header"><img class="rounded4" id="header" onclick="cycleHeader()" src="images/headers/black.png" /></div>
+      <div class="container">
+        <div class="venueApps" style="margin-top: 7px;">
+          <div style="float: left; width: 250px; font-size: 24px; font-weight: bold; color: #fff; padding: 8px 0 2px 8px;">Cocoon In The Park</div>
+          <div style="float: right; padding-top: 12px; padding-right: 4px;"><img src="images/layout/venuelinks.png" /></div>
+        </div>
+        <!--
+        <div class="venueApps">
+          <div style="float: left; width: 200px; font-size: 18px; font-weight: bold; color: #fff; padding: 8px 0 0 8px;">Cocoon In The Park</div>
+          <ul class="nav">
+            <li><a href="">Tickets</a></li>
+            <li><a href="">Galleries</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Home</a></li>
+          </ul>
+        </div>
+        -->
+        <div id="venueHero">
+          <div id="hero">
+            <div>
+              <img class="rounded" src="images/heros/ccitp1.jpg" width="920" height="406" title="hover to pause" />
+              <div style="position: absolute; z-index: 5000; bottom: 0px; left: 0px; width: 920px; background: #000; filter:alpha(opacity=85); -moz-opacity:0.85; -khtml-opacity: 0.85; opacity: 0.85;"><p style="float: left; margin: 0; padding: 5px 10px; padding-top: 8px; color: #fff">Sven Vath at Cocoon In The Park 2009</p><p style="float: right; margin: 0; padding: 5px 10px; padding-top: 10px; font-size: 11px; color: #fff">Nik Torrens - niktorrens@residentadvisor.net</p></div>
+            </div>
+            <div>
+              <img class="rounded" src="images/heros/ccitp2.jpg" width="920" height="406" title="hover to pause" />
+              <div style="position: absolute; z-index: 5000; bottom: 0px; left: 0px; width: 920px; background: #000; filter:alpha(opacity=85); -moz-opacity:0.85; -khtml-opacity: 0.85; opacity: 0.85;"><p style="float: left; margin: 0; padding: 5px 10px; padding-top: 8px; color: #fff">Cocoon In The Park 2009</p><p style="float: right; margin: 0; padding: 5px 10px; padding-top: 10px; font-size: 11px; color: #fff">Lisa Loco - rites@lisaloco.co.uk</p></div>
+            </div>
+            <div>
+              <img class="rounded" src="images/heros/ccitp3.jpg" width="920" height="406" title="hover to pause" />
+              <div style="position: absolute; z-index: 5000; bottom: 0px; left: 0px; width: 920px; background: #000; filter:alpha(opacity=85); -moz-opacity:0.85; -khtml-opacity: 0.85; opacity: 0.85;"><p style="margin: 0; padding: 5px 10px; padding-top: 8px; color: #fff">Luciano at Cocoon In The Park 2009</p></div>
+            </div>
+            <div>
+              <img class="rounded" src="images/heros/ccitp4.jpg" width="920" height="406" title="hover to pause" />
+              <div style="position: absolute; z-index: 5000; bottom: 0px; left: 0px; width: 920px; background: #000; filter:alpha(opacity=85); -moz-opacity:0.85; -khtml-opacity: 0.85; opacity: 0.85;"><p style="margin: 0; padding: 5px 10px; padding-top: 8px; color: #fff">Sven Vath at Cocoon In The Park 2009</p></div>
+            </div>
+          </div>
+        </div>
+        <div style="float: right;">
+          <div class="details rounded">
+            <img style="padding: 14px; padding-bottom: 5px;" src="images/layout/ccitplogo.png" />
+            <p style="color: #ccc; padding-left: 12px; padding-bottom: 10px; font-size: 11px; margin: 0;">Visit the official website</p>
+          </div>
+          <div class="details rounded" style="height: 351px; background: url(images/layout/venuegradient.png) bottom repeat-x #121212;">
+            <div class="rounded3" style="color: #5164ae; background: #0c0c0c; font-size: 14px; font-weight: bold;  padding: 5px 0 4px 10px;">Mini Feed</div>
+            <div style="padding: 12px; color: #ddd; font-size: 11px;">
+              <div style="overflow: auto; float: left; padding: 2px; width: 15px;"><img src="images/icons/tickets.png" /></div>
+              <div style="overflow: auto; float: left; width: 170px; padding-left: 5px;">Tickets are now on sale for Cocoon In The Park 2010 - buy here</div>
+            </div>
+            <div style="clear: both; padding: 12px; margin-top: 10px; color: #ddd; font-size: 11px;">
+              <div style="overflow: auto; float: left; padding: 2px; width: 15px;"><img src="images/icons/event.png" /></div>
+              <div style="overflow: auto; float: left; width: 170px; padding-left: 5px;">Cocoon In The Park created the event Cocoon In The Park 2010</div>
+            </div>
+            <div style="clear: both; padding: 12px; margin-top: 10px; color: #ddd; font-size: 11px;">
+              <div style="overflow: auto; float: left; padding: 2px; width: 16px;"><img src="images/icons/photos.png" /></div>
+              <div style="overflow: auto; float: left; width: 170px; padding-left: 4px;">Cocoon In The Park added photos to the gallery Cocoon In The Park 2009</div>
+            </div>
+          </div>
+        </div>
+        <div class="contentArea" style="color: #fafafa; font-size: 11px;">
+          <ul class="subLinks rounded2" style="text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);">
+            <li><a href="">Details</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Reviews</a></li>
+            <li><a href="">Blogs</a></li>
+            <li><a href="">The club</a></li>
+            <li><a href="">Location</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+          <div class="introducing rounded" style="color: #bbb;" ondblclick="editText(this)">
+            <h3 style="color: #5164ae; padding-top: 5px; font-size: 18px;">Introducting Cocoon In The Park</h3>
+            <div style="overflow: auto;">
+              <p style="text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1); font-weight: bold;">Cocoon in the Park returns in 2010 for our second spectacular open-air festival, the only one of it's kind in the UK.</p>
+<p style="text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);">The festival site is set within the grounds of a 450 year old mansion house in the rolling Yorkshire countryside, an area of outstanding natural beauty surrounded by forests and lakes, playing host to an exclusive lineup over one stage featuring Ricardo Villalobos, Loco Dice, Adam Shelton and headed-up by the Cocoon ringmaster himself, Sven Väth. Expect a breathtaking Cocoon production including dancers, full lighting show, pyrotechnics, Live VJ along with many other extras to top last years event. A custom built PA supplied by Audio-Plus to supply us with their Funktion-One setup.</p>
+<p style="text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);">Join us and thousands of like-minded souls for what promises to be a truly unique and captivating experience.</p>
+            </div>
+        </div>
+        <div class="rounded" style="margin-bottom: 15px; float: right; background: url(images/layout/venuegradient.png) bottom repeat-x #121212; height: 200px; width: 338px;">
+          <div class="rounded3" style="color: #5164ae; background: #080808; font-size: 14px; font-weight: bold;  padding: 5px 0 4px 10px;">Sven Väth</div>
+          <div style="overflow: auto; font-size: 12px;">
+              <img align="left" style="margin: 12px; border: 1px solid #666;" src="images/layout/sven.jpg" width="108" height="140" /><div style="color: #bbb; padding: 10px 10px 10px 0;"><h3 style="color: #999;">Uncovered.</h3><p>We catch up with the father of Cocoon, papa Sven. Check out the interview as we pick his brains on some of the biggest issues in techno, plus he releases some very hot info about Ibiza 2010!</p></div>
+            </div>
+        </div>
+        <div class="rounded" style="margin-bottom: 15px; margin-right: 10px; float: right; background: url(images/layout/venuegradient.png) bottom repeat-x #121212; height: 200px; width: 337px;">
+          <div class="rounded3" style="color: #5164ae; background: #080808; font-size: 14px; font-weight: bold;  padding: 5px 0 4px 10px;">Latest News</div>
+          <div style="padding: 10px; color: #bbb;">
+              <ul style="padding-left: 25px; margin-bottom: 5px; font-size: 12px;">
+                <li style="margin-bottom: 8px;"><span style="color: #fff;">16.04.10</span> Win 2VIP Tickets for CITP with E-Festivals.</li>
+                <li style="margin-bottom: 8px;"><span style="color: #fff;">14.04.10</span> Early Bird Tickets *Sold Out*.</li>
+                <li style="margin-bottom: 8px;"><span style="color: #fff;">07.04.10</span> CITP 2010 Lineup Announced.</li>
+                <li style="margin-bottom: 8px;"><span style="color: #fff;">07.04.10</span> CITP Over 7,000+ Fans!</li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="wrapper" style="background: url(images/layout/footergradient.png); height: 175px; min-height: 0;">
+    <div style="float: right; margin: 20px; margin-right: 60px; color:#ddd;">The Company
+      <ul style="font-size: 11px; list-style: none; padding: 0; padding-top: 10px;">
+        <li>About us</li>
+        <li>Partners</li>
+        <li>Work with us</li>
+        <li>Press centre</li>
+        <li>The team</li>
+        <li>Contact us</li>
+      </ul>
+    </div>
+    <div style="float: right; margin: 20px; margin-right: 30px; color:#ddd;">Opportunities
+      <ul style="font-size: 11px; list-style: none; padding: 0; padding-top: 10px;">
+        <li>Advertising</li>
+        <li>Industry</li>
+        <li>Venues</li>
+        <li>Promoters</li>
+        <li>Photographers</li>
+        <li>Festivals</li>
+      </ul>
+    </div>
+    <div style="float: right; margin: 20px; margin-right: 30px; color:#ddd;">Platform
+      <ul style="font-size: 11px; list-style: none; padding: 0; padding-top: 10px;">
+        <li>Details</li>
+        <li>Possibilities</li>
+        <li>Access</li>
+        <li>API</li>
+      </ul>
+    </div>
+    <div style="float: left; margin: 20px; margin-top: 17px; width: 200px; font-size: 11px; color: #666;"><img src="images/layout/logo.png" width="200" height="35"/><div style="padding-left: 10px;">Project Nightlife is not responsible for the content of external websites</div></div>
+  </div>
+</body>
+</html>
