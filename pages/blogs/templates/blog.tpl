@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta property="og:title" content="{$blog->name}"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:url" content="http://www.projectnightlife.co.uk/blog/{$blog->id}"/>
+<meta property="og:image" content="http://photos.projectnightlife.co.uk/uploads/{$blog->thumbnail}.jpg"/>
+<meta property="og:site_name" content="Project Nightlife"/>
+<meta property="fb:app_id" content="131359770249054"/>
+<meta property="og:description" content="{$blog->description}"/>
+<title>Project Nightlife | {$blog->name} Blog</title>
+<link rel="shortcut icon" href="images/core/icons/favicon.ico" type="image/x-icon" />
+<link rel="icon" type="image/png" href="images/core/icons/favicon.png" />
+<link rel="apple-touch-icon" href="images/core/icons/favicon.png" />
+<!-- Framework CSS -->
+  <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+  <!--[if lte IE 7]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+  <!--[if IE]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+  <link rel="stylesheet" href="css/core.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
+</head>
+
+<body id="blogs">
+  <div class="wrapper">
+    {include file='../../includes/templates/header.tpl'}
+    <div class="container">
+      
+      <div class="masthead">
+        <div class="heading">
+          <h1 class="left">{$blog->name}</h1><h1 class="right">Blog Overview</h1>
+        </div>
+        <hr />
+        <div class="breadcrumbs"><a href="">Home</a> > <a href="pages/blogs/blogs.php">Blogs</a> > <a href="pages/blogs/blog.php?id={$blog->id}">{$blog->name}</a></div>
+      </div>
+      
+      <div class="canvas">
+        
+        <div id="leftColumn" class="span200">
+          <img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=200x600" style="display: block; margin: 0 auto;" />
+          <div class="profileInteractions topspcr">
+            {if $blog->subscribed == "false" && $session['userId'] != 0 && !$isContributor}
+            <a href="backend/ajax.php?service=blog&method=Subscribe&blogId={$blog->id}" class="profileButton subscription" rel="subscribe" ajaxify="1" callback="subscription">Subscribe to this blog</a>
+            {else if $blog->subscribed == "true" && $session['userId'] != 0 && !$isContributor}
+            <a href="backend/ajax.php?service=blog&method=Unsubscribe&blogId={$blog->id}" class="profileButton subscription" rel="unsubscribe" ajaxify="1" callback="subscription">Unsubscribe from this blog</a>
+            {/if}
+          </div>
+          <div class="UIpanel topspcr">
+            <div class="UIheading">
+              <h3>Info</h3>
+            </div>
+            {$blog->description}
+          </div>
+          {if isset($subscribers)}
+          <div class="UIpanel topspcr">
+            <div class="UIheading">
+              <h3>Subscribers</h3>
+            </div>
+            <div id="subscriptions">
+              {foreach from=$subscribers item=subscriber name=subscribers}
+              <a id="subscription[{$subscriber->id}]" href="http://www.facebook.com/profile.php?id={$subscriber->id}" class="fbSquareProfilePic" title="{$subscriber->firstname} {$subscriber->lastname}" target="_blank"><img src="https://graph.facebook.com/{$subscriber->id}/picture" alt="{$subscriber->firstname} {$subscriber->lastname}" /></a>
+              {/foreach}
+            </div>
+          </div>
+          {/if}
+        </div>
+        
+        <div class="span600 leftspcr">
+          <div class="UIpanel">
+            
+              <div style="width: 520px; float: left;">
+                <h3 style="line-height: 1em; padding-bottom: 5px; color: #ABA0C0;">{$blog->name}</h3>
+                {if isset($blog->slogan)}
+                <span>{$blog->slogan}</span>
+                {/if}
+                <p>By 
+                {foreach from=$blogContributors item=contributor name=contributors}{if $smarty.foreach.contributors.first}<a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{elseif $smarty.foreach.contributors.last} and <a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{else}, <a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{/if}{/foreach}
+                </p>
+                {foreach from=$genres item=genre name=genres}
+                  <a href="pages/blogs/blogs.php?filter={$genre->name}" title="{$genre->name} homepage"><img src="images/genres/{$genre->id}.png" alt="{$genre->name}" style="margin-right: 3px;" /></a>
+                {/foreach}
+              </div>
+              <div class="right fblike fblikecount">
+                <fb:like href="projectnightlife.co.uk/blog/{$blog->id}" layout="box_count" show_faces="false" width="55" colorscheme="dark"></fb:like>
+              </div>
+            </div>
+          
+          <div class="UIpanel topspcr">
+            <div class="UIheading">
+              <h3>Blog posts</h3>
+              <div class="UIcontrol">
+                <ul class="filter" id="postFilter">
+                  <li class="selected rnd8px last" style="color: #222;">Most recent</li>
+                </ul>
+              </div>
+            </div>
+            <ul id="posts" class="UIobjectlist listw580">
+              
+              {foreach from=$posts item=post name=posts}
+              <li {if $smarty.foreach.posts.first && $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="first last"{else}{if $smarty.foreach.posts.first}class="first"{elseif $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="last"{/if}{/if}>
+                <div class="thumb"><a class="thumb" href="pages/blogs/post.php?id={$post->id}"><img src="pages/getphoto/GetPhoto.php?id={$post->thumbnail}&size=80x80" width="80" height="80" /></a></div>
+                <div class="description">
+                  <div class="heading">
+                    <h4 class="left text-overflow"><a href="pages/blogs/post.php?id={$post->id}">{$post->title}</a></h4>
+                    <span class="datetime right">{$post->created}</span>
+                  </div>
+                  <p class="word-wrap">{$post->excerpt}</p>
+                </div>
+              </li>
+              {/foreach}
+              {if $smarty.foreach.posts.total eq 8}
+              <li class="last">
+                <div style="width: 500px; margin: 0 auto; padding: 5px; text-align: center;">
+                  <a href="backend/ajax.php?service=blog&method=GetPostsByBlog&id={$blog->id}&amount=8&start=8" ajaxify="1" callback="injectPosts" onclick="this.style.display = 'none'; document.getElementById('morePostsSpinner').style.display = 'inline-block';" spinner="morePostsSpinner" offset="8" pagesize="8">View more</a>
+                  <div id="morePostsSpinner" class="ajaxSpinner" style="display: none; float: none; margin: 1px;"></div>
+                </div> 
+              </li>
+              {/if}
+            
+            </ul>
+          </div>
+          
+        </div> <!-- span630 -->
+        
+        
+        <div class="span140 leftspcr">
+          {if isset($relatedBlogs)}
+          <div class="UIpanel">
+            <div class="UIheading">
+              <h3>Similar Blogs</h3>
+            </div>
+            <ul class="UItileview single">
+            {foreach from=$relatedBlogs item=relatedBlog name=blogs}
+              <li>
+                <a class="thumb" href="pages/blogs/blog.php?id={$relatedBlog->id}"><img src="pages/getphoto/GetPhoto.php?id={$relatedBlog->thumbnail}&size=80x80" width="80" height="80" /></a><span class="tilename">{$relatedBlog->name}</span>
+              </li>
+            {/foreach}
+            </ul>
+          </div>
+          {/if}
+        </div> <!-- span140 -->
+          
+      </div> <!-- canvas -->
+    </div> <!-- container -->
+    <div class="push"></div>
+  </div> <!-- wrapper -->
+  {include file='../../includes/templates/footer.tpl'}
+  <div id="fb-root"></div>
+</body>
+</html>
+{include file='../../includes/templates/js.tpl'}
+<script type="text/javascript" src="js/corners.js"></script>
+<script type="text/javascript" src="js/blogs/blog.js"></script>

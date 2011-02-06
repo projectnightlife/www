@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PNightAPI</name>
+    </assembly>
+    <members>
+        <member name="M:AuthenticationService.Authenticate(System.String,System.String,System.String,System.String)">
+            <summary>
+            Authenticate a client against the API
+            </summary>
+            <param name="wsApiId">The WebService API Key for the client <example>PNIGHT</example></param>
+            <param name="secretKey">The secret key for the client<example>SECRET</example></param>
+            <param name="user">Optional. Either a user name to authenticate against, or leave blank to authenticate as a guest</param>
+            <param name="token">Optional, Required with user. The Facebook auth token for the given user id</param>
+            <returns></returns>
+        </member>
+        <member name="T:BlogGenres">
+            <summary>
+            Summary description for Genre
+            </summary>
+        </member>
+        <member name="T:Facebook.FacebookAPI">
+            <summary>
+            Wrapper around the Facebook Graph API. 
+            </summary>
+        </member>
+        <member name="M:Facebook.FacebookAPI.#ctor">
+            <summary>
+            Create a new instance of the API, with public access only.
+            </summary>
+        </member>
+        <member name="M:Facebook.FacebookAPI.#ctor(System.String)">
+            <summary>
+            Create a new instance of the API, using the given token to
+            authenticate.
+            </summary>
+            <param name="token">The access token used for
+            authentication</param>
+        </member>
+        <member name="M:Facebook.FacebookAPI.Get(System.String)">
+            <summary>
+            Makes a Facebook Graph API GET request.
+            </summary>
+            <param name="relativePath">The path for the call,
+            e.g. /username</param>
+        </member>
+        <member name="M:Facebook.FacebookAPI.Get(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Makes a Facebook Graph API GET request.
+            </summary>
+            <param name="relativePath">The path for the call,
+            e.g. /username</param>
+            <param name="args">A dictionary of key/value pairs that
+            will get passed as query arguments.</param>
+        </member>
+        <member name="M:Facebook.FacebookAPI.Delete(System.String)">
+            <summary>
+            Makes a Facebook Graph API DELETE request.
+            </summary>
+            <param name="relativePath">The path for the call,
+            e.g. /username</param>
+        </member>
+        <member name="M:Facebook.FacebookAPI.Post(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Makes a Facebook Graph API POST request.
+            </summary>
+            <param name="relativePath">The path for the call,
+            e.g. /username</param>
+            <param name="args">A dictionary of key/value pairs that
+            will get passed as query arguments. These determine
+            what will get set in the graph API.</param>
+        </member>
+        <member name="M:Facebook.FacebookAPI.Call(System.String,Facebook.HttpVerb,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Makes a Facebook Graph API Call.
+            </summary>
+            <param name="relativePath">The path for the call, 
+            e.g. /username</param>
+            <param name="httpVerb">The HTTP verb to use, e.g.
+            GET, POST, DELETE</param>
+            <param name="args">A dictionary of key/value pairs that
+            will get passed as query arguments.</param>
+        </member>
+        <member name="M:Facebook.FacebookAPI.MakeRequest(System.Uri,Facebook.HttpVerb,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Make an HTTP request, with the given query args
+            </summary>
+            <param name="url">The URL of the request</param>
+            <param name="verb">The HTTP verb to use</param>
+            <param name="args">Dictionary of key/value pairs that represents
+            the key/value pairs for the request</param>
+        </member>
+        <member name="M:Facebook.FacebookAPI.EncodeDictionary(System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean)">
+            <summary>
+            Encode a dictionary of key/value pairs as an HTTP query string.
+            </summary>
+            <param name="dict">The dictionary to encode</param>
+            <param name="questionMark">Whether or not to start it
+            with a question mark (for GET requests)</param>
+        </member>
+        <member name="P:Facebook.FacebookAPI.AccessToken">
+            <summary>
+            The access token used to authenticate API calls.
+            </summary>
+        </member>
+        <member name="T:Blog">
+            <summary>
+            Summary description for blog_Blog
+            </summary>
+        </member>
+        <member name="T:Utils">
+            <summary>
+            Summary description for Utils
+            </summary>
+        </member>
+        <member name="T:PublicBlogComment">
+            <summary>
+            Summary description for PublicBlogComment
+            </summary>
+        </member>
+        <member name="T:NotAuthorizedException">
+            <summary>
+            Summary description for NotAuthorisedException
+            </summary>
+        </member>
+        <member name="T:UserService">
+            <summary>
+            Summary description for UserService
+            </summary>
+        </member>
+        <member name="T:User">
+            <summary>
+            Summary description for Account
+            </summary>
+        </member>
+        <member name="T:Facebook.JSONObject">
+            <summary>
+            Represents an object encoded in JSON. Can be either a dictionary 
+            mapping strings to other objects, an array of objects, or a single 
+            object, which represents a scalar.
+            </summary>
+        </member>
+        <member name="M:Facebook.JSONObject.CreateFromString(System.String)">
+            <summary>
+            Creates a JSONObject by parsing a string.
+            This is the only correct way to create a JSONObject.
+            </summary>
+        </member>
+        <member name="M:Facebook.JSONObject.ToDisplayableString">
+            <summary>
+            Prints the JSONObject as a formatted string, suitable for viewing.
+            </summary>
+        </member>
+        <member name="M:Facebook.JSONObject.Create(System.Object)">
+            <summary>
+            Recursively constructs this JSONObject 
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.IsDictionary">
+            <summary>
+            Returns true if this JSONObject represents a dictionary.
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.IsArray">
+            <summary>
+            Returns true if this JSONObject represents an array.
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.IsString">
+            <summary>
+            Returns true if this JSONObject represents a string value. 
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.IsInteger">
+            <summary>
+            Returns true if this JSONObject represents an integer value.
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.IsBoolean">
+            <summary>
+            Returns true if this JSONOBject represents a boolean value.
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.Dictionary">
+            <summary>
+            Returns this JSONObject as a dictionary
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.Array">
+            <summary>
+            Returns this JSONObject as an array
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.String">
+            <summary>
+            Returns this JSONObject as a string
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.Integer">
+            <summary>
+            Returns this JSONObject as an integer
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.Boolean">
+            <summary>
+            Returns this JSONObject as a boolean
+            </summary>
+        </member>
+        <member name="T:Database">
+            <summary>
+            Summary description for Database
+            </summary>
+        </member>
+        <member name="T:Session">
+            <summary>
+            Summary description for Session
+            </summary>
+        </member>
+        <member name="T:BlogService">
+            <summary>
+            Summary description for BlogService
+            </summary>
+        </member>
+        <member name="M:BlogService.GetBlog(System.String,System.Int32)">
+            <summary>
+            Get the basic information about a blog
+            </summary>
+            <param name="authToken"></param>
+            <param name="blogId">ID of the blog to return information for <ex>1</ex></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlogService.GetRelatedBlogs(System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="authToken"></param>
+            <param name="blogId"></param>
+            <param name="numberRequired"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlogService.GetComments(System.String,System.Int32,System.Int32)">
+            <summary>
+            Return a list of comments associated with a blog post
+            </summary>
+            <param name="authToken"></param>
+            <param name="postId">The id of the post to fetch comments for <example>1</example></param>
+            <param name="numberRequired">The number of comments to return, or 0 for all comments <example>2</example></param>
+            <returns></returns>
+        </member>
+        <member name="M:BlogService.RemoveComment(System.String,System.Int32)">
+            <summary>
+            removes a comment
+            </summary>
+            <param name="authToken"></param>
+            <param name="commentId">the id to retreive</param>
+            <returns></returns>
+        </member>
+        <member name="T:BlogPost">
+            <summary>
+            Summary description for blog_Post
+            </summary>
+        </member>
+        <member name="T:AuthenticationFailureException">
+            <summary>
+            Summary description for AuthenticationFailureException
+            </summary>
+        </member>
+        <member name="T:PublicBlog">
+            <summary>
+            Summary description for PublicBlog
+            </summary>
+        </member>
+        <member name="T:BlogComment">
+            <summary>
+            Summary description for blog_Comment
+            </summary>
+        </member>
+        <member name="T:Response`1">
+            <summary>
+            Summary description for Response
+            </summary>
+        </member>
+        <member name="T:PublicThinUser">
+            <summary>
+            Summary description for PublicUser
+            </summary>
+        </member>
+        <member name="T:VenueService">
+            <summary>
+            Summary description for VenueService
+            </summary>
+        </member>
+        <member name="T:RegistrationService">
+            <summary>
+            Summary description for RegistrationService
+            </summary>
+        </member>
+        <member name="T:PublicBlogPost">
+            <summary>
+            Summary description for PublicBlogPost
+            </summary>
+        </member>
+        <member name="T:DatabaseFactory">
+            <summary>
+            Summary description for DatabaseFactory
+            </summary>
+        </member>
+        <member name="T:Genre">
+            <summary>
+            Summary description for Genre
+            </summary>
+        </member>
+    </members>
+</doc>

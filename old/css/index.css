@@ -1,0 +1,19 @@
+.heros { width: 630px; height: 430px; overflow: hidden;}
+
+.heros .hero { width: 100%; height: 100%; }
+
+.heros .hero a { position: absolute; width: 100%; height: 100%; }
+
+.hero .headline { position: absolute; overflow: auto; bottom: 0px; left: 0px; width: 100%; background: url(../images/core/transparency/75.png) repeat; }
+
+.hero .headline h1 { float: left; margin: 0; padding: 4px 5px; color: #fff; font-size: 32px; }
+
+.hero .headline h5 { float: right; margin: 15px 20px 0 0; padding-left: 15px; color: #fff; font-size: 11px; font-weight: normal; background: url(../images/core/icons/blue_chevron.png) no-repeat center left; }
+
+.hero a { text-decoration: none; }
+
+.hero li a:hover { color: #fff; }
+
+.hero a.selected { color: #fff; }
+
+.hero a:focus { outline: none; }
