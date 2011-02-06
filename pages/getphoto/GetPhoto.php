@@ -1,4 +1,6 @@
 <?php
+header('Cache-Control: max-age=604800 must-revalidate');
+header("Expires: ".gmdate('r', strtotime('+1 week'))." GMT"); // Date in the past
 $globalDir = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
 require_once($globalDir.'backend\\global_include.php');
 

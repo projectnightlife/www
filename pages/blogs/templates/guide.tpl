@@ -43,8 +43,9 @@
         <div class="span770 leftspcr">
           <div class="UIpanel">
             <div class="tutorial">
-              <p>Project Nightlife prides itself on the quality of our site. We want to ensure you guys know how to create quality posts which will be recognised both for their cutting edge, industry leading content and for how that content is presented to our readers.</p>
+              <p>At Project Nightlife, we pride ourselves on the quality of our site. We want to ensure you guys know how to create quality posts which will be recognised both for their cutting edge, industry leading content and for how that content is presented to our readers.</p>
               <p>The following guide details how to use our blogging system as well as how to gain the best results from it. We've worked hard to make the site as user friendly and intuitive as possible, however if you feel we could improve something or even add new features, then we want to <a href="#" onclick="return api.composeMessage('Contact Us', api.contactus(), 'http://www.projectnightlife.co.uk/backend/communicate.php', 0);" title="Contact us">hear your suggestions</a>.</p>
+              <p>To ensure all of our features work as they should, make sure you've got the latest version of your browser installed. In particular, if you use Internet Explorer, we highly recommend upgrading to version 9. You can get the update <a href="http://windows.microsoft.com/en-US/internet-explorer/download/ie-9/worldwide" target="_blank">here</a>.</p>
               <h3>Accessing the dashboard</h3>
               <p>In order to access your blog dashboard, you'll need to be logged in. Once you've logged in, you'll see a dashboard button appear at the top right of each page.</p>
               <img src="images/tutorials/bloggers/dashboard_button.jpg" alt="Dashboard button" />
@@ -66,8 +67,8 @@
               <p>If you think its appropriate, add a youtube video or soundcloud clip, especially if you're blogging about a new track. You may even be posting your latest mix!</p>
               <p>To create a post, choose <i>New post</i> from the left menu. You're presented with the following page.</p>
               <img src="images/tutorials/bloggers/post.jpg" alt="A new post" />
-              <p>Try to come up with an intriguing title in order to make your post stand out and entice the reader to read more. Your title must also be greater than 12 characters in length.</p>
-              <p>The Body of your post is where you write your content. We recommend opening your post with a photo - posts with an opening photo look a lot better than those without. The body of your post must be at least 40 characters in length, however if your post is longer than the box provided, it'll automatically expand as you type.</p>
+              <p>Try to come up with an intriguing title in order to make your post stand out and entice the reader to read more.</p>
+              <p>The Body of your post is where you write your content. We recommend opening your post with a photo - posts with an opening photo look a lot better than those without. If your post is longer than the box provided, it'll automatically expand as you type.</p>
               
               <h4>Formatting</h4>
               <p>To format text in your post, simply surround it with the appropriate tag pairing.</p>
@@ -107,9 +108,52 @@
                  etc...</p>
               
               <h4>Adding audio and video</h4>
+              <p>To add flash audio or video, begin by clicking the <i>Add flash content</i> link, this will uncover the embed facility.</p>
+              <img src="images/tutorials/bloggers/add_flash.jpg" alt="Add Flash" />
+              <p>You're presented with a text box and an <i>add flash</i> button. The text box is where we paste the content for the flash file.</p>
+              <p>Adding content from Youtube is easy, however adding flash from other websites is slightly different.</p>
+              <h4>Youtube videos</h4>
+              <p>If you're adding a youtube video, all thats required is to simply paste the youtube address from your browser's address bar into the box provided and click add flash.</p>
+              <img src="images/tutorials/bloggers/youtube_browser.jpg" alt="Youtube address" />
+              <img src="images/tutorials/bloggers/add_youtube.jpg" alt="Add Youtube" />
+              <p>Upon adding your video, Your flash file will appear as a thumbnail in just the same way as photos.</p>
+              <img src="images/tutorials/bloggers/youtube.jpg" alt="Youtube video" />
+              <h4>SoundCloud</h4>
+              <p>Adding a SoundCloud flash audio file is a little more tricky. We need to find whats known as the <i>embed code</i> and paste that into the box we provide.</p>
+              <p>You'll notice in the upper left corner of the SoundCloud waveform is a <i>Share</i> button, clicking this provides you with all the ways you can share it. You'll see one of fields contains the embed code.</p>
+              <img src="images/tutorials/bloggers/soundcloud.jpg" alt="Get SoundCloud" />
+              <p>Clicking the code in the embed box automatically highlights it for you. Once you've copied it, switch to your <i>Add Post</i> window and paste it into the box we provide. <i>The code looks rather lengthy and complicated, but you theres no need to worry youself with what it all means</i>.</p>
+              <img src="images/tutorials/bloggers/embed_soundcloud.jpg" alt="Embed SoundCloud" />
+              <p>Finally, click <i>Add Flash</i>. Once again, you'll see a thumbnail appear of the SoundCloud waveform.</p>
+              <img src="images/tutorials/bloggers/soundcloud_preview.jpg" alt="SoundCloud preview" />
+              <h4>Other websites</h4>
+              <p>To embed audio and video from all other websites requires you to again locate the embed code for the video. This can be found in much the same way as the SoundCloud example. Simply look for a share button or link and copy the embed code it provides.</p>
+              <h4>General info</h4>
+              <p>At present we only support Flash based audio and video files, however almost all audio and video on the web is Flash based.</p>
+              <p>We're working hard to make it easier to embed audio and video from other popular websites in much the same way we do for youtube. We'll let you all know when these improvements become available.</p>
               <h4>Keywords</h4>
+              <p>The final step to creating a new post is adding your chosen keywords. Keywords allow us to very quickly relate your post to others in the database and this is how we're able to recommend similar posts when you're reading a post.</p>
+              <p>Picking good keywords is very important. The following points will ensure you always select good quality keywords for your post.</p>
+              <ol>
+                <li>Generally, only use Nouns. These include words representing people, places and things.</li>
+                <li>Don't pick too many. Picking too many will ultimately result in us recommending two posts which really don't have much in common.</li>
+              </ol>
+              <p>As a general rule, try and pick around 3-6 keywords which when read back give a pretty good summary of what your post is about.</p>
+              <p>For example if your post is about a new Swedish House Mafia track which was played for the first time at the Winter Music Conference 2011, good keywords would be <i>Swedish House Mafia</i>, <i>the name of the new track</i>, <i>Winter Music Conference</i> and <i>WMC</i>. If one of your keywords is regularly abbreviated, include the abbreviation as well.</p>
+              <p>If you're reviewing a club night or a gig, include keywords such as the <i>name of the event</i> and maybe the <i>headlining act</i> as well as any other words you feel appropriate.</p>
+              <p>If you're posting about this summer's fashion trends and you feature a section on shoes, make sure your keywords include <i>Summer Fashion</i> and <i>Shoes</i></p>
+              <p>If you only mention something/somebody very briefly in your post i.e. just one or two sentences, we would recommend against including that as a keyword because it isn't representitive of the overall post.</p>
+              <p>To actually add a keyword, type it into the keyword box and hit the <i>enter</i> key. To remove it, simply select it and press <i>Remove Keyword</i>.</p>
+              <p>Finally, we require you to enter at least two keywords to ensure we can gain a minimal understanding of what your post is about. Upon doing so, the warning box will fade away.</p>
+              <img src="images/tutorials/bloggers/keyword_warning.jpg" alt="Keywords" />
+              
               <h4>Publishing or discarding your post</h4>
+              <p> When you're ready to publish your post, click <i>publish</i>. If we're ever unable to publish your post, you'll see a popup telling you to try again in a moment.</p>
+              <p>if you choose against publishing your post, click the <i>discard</i> button and confirm this to return to a list of your previous posts.</p>
+              <img src="images/tutorials/bloggers/publish_discard.jpg" alt="Publishing" />
+              <p>Once you've begun writing a post, if you try and leave the page without publishing it, we'll display a confirmation warning ensuring you really do want to dispose of the post. This will prevent you losing your post if you accidently click a link.</p>
               <img src="images/tutorials/bloggers/navigation_alert.jpg" alt="Leaving the page without saving your post" />
+              
               <h3>Managing your posts</h3>
               <h3>Editing a post</h3>
               <p>from manage posts and the post page if you own it</p>

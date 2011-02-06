@@ -90,7 +90,7 @@
                         <a href="#" onclick="return initAddObjects();" id="addObjectText">Add flash content</a>
                         <textarea id="object" name="helper" style="height: 50px; display: none;"></textarea>
                         <label class="uiButton" id="objectButton" style="display: none;">
-                          <input type="button" onclick="addObject()" value="Add object" />
+                          <input type="button" onclick="addObject()" value="Add Flash" />
                         </label>
                       </div>
                     </td>
@@ -112,7 +112,7 @@
                       {/foreach}
                       </select>
                       <label class="uiButton" style="margin: 1em 0;">
-                        <input type="button" onclick="removeKeywordOption()" value="Remove tag" />
+                        <input type="button" onclick="removeKeywordOption()" value="Remove keyword" />
                       </label>
                       <div id="keywordWarning" class="UIembeddedMsg">Warning: You must enter at least two keywords in order for Project Nightlife relate this post to others.</div>
                     </td>
