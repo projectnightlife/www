@@ -233,7 +233,7 @@ function submitRequest()
 	  document.getElementById('spinnerContainer').style.width = "500px";
 	  document.getElementById('spinnerContainer').style.marginTop = "90px";
 	  document.getElementById('spinnerContainer').innerHTML = "<p>Great, you're all set up and ready to start blogging.</p><p>In just a moment we'll redirect you to your Blog's control panel, where you can create your first post.</p>";
-	  setTimeout('window.location = "/blog/edit#welcome";', 8500);
+	  setTimeout('window.location = "/blog/edit#welcome";', 8000);
   }
 
 function validateGenres(genres)

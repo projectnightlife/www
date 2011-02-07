@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Project Nightlife | Overview</title>
+<title>Project Nightlife | Dashboard</title>
 <link rel="shortcut icon" href="images/core/icons/favicon.ico" type="image/x-icon" />
 <link rel="icon" type="image/png" href="images/core/icons/favicon.png" />
 <link rel="apple-touch-icon" href="images/core/icons/favicon.png" />
@@ -100,6 +100,6 @@
 $(document).ready(function()
 {
 	if (window.location.href.lastIndexOf("#welcome") != -1)
-	  api.launchDialog("Welcome to your blog dashboard", '<p>Before you get started, we recommend you take a moment to read the guide we\'ve prepared. It\'ll give you a brief introduction to our blogging system as well as how to get the most from your blog.</p><p>The guide is available at any time under the \'Guide\' option from the left menu.</p><p><a href="blog/edit?v=guide">Read the guide</a></p>');
+	  api.launchDialog("Welcome to your blog dashboard", '<p>Before you get started, we recommend you take a moment to read the guide we\'ve prepared. It\'ll give you a brief introduction to our blogging system as well as how to get the most from your blog.</p><p>The guide is available at any time under the \'Guide\' option from the left menu.</p><p><a href="blog/edit?v=guide" style="background: url(http://www.projectnightlife.co.uk/images/core/icons/single_pink_chevron.png) no-repeat 0 2px; padding-left: 12px;">Read the guide</a></p>');
 });
 </script>
