@@ -39,10 +39,6 @@
 
 #blogs .blogvitals .info { margin-left: 7px; width: 420px; float: left; overflow: auto; }
 
-#blogs .blogvitals .fblike { width: 200px; overflow: hidden; }
-
-#blogs .blogvitals .fblikecount { width: 55px !important; }
-
 #blogs .blogvitals .thin { width: 200px !important; }
 
 #blogs .blogvitals .info h3 { font-size: 17px; margin: 5px 0 3px; line-height: 20px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
