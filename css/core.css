@@ -280,7 +280,7 @@ a.thumb img { margin: 3px; }
 
 /* drop down menus */
 
-.dropDown { display: none; position: absolute; top: 100%; width: 210px; background: #0f0f0f; border-left: 1px solid #191919; border-right: 1px solid #191919; border-bottom: 1px solid #191919; cursor: pointer; left: 0; }
+.dropDown { display: none; position: absolute; top: 100%; width: 210px; background: #0f0f0f; border-left: 1px solid #1e1e1e; border-right: 1px solid #1e1e1e; border-bottom: 1px solid #1e1e1e; cursor: pointer; left: 0; }
 .dropDownOption { padding: 2px 4px 2px 4px; }
 .dropDown .selected { background: #444; }
 
@@ -409,10 +409,10 @@ a:active.previous { background: url(../images/core/buttons/previous.png) 0px -51
 /* tempory */
 
 .addedContent { display: none; margin-top: 0.5em; overflow: auto; }
-.addContentContainer { margin: 9px 0 10px; overflow: auto; }
+.addContentContainer { margin: 12px 0 10px; overflow: auto; }
 
 table.UIform { border: none; padding: 5px 10px 10px; overflow: auto; }
-table.UIform th { width: 110px; text-align: right; padding-top: 13px; padding-right: 10px; font-weight: normal !important; vertical-align: top;}
+table.UIform th { width: 110px; text-align: right; padding-top: 16px; padding-right: 10px; font-weight: normal !important; vertical-align: top;}
 table.UIform th label { font-weight: normal !important; }
 table.UIform input[type="text"], table.UIform input[type="password"], table.UIform textarea, table.UIform select { font-size: 12px !important; font-family: Tahoma, Geneva, sans-serif; color: #ccc; background: #0f0f0f !important; border: 1px solid #1e1e1e !important; width: 570px; padding: 7px 5px; }
 table.UIform select { padding: 0 !important; font-size: 12px !important; }

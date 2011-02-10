@@ -3,7 +3,8 @@ function API()
   this.appId = "1"; // Website application id for platform communication
   this.dialog = "dialogPositioner"; // enables us to change the name of the dialog id
   this.msgDialog = "msgDialogPositioner"; // enables us to change the name of the dialog id
-  this.dialogErrorMessage = "Oops, something went wrong...";
+  this.dialogErrorTitle = "Oops, something went wrong";
+  this.dialogErrorMessage = '<p style="margin-bottom: 1em;">Please try again in a moment.</p><p><a href="#" onclick="return api.NotifyOfError();" style="background: url(http://www.projectnightlife.co.uk/images/core/icons/single_pink_chevron.png) no-repeat 0 2px; padding-left: 12px;">If this problem persists, please let us know</a>.</p>';
   this.ajaxNotSupportedMsg = "Your browser is too old to interact properly with this page, please update it to the latest version.";
   this.upgradeBrowser = "Your browser is too old to view this webpage, please upgrade to Internet Explorer 9";
   this.debug = false;
@@ -670,7 +671,7 @@ function API()
 			  if (api.debug)
 			    api.launchDialog("Error", "<p>"+e.message+"</p><p>Server responded with:</p><p>"+xmlHttp.responseText+"</p>");
 			  else if (!suppress)
-			    api.launchDialog(api.dialogErrorMessage, "Please try again in a moment. If this problem persists, please <a href=\"#\" onclick=\"return api.NotifyOfError();\">let us know</a>.");
+			    api.launchDialog(api.dialogErrorTitle, api.dialogErrorMessage);
 			  return false;
 			}
 		    if (callback)
@@ -682,7 +683,7 @@ function API()
 			if (api.debug)
 			  api.launchDialog("Error", "Ajax request failed, returned status of "+xmlHttp.status);
 			else if (!suppress)
-			  api.launchDialog(api.dialogErrorMessage, "Please try again in a moment. If this problem persists, please <a href=\"#\" onclick=\"return api.NotifyOfError();\">let us know</a>.");
+			  api.launchDialog(api.dialogErrorTitle, api.dialogErrorMessage);
 			return false;
 		  }
       };
@@ -711,7 +712,7 @@ function API()
 			  if (api.debug)
 			    api.launchDialog("Error", "<p>"+e.message+"</p><p>Server responded with:</p><p>"+xmlHttp.responseText+"</p>");
 			  else if (!suppress)
-			    api.launchDialog(api.dialogErrorMessage, "Please try again in a moment. If this problem persists, please <a href=\"#\" onclick=\"return api.NotifyOfError();\">let us know</a>.");
+			    api.launchDialog(api.dialogErrorTitle, api.dialogErrorMessage);
 			  if (errorCallback)
 			    api.executeFunctionByName(errorCallback, window, null);
 			  return false;
@@ -725,7 +726,7 @@ function API()
 			if (api.debug)
 			  api.launchDialog("Error", "Ajax request failed, returned status of "+xmlHttp.status);
 			else if (!suppress)
-			  api.launchDialog(api.dialogErrorMessage, "Please try again in a moment. If this problem persists, please <a href=\"#\" onclick=\"return api.NotifyOfError();\">let us know</a>.");
+			  api.launchDialog(api.dialogErrorTitle, api.dialogErrorMessage);
 			if (errorCallback)
 			    api.executeFunctionByName(errorCallback, window, null);
 			return false;

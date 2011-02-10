@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Project Nightlife | Post</title>
+<title>Project Nightlife | {if $uri|strpos:"v=edit" === false}New{else}Edit{/if} Post</title>
 <link rel="shortcut icon" href="images/core/icons/favicon.ico" type="image/x-icon" />
 <link rel="icon" type="image/png" href="images/core/icons/favicon.png" />
 <link rel="apple-touch-icon" href="images/core/icons/favicon.png" />
@@ -23,7 +23,7 @@
       
       <div class="masthead">
  	    <div class="heading">
-          <h1 class="left">{$blog->name}</h1><h1 class="right">{if $uri|strpos:"v=edit" === false}New Post{else}Edit Post{/if}</h1>
+          <h1 class="left">{$blog->name}</h1><h1 class="right">{if $uri|strpos:"v=edit" === false}New{else}Edit{/if} Post</h1>
         </div>
         <hr />
       </div>
