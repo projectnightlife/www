@@ -26,28 +26,28 @@ function injectPosts(response)
 
 function subscription()
 {
-	if ($(".profileInteractions .subscription").attr("rel") == "subscribe")
+	if ($(".profileInteractions .subscription").attr("rel") == "subscribe" && api.session.data.userId != 0)
 	{
-		api.launchDialog("Subscription", "<p>We'll now ensure you're always right up to date with this blog.</p><p>Whenever it publishes a new piece of content, we'll send you a Facebook notification to let you know.</p>");
+		api.launchDialog("Subscription", "<p>We'll now ensure you're always right up to date with this blog.</p><p>Whenever it publishes a new piece of content, we'll send you a  notification to let you know.</p>");
 		$(".profileInteractions .subscription").html("Unsubscribe from this blog");
 		$(".profileInteractions .subscription").attr("rel", "unsubscribe");
 		$(".profileInteractions .subscription").attr("href", $(".profileInteractions .subscription").attr("href").replace("Subscribe", "Unsubscribe"));
 		if ($("#leftColumn #subscriptions").size() > 0)
 		{
-			$('<a id="subscription['+api.session.userId+']"href="http://www.facebook.com/profile.php?id='+api.session.userId+'" class="fbSquareProfilePic" title="'+api.session.firstname+' '+api.session.lastname+'" target="_blank" style="display: none;"><img src="https://graph.facebook.com/'+api.session.userId+'/picture" alt="'+api.session.firstname+' '+api.session.lastname+'"></a>').appendTo("#leftColumn #subscriptions").fadeIn('slow');
+			$('<a id="subscription['+api.session.data.userId+']"href="http://www.facebook.com/profile.php?id='+api.session.data.userId+'" class="fbSquareProfilePic" title="'+api.session.data.firstname+' '+api.session.data.lastname+'" target="_blank" style="display: none;"><img src="https://graph.facebook.com/'+api.session.data.userId+'/picture" alt="'+api.session.data.firstname+' '+api.session.data.lastname+'"></a>').appendTo("#leftColumn #subscriptions").fadeIn('slow');
 		}
 		else
 		{
-			$('<div class="UIpanel topspcr" style="display: none;"><div class="UIheading"><h3>Subscribers</h3></div><div id="subscriptions"><a id="subscription['+api.session.userId+']"href="http://www.facebook.com/profile.php?id='+api.session.userId+'" class="fbSquareProfilePic" title="'+api.session.firstname+' '+api.session.lastname+'" target="_blank"><img src="https://graph.facebook.com/'+api.session.userId+'/picture" alt="'+api.session.firstname+' '+api.session.lastname+'"></a></div></div>').appendTo("#leftColumn").fadeIn('slow');
+			$('<div class="UIpanel topspcr" style="display: none;"><div class="UIheading"><h3>Subscribers</h3></div><div id="subscriptions"><a id="subscription['+api.session.data.userId+']"href="http://www.facebook.com/profile.php?id='+api.session.data.userId+'" class="fbSquareProfilePic" title="'+api.session.data.firstname+' '+api.session.data.lastname+'" target="_blank"><img src="https://graph.facebook.com/'+api.session.data.userId+'/picture" alt="'+api.session.data.firstname+' '+api.session.data.lastname+'"></a></div></div>').appendTo("#leftColumn").fadeIn('slow');
 		}
 	}
-	else
+	else if (api.session.userId != 0)
 	{
 		$(".profileInteractions .subscription").html("Subscribe to this blog");
 		$(".profileInteractions .subscription").attr("rel", "subscribe");
 		$(".profileInteractions .subscription").attr("href", $(".profileInteractions .subscription").attr("href").replace("Unsubscribe", "Subscribe"));
 		if ($('#subscriptions').children().size() > 1)
-		  $('#subscriptions #subscription\\\['+api.session.userId+'\\\]').fadeOut('slow').delay(300, function() { $(this).empty().remove(); });
+		  $('#subscriptions #subscription\\\['+api.session.data.userId+'\\\]').fadeOut('slow').delay(300, function() { $(this).empty().remove(); });
 		else
 		  $('#subscriptions').parent().fadeOut('slow').delay(300, function() { $(this).empty().remove(); });
 	}

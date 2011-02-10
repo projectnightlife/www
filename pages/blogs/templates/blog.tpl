@@ -83,7 +83,7 @@
                 {/foreach}
               </div>
               <div class="right fblike fblikecount">
-                <fb:like href="projectnightlife.co.uk/blog/{$blog->id}" layout="box_count" show_faces="false" width="55" colorscheme="dark"></fb:like>
+                <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;action=like&amp;colorscheme=dark&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:65px;" allowTransparency="true"></iframe>
               </div>
             </div>
           

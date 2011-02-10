@@ -5,5 +5,4 @@
   <a href="pages/blogs/editblog.php?v=details">Blog details</a>
   <a href="pages/blogs/editblog.php?v=insights">Insights</a>
   <a href="pages/blogs/editblog.php?v=guide">Guide</a>
-  <a href="pages/blogs/editblog.php?v=guidelines">Guidelines</a>
 </div>

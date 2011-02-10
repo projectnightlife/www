@@ -12,14 +12,13 @@ function API()
   this.data = null;
   this.keycode = 0;
   this.mousePageCoords = { x : null, y : null };
-  this.session = null; // session data
   this.contactus = function() {
-	  if (api.session.userId == 0)
+	  if (api.session.data.userId == 0)
 	    return '<input type="hidden" name="userId" value="0" /><div class="fieldSet"><div class="label">Name</div><input type="text" name="name" validator="api.validation.name" /></div><div class="fieldSet"><div class="label">Email</div><input type="text" name="email" validator="api.validation.email"/></div><div class="fieldSet"><div class="label">Subject</div><input type="text" name="subject" validator="api.validation.nonEmpty" /></div><div class="fieldSet last"><div class="label">Body</div><textarea id="messageBody" name="body" validator="api.validation.nonEmpty"></textarea></div>';
-	  else if (api.session.email == "")
-	    return '<input type="hidden" name="userId" value="'+api.session.userId+'" /><input type="hidden" name="name" value="'+api.session.firstname+' '+api.session.lastname+'" /><div class="fieldSet"><div class="label">Email</div><input type="text" name="email" validator="api.validation.email" /></div><div class="fieldSet"><div class="label">Subject</div><input type="text" name="subject" validator="api.validation.nonEmpty" /></div><div class="fieldSet last"><div class="label">Body</div><textarea id="messageBody" name="body" validator="api.validation.nonEmpty"></textarea></div>';
+	  else if (api.session.data.email == "")
+	    return '<input type="hidden" name="userId" value="'+api.session.data.userId+'" /><input type="hidden" name="name" value="'+api.session.data.firstname+' '+api.session.data.lastname+'" /><div class="fieldSet"><div class="label">Email</div><input type="text" name="email" validator="api.validation.email" /></div><div class="fieldSet"><div class="label">Subject</div><input type="text" name="subject" validator="api.validation.nonEmpty" /></div><div class="fieldSet last"><div class="label">Body</div><textarea id="messageBody" name="body" validator="api.validation.nonEmpty"></textarea></div>';
 	  else
-	    return '<input type="hidden" name="userId" value="'+api.session.userId+'" /><input type="hidden" name="name" value="'+api.session.firstname+' '+api.session.lastname+'" /><input type="hidden" name="email" value="'+api.session.email+'" /><div class="fieldSet"><div class="label">Subject</div><input type="text" name="subject" validator="api.validation.nonEmpty" /></div><div class="fieldSet last"><div class="label">Body</div><textarea id="messageBody" name="body" validator="api.validation.nonEmpty"></textarea></div>';
+	    return '<input type="hidden" name="userId" value="'+api.session.data.userId+'" /><input type="hidden" name="name" value="'+api.session.data.firstname+' '+api.session.data.lastname+'" /><input type="hidden" name="email" value="'+api.session.data.email+'" /><div class="fieldSet"><div class="label">Subject</div><input type="text" name="subject" validator="api.validation.nonEmpty" /></div><div class="fieldSet last"><div class="label">Body</div><textarea id="messageBody" name="body" validator="api.validation.nonEmpty"></textarea></div>';
   };
   
   // Javascript bootstraper //
@@ -81,11 +80,7 @@ function API()
   	}
   	return context[func].apply(this, args);
   }*/
-  // populate session data
-  this.populateSession = function(userId, firstname, lastname, email)
-  {
-	  this.session = { 'userId':userId, 'firstname':firstname, 'lastname':lastname, 'email':email }
-  }
+  
   
   // call function name if held as string
   this.executeFunctionByName = function(functionName, context, args) {
@@ -253,6 +248,57 @@ function API()
 	  }
   };
   
+  /* sessions */
+  this.session = {
+	  data : null,
+	  populate : function(userId, firstname, lastname, email)
+  	  {
+	      this.data = 
+		  {
+			  'userId':userId,
+			  'firstname':firstname,
+			  'lastname':lastname,
+			  'email':email
+		  }
+	  }
+  };
+  
+  /* Notifications */
+  
+  this.notifications = {
+	  data : new Array(),
+	  populate : function(thumbnail, title, url, excerpt, time)
+	  {
+		  this.data.push(
+		  {
+			  'thumbnail':thumbnail,
+			  'title':title,
+			  'url':url,
+			  'excerpt':excerpt,
+			  'time':time
+		  });
+	  },
+	  get : function()
+	  {
+		  if (this.data.length == 0)
+		    return '<div style="text-align: center; font-family: \'Lucida Sans Unicode\', \'Lucida Grande\', sans-serif; font-size: 18px; padding: 15px 0 5px;">No notifications</div>';
+		  else
+		  {
+		    var response = '<div class="notifications">';
+			for (var notification in this.data)
+			{
+			  var position = ""; // the position within the list of notifications
+			  if (notification == 0)
+			    position = " first";
+			  response += '<div class="notification'+position+'"><a href="'+this.data[notification].url+'"><img src="http://www.projectnightlife.co.uk/photo/'+this.data[notification].thumbnail+'/50x50" /></a><div class="details"><h3 class="text-overflow"><a href="'+this.data[notification].url+'">'+this.data[notification].title+'</a></h3><p class="text-overflow">'+this.data[notification].excerpt+'</p><div class="datetime">'+this.data[notification].time+'</div></div></div>';
+			}
+			response += '<div class="notification last" style="text-align: center;"><a href="http://www.projectnightlife.co.uk/notifications">View all</a></div>';
+			response += '</div>';
+			return response;
+		  }
+	  }
+  };
+  
   /* document info methods */
   
   this.getPageScrollOffsets = function() {
@@ -342,7 +388,7 @@ function API()
 	  content.className = "content";
 	  content.innerHTML = message;
 	  buttonSet.className = 'buttonSet';
-	  buttonSet.innerHTML = '<label class="uiButton uiButtonConfirm"><input type="button" value="Ok" onclick="return api.closeDialog();" /></label>';
+	  buttonSet.innerHTML = '<label class="uiButton uiButtonConfirm"><input type="button" value="Close" onclick="return api.closeDialog();" /></label>';
 	  dialogBody.appendChild(heading);
 	  dialogBody.appendChild(content);
 	  dialogBody.appendChild(buttonSet);
@@ -363,6 +409,8 @@ function API()
 	  positioner.className = this.dialog;
 	  positioner.id = this.dialog;
 	  dialog.className = "dialog";
+	  dialog.style.width = "475px";
+	  dialogBody.style.width = "471px";
 	  dialog.style.top = ((this.getDocumentDimensions()[1] * 0.2) + this.getPageScrollOffsets()[1]) + "px";
 	  dialogBody.className = "body";
 	  heading.className = "heading";
@@ -631,7 +679,7 @@ function API()
 	error = error.replace(pattern, " "); // replace all multiple white space chars with one space
 	if (error.replace(pattern, "").length != 0) // remove all spaces and see if input box is empty
 	{
-	  api.sendSimpleRequest('http://www.projectnightlife.co.uk/backend/ajax.php?service=log&method=NotifyError&appId='+this.appId+'&error='+api.serializeString(error), "null", null, true);
+	  api.sendSimpleRequest('http://www.projectnightlife.co.uk/backend/ajax.php?service=log&method=NotifyError&appId='+this.appId+'&error='+api.serializeString(error), null, null, true);
 	  api.launchDialog("Thanks", "<p>We'll have one of our engineers look into this straight away.</p><p>We appreciate your help in making Project Nightlife a better experience.</p>");
 	}
 	return false;
@@ -886,6 +934,12 @@ document.documentElement.onclick = function(event)
   {
 	if (target.id.substr(0, 2) == 'fb')
 	  api.fbrequest(target.id);
+	else if (target.id == "notifications")
+	{
+	  api.launchDialog("Notifications", api.notifications.get(), 350);
+	  target.innerHTML = "Notifications";
+	  api.sendSimpleRequest('http://www.projectnightlife.co.uk/backend/ajax.php?service=notification&method=ClearUserHasPending', null, null, true);
+	}
 	else
 	{
 	  var callback = api.getCallback(target);

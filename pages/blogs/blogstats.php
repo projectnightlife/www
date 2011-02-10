@@ -146,7 +146,7 @@ $row->addChild('string', date("D j M Y", $lastMonday - $oneWeek)." to \n".date("
 $row->addChild('string', date("D j M Y", $lastMonday)."\nto now");
 
 $row = $chartData->addChild('row');
-$row->addChild('string', 'Blog subscribers');
+$row->addChild('string', 'New blog subscriptions');
 
 for ($i = count($month) - 1; $i >= 0; $i--)
 {

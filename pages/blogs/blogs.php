@@ -5,8 +5,6 @@ require_once($globalDir.'pages\\includes\\global.php');
 $timeparts = explode(" ",microtime());
 $startTime = bcadd(($timeparts[0]*1000),bcmul($timeparts[1],1000));
 
-$logService->LogAppHit($appId, $_SERVER['REQUEST_URI'], $_SERVER['HTTP_USER_AGENT'], $_SERVER['REMOTE_ADDR']);
-
 if (isset($_GET['filter']))
 {
     switch (strtolower($_GET['filter']))

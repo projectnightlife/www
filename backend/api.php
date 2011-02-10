@@ -57,6 +57,10 @@ class API
 		{
 			return self::CreateWS("http://www.projectnightlife.co.uk/api/LogService.asmx?WSDL");
 		}
+		else if ($serviceName == "notification")
+		{
+			return self::CreateWS("http://www.projectnightlife.co.uk/api/NotificationService.asmx?WSDL");
+		}
 		else if ($serviceName == "blog")
 		{
 			return self::CreateWS("http://www.projectnightlife.co.uk/api/BlogService.asmx?WSDL");

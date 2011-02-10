@@ -17,8 +17,8 @@
   <div class="wrapper">
     <div class="header">
       <ul class="mainnav left">
-        <li id="nav-home"><a class="" href="/"><img src="http://www.projectnightlife.co.uk/images/core/header/logo.png" height="33" width="101" alt="home" /><span>home</span></a></li>
-        <li id="nav-blogs"><a href="/blogs">Blogs</a></li>
+        <li id="nav-home"><a class="" href=""><img src="http://www.projectnightlife.co.uk/images/core/header/logo.png" height="33" width="101" alt="home" /><span>home</span></a></li>
+        <li id="nav-blogs"><a href="blogs">Blogs</a></li>
         <!--<li id="nav-photos"><a href="/">Photos</a></li>-->
         <!--<li id="nav-venues"><a href="index.htm">Venues</a></li>
         <li id="nav-events"><a href="index.htm">Events</a></li>
@@ -30,6 +30,9 @@
       <!--<div id="mainsearch" class="right"><input type="text" /></div>-->
       <ul class="mainnav right">
         {if $session['loggedIn']}
+          {if $session['notifications']|@count > 0}
+            <li><a href="#" ajaxify="1" id="notifications">{if $session['notificationsPending'] eq 'true'}New {/if}Notifications</a></li>
+          {/if}
           {if $session['ownsBlog']}
             <li><a href="http://www.projectnightlife.co.uk/blog/edit">Dashboard</a></li>
           {/if}
@@ -58,7 +61,7 @@
             </div>
             <p style="margin-top: 5px; margin-bottom: 1em;">You may have mistyped the address or the page is currently experiencing problems.</p>
             <ul style="list-style-type: square; font-size: 11px; padding-left: 2em; margin-bottom: 1em;">
-              <li><a href="http://www.projectnightlife.co.uk">Return home</a></li>
+              <li><a href="">Return home</a></li>
               <li><a href="#" onclick="history.back(); return false;">Go back to the previous page</a></li>
             </ul>
           </div>
@@ -112,5 +115,8 @@
 <script type="text/javascript" src="http://www.projectnightlife.co.uk/js/api.js"></script>
 <!--[if lte IE 6]><script>api.upgradeBrowser();</script><![endif]-->
 <script type="text/javascript">
-  api.populateSession({$session['userId']});
+  api.session.populate({$session['userId']}, "{$session['user']['first_name']}", "{$session['user']['last_name']}", "{$session['user']['email']}");
+  {foreach from=$session['notifications'] item=notification name=notifications}
+  api.notifications.populate("{$notification->type}", "{$notification->information}", "{$notification->date}");
+  {/foreach}
 </script>

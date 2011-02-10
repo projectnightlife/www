@@ -200,6 +200,13 @@ var objects = new Array();
 	  document.getElementById('uploading').style.display = "none";
 	  document.getElementById('upload_iframe').contentWindow.document.body.style.background = "#0a0a0a";
   }
+  function uploadError()
+  {
+	  document.getElementById('upload_iframe').style.display = "block";
+	  document.getElementById('uploading').style.display = "none";
+	  document.getElementById('upload_iframe').contentWindow.document.body.style.background = "#0a0a0a";
+	  api.launchDialog("Invalid photo type", "Please upload a valid photo.");
+  }
   
 function insertKeywordOption(element)
 {

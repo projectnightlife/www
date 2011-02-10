@@ -128,7 +128,7 @@
               <img src="images/tutorials/bloggers/soundcloud_preview.jpg" alt="SoundCloud preview" />
               <h4>Other websites</h4>
               <p>To embed audio and video from all other websites requires you to again locate the embed code for the video. This can be found in much the same way as the SoundCloud example. Simply look for a share button or link and copy the embed code it provides.</p>
-              <h4>General info</h4>
+              <h4>General audio and video info</h4>
               <p>At present we only support Flash based audio and video files, however almost all audio and video on the web is Flash based.</p>
               <p>We're working hard to make it easier to embed audio and video from other popular websites in much the same way we do for youtube. We'll let you all know when these improvements become available.</p>
               <h4>Keywords</h4>
@@ -142,7 +142,7 @@
               <p>For example if your post is about a new Swedish House Mafia track which was played for the first time at the Winter Music Conference 2011, good keywords would be <i>Swedish House Mafia</i>, <i>the name of the new track</i>, <i>Winter Music Conference</i> and <i>WMC</i>. If one of your keywords is regularly abbreviated, include the abbreviation as well.</p>
               <p>If you're reviewing a club night or a gig, include keywords such as the <i>name of the event</i> and maybe the <i>headlining act</i> as well as any other words you feel appropriate.</p>
               <p>If you're posting about this summer's fashion trends and you feature a section on shoes, make sure your keywords include <i>Summer Fashion</i> and <i>Shoes</i></p>
-              <p>If you only mention something/somebody very briefly in your post i.e. just one or two sentences, we would recommend against including that as a keyword because it isn't representitive of the overall post.</p>
+              <p>If you only mention something/somebody very briefly in your post i.e. just one or two sentences, we would recommend against including that as a keyword because it isn't representative of the overall post.</p>
               <p>To actually add a keyword, type it into the keyword box and hit the <i>enter</i> key. To remove it, simply select it and press <i>Remove Keyword</i>.</p>
               <p>Finally, we require you to enter at least two keywords to ensure we can gain a minimal understanding of what your post is about. Upon doing so, the warning box will fade away.</p>
               <img src="images/tutorials/bloggers/keyword_warning.jpg" alt="Keywords" />
@@ -155,15 +155,46 @@
               <img src="images/tutorials/bloggers/navigation_alert.jpg" alt="Leaving the page without saving your post" />
               
               <h3>Managing your posts</h3>
+              <p>To see a list of all of your previous posts, simply click <i>Manage posts</i> from the left menu. From this page you can view, edit or delete any post you've ever created.</p>
+              <img src="images/tutorials/bloggers/manage.jpg" alt="Manage posts" />
+              
               <h3>Editing a post</h3>
-              <p>from manage posts and the post page if you own it</p>
+              <p>There are two ways to edit one of your posts. Each post listed in <i>Manage posts</i> has an <i>Edit</i> option <i>(as seen above)</i>. Alternatively, if you wish to edit the post you're reading, <i>(providing you or another member of your blog authored it)</i> you'll see an edit button along side the title of the post.</p>
+              <img src="images/tutorials/bloggers/edit_post.jpg" alt="Edit post" />
+              <p>Editing a post is identical to writing a new one and every aspect of your post is editable. Simply make any alterations and press save.</p>
+              <p>One point worth mentioning is photos. If you remove a photo from your post, you'll see the following warning fade in.</p>
+              <img src="images/tutorials/bloggers/edit_photos.jpg" alt="Edit photos" />
+              <p>If you accidently remove the wrong photo, it can be recovered by not saving your changes. If you have already made changes elsewhere in your post, copy and paste them somewhere safe and reload the page <i>(either by pressing the back button and clicking edit again, or press the refresh button)</i>.
+              <p>When you reload the page, you'll see the original photos again.</p>
+              
               <h3>Deleting a post</h3>
+              <p>If you ever wish to delete a post, again there are two ways to do this. Every post listed on the <i>Manage post</i> page also contains a delete option <i>(see above)</i>, clicking it presents you with a confirmation dialogue asking you to confirm or cancel your action.</p>
+              <img src="images/tutorials/bloggers/confirm_delete.jpg" alt="Confirm delete" />
+              <p>Alternatively, you can delete a post whilst editing it, simply click the <i>Delete</i> button next to save. Once again, confirm the warning and the post will be removed.</p>
+              <img src="images/tutorials/bloggers/delete_post.jpg" alt="Delete post" />
+              
               <h3>Changing blog details</h3>
-              <h4>Genres</h4>
+              <p>If you need to change any of your blog's info, you can do so by clicking <i>Blog details</i> from the left menu. Once again, if you decide against the photo change you make, not saving your changes will restore your previous photo.</p>
+              <h4>Genres and styles</h4>
+              <p>Genres are possibly the most important aspect of your blog, as they allow us to categorise and relate your blog to others.</p>
+              <p>We've got a pretty comprehensive database of music types and styles for you to choose from, however you can only add a style if it appears in the drop down when you begin typing it. If you require a new style, you can requesting it by clicking the link next to the search box. To add the genre, either click it or select it using the up/down keys and press enter.</p>
+              <img src="images/tutorials/bloggers/genres.jpg" alt="Genres" />
+              <p>Because they are so fundamental to categorising your blog, we require you to enter at least one. If you blog heavily about a very specific style of music such as <i>Acid House</i>, add this style. If you blog about all different types of house music, just add <i>House</i>. If your blog is even more general, simply add <i>Electronic</i>.
+              <p>Genres are hierarchical and in the example given, <i>Acid House</i> is a sub-genre of <i>House</i> which is a sub-genre of <i>Electronic</i>. As a result, any searches for electronic blogs will also return acid house blogs.</p>
+              <p>Unlike keywords, enter as many genres/styles as you like, providing you write posts related to those styles of music fairly often.</p>
+              <p>If your blog is non music related, you can also select categories such as <i>fashion</i> and <i>film</i> from the drop down menu. We also allow you to choose styles which are non genre specific, such as <i>deep</i>, <i>mellow</i> or <i>remix</i>.</p>
+              
               <h3>Insights</h3>
+              <p>Insights allow you to visualise your blog's activity. Selecting <i>Insights</i> from the left menu presents you with graphs for the number of times your posts have been read, the number of comments your posts have received, the number of subscribers your blog has and the number of posts you've created.</p>
+              <p>These statistics are live and allow you to easily track how popular your blog is or the rate at which your blog is growing. If your blog is in decline, you can take measures to win readers back.</p>
+              
               <h3>Rewards</h3>
-              <p>payment and gigs/nights</p>
-              <h3>Guidelines</h3>
+              <p>As our brand begins to gain ground and become industry recognised, we want to share our success with you. Afterall, you're just as much a part of Project Nightlife as the people who run the company on a day to day basis.</p>
+              <p>In time, we'll give you the opportunity to experience some truly memorable nights out.</p>
+              <p>When the time is right, we plan to advertise through the website. Don't worry, we don't plan on bombarding you with ads for the latest mobile phone deals or claiming to give you free bets when you sign up to online betting websites.</p>
+              <p>Instead, we're working with companies in the music/nightlife and fashion industries to provide adverts directly related to your blog and which we hope your readers will find interesting. This is another reason why it is so important to pick good keywords for your posts and relavent genres and styles for your blog.</p>
+              <p>When we do begin advertising, we'll pay you a cut of any advertising revenue your blog generates.</p>
+              <p>We'll announce our plans regarding these in due course.</p>
             </div>
           </div>
         </div> <!-- span770 -->

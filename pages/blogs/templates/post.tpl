@@ -100,7 +100,7 @@
                 <h3>{$blog->name}</h3>
                 <p style="margin-bottom: 10px;">By <a href="http://www.facebook.com/profile.php?id={$post->authorId}" target="_blank">{$post->firstname} {$post->lastname}</a></p>
                 <div class="fblike">
-                  <fb:like href="projectnightlife.co.uk/blog/{$blog->id}" layout="button_count" show_faces="false" width="55"></fb:like>
+                  <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
                 </div>
               </div>
             </div>

@@ -34,3 +34,20 @@
       </div>-->
     </div>
   </div>
+   {if $session['loggedIn']}
+  <div style="position: fixed; bottom: 0px; height: 30px; background: #161616; width: 100%; border-top: 1px solid #222; overflow: auto;">
+    <div style="padding: 5px;">
+      <div style="float: left; color: #bbb;">Just a little idea i'm toying with for the future ;-)</div>
+      {if $session['notifications']|@count > 0}
+        {if $session['notificationsPending'] eq 'true'}
+          <a href="#" ajaxify="1" id="notifications" style="background: #6b5294; float: right;">New Notifications</a>
+        {else}
+          <a href="#" ajaxify="1" id="notifications" style="float: right;">Notifications</a>
+        {/if}
+      {/if}
+      {if $session['ownsBlog']}
+        <a href="pages/blogs/editblog.php" style="padding-right: 10px; float: right;">Dashboard</a>
+      {/if}
+    </div>
+  </div>
+  {/if}

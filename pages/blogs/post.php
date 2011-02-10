@@ -2,15 +2,10 @@
 $globalDir = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
 require_once($globalDir.'pages\\includes\\global.php');
 
-$timeparts = explode(" ",microtime());
-$startTime = bcadd(($timeparts[0]*1000),bcmul($timeparts[1],1000));
-
-$logService->LogAppHit($appId, $_SERVER['REQUEST_URI'], $_SERVER['HTTP_USER_AGENT'], $_SERVER['REMOTE_ADDR']);
-
 $blogService = API::GetService("blog");
 
 try {
-    $post = $blogService->GetPost($_GET['id']);
+    $post = $blogService->GetPost($_GET['id'], true);
 }
 catch (Exception $e)
 {
@@ -158,8 +153,4 @@ if ($relatedBlogs->count() != 0)
 $smarty->assign('pageData', $pageData);
 
 $smarty->display('templates/post.tpl');
-
-$timeparts = explode(" ",microtime());
-$endTime = bcadd(($timeparts[0]*1000),bcmul($timeparts[1],1000));
-$logService->LogResponseTime($appId, $_SERVER['REQUEST_URI'], $endTime - $startTime);
 ?>

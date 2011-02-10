@@ -2,8 +2,8 @@
   <ul class="mainnav left">
     <li id="nav-home"><a class="" href=""><img src="images/core/header/logo.png" height="33" width="101" alt="home" /><span>home</span></a></li>
     <li id="nav-blogs"><a href="pages/blogs/blogs.php">Blogs</a></li>
-    <li id="nav-faq"><a href="pages/general/site/faq.php">Faq</a></li>
-    <!--<li id="nav-photos"><a href="index.htm">Photos</a></li>
+    <!--<li id="nav-faq"><a href="pages/general/site/faq.php">Faq</a></li>
+    <li id="nav-photos"><a href="index.htm">Photos</a></li>
     <li id="nav-venues"><a href="index.htm">Venues</a></li>
     <li id="nav-events"><a href="index.htm">Events</a></li>
     <li id="nav-photos"><a href="index.htm">Photos</a></li>
@@ -14,6 +14,9 @@
   <!--<div id="mainsearch" class="right"><input type="text" /></div>-->
   <ul class="mainnav right">
     {if $session['loggedIn']}
+      {if $session['notifications']|@count > 0}
+        <li><a href="#" ajaxify="1" id="notifications">{if $session['notificationsPending'] eq 'true'}New {/if}Notifications</a></li>
+      {/if}
       {if $session['ownsBlog']}
         <li><a href="pages/blogs/editblog.php">Dashboard</a></li>
       {/if}

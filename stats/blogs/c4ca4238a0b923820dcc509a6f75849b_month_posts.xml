@@ -11,8 +11,8 @@
 	<legend layout="vertical" fill_color="0a0a0a" color="aaaaaa" size="12" bold="false" font="Tahoma"/>
 	<axis_value size="11" color="aaaaaa"/>
 	<tooltip color="FFFFFF" alpha="75" size="11" background_color_1="282828" background_alpha="85" shadow="low"/>
-<chart_data><row><null></null><string>Mon 10 Jan 2011 to 
-Sun 16 Jan 2011</string><string>Mon 17 Jan 2011 to 
+<chart_data><row><null></null><string>Mon 17 Jan 2011 to 
 Sun 23 Jan 2011</string><string>Mon 24 Jan 2011 to 
-Sun 30 Jan 2011</string><string>Mon 31 Jan 2011
-to now</string></row><row><string>Posts you've made</string><number tooltip="5 posts">5</number><number tooltip="2 posts">2</number><number tooltip="3 posts">3</number><number tooltip="4 posts">4</number></row></chart_data></chart>
+Sun 30 Jan 2011</string><string>Mon 31 Jan 2011 to 
+Sun 6 Feb 2011</string><string>Mon 7 Feb 2011
+to now</string></row><row><string>Posts you've made</string><number tooltip="2 posts">2</number><number tooltip="3 posts">3</number><number tooltip="4 posts">4</number><number tooltip="1 post">1</number></row></chart_data></chart>

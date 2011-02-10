@@ -11,7 +11,9 @@ require($global.'pages\\includes\\autolink.php');
 API::Authenticate();
 
 $logService = API::GetService("log");
+$notificationService = API::GetService("notification");
 $appId = 1;
+$logService->LogAppHit($appId, $_SERVER['REQUEST_URI'], $_SERVER['HTTP_USER_AGENT'], $_SERVER['REMOTE_ADDR']);
 
 $smarty = new Smarty;
 
@@ -42,8 +44,22 @@ catch (Exception $e) {
 $session['user'] = $user;
 $session['userId'] = $user['id'];
 $session['loggedIn'] = API::IsUserLoggedIn();
+if (API::isUserLoggedIn())
+{
+	$session['notificationsPending'] = $notificationService->GetUserHasPending();
+	$notifications = $notificationService->GetUserNotifications(5, 0);
+	$session['notifications'] = array();
+	foreach ($notifications as $notification)
+	{
+		if (strcmp($notification->type, "Post") == 0)
+		{
+			$post = $blogService->GetPost($notification->information, false);
+			$session['notifications'][] = new notification($post->thumbnail, $post->title, "http://www.projectnightlife.co.uk/post/".$post->id, $post->excerpt,  API::GetDynamicDateString((int)$notification->date));
+		}
+	}
+}
 
 $smarty->assign('pageData', $pageData);
 $smarty->assign('session', $session);
-//print '<div style="margin: 20px; background-color: #FDF07E; border: 1px solid #e7d118; color: #111; padding: 10px;"><p>We can now assign multiple authors to a blog. I\'ve created a new blog with Chris, Alan and myself assigned to it. Can we all give it a thorough testing to make sure the site still works fine. Let me know any errors you find. I\'ve given it a good testing myself and tested at each stage in the modifications but it required me to make changes to about 2/3 of the blog system\'s stored procs - so i may have overlooked something...</p><p>At present we can only allow a person to author 1 blog due to limitations with the front end, however the backend does support a user having multiple blog privilidges. That means that for the time being you don\'t have author privilidges on your old blogs.</p></div>';
+//print '<div style="margin: 20px; background-color: #FDF07E; border: 1px solid #e7d118; color: #111; padding: 10px;"><p>We\'re currently reworking the genre system and as a result, its broken quite a lot of pages which rely on the old system.</p></div>';
 ?>

@@ -117,7 +117,7 @@ function removeGenreOption()
 function requestGenre()
 {
 	var pattern = /\s+/g; // all white space characters (selecting consecutive as one) not stopping at the first (\n \t space etc...)
-	var genre = prompt("Please enter the genre you want to request and we'll add it as soon as we can.", "");
+	var genre = prompt("Please enter the genre or style you want to request and we'll add for you.", "");
 	if (genre == null)
 	  return false; // cancel was pressed which for some reason seems to throw return null or something... strange! So we better deal with it nicely!
 	genre = genre.replace(pattern, " "); // replace all multiple white space chars with one space
@@ -151,6 +151,13 @@ function uploadStarted()
 	  document.getElementById('upload_iframe').style.display = "block";
 	  document.getElementById('uploading').style.display = "none";
 	  document.getElementById('upload_iframe').contentWindow.document.body.style.background = "#0a0a0a";
+  }
+  function uploadError()
+  {
+	  document.getElementById('upload_iframe').style.display = "block";
+	  document.getElementById('uploading').style.display = "none";
+	  document.getElementById('upload_iframe').contentWindow.document.body.style.background = "#0a0a0a";
+	  api.launchDialog("Invalid photo type", "Please upload a valid photo.");
   }
 
 function addPhoto(photo)

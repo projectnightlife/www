@@ -51,6 +51,36 @@
             <param name="authToken"></param>
             <returns></returns>
         </member>
+        <member name="T:NotificationService">
+            <summary>
+            Summary description for NotificationService
+            </summary>
+        </member>
+        <member name="M:NotificationService.GetUserHasPending(System.String)">
+            <summary>
+            Determine if the logged in user has any notifications pending. Throws an exception if current user is guest
+            </summary>
+            <param name="authToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NotificationService.ClearUserHasPending(System.String)">
+            <summary>
+            Clear the notifications pending flag for the logged in user. Throws an exception if current user is guest
+            </summary>
+            <param name="authToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NotificationService.GetUserNotifications(System.String,System.Int32,System.Int32)">
+            <summary>
+            Get a list of notifications for the current user. Throws an exception if current user is guest.
+            
+            The list returned includes the type of notification, the date/time it was added, and some associated information (usually the id for whatever type, i.e. postId)
+            </summary>
+            <param name="authToken"></param>
+            <param name="numberRequired">The number of notifications to return, or 0 for all notifications <example>10</example></param>
+            <param name="startIndex">The index at which to start returning notifications, begining at 0 <example>0</example></param>
+            <returns></returns>
+        </member>
         <member name="T:Blog">
             <summary>
             Summary description for blog_Blog
@@ -88,6 +118,29 @@
             <param name="authToken"></param>
             <returns></returns>
         </member>
+        <member name="M:GenreService.GetParentGenre(System.String,System.String)">
+            <summary>
+            Get the parent genre for a given genre. If the provided genre is already a parent, the given genre is returned
+            </summary>
+            <param name="authToken"></param>
+            <param name="genre">The genre to get the parent for <example>House</example></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenreService.GetTopLevelGenres(System.String)">
+            <summary>
+            Get a list of top level genres
+            </summary>
+            <param name="authToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenreService.GetGenreHierarchy(System.String,System.String)">
+            <summary>
+            Get the sub-child hierarchy for a given genre, including itself
+            </summary>
+            <param name="authToken"></param>
+            <param name="rootGenre">The root of the genre hierarchy to retreive<example>TestGenre</example></param>
+            <returns></returns>
+        </member>
         <member name="M:GenreService.RequestGenre(System.String,System.String,System.String)">
             <summary>
             Request a new genre for Project Nightlife to index on
@@ -106,6 +159,23 @@
             <summary>
             Summary description for Account
             </summary>
+        </member>
+        <member name="T:SystemService">
+            <summary>
+            Summary description for SystemService
+            </summary>
+        </member>
+        <member name="M:SystemService.GetMemoryOverview(System.String)">
+            <summary>
+            Gets an overview of the Project Nightlife Platform's memory usage
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SystemService.GetCPUOverview(System.String)">
+            <summary>
+            Gets an overview of the Project Nightlife Platform's CPU usage
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:Facebook.FacebookAPI">
             <summary>
@@ -362,12 +432,13 @@
             <param name="commentId">The ID of the comment to delete</param>
             <returns></returns>
         </member>
-        <member name="M:BlogService.GetPost(System.String,System.Int32)">
+        <member name="M:BlogService.GetPost(System.String,System.Int32,System.Boolean)">
             <summary>
             Get a blog post
             </summary>
             <param name="authToken"></param>
             <param name="postId">The ID of the post to retrieve <example>1</example></param>
+            <param name="addHit">Whether or not to log the hit for the viewing of this post<example>false</example></param>
             <returns></returns>
         </member>
         <member name="M:BlogService.GetPosts(System.String,System.String,System.Int32,System.Int32)">
@@ -475,7 +546,7 @@
             Get a list of photo sizes and locations for a given photoId
             </summary>
             <param name="authToken"></param>
-            <param name="photoId">The id of the photo to get sizes for <example>489</example></param>
+            <param name="photoId">The id of the photo to get sizes for <example>125</example></param>
             <returns></returns>
         </member>
         <member name="M:ImageService.BlogUploadPhoto(System.String,System.String,System.String)">
@@ -766,23 +837,6 @@
             <summary>
             Summary description for VenueService
             </summary>
-        </member>
-        <member name="T:SystemService">
-            <summary>
-            Summary description for SystemService
-            </summary>
-        </member>
-        <member name="M:SystemService.GetMemoryOverview(System.String)">
-            <summary>
-            Gets an overview of the Project Nightlife Platform's memory usage
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:SystemService.GetCPUOverview(System.String)">
-            <summary>
-            Gets an overview of the Project Nightlife Platform's CPU usage
-            </summary>
-            <returns></returns>
         </member>
     </members>
 </doc>

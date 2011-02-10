@@ -92,10 +92,10 @@
                 </tbody>
                 <tbody>
                   <tr>
-                    <th><label>Genres</label></th>
+                    <th><label>Genres / Styles</label></th>
                     <td>
                       <div style="position: relative; z-index: 100;" id="genreContainer">
-                        <input id="genreInput" name="helper" class="UIoptionInput" type="text" /><span class="italic">Genre not listed? <a href="#" onclick="return requestGenre();">Request it</a></span>
+                        <input id="genreInput" name="helper" class="UIoptionInput" type="text" /><span class="italic">Genre or style not listed? <a href="#" onclick="return requestGenre();">Request it</a></span>
                         <div id="genreFilter" class="dropDown"></div>
                       </div>
                       <select id="genres" name="genres" class="UIoptions" serializable="serializeGenres" validator="validateGenres" size="{if $blogGenres|@count > 3}{$blogGenres|@count}{else}3{/if}">
@@ -104,9 +104,9 @@
                         {/foreach}
                       </select>
                       <label class="uiButton" style="margin: 1em 0;">
-                        <input type="button" onclick="removeGenreOption()" value="Remove genre" />
+                        <input type="button" onclick="removeGenreOption()" value="Remove style" />
                       </label>
-                      <div id="genreEmptyWarning" class="UIembeddedMsg">Warning: You must enter at least one genre in order for Project Nightlife to index your blog and any posts you make.</div>
+                      <div id="genreEmptyWarning" class="UIembeddedMsg">Warning: You must enter at least one genre or style in order for Project Nightlife to index your blog and any posts you make.</div>
                     </td>
                   </tr>
                   <tr>

@@ -2,8 +2,6 @@
 $globalDir = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
 require_once($globalDir.'pages\\includes\\global.php');
 
-$logService->LogAppHit($appId, $_SERVER['REQUEST_URI'], $_SERVER['HTTP_USER_AGENT'], $_SERVER['REMOTE_ADDR']);
-
 if (!$session['ownsBlog'])
 {
 	//die("User doesn't own a blog"); // tempory
@@ -42,7 +40,7 @@ switch ($action)
 	case 'edit' :       $page = 'templates/editpost.tpl';
 					    try {
 					      try {
-	                   	      $post = $blogService->GetPost($_GET['p']);
+	                   	      $post = $blogService->GetPost($_GET['p'], false);
 					      }
 					      catch (Exception $e)
 					      {

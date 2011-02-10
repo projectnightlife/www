@@ -40,6 +40,10 @@ function initUploader()
   {
 	  echo "parent.uploadComplete('".$_GET['photo']."');";
   }
+  if (isset($_GET['error']))
+  {
+	  echo "parent.uploadError();";
+  }
   ?>
 }
 </script>
@@ -51,7 +55,6 @@ function initUploader()
   <input id="file" name="image" class="text" type="file" />
   <input type="hidden" name="caption" value="" />
   <input type="hidden" name="return" id="return" value="http://www.projectnightlife.co.uk/blogupload.php" />
-  <span class="text" id="filename"></span>
 </form>
 </body>
 </html>

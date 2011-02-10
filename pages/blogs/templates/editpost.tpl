@@ -73,7 +73,7 @@
                           <img src="images/core/spinners/001.gif" />
                           <span style="margin-left: 10px;">Uploading Photo...</span>
                         </div>
-                        <div id="photoUploadWarning" class="UIembeddedMsg">Your photo changes will take effect once you press publish. If you deleted the wrong photo, you can restore your post's original photos (if any existed) by <u>not</u> saving your changes.</div>
+                        <div id="photoUploadWarning" class="UIembeddedMsg">Your photo changes will take effect once you press save. If you deleted the wrong photo, you can restore your post's original photos by <u>not</u> saving your changes.</div>
                       </div>
                     </td>
                   </tr>
