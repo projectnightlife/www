@@ -120,9 +120,10 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 .span750 { width: 750px; }
 .span770 { width: 770px; }
 .span780 { width: 780px; }
+.span790 { width: 790px; }
 .span960 { width: 960px; }
 
-.span10, .span20, .span140, .span160, .span180, .span200, .span220, .span300, .span310, .span320, .span500, .span580, .span600, .span620, .span630, .span650, .span720, .span750, .span770, .span780, .span960 { float: left; }
+.span10, .span20, .span140, .span160, .span180, .span200, .span220, .span300, .span310, .span320, .span500, .span580, .span600, .span620, .span630, .span650, .span720, .span750, .span770, .span780, .span790, .span960 { float: left; }
 
 /* UI panels */
 
@@ -157,6 +158,26 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 .dialogPositioner .dialog .body .message .content .fieldSet .label { float: left; padding: 5px 10px 0 0; text-align: right; width: 55px; }
 .dialogPositioner .dialog .body .message .content input[type="text"], .dialogPositioner .dialog .body .message .content textarea { float: left; margin: 0; padding: 6px 4px; width: 465px; background: #121212; border: 1px solid #1e1e1e; color: #BBB; font-size: 12px; font-family: Tahoma, Geneva, sans-serif; }
 .dialogPositioner .dialog .body .message .content textarea { height: 100px; }
+
+.dialogPositioner .dialog .body .notifications .notification { border-bottom: #222 1px solid; padding: 10px 0; overflow: auto; }
+.dialogPositioner .dialog .body .notifications .first { padding-top: 0 !important; }
+.dialogPositioner .dialog .body .notifications .last { border: none !important; padding-bottom: 0; }
+.dialogPositioner .dialog .body .notifications .notification img { display: block; float: left; }
+.dialogPositioner .dialog .body .notifications .notification .details { float: left; padding-left: 8px; }
+.dialogPositioner .dialog .body .notifications .notification h3 { width: 265px; }
+.dialogPositioner .dialog .body .notifications .notification h3 a { font-size: 12px; }
+.dialogPositioner .dialog .body .notifications .notification p { font-size: 11px; margin-bottom: 0px; width: 265px; }
+
+/* notifications */
+
+.notifications .notification { border-bottom: #222 1px solid; padding: 10px 0; overflow: auto; }
+.notifications .first { padding-top: 0 !important; }
+.notifications .last { border: none !important; padding-bottom: 0; }
+.notifications .notification img { display: block; float: left; }
+.notifications .notification .details { float: left; padding-left: 8px; }
+.notifications .notification h3 { width: 680px; }
+.notifications .notification h3 a { font-size: 12px; }
+.notifications .notification p { font-size: 11px; margin-bottom: 0px; width: 680px; }
 
 /* filter menus */
 
@@ -286,12 +307,14 @@ a.thumb img { margin: 3px; }
 
 /* Embedded message boxes */
 
-.UIembeddedMsg { font-size: 11px; margin-botom: 1em; margin-top: 1.7em; background-color: #FDF07E; border: 1px solid #e7d118; color: #111; padding: 10px; overflow: auto; display: none; }
+.UIembeddedMsg { font-size: 11px; margin-bottom: 1em; margin-top: 1.5em; background-color: #FDF07E; border: 1px solid #e7d118; color: #111; padding: 10px; overflow: auto; display: none; }
 
 /* social media pluggins */
 
 table.socialPlugins { margin: 0; }
 table.socialPlugins th { font-weight: normal; }
+.fblike { width: 200px; overflow: hidden !important; }
+.fblikecount { width: 55px !important; }
 
 /* profile interaction buttons */
 
