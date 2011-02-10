@@ -47,7 +47,9 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 
 .masthead { margin: 15px 0 0; overflow: auto; color: #aaa; }
 
-.masthead .heading { overflow: auto; }
+.masthead .heading { 
+	overflow: hidden; /* Greenhill - 10/02/2011 - Changed from auto to hidden to fix Firefox rendering bug */
+}
 
 .masthead .heading h1 { margin-bottom: 8px; font-size: 24px; color: #aaa; }
 
