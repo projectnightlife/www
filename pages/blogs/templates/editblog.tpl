@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
 </head>
 
-<body id="blogs">
+<body id="blogs{if $ismobile == "true"} mobile{/if}">
   <div class="wrapper">
     {include file='../../includes/templates/header.tpl'}
     <div class="container">
@@ -47,7 +47,7 @@
                 </tbody>
                 <tbody>
                   <tr>
-                    <th><label>Description</label></th><td><textarea id="blogDescription" name="description" validator="api.validation.nonEmpty" class="expand260-1000" onkeydown="api.limitText(this,4000);" onkeyup="api.limitText(this,4000);" onchange="api.limitText(this,4000);"></textarea></td>
+                    <th><label>Description</label></th><td><textarea id="blogDescription" name="description" validator="api.validation.nonEmpty" class="expand260-1000" onKeyDown="api.limitText(this,4000);" onKeyUp="api.limitText(this,4000);" onChange="api.limitText(this,4000);"></textarea></td>
                   </tr>
                   <tr>
                     <td colspan="2"><hr /></td>
@@ -59,7 +59,7 @@
                     <td class="UIsinglePhotoUpload">
                       <div id="addedPhotos" class="addedContent"></div>
                       <div class="addContentContainer">
-                        <a href="#" onclick="return initAddPhotos();" id="addPhotoText">Add photos</a>
+                        <a href="#" onClick="return initAddPhotos();" id="addPhotoText">Add photos</a>
                         <div id="photo_upload">
                           <span class="uploadPhotoText">Upload a photo</span>
                           <iframe id="upload_iframe" src="http://www.projectnightlife.co.uk/blogupload.php?type=BlogUploadProfile" frameborder="0" scrolling="no"></iframe>
@@ -82,7 +82,7 @@
                     <th><label>Genres / Styles</label></th>
                     <td>
                       <div style="position: relative; z-index: 100;" id="genreContainer">
-                        <input id="genreInput" name="helper" class="UIoptionInput" type="text" /><span class="italic">Genre or style not listed? <a href="#" onclick="return requestGenre();">Request it</a></span>
+                        <input id="genreInput" name="helper" class="UIoptionInput" type="text" /><span class="italic">Genre or style not listed? <a href="#" onClick="return requestGenre();">Request it</a></span>
                         <div id="genreFilter" class="dropDown"></div>
                       </div>
                       <select id="genres" name="genres" class="UIoptions" serializable="serializeGenres" validator="validateGenres" size="{if $blogGenres|@count > 3}{$blogGenres|@count}{else}3{/if}">
@@ -91,7 +91,7 @@
                         {/foreach}
                       </select>
                       <label class="uiButton" style="margin: 1em 0;">
-                        <input type="button" onclick="removeGenreOption()" value="Remove style" />
+                        <input type="button" onClick="removeGenreOption()" value="Remove style" />
                       </label>
                       <div id="genreEmptyWarning" class="UIembeddedMsg">Warning: You must enter at least one genre or style in order for Project Nightlife to index your blog and any posts you make.</div>
                     </td>

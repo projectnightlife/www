@@ -13,7 +13,7 @@ var requiredRevision = 45;
 </script>
 </head>
 
-<body id="blogs">
+<body id="blogs{if $ismobile == "true"} mobile{/if}">
   <div class="wrapper">
     {include file='../../includes/templates/header.tpl'}
     <div class="container">

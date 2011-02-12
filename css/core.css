@@ -482,3 +482,14 @@ border-color: #777 #777 #666;
 color: #1d1d1d !important; }
 .uiButtonConfirm:active { background:#7a7a7a;border-color:#555; border-bottom-color: #696969;}
 .uiButtonConfirm input { color:#1f1f1f; font-weight:bold;}
+
+/** Mobile-device optimised
+-----------------------------------------------------------------------**/
+
+body.mobile { 
+
+}
+
+body.mobile .wrapper { 
+	width: auto !important; 
+}

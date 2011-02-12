@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
 </head>
 
-<body id="blogs">
+<body id="blogs{if $ismobile == "true"} mobile{/if}">
   <div class="wrapper">
     {include file='../../includes/templates/header.tpl'}
     <div class="container">
@@ -51,7 +51,7 @@
                     <td class="UIsinglePhotoUpload">
                       <div id="addedPhotos" class="addedContent"></div>
                       <div class="addContentContainer">
-                        <a href="#" onclick="return initAddPhotos();" id="addPhotoText">Add photos</a>
+                        <a href="#" onClick="return initAddPhotos();" id="addPhotoText">Add photos</a>
                         <div id="photo_upload">
                           <span class="uploadPhotoText">Upload a photo</span>
                           <iframe id="upload_iframe" src="http://www.projectnightlife.co.uk/blogupload.php?type=BlogUploadPhoto" frameborder="0" scrolling="no"></iframe>
@@ -74,10 +74,10 @@
                     <td>
                       <div id="addedObjects" class="addedContent"></div>
                       <div class="addContentContainer">
-                        <a href="#" onclick="return initAddObjects();" id="addObjectText">Add flash content</a>
+                        <a href="#" onClick="return initAddObjects();" id="addObjectText">Add flash content</a>
                         <textarea id="object" name="helper" style="height: 50px; display: none;"></textarea>
                         <label class="uiButton" id="objectButton" style="display: none;">
-                          <input type="button" onclick="addObject()" value="Add Flash" />
+                          <input type="button" onClick="addObject()" value="Add Flash" />
                         </label>
                       </div>
                     </td>
@@ -99,7 +99,7 @@
                       {/foreach}
                       </select>
                       <label class="uiButton" style="margin: 1em 0;">
-                        <input type="button" onclick="removeKeywordOption()" value="Remove keyword" />
+                        <input type="button" onClick="removeKeywordOption()" value="Remove keyword" />
                       </label>
                       <div id="keywordWarning" class="UIembeddedMsg">Warning: You must enter at least two keywords in order for Project Nightlife relate this post to others.</div>
                     </td>
@@ -123,9 +123,9 @@
                       </label>
                       <label class="uiButton">
                         {if $uri|strpos:"v=edit" === false}
-                        <input type="button" value="Discard" onclick="api.launchConfirmDialog(&quot;Do you wish to discard this post?&quot;, &quot;discardPost&quot;); return false;" />
+                        <input type="button" value="Discard" onClick="api.launchConfirmDialog(&quot;Do you wish to discard this post?&quot;, &quot;discardPost&quot;); return false;" />
                         {else}
-                        <input type="button" value="Delete" onclick="api.launchConfirmDialog(&quot;Do you wish to delete this post?&quot;, &quot;removePost&quot;, &quot;{$post->id}&quot;); return false;" />
+                        <input type="button" value="Delete" onClick="api.launchConfirmDialog(&quot;Do you wish to delete this post?&quot;, &quot;removePost&quot;, &quot;{$post->id}&quot;); return false;" />
                         {/if}
                       </label>
                       <div id="savingNotification" class="UIembeddedMsg">

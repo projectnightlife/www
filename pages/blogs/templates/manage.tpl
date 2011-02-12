@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
 </head>
 
-<body id="blogs">
+<body id="blogs{if $ismobile == "true"} mobile{/if}">
   <div class="wrapper">
     {include file='../../includes/templates/header.tpl'}
     <div class="container">
@@ -28,7 +28,7 @@
               <div class="UIcontrol">
                 <ul class="filter" id="postFilter">
                   <li class="spinner">loading icon</li>
-                  <li class="selected rnd8px"><a onclick="return false;" href="#">Posts</a></li>
+                  <li class="selected rnd8px"><a onClick="return false;" href="#">Posts</a></li>
                   <!--<li class="last"><a onclick="return transition();" href="#">Charts</a></li>-->
                 </ul>
               </div>
@@ -46,14 +46,14 @@
                     <span class="datetime right">{$post->created}</span>
                   </div>
                   <p class="word-wrap">{$post->excerpt}</p>
-                  <ul class="inline-links"><li><i>Live</i></li><li><a href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit</a></li><li><a href="#" onclick="api.launchConfirmDialog(&quot;Do you wish to delete this post?&quot;, &quot;removePost&quot;, &quot;{$post->id}&quot;); return false;">Delete</a></li><li><div class="ajaxSpinner" id="postSpinner{$post->id}"></div></li></ul>
+                  <ul class="inline-links"><li><i>Live</i></li><li><a href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit</a></li><li><a href="#" onClick="api.launchConfirmDialog(&quot;Do you wish to delete this post?&quot;, &quot;removePost&quot;, &quot;{$post->id}&quot;); return false;">Delete</a></li><li><div class="ajaxSpinner" id="postSpinner{$post->id}"></div></li></ul>
                 </div>
               </li>
               {/foreach}
               {if $smarty.foreach.posts.total eq 10}
               <li class="last">
                 <div style="width: 500px; margin: 0 auto; padding: 5px; text-align: center;">
-                  <a href="backend/ajax.php?service=blog&method=GetPostsByBlog&id={$blog->id}&amount=10&start=10" ajaxify="1" callback="injectPosts" onclick="this.style.display = 'none'; document.getElementById('morePostsSpinner').style.display = 'inline-block';" spinner="morePostsSpinner" offset="10" pagesize="10">View more</a>
+                  <a href="backend/ajax.php?service=blog&method=GetPostsByBlog&id={$blog->id}&amount=10&start=10" ajaxify="1" callback="injectPosts" onClick="this.style.display = 'none'; document.getElementById('morePostsSpinner').style.display = 'inline-block';" spinner="morePostsSpinner" offset="10" pagesize="10">View more</a>
                   <div id="morePostsSpinner" class="ajaxSpinner" style="display: none; float: none; margin: 1px;"></div>
                 </div> 
               </li>

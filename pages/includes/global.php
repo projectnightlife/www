@@ -67,4 +67,13 @@ if (API::isUserLoggedIn())
 $smarty->assign('pageData', $pageData);
 $smarty->assign('session', $session);
 //print '<div style="margin: 20px; background-color: #FDF07E; border: 1px solid #e7d118; color: #111; padding: 10px;"><p>We\'re currently reworking the genre system and as a result, its broken quite a lot of pages which rely on the old system.</p></div>';
+
+// Greenhill - 12/02/2011 - Load mobiledetect
+require_once($global."browscap\Mobile_Detect.php");
+@$mobiledetect = new Mobile_Detect();
+if ($mobiledetect->isMobile()) {
+	$smarty->assign("ismobile", "true");
+} else {
+	$smarty->assign("ismobile", "false");
+}
 ?>

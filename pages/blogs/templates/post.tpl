@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
 </head>
 
-<body id="blogs">
+<body id="blogs{if $ismobile == "true"} mobile{/if}">
   <input type="hidden" id="commentCount" value="{$post->numComments}" autocomplete="off" />
   <div class="wrapper">
     {include file='../../includes/templates/header.tpl'}
