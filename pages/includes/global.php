@@ -28,6 +28,11 @@ $session = array();
 $pageData = array();
 $pageData['year'] = gmDate("Y");
 
+if (strcmp(substr($_SERVER['REQUEST_URI'], strlen($_SERVER['REQUEST_URI']) - 1), "/") == 0)
+	$pageData['URIDetectTrailingSlash'] = "/";
+else
+	$pageData['URIDetectTrailingSlash'] = "";
+
 $credentials = API::GetUserCredentials();
 $user = $credentials->getUser();
 

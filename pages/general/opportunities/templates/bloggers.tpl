@@ -1,26 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Project Nightlife | Blog For Us</title>
-<link rel="shortcut icon" href="images/core/icons/favicon.ico" type="image/x-icon" />
-<link rel="icon" type="image/png" href="images/core/icons/favicon.png" />
-<link rel="apple-touch-icon" href="images/core/icons/favicon.png" />
-<!-- Framework CSS -->
-  <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
-  <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" />
-  <!--[if lte IE 7]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-  <!--[if IE]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
-  <link rel="stylesheet" href="css/core.css" type="text/css" media="screen, projection" />
-  <link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection" />
+{include file='../../includes/templates/page.tpl'}
+<title>Blog For Us | Project Nightlife</title>
+<link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
   <style type="text/css">
 input[type="text"] { float: left; width: 465px; background: #121212; border-color: #252525; padding: 7px; color: #ccc; font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
 textarea { float: left; width: 425px; height: 125px; background: #121212; border-color: #252525; padding: 7px; color: #ccc; margin: 0; font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
 div#reel { position: absolute; width: 4790px; height: 377px; left: 0; top: 0; }
 div#reel div.slide { display: block; float: left; width: 938px; height: 357px; margin: 10px; }
 select { font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; background: #121212; border-color: #252525; color: #ccc; }
-.UIinputPanel { background-color:#0f0f0f; padding: 10px; overflow: auto; -webkit-border-top-left-radius: 6px; -webkit-border-bottom-left-radius: 6px; -moz-border-top-left-radius: 6px; -moz-border-bottom-left-radius: 6px; border-top-left-radius: 6px; border-bottom-left-radius: 6px; border: 1px solid #111; }
+.UIinputPanel { background-color:#0f0f0f; padding: 10px; overflow: auto; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; border: 1px solid #111; }
 .UIinputPanelHeading { font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; color: #ABA0C0; line-height: 16px; }
 .slideHeading { margin: 0; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 28px; color: #ABA0C0; line-height: 36px; }
 </style>
@@ -38,7 +25,8 @@ select { font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', s
       
       <form id="blogForm" name="blogForm" action="backend/ajax.php" ajaxify="1" callback="requestSent" spinner="requestSpinner:001" errorCallback="requestError" onFormSubmit="submitRequest" autocomplete="off">
       
-      <div class="span960">
+      <div class="span960" style="position: relative;">
+        <div id="genreFilter" class="dropDown" style="z-index: 10000; top: 156px; left: 538px;"></div>
         <div class="UIpanel" style="position: relative; overflow: hidden; width: 958px; height: 377px; padding: 0;">
           <div id="reel">
             <div class="slide">
@@ -92,8 +80,8 @@ select { font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', s
               <div style="height: 330px;">
                 <h1 class="slideHeading">Join Us</h1>
                 <div style="padding: 30px 0; overflow: auto;">
-                  <div style="margin: 0 auto; width: 654px;">
-                    <div class="UIinputPanel" style="float: left; width: 300px; height: 190px;">
+                  <div style="margin: 0 auto; width: 654px; overflow: auto;">
+                    <div class="UIinputPanel" style="float: left; width: 300px; height: 190px; -webkit-border-top-right-radius: 0; -webkit-border-bottom-right-radius: 0; -moz-border-top-right-radius: 0; -moz-border-bottom-right-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0;">
                       <h3 class="UIinputPanelHeading">Choose a mugshot</h3>
                       
                       <div class="UIsinglePhotoUpload">
@@ -111,12 +99,12 @@ select { font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', s
                       <input type="hidden" name="thumbnail" serializable="serializeThumbnail" value="" autocomplete="off" />
                       
                     </div>
-                    <div class="UIinputPanel" style="float: right; width: 300px; height: 190px;">
+                    <div class="UIinputPanel" style="float: right; width: 300px; height: 190px; -webkit-border-top-left-radius: 0; -webkit-border-bottom-left-radius: 0; -moz-border-top-left-radius: 0; -moz-border-bottom-left-radius: 0; border-top-left-radius: 0; border-bottom-left-radius: 0;">
                       <h3 class="UIinputPanelHeading" style="margin-bottom: 15px;">Select some genres</h3>
                       <div style="width: 215px; margin: 0 auto;">
                         <div style="position: relative; z-index: 100;" id="genreContainer">
                           <input id="genreInput" name="helper" class="UIoptionInput" type="text" style="float: none !important; color: #999; font-style: italic;" value="type here and select results..." autocomplete="off" />
-                          <div id="genreFilter" class="dropDown"></div>
+                          
                         </div>
                         <select id="genres" name="genres" class="UIoptions" serializable="serializeGenres" validator="validateGenres" size="3"></select>
                         <label class="uiButton" style="margin: 1em 0;">
@@ -233,7 +221,7 @@ function submitRequest()
 	  document.getElementById('spinnerContainer').style.width = "500px";
 	  document.getElementById('spinnerContainer').style.marginTop = "90px";
 	  document.getElementById('spinnerContainer').innerHTML = "<p>Great, you're all set up and ready to start blogging.</p><p>In just a moment we'll redirect you to your Blog's control panel, where you can create your first post.</p>";
-	  setTimeout('window.location = "/blog/edit#welcome";', 8000);
+	  setTimeout('window.location = "/blog/edit#welcome";', 6000);
   }
 
 function validateGenres(genres)
@@ -277,7 +265,7 @@ function validateName(input)
 	var valid = true;
 	var pattern = /\s+/g; // all white space characters (selecting consecutive as one) not stopping at the first (\n \t space etc...)
 	
-	if(!input.value.replace(pattern, "").length > 0)
+	if(!input.replace(pattern, "").length > 0)
 	{
 	  valid = false;
 	  api.error = "Please enter the name of your blog";
@@ -293,7 +281,7 @@ function validateDescription(input)
 	var valid = true;
 	var pattern = /\s+/g; // all white space characters (selecting consecutive as one) not stopping at the first (\n \t space etc...)
 	
-	if(!input.value.replace(pattern, "").length > 0)
+	if(!input.replace(pattern, "").length > 0)
 	{
 	  valid = false;
 	  api.error = "Please provide a brief description of your blog";
@@ -319,11 +307,6 @@ function insertGenreOption(value, key)
 		  //genres.add(new Option(value, key), null);
 		  var options = $(genres).attr('options');
           options[options.length] = new Option(value, key, true, true);
-		  //if (genres.size < genres.length)
-		    //genres.size = genres.length;
-		  //else
-		  if (genres.length > 3)
-		    genres.size++;
 		}
 		else
 		{
@@ -342,10 +325,6 @@ function removeGenreOption()
 	if(genres.selectedIndex >= 0)
 	{
       genres.remove(genres.selectedIndex);
-	  if (genres.options.length < 3)
-		genres.size = 3;
-	  else
-		genres.size--;
 	}
 	else
 	{

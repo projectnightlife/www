@@ -31,7 +31,7 @@ switch ($action)
    							exit(); 
 						}
 						$smarty->assign('blogContributors', $blogContributors);
-						$page = 'templates/overview.tpl';
+						$page = 'templates/dashboard.tpl';
 	                    break;
 					 
 	case 'new' :        $page = 'templates/editpost.tpl';
@@ -118,10 +118,7 @@ switch ($action)
 						$page = 'templates/insights.tpl';
 	                    break;
 					 
-	case 'guidelines' : $page = 'templates/guidelines.tpl';
-	                    break;
-					 
-	case 'guide' :  $page = 'templates/guide.tpl';
+	case 'guide' :      $page = 'templates/guide.tpl';
 	                    break;
 					 
 	default :           $page = 'templates/overview.tpl';

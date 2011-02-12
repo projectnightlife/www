@@ -19,8 +19,9 @@
 	margin: 0 auto; 
 	padding: 20px 0 15px; 
 	width: 530px; 
-	min-height: 400px; /* Greenhill - 10/02/2011 - Added to stop a slidebar rendering bug on blog comment forms */
+	/*min-height: 400px;  Greenhill - 10/02/2011 - Added to stop a slidebar rendering bug on blog comment forms */
 	font-family: Tahoma, Geneva, sans-serif; 
+	overflow-x: hidden;
 }
 
 #blogs .comments .viewAll { padding: 10px; color: #bbb; font-size: 11px; background: #111; margin-bottom: 2px; border: #0f0f0f solid 1px; overflow: auto; }
@@ -55,10 +56,10 @@
 
 #blogs .blogstats li { float: left; text-align: center; }
 
-#blogs .blogstats li.posts { border-right: #222 1px solid; padding: 0 20px 0 24px; width: 48px; }
+#blogs .blogstats li.postCount { border-right: #222 1px solid; padding: 0 20px 0 24px; width: 48px; }
 
-#blogs .blogstats li.comments { padding: 0 20px; width: 60px; }
+#blogs .blogstats li.commentCount { padding: 0 20px; width: 60px; }
 
-#blogs .blogstats li.followers { border-left: #222 1px solid; padding: 0 24px 0 20px; width: 60px; }
+#blogs .blogstats li.followerCount { border-left: #222 1px solid; padding: 0 24px 0 20px; width: 60px; }
 
 #blogs .blogstats li .value { display: block; font-size: 22px; color: #ABA0C0; }

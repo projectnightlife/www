@@ -290,6 +290,8 @@ function addPhoto(photo, loadingPage)
 	var addedPhotos = document.getElementById('addedPhotos');
 	var image = document.createElement('img');
     image.src = "http://www.projectnightlife.co.uk/photo/"+newPhoto.id+"/160x120";
+	image.style.width = "160px";
+	image.style.height = "120px";
 	var holder = document.createElement('div');
 	holder.className = 'mediaPreviewControl';
 	holder.id = 'photo'+photos.length;

@@ -77,6 +77,10 @@ class API
 		{
 			return self::CreateWS("http://www.projectnightlife.co.uk/api/InsightService.asmx?WSDL");
 		}
+		else if ($serviceName == "authentication")
+		{
+			return self::CreateWS("http://www.projectnightlife.co.uk/api/AuthenticationService.asmx?WSDL");
+		}
 	}
 	
 	public static function GetDateString($timestamp)
@@ -198,6 +202,5 @@ class API
 		return $result;
 	}
 }
-
 
 ?>

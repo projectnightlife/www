@@ -1,26 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+{include file='../../includes/templates/page.tpl'}
 <meta property="og:title" content="{$blog->name}"/>
 <meta property="og:type" content="blog"/>
 <meta property="og:url" content="http://www.projectnightlife.co.uk/blog/{$blog->id}"/>
 <meta property="og:image" content="http://photos.projectnightlife.co.uk/uploads/{$blog->thumbnail}.jpg"/>
 <meta property="og:site_name" content="Project Nightlife"/>
 <meta property="fb:app_id" content="131359770249054"/>
-<meta property="og:description" content="{$blog->description}"/>
-<title>Project Nightlife | {$blog->name} Blog</title>
-<link rel="shortcut icon" href="images/core/icons/favicon.ico" type="image/x-icon" />
-<link rel="icon" type="image/png" href="images/core/icons/favicon.png" />
-<link rel="apple-touch-icon" href="images/core/icons/favicon.png" />
-<!-- Framework CSS -->
-  <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
-  <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
-  <!--[if lte IE 7]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-  <!--[if IE]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
-  <link rel="stylesheet" href="css/core.css" type="text/css" media="screen, projection">
-  <link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
+<meta property="og:description" content="{$blog->slogan}"/>
+<title>{$blog->name} | Project Nightlife</title>
+<link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
 </head>
 
 <body id="blogs">
@@ -60,7 +47,7 @@
             </div>
             <div id="subscriptions">
               {foreach from=$subscribers item=subscriber name=subscribers}
-              <a id="subscription[{$subscriber->id}]" href="http://www.facebook.com/profile.php?id={$subscriber->id}" class="fbSquareProfilePic" title="{$subscriber->firstname} {$subscriber->lastname}" target="_blank"><img src="https://graph.facebook.com/{$subscriber->id}/picture" alt="{$subscriber->firstname} {$subscriber->lastname}" /></a>
+              <a id="subscription[{$subscriber->id}]" href="http://www.facebook.com/profile.php?id={$subscriber->id}" class="fbSquareProfilePic" title="{$subscriber->firstname} {$subscriber->lastname}" target="_blank"><img src="https://graph.facebook.com/{$subscriber->id}/picture" alt="{$subscriber->firstname} {$subscriber->lastname}" width="50" height="50" /></a>
               {/foreach}
             </div>
           </div>
@@ -79,7 +66,7 @@
                 {foreach from=$blogContributors item=contributor name=contributors}{if $smarty.foreach.contributors.first}<a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{elseif $smarty.foreach.contributors.last} and <a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{else}, <a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{/if}{/foreach}
                 </p>
                 {foreach from=$genres item=genre name=genres}
-                  <a href="pages/blogs/blogs.php?filter={$genre->name}" title="{$genre->name} homepage"><img src="images/genres/{$genre->id}.png" alt="{$genre->name}" style="margin-right: 3px;" /></a>
+                  <a href="pages/blogs/blogs.php?filter={$genre->name}" title="{$genre->name} homepage"><img src="images/genres/{$genre->id}.png" alt="{$genre->name}" style="margin-right: 3px;" height="19" /></a>
                 {/foreach}
               </div>
               <div class="right fblike fblikecount">
@@ -113,7 +100,7 @@
               {if $smarty.foreach.posts.total eq 8}
               <li class="last">
                 <div style="width: 500px; margin: 0 auto; padding: 5px; text-align: center;">
-                  <a href="backend/ajax.php?service=blog&method=GetPostsByBlog&id={$blog->id}&amount=8&start=8" ajaxify="1" callback="injectPosts" onclick="this.style.display = 'none'; document.getElementById('morePostsSpinner').style.display = 'inline-block';" spinner="morePostsSpinner" offset="8" pagesize="8">View more</a>
+                  <a href="backend/ajax.php?service=blog&method=GetPostsByBlog&id={$blog->id}&amount=8&start=8" ajaxify="1" callback="injectPosts" onClick="this.style.display = 'none'; document.getElementById('morePostsSpinner').style.display = 'inline-block';" spinner="morePostsSpinner" offset="8" pagesize="8">View more</a>
                   <div id="morePostsSpinner" class="ajaxSpinner" style="display: none; float: none; margin: 1px;"></div>
                 </div> 
               </li>

@@ -1,19 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Project Nightlife | Dashboard</title>
-<link rel="shortcut icon" href="images/core/icons/favicon.ico" type="image/x-icon" />
-<link rel="icon" type="image/png" href="images/core/icons/favicon.png" />
-<link rel="apple-touch-icon" href="images/core/icons/favicon.png" />
-<!-- Framework CSS -->
-  <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
-  <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
-  <!--[if lte IE 7]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-  <!--[if IE]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
-  <link rel="stylesheet" href="css/core.css" type="text/css" media="screen, projection">
-  <link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
+{include file='../../includes/templates/page.tpl'}
+<title>Dashboard | Project Nightlife</title>
+<link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
 </head>
 
 <body id="blogs">
@@ -38,7 +25,7 @@
           <div class="UIpanel">
             <div class="blogvitals left">
               <div class="clear left">
-                <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=80x80" /></a>
+                <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=80x80" width="80" height="80" /></a>
               </div>
               <div class="info">
                 <h3 style="line-height: 1em">{$blog->name}</h3>
@@ -57,15 +44,15 @@
               <li class="first">
                 <div style="margin: 0 auto; width: 298px;">
                   <ul class="blogstats">
-                    <li class="posts">
+                    <li class="postCount">
                       <span class="value">{$blog->numPosts}</span>
                       <span>posts</span>
                     </li>
-                    <li class="comments">
+                    <li class="commentCount">
                       <span class="value">{$blog->numComments}</span>
                       <span>comments</span>
                     </li>
-                    <li class="followers">
+                    <li class="followerCount">
                       <span class="value">{$blog->numSubscribers}</span>
                       <span>subscribers</span>
                     </li>

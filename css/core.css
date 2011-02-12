@@ -196,9 +196,9 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 .notifications .last { border: none !important; padding-bottom: 0; }
 .notifications .notification img { display: block; float: left; }
 .notifications .notification .details { float: left; padding-left: 8px; }
-.notifications .notification h3 { width: 680px; }
+.notifications .notification h3 { width: 850px; }
 .notifications .notification h3 a { font-size: 12px; }
-.notifications .notification p { font-size: 11px; margin-bottom: 0px; width: 680px; }
+.notifications .notification p { font-size: 11px; margin-bottom: 0px; width: 850px; }
 
 /* filter menus */
 
@@ -307,7 +307,7 @@ a.thumb img { margin: 3px; }
 .mediaPreviewControl { position: relative; float: left; margin: 0 10px 10px 0; width: 168px; }
 .mediaPreviewControl img { width: 160px; height: 120px; padding: 3px; border: 1px solid #242424; }
 .mediaPreviewControl object { display: block; padding: 3px; border: 1px solid #242424; }
-.mediaPreviewControl > div { padding: 2px 1px; font-size: 11px; overflow: auto; }
+.mediaPreviewControl > div { padding: 2px 1px; font-size: 11px; overflow: hidden; }
 .mediaPreviewControl input { margin-left: 5px; }
 .mediaPreviewControl label { font-weight: normal; }
 .mediaPreviewControl .remove { position: absolute; top: 8px; right: 8px; display: inline-block; }

@@ -18,7 +18,7 @@ $response = array("data" => '
     <span>Step 3.</span><span style="padding-left: 10px;">Get started with Project Nightlife</span>
   </div>
 </div>
-<div style="padding: 20px 0;"><a class="register" href="/" style="display: block; margin: 0 auto;" ajaxify="1" id="fblogin" title="Click to register" onclick="return api.updateRegisterDialog();">Register</a></div>
+<div style="padding: 20px 0;"><a class="register" href="#" style="display: block; margin: 0 auto;" title="Click to register" onclick="return api.updateRegisterDialog();">Register</a></div>
 <p style="margin-bottom: 5px;">Although you\'ll be using Facebook to login, Facebook never send us your login details - so your account is completely safe.</p>
 <p style="font-size: 11px;">More information can be found at <a href="http://www.facebook.com/about/login/" target="_blank">http://www.facebook.com/about/login/</a></p>
 ');

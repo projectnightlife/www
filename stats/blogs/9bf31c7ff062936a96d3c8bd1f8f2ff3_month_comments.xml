@@ -6,7 +6,7 @@
     <chart_border color="666666"/> 
 	<axis_category font="Tahoma" bold="false" size="11" color="aaaaaa"/>
 	<series_color>
-		<color>3399ff</color>
+		<color>97e35f</color>
 	</series_color>
 	<legend layout="vertical" fill_color="0a0a0a" color="aaaaaa" size="12" bold="false" font="Tahoma"/>
 	<axis_value size="11" color="aaaaaa"/>
@@ -15,4 +15,4 @@
 Sun 23 Jan 2011</string><string>Mon 24 Jan 2011 to 
 Sun 30 Jan 2011</string><string>Mon 31 Jan 2011 to 
 Sun 6 Feb 2011</string><string>Mon 7 Feb 2011
-to now</string></row><row><string>Post views</string><number tooltip="0 post views">0</number><number tooltip="0 post views">0</number><number tooltip="51 post views">51</number><number tooltip="111 post views">111</number></row></chart_data></chart>
+to now</string></row><row><string>Post comments</string><number tooltip="0 comments">0</number><number tooltip="0 comments">0</number><number tooltip="0 comments">0</number><number tooltip="0 comments">0</number></row></chart_data></chart>

@@ -32,7 +32,7 @@ function API()
 		script.src = url;
 		document.getElementsByTagName('head')[0].appendChild(script);
 	  }
-  }
+  };
   
   if (window.location.href.lastIndexOf("debug") != -1)
   {
@@ -105,18 +105,11 @@ function API()
   };
   
   this.fbconnect = function() {
-	  try {
 	  FB.login(function(response) {
         if (response.session) { // ok, we've logged them in, now reload the current page
           window.location.reload();
         }
 	  }, {perms:'user_birthday,email,publish_stream'});
-	  }
-	  
-	catch (e)
-	{
-		alert("error thrown during fb login");
-	}
   };
   
   this.fbdisconnect = function() {
@@ -137,14 +130,16 @@ function API()
 		$('#registerDialog').html(response);
 	  }
   	  catch(e) {}
-  }
+  };
   
   this.updateRegisterDialog = function()
   {
+	  this.fbconnect();
 	  $('#registerDialog').empty().remove();
-	  $("<div style=\"margin: 120px auto 80px;\"><div style=\"font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; text-align: center; font-size: 18px; line-height: 26px;\">Just one moment</div><div id=\"requestSpinner\" class=\"ajaxSpinner\" style=\"display: block; background: url(http://www.projectnightlife.co.uk/images/core/spinners/001.gif); float: none; margin: 15px auto 7px;\"></div></div>").appendTo(".dialog .content");
+	  $("<div style=\"margin: 120px auto 81px;\"><div style=\"font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; text-align: center; font-size: 18px; line-height: 26px;\">Just one moment</div><div id=\"requestSpinner\" class=\"ajaxSpinner\" style=\"display: block; background: url(http://www.projectnightlife.co.uk/images/core/spinners/001.gif); float: none; margin: 15px auto 7px;\"></div></div>").appendTo(".dialog .content");
+	  $('#'+this.dialog+' .buttonSet input').val('Close');
 	  return false;
-  }
+  };
   
   /* dom manipulation methods */
   
@@ -194,7 +189,7 @@ function API()
 		}
 		catch (e) {}
 	  }
-  }
+  };
   
   this.removeSpinner = function(id) {
 	  if (id)
@@ -210,7 +205,7 @@ function API()
 		}
 		catch (e) {}
 	  }
-  }
+  };
   
   // validation //
   
@@ -260,6 +255,18 @@ function API()
 			  'lastname':lastname,
 			  'email':email
 		  }
+		  if (userId != 0) // check to see if their session has expired
+		    setTimeout("api.sendSimpleRequest('http://www.projectnightlife.co.uk/backend/ajax.php?service=authentication&method=IsGuestUser', 'api.session.monitor', null, true);", 60000);
+	  },
+	  monitor : function(response)
+	  {
+		  if (response[0] == 'true')
+		  {
+			 FB.logout(function(response) {});
+		     api.launchLoggedOutDialog();
+		  }
+		  else // recursively monitor session every 30 seconds
+		    setTimeout("api.sendSimpleRequest('http://www.projectnightlife.co.uk/backend/ajax.php?service=authentication&method=IsGuestUser', 'api.session.monitor', null, true);", 30000);
 	  }
   };
   
@@ -359,7 +366,7 @@ function API()
 	    return true;
 	  else
 	    return false;
-  }
+  };
 		  
   
   /* Dialog windows */
@@ -395,7 +402,7 @@ function API()
 	  dialog.appendChild(dialogBody);
 	  positioner.appendChild(dialog);
 	  document.body.appendChild(positioner);
-  }
+  };
   
   this.launchConfirmDialog = function(message, callback, arg) {
 	  this.forceCloseDialog();
@@ -418,14 +425,14 @@ function API()
 	  content.className = "content";
 	  content.innerHTML = message;
 	  buttonSet.className = 'buttonSet';
-	  buttonSet.innerHTML = '<label class="uiButton"><input type="button" value="No" onclick="return api.closeDialog();" /></label><label class="uiButton uiButtonConfirm"><input type="button" onclick="api.closeDialog(); '+callback+'(&quot;'+arg+'&quot;);" value="Yes" /></label>';
+	  buttonSet.innerHTML = '<label class="uiButton"><input type="button" value="Cancel" onclick="return api.closeDialog();" /></label><label class="uiButton uiButtonConfirm"><input type="button" onclick="api.closeDialog(); '+callback+'(&quot;'+arg+'&quot;);" value="Confirm" /></label>';
 	  dialogBody.appendChild(heading);
 	  dialogBody.appendChild(content);
 	  dialogBody.appendChild(buttonSet);
 	  dialog.appendChild(dialogBody);
 	  positioner.appendChild(dialog);
 	  document.body.appendChild(positioner);
-  }
+  };
   
   this.launchRegisterDialog = function(message, width) {
 	  this.forceCloseDialog();
@@ -454,7 +461,37 @@ function API()
 	  dialog.appendChild(dialogBody);
 	  positioner.appendChild(dialog);
 	  document.body.appendChild(positioner);
-  }
+  };
+  
+  this.launchLoggedOutDialog = function() {
+	  this.forceCloseDialog();
+	  var positioner = document.createElement("div");
+	  var dialog = document.createElement("div");
+	  var dialogBody = document.createElement("div");
+	  var heading = document.createElement("div");
+	  var content = document.createElement("div");
+	  var buttonSet = document.createElement("div");
+	  
+	  positioner.className = this.dialog;
+	  positioner.id = this.dialog;
+	  dialog.className = "dialog";
+	  dialog.style.width = "475px";
+	  dialogBody.style.width = "471px";
+	  dialog.style.top = ((this.getDocumentDimensions()[1] * 0.2) + this.getPageScrollOffsets()[1]) + "px";
+	  dialogBody.className = "body";
+	  heading.className = "heading";
+	  heading.innerHTML = '<h3>Please log in to continue</h3>';
+	  content.className = "content";
+	  content.innerHTML = 'You\'ve either become inactive or you\'ve logged out of Facebook. To continue using Project Nightlife, please login. Otherwise continue as a guest.';
+	  buttonSet.className = 'buttonSet';
+	  buttonSet.innerHTML = '<label class="uiButton"><input type="button" value="Cancel" onclick="return api.closeDialog();" /></label><label class="uiButton uiButtonConfirm"><input type="button" onclick="api.fbconnect();" value="Login" /></label>';
+	  dialogBody.appendChild(heading);
+	  dialogBody.appendChild(content);
+	  dialogBody.appendChild(buttonSet);
+	  dialog.appendChild(dialogBody);
+	  positioner.appendChild(dialog);
+	  document.body.appendChild(positioner);
+  };
   
   this.existsDialog = function() {
 	return (document.getElementById(this.dialog) != null);
@@ -520,22 +557,22 @@ function API()
 	  	$('#messageBody').TextAreaExpander(100, 300);
 	  });
 	  }
-	  catch(e){alert(e);}
+	  catch(e){}
 	  return false;
-  }
+  };
   
   this.sendMessage = function() {
 	  document.getElementById('sendMsg').disabled = true;
 	  document.getElementById('messageBody').disabled = true;
 	  $('#msgErrorNotification').fadeOut('normal').delay(300, function() { $('#'+api.msgDialog+' form > .content > .last').empty().remove(); $('#'+api.msgDialog+' form > .content > div:last').addClass('last'); });
-  }
+  };
   
   this.messageSent = function() {
 	  $('#'+this.msgDialog+' .content').children().empty().remove();
 	  $('#'+this.msgDialog+' .buttonSet').empty().remove();
 	  $('<div style="text-align: center; font-family: \'Lucida Sans Unicode\', \'Lucida Grande\', sans-serif; font-size: 18px; padding: 15px 0;">Message sent</div>').appendTo('#'+this.msgDialog+' form > .content');
 	  setTimeout('api.closeMsgDialog();', 1500);
-  }
+  };
   
   this.messageError = function() {
 	  document.getElementById('sendMsg').disabled = false;
@@ -543,7 +580,7 @@ function API()
 	  $('#'+this.msgDialog+' form > .content .last').removeClass('last');
 	  $('<div class="fieldSet last" style="padding-top: 0;"><div id="msgErrorNotification" style="margin: 0px 11px;" class="UIembeddedMsg">We were unable to send your message, please retry in a moment</div></div>').appendTo('#'+this.msgDialog+' form > .content');
 	  $('#msgErrorNotification').fadeIn('normal');
-  }
+  };
   
   this.existsMsgDialog = function() {
 	return (document.getElementById(this.msgDialog) != null);
@@ -579,13 +616,13 @@ function API()
 	  content = content.replace("[b]", "");
 	  content = content.replace("[/b]", "");
 	  return content;
-  }
+  };
   
   this.limitText = function (field, limit) {
     if (field.value.length > limit) {
       field.value = field.value.substring(0, limit);
     } 
-  }
+  };
   
   this.dummySerialization = function (element) {
 	  return element.value;
@@ -593,11 +630,11 @@ function API()
   
   this.serializeStringFormatting = function (content) {
 	  return this.internalSerializeString(content, true);
-  }
+  };
   
   this.serializeString = function (content) {
 	  return this.internalSerializeString(content, false);
-  }
+  };
   
   // serializes string into utf-8 compliant string. internal line breaks (\n character) converted into \ and n characters
   this.internalSerializeString = function (content, formatting) {
@@ -683,7 +720,7 @@ function API()
 	  api.launchDialog("Thanks", "<p>We'll have one of our engineers look into this straight away.</p><p>We appreciate your help in making Project Nightlife a better experience.</p>");
 	}
 	return false;
-  }
+  };
   
   /* ajax requests */
   
