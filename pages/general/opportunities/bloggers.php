@@ -15,6 +15,17 @@ catch (Exception $e)
   	exit(); 	
 }
 
+$resourceManager = new ResourceDependancyManager('bloggers', 'css');
+$resourceManager->addResource('blueprint/screen.css');
+$resourceManager->addResource('core.css');
+$pageData['cssFile'] = $resourceManager->build();
+
+$resourceManager = new ResourceDependancyManager('bloggers', 'js');
+$resourceManager->addResource('jquery.js');
+$resourceManager->addResource('api.js');
+$pageData['jsFile'] = $resourceManager->build();
+
+$smarty->assign('pageData', $pageData);
 $smarty->assign('genres', $genres);
 $smarty->display('templates/bloggers.tpl');
 ?>

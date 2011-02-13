@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/screen.css" type="text/css" media="screen, projection">
 <link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/print.css" type="text/css" media="print">
 <!--[if lte IE 7]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-<!--[if IE]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
 <link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/core.css" type="text/css" media="screen, projection">
 <title>Page Unavailable | Project Nightlife</title>
 </head>

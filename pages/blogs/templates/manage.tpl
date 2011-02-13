@@ -1,6 +1,6 @@
 {include file='../../includes/templates/page.tpl'}
 <title>Manage Content | Project Nightlife</title>
-<link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
 </head>
 
 <body id="blogs{if $ismobile == "true"} mobile{/if}">
@@ -80,6 +80,6 @@
   <div id="fb-root"></div>
 </body>
 </html>
+{include file='../../includes/templates/critical_js.tpl'}
+<script type="text/javascript" src="{$pageData['jsFile']}"></script>
 {include file='../../includes/templates/js.tpl'}
-<script type="text/javascript" src="js/corners.js"></script>
-<script type="text/javascript" src="js/blogs/manage.js"></script>

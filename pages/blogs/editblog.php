@@ -30,11 +30,22 @@ switch ($action)
 							header("HTTP/1.0 500 Internal Server Error"); 
    							exit(); 
 						}
+						$resourceManager = new ResourceDependancyManager('blogs/dashboard', 'js');
+						$resourceManager->addResource('jquery.js');
+						$resourceManager->addResource('api.js');
+						$pageData['jsFile'] = $resourceManager->build();
 						$smarty->assign('blogContributors', $blogContributors);
 						$page = 'templates/dashboard.tpl';
 	                    break;
 					 
 	case 'new' :        $page = 'templates/editpost.tpl';
+						$resourceManager = new ResourceDependancyManager('blogs/editpost', 'js');
+						$resourceManager->addResource('jquery.js');
+						$resourceManager->addResource('api.js');
+						$resourceManager->addResource('pnobject-linkify.js');
+						$resourceManager->addResource('jquery.textarea-expander.js');
+						$resourceManager->addResource('blogs/editpost.js');
+						$pageData['jsFile'] = $resourceManager->build();
 	                    break;
 					 
 	case 'edit' :       $page = 'templates/editpost.tpl';
@@ -65,6 +76,13 @@ switch ($action)
 							header("HTTP/1.0 500 Internal Server Error"); 
         					exit(); 
 					    }
+						$resourceManager = new ResourceDependancyManager('blogs/editpost', 'js');
+						$resourceManager->addResource('jquery.js');
+						$resourceManager->addResource('api.js');
+						$resourceManager->addResource('pnobject-linkify.js');
+						$resourceManager->addResource('jquery.textarea-expander.js');
+						$resourceManager->addResource('blogs/editpost.js');
+						$pageData['jsFile'] = $resourceManager->build();
 					    $smarty->assign('keywords', $keywords);
 					    $smarty->assign('post', $post);
 	                    break;
@@ -84,6 +102,12 @@ switch ($action)
                         {
                           $post->created = API::GetDateString((int)$post->created);
                         }
+						$resourceManager = new ResourceDependancyManager('blogs/manage', 'js');
+						$resourceManager->addResource('jquery.js');
+						$resourceManager->addResource('api.js');
+						$resourceManager->addResource('corners.js');
+						$resourceManager->addResource('blogs/manage.js');
+						$pageData['jsFile'] = $resourceManager->build();
 					    $smarty->assign('posts', $posts);
 	                    break;
 					 
@@ -109,6 +133,12 @@ switch ($action)
 							header("HTTP/1.0 500 Internal Server Error"); 
        						exit(); 
 					    }
+						$resourceManager = new ResourceDependancyManager('blogs/editblog', 'js');
+						$resourceManager->addResource('jquery.js');
+						$resourceManager->addResource('api.js');
+						$resourceManager->addResource('jquery.textarea-expander.js');
+						$resourceManager->addResource('blogs/editblog.js');
+						$pageData['jsFile'] = $resourceManager->build();
 						$smarty->assign('genres', $genres);
 					    $smarty->assign('blogGenres', $blogGenres);
 					    break;
@@ -116,14 +146,32 @@ switch ($action)
 	case 'insights' :   require_once('blogstats.php');
 						$pageData['blogIdHash'] = md5($blog->id);
 						$page = 'templates/insights.tpl';
+						$resourceManager = new ResourceDependancyManager('blogs/insights', 'js');
+						$resourceManager->addResource('jquery.js');
+						$resourceManager->addResource('api.js');
+						$pageData['jsFile'] = $resourceManager->build();
 	                    break;
 					 
 	case 'guide' :      $page = 'templates/guide.tpl';
+						$resourceManager = new ResourceDependancyManager('blogs/guide', 'js');
+						$resourceManager->addResource('jquery.js');
+						$resourceManager->addResource('api.js');
+						$pageData['jsFile'] = $resourceManager->build();
 	                    break;
 					 
 	default :           $page = 'templates/overview.tpl';
+						$resourceManager = new ResourceDependancyManager('blogs/dashboard', 'js');
+						$resourceManager->addResource('jquery.js');
+						$resourceManager->addResource('api.js');
+						$pageData['jsFile'] = $resourceManager->build();
 	                    break;
 }
+
+$resourceManager = new ResourceDependancyManager('blogs/editblog', 'css');
+$resourceManager->addResource('blueprint/screen.css');
+$resourceManager->addResource('core.css');
+$resourceManager->addResource('blogs.css');
+$pageData['cssFile'] = $resourceManager->build();
 
 $smarty->assign('pageData', $pageData);
 $smarty->assign('uri', $_SERVER['REQUEST_URI']);

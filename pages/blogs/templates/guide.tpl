@@ -1,6 +1,6 @@
 {include file='../../includes/templates/page.tpl'}
 <title>Guide | Project Nightlife</title>
-<link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
   <style type="text/css">
     .tutorial h3 { font-size: 20px; color: #ABA0C0; margin-bottom: 12px; line-height: 22px; }
 	.tutorial h4 { color: #777; }
@@ -194,4 +194,6 @@
   <div id="fb-root"></div>
 </body>
 </html>
+{include file='../../includes/templates/critical_js.tpl'}
+<script type="text/javascript" src="{$pageData['jsFile']}"></script>
 {include file='../../includes/templates/js.tpl'}

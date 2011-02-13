@@ -9,6 +9,7 @@ include_once($globalDir."WebService.php");
 include_once($globalDir."api.php");
 include_once($globalDir."facebook.php");
 include_once($globalDir."notification.php");
+include_once($globalDir."ResourceDependancyManager.php");
 
 
 ?>

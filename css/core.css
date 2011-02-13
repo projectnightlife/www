@@ -1,6 +1,6 @@
 * { margin: 0; }
 html, body { height: 100%; }
-body { background: url(../images/core/brick.jpg) repeat #444; font-family: Arial, Helvetica, sans-serif; }
+body { background: url(../../images/core/brick.jpg) repeat #444; font-family: Arial, Helvetica, sans-serif; }
 
 .wrapper { 
 	min-height: 100%; 
@@ -8,7 +8,7 @@ body { background: url(../images/core/brick.jpg) repeat #444; font-family: Arial
 	height: 100%;
 	margin: 0 auto -150px; 
 	width: 1000px; 
-	background: url(../images/core/stripe.png) repeat #000; 
+	background: url(../../images/core/stripe.png) repeat #000; 
 	-webkit-box-shadow: 0px 0px 5px #000; 
 	-moz-box-shadow: 0px 0px 5px #000; 
 	box-shadow: 0px 0px 5px #000; /* Greenhill - 10/02/2010 - Softening the page edge */
@@ -30,24 +30,24 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 
 /* header */
 
-.header { width: 980px; padding: 0 10px; margin: 0 auto; height: 50px; background: url(../images/core/header/colours.png) 0 -600px repeat-x; }
+.header { width: 980px; padding: 0 10px; margin: 0 auto; height: 50px; background: url(../../images/core/header/sprite.png) repeat-x; }
 .header ul { margin: 0; padding: 0; list-style: none; overflow: auto; }
 .header ul li { margin: 0; padding: 0; float: left; }
 
 .header ul.mainnav span { display: none; }
 .header ul.mainnav li#nav-home a { padding: 0; height: 50px; padding-right: 16px;}
-.header ul.mainnav li#nav-home img { padding: 9px 0 0 16px; }
+.header ul.mainnav li#nav-home .logo { padding: 9px 0 0 16px; background: url(../../images/core/sprite.png) 0 -35px no-repeat; width: 101px; height: 33px; }
 
-.header #mainsearch { margin: 15px 16px 0 5px; padding: 0; height: 20px; width: 162px; background: url(../images/core/header/searchbox.png) no-repeat; }
-.header #mainsearch input { padding: 0 0 0 14px; margin: 1px 0 0 8px; height: 18px; width: 132px; font: 1em Tahoma, Geneva, sans-serif; border: none; background: url(../images/core/header/magnifier.png) left no-repeat; }
+.header #mainsearch { margin: 15px 16px 0 5px; padding: 0; height: 20px; width: 162px; background: url(../../images/core/header/searchbox.png) no-repeat; }
+.header #mainsearch input { padding: 0 0 0 14px; margin: 1px 0 0 8px; height: 18px; width: 132px; font: 1em Tahoma, Geneva, sans-serif; border: none; background: url(../../images/core/header/magnifier.png) left no-repeat; }
 
 /* header links */
 
-.header ul.mainnav li a { display: block; padding: 18px 21px 0; height: 32px; color: #fff; font: 0.95em Tahoma, Geneva, sans-serif; background: url(../images/core/header/hover.png) repeat-x; text-decoration: none; }
+.header ul.mainnav li a { display: block; padding: 18px 21px 0; height: 32px; color: #fff; font: 0.95em Tahoma, Geneva, sans-serif; background: url(../../images/core/header/sprite.png) 0 -100px repeat-x; text-decoration: none; }
 
 .header ul.right li a { padding: 18px 14px 0; }
 
-.header ul.mainnav li a:hover { color: #fff; background: url(../images/core/header/hover.png) 0 -50px repeat-x; }
+.header ul.mainnav li a:hover { color: #fff; background: url(../../images/core/header/sprite.png) 0 -50px repeat-x; }
 
 .header ul.mainnav li a.selected { color: #fff; }
 
@@ -85,6 +85,8 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 .footer { width: 1000px; margin: 0 auto; background: #060606; font-size: 11px; }
 
 .footer #stamp { float: left; margin: 17px 30px 20px; width: 180px; height: 113px; color: #666; }
+
+.footer #stamp .name { background: url(../../images/core/sprite.png) no-repeat; width: 180px; height: 35px; }
 
 .footer #columns { float: right; margin: 20px 30px 5px 30px; color: #ddd; width: 500px; }
 
@@ -150,10 +152,10 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 
 .UIpanel { overflow: auto; padding: 10px; background: #0a0a0a; border: 1px solid #0e0e0e; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
 .UIpanel .UIheading { overflow: auto; margin-bottom: 10px; color: #777; }
-.UIpanel .UIheading h3 { float: left; margin: 0; color: #ddd; line-height: 1.33em; padding-left: 12px; background: url(../images/core/icons/single_pink_chevron.png) center left no-repeat; } /* remove color attribute to restore heading style */
+.UIpanel .UIheading h3 { float: left; margin: 0; color: #ddd; line-height: 1.33em; padding-left: 12px; background: url(../../images/core/icons/single_pink_chevron.png) center left no-repeat; } /* remove color attribute to restore heading style */
 .UIpanel .UIheading .UIcontrol { float: right; }
 
-.box { background: url(../images/core/gradients/box.png) bottom repeat-x #121212; }
+.box { background: url(../../images/core/gradients/box.png) bottom repeat-x #121212; }
 .box h2 { color: #a56efd; font-size: 14px; font-weight: bold; margin: 0; padding: 5px 0 4px 10px; }
 .box div.body { padding: 10px; overflow: auto; }
 
@@ -166,9 +168,9 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 /* dialogs */
 
 .dialogPositioner { position: absolute; width: 100%; height: 0px; top: 0px; }
-.dialogPositioner .dialog { z-index: 9999; position: relative; margin: auto; width: 575px; padding: 10px; background: url(../images/core/transparency/dialog.png) repeat; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
+.dialogPositioner .dialog { z-index: 9999; position: relative; margin: auto; width: 575px; padding: 10px; background: url(../../images/core/transparency/dialog.png) repeat; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
 .dialogPositioner .dialog .body { font-family: Tahoma, Geneva, sans-serif; overflow: auto; border: 1px solid #444; color: #bbb; background: #0a0a0a; width: 571px; }
-.dialogPositioner .dialog .body .heading { padding: 8px 10px 7px; background: url(../images/core/header/colours.png) repeat-x 0px -600px; color: #eee !important; margin: auto !important; }
+.dialogPositioner .dialog .body .heading { padding: 8px 10px 7px; background: url(../../images/core/header/colours.png) repeat-x 0px -600px; color: #eee !important; margin: auto !important; }
 .dialogPositioner .dialog .body .content { padding: 10px; color: #ccc; }
 .dialogPositioner .dialog .body .buttonSet { overflow: auto; padding: 10px; margin-right: 11px; }
 .dialogPositioner .dialog .body .buttonSet label { float: right; width: 50px; margin-top: 0; margin-bottom: 7px; }
@@ -339,7 +341,7 @@ table.socialPlugins th { font-weight: normal; }
 
 /* profile interaction buttons */
 
-.vnav > a { display: block; margin: 0 0 4px; padding: 10px 13px 10px 22px; background-image: url(../images/core/icons/single_purple_chevron.png); background-color: #0d0d0d; background-repeat: no-repeat; background-position: 5% 50%; }
+.vnav > a { display: block; margin: 0 0 4px; padding: 10px 13px 10px 22px; background-image: url(../../images/core/icons/single_purple_chevron.png); background-color: #0d0d0d; background-repeat: no-repeat; background-position: 5% 50%; }
 
 .vnav a:hover { background-color: #181818; text-decoration: none; }
 
@@ -378,51 +380,51 @@ a.profileButton:hover { color: #fff; text-decoration: none; }
 
 a.profileButton:active { color: #fff; }
 
-a.register { display: block; width: 68px; height: 21px; background: url(../images/core/buttons/register.png) -2px -1px no-repeat; overflow: hidden; text-indent: -9999px; }
+a.register { display: block; width: 68px; height: 21px; background: url(../../images/core/buttons/register.png) -2px -1px no-repeat; overflow: hidden; text-indent: -9999px; }
 
-a:hover.register { background: url(../images/core/buttons/register.png) -2px -26px no-repeat; }
+a:hover.register { background: url(../../images/core/buttons/register.png) -2px -26px no-repeat; }
 
-a:active.register { background: url(../images/core/buttons/register.png) -2px -51px no-repeat; }
+a:active.register { background: url(../../images/core/buttons/register.png) -2px -51px no-repeat; }
 
-a.readmore { display: block; width: 68px; height: 21px; background: url(../images/core/buttons/read_more.png) -2px -1px no-repeat; overflow: hidden; text-indent: -9999px; }
+a.readmore { display: block; width: 68px; height: 21px; background: url(../../images/core/buttons/read_more.png) -2px -1px no-repeat; overflow: hidden; text-indent: -9999px; }
 
-a:hover.readmore { background: url(../images/core/buttons/read_more.png) -2px -26px no-repeat; }
+a:hover.readmore { background: url(../../images/core/buttons/read_more.png) -2px -26px no-repeat; }
 
-a:active.readmore { background: url(../images/core/buttons/read_more.png) -2px -51px no-repeat; }
+a:active.readmore { background: url(../../images/core/buttons/read_more.png) -2px -51px no-repeat; }
 
-a.edit { display: block; width: 68px; height: 21px; background: url(../images/core/buttons/edit2.png) -2px -1px no-repeat; overflow: hidden; text-indent: -9999px; }
+a.edit { display: block; width: 68px; height: 21px; background: url(../../images/core/buttons/edit2.png) -2px -1px no-repeat; overflow: hidden; text-indent: -9999px; }
 
-a:hover.edit { background: url(../images/core/buttons/edit2.png) -2px -26px no-repeat; }
+a:hover.edit { background: url(../../images/core/buttons/edit2.png) -2px -26px no-repeat; }
 
-a:active.edit { background: url(../images/core/buttons/edit2.png) -2px -51px no-repeat; }
+a:active.edit { background: url(../../images/core/buttons/edit2.png) -2px -51px no-repeat; }
 
-a.apply { display: block; width: 68px; height: 21px; background: url(../images/core/buttons/apply.png) -2px -1px no-repeat; overflow: hidden; text-indent: -9999px; }
+a.apply { display: block; width: 68px; height: 21px; background: url(../../images/core/buttons/apply.png) -2px -1px no-repeat; overflow: hidden; text-indent: -9999px; }
 
-a:hover.apply { background: url(../images/core/buttons/apply.png) -2px -26px no-repeat; }
+a:hover.apply { background: url(../../images/core/buttons/apply.png) -2px -26px no-repeat; }
 
-a:active.apply { background: url(../images/core/buttons/apply.png) -2px -51px no-repeat; }
+a:active.apply { background: url(../../images/core/buttons/apply.png) -2px -51px no-repeat; }
 
-a.join { display: block; width: 68px; height: 21px; background: url(../images/core/buttons/join.png) -2px -1px no-repeat; overflow: hidden; text-indent: -9999px; }
+a.join { display: block; width: 68px; height: 21px; background: url(../../images/core/buttons/join.png) -2px -1px no-repeat; overflow: hidden; text-indent: -9999px; }
 
-a:hover.join { background: url(../images/core/buttons/join.png) -2px -26px no-repeat; }
+a:hover.join { background: url(../../images/core/buttons/join.png) -2px -26px no-repeat; }
 
-a:active.join { background: url(../images/core/buttons/join.png) -2px -51px no-repeat; }
+a:active.join { background: url(../../images/core/buttons/join.png) -2px -51px no-repeat; }
 
-a.next { display: block; float: right; width: 83px; height: 21px; background: url(../images/core/buttons/next.png) 100% -1px no-repeat; overflow: hidden; line-height: 20px; font-size: 22px; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+a.next { display: block; float: right; width: 83px; height: 21px; background: url(../../images/core/buttons/next.png) 100% -1px no-repeat; overflow: hidden; line-height: 20px; font-size: 22px; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
 
-a:hover.next { background: url(../images/core/buttons/next.png) 100% -26px no-repeat; text-decoration: none; color: #ddd; }
+a:hover.next { background: url(../../images/core/buttons/next.png) 100% -26px no-repeat; text-decoration: none; color: #ddd; }
 
-a:active.next { background: url(../images/core/buttons/next.png) 100% -51px no-repeat; color: #aaa; }
+a:active.next { background: url(../../images/core/buttons/next.png) 100% -51px no-repeat; color: #aaa; }
 
-a.previous { display: block; float: left; width: 130px; height: 21px; background: url(../images/core/buttons/previous.png) 0px -1px no-repeat; overflow: hidden; line-height: 20px; font-size: 22px; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; text-indent: 32px; }
+a.previous { display: block; float: left; width: 130px; height: 21px; background: url(../../images/core/buttons/previous.png) 0px -1px no-repeat; overflow: hidden; line-height: 20px; font-size: 22px; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; text-indent: 32px; }
 
-a:hover.previous { background: url(../images/core/buttons/previous.png) 0px -26px no-repeat; text-decoration: none; color: #ddd; }
+a:hover.previous { background: url(../../images/core/buttons/previous.png) 0px -26px no-repeat; text-decoration: none; color: #ddd; }
 
-a:active.previous { background: url(../images/core/buttons/previous.png) 0px -51px no-repeat; color: #aaa; }
+a:active.previous { background: url(../../images/core/buttons/previous.png) 0px -51px no-repeat; color: #aaa; }
 
 /* feature items */
 
-#mainFeaturedApp { background: url(../images/core/gradients/box.png) bottom repeat-x #121212; height: 312px; overflow: auto; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
+#mainFeaturedApp { background: url(../../images/core/gradients/box.png) bottom repeat-x #121212; height: 312px; overflow: auto; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
 
 #mainFeaturedApp > #descriptionWindow { position: relative; overflow: hidden; float: left; width: 220px; height: 312px; padding: 0 20px; }
 
@@ -470,7 +472,7 @@ table.UIform hr { color: #141414; background: #141414; }
 .uiButton,
 .uiButtonSuppressed:active,
 .uiButtonSuppressed:focus,
-.uiButtonSuppressed:hover{ background:#222 url(../../images/core/buttons/buttonset.png) repeat 0 0;border:1px solid #222;border-bottom-color:#111;box-shadow:0 1px 0 rgba(0, 0, 0, .1);-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .1);-webkit-box-shadow:0 1px 0 rgba(0, 0, 0, .1);color:#333;cursor:pointer;display:-moz-inline-box;display:inline-block;font-size:11px;line-height:normal !important;margin: 1.5em 0; padding:3px 7px;*position:relative;text-align:center;text-decoration:none;white-space:nowrap }
+.uiButtonSuppressed:hover{ background:#222 url(../../../../images/core/buttons/buttonset.png) repeat 0 0;border:1px solid #222;border-bottom-color:#111;box-shadow:0 1px 0 rgba(0, 0, 0, .1);-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .1);-webkit-box-shadow:0 1px 0 rgba(0, 0, 0, .1);color:#333;cursor:pointer;display:-moz-inline-box;display:inline-block;font-size:11px;line-height:normal !important;margin: 1.5em 0; padding:3px 7px;*position:relative;text-align:center;text-decoration:none;white-space:nowrap }
 .uiButton + .uiButton{ margin-right:8px }
 .uiButton:hover{ text-decoration:none }
 .uiButton:active,
@@ -482,14 +484,3 @@ border-color: #777 #777 #666;
 color: #1d1d1d !important; }
 .uiButtonConfirm:active { background:#7a7a7a;border-color:#555; border-bottom-color: #696969;}
 .uiButtonConfirm input { color:#1f1f1f; font-weight:bold;}
-
-/** Mobile-device optimised
------------------------------------------------------------------------**/
-
-body.mobile { 
-
-}
-
-body.mobile .wrapper { 
-	width: auto !important; 
-}

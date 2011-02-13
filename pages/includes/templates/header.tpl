@@ -1,6 +1,6 @@
 <div class="header">
   <ul class="mainnav left">
-    <li id="nav-home"><a class="" href=""><img src="images/core/header/logo.png" height="33" width="101" alt="home" /><span>home</span></a></li>
+    <li id="nav-home"><a class="" href=""><div class="logo"></div><span>home</span></a></li>
     <li id="nav-blogs"><a href="pages/blogs/blogs.php">Blogs</a></li>
     <!--<li id="nav-faq"><a href="pages/general/site/faq.php">Faq</a></li>
     <li id="nav-photos"><a href="index.htm">Photos</a></li>

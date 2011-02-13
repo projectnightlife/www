@@ -97,6 +97,20 @@ foreach ($posts as $key => $post)
   $post->created = API::GetDateString((int)$post->created);
 }
 
+$resourceManager = new ResourceDependancyManager('blogs/blogs', 'css');
+$resourceManager->addResource('blueprint/screen.css');
+$resourceManager->addResource('core.css');
+$resourceManager->addResource('blogs.css');
+$pageData['cssFile'] = $resourceManager->build();
+
+$resourceManager = new ResourceDependancyManager('blogs/blogs', 'js');
+$resourceManager->addResource('jquery.js');
+$resourceManager->addResource('api.js');
+$resourceManager->addResource('jquery.color.js');
+$resourceManager->addResource('corners.js');
+$resourceManager->addResource('blogs/blogs.js');
+$pageData['jsFile'] = $resourceManager->build();
+
 $smarty->assign('pageData', $pageData);
 $smarty->assign('featuredPosts', $featuredPosts);
 $smarty->assign('posts', $posts);

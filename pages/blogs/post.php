@@ -138,6 +138,19 @@ foreach ($comments as $key => $comment)
   }
 }
 
+$resourceManager = new ResourceDependancyManager('blogs/post', 'css');
+$resourceManager->addResource('blueprint/screen.css');
+$resourceManager->addResource('core.css');
+$resourceManager->addResource('blogs.css');
+$pageData['cssFile'] = $resourceManager->build();
+
+$resourceManager = new ResourceDependancyManager('blogs/post', 'js');
+$resourceManager->addResource('jquery.js');
+$resourceManager->addResource('api.js');
+$resourceManager->addResource('ba-linkify.min.js');
+$resourceManager->addResource('blogs/post.js');
+$pageData['jsFile'] = $resourceManager->build();
+
 $smarty->assign('post', $post);
 $smarty->assign('comments', $comments);
 $smarty->assign('blog', $blog);

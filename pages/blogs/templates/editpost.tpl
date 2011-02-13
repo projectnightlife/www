@@ -1,6 +1,6 @@
 {include file='../../includes/templates/page.tpl'}
 <title>{if $uri|strpos:"v=edit" === false}New{else}Edit{/if} Post | Project Nightlife</title>
-<link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
 </head>
 
 <body id="blogs{if $ismobile == "true"} mobile{/if}">
@@ -151,7 +151,6 @@
   <input type="hidden" id="postThumbnailId" value="{if $post->thumbnail != 1}{$post->thumbnail}{/if}" />
 </body>
 </html>
+{include file='../../includes/templates/critical_js.tpl'}
+<script type="text/javascript" src="{$pageData['jsFile']}"></script>
 {include file='../../includes/templates/js.tpl'}
-<script type="text/javascript" src="js/pnobject-linkify.js"></script>
-<script type="text/javascript" src="js/jquery.textarea-expander.js"></script>
-<script type="text/javascript" src="js/blogs/editpost.js"></script>
