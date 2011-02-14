@@ -2,7 +2,7 @@
 		<div class="mainheader">
 			<a href="/" class="site_logo"><span>Project Nightlife</span></a>
 		</div>
-		<a class="mainheader_pulldown" href="javascript:void(0);">&nbsp;</a>
+		<a class="mainheader_pulldown">&nbsp;</a>
 		<div id="pulldown">
 			<div class="pulldown_spacer">
 				<ul>

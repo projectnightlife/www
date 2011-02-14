@@ -63,6 +63,7 @@ h1 {
 	-moz-border-radius: 3px; 
 	border-radius: 3px; 
 	text-decoration: none; 
+	cursor: pointer; 
 }
 
 #header .mainheader_pulldown:hover { 
