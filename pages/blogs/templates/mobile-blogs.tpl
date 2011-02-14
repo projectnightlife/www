@@ -29,7 +29,7 @@
 					{if $smarty.foreach.posts.total eq 8}
 					<li class="last">
 						<div style="margin: 0 auto; padding: 5px; text-align: center;">
-						  <a href="backend/ajax.php?service=blog&method=GetPosts&genre={$pageData['filterOn']}&amount=8&start=8" ajaxify="1" callback="injectPosts" onClick="this.style.display = 'none'; document.getElementById('morePostsSpinner').style.display = 'inline-block';" spinner="morePostsSpinner" offset="8" pagesize="8">View more</a>
+						  <a class="viewmorelink" href="backend/ajax.php?service=blog&method=GetPosts&genre={$pageData['filterOn']}&amount=8&start=8" ajaxify="1" callback="injectPosts" onClick="this.style.display = 'none'; document.getElementById('morePostsSpinner').style.display = 'inline-block';" spinner="morePostsSpinner" offset="8" pagesize="8">View more</a>
 						  <div id="morePostsSpinner" class="ajaxSpinner" style="display: none; float: none; margin: 1px;"></div>
 						</div> 
 					</li>

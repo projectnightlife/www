@@ -152,5 +152,17 @@ a:hover {
 }
 
 .UIobjectlist > li > div.description h4 { 
+
 }
+
+.UIobjectlist > li .viewmorelink { 
+	display: block; 
+	width: 100%; 
+	line-height: 30px; 
+	height: 30px; 
+	background: #333; 
+	font-weight: bold; 
+}
+
+
 
