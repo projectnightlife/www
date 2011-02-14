@@ -25,10 +25,10 @@
 				
 			});
 			
-			$("body").css("width", $(window).width() + 'px';
+			$(".UIobjectlist").css("width", $(window).width() + 'px');
 			
-			$(window).resize(function() { 
-				$("body").css("width", $(window).width() + 'px';
+			$(window).resize(function() {
+				$(".UIobjectlist").css("width", $(window).width() + 'px');
 			});
 		});
 	</script>
