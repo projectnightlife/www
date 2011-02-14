@@ -17,7 +17,7 @@
 					{foreach from=$posts item=post name=posts}
 					<li {if $smarty.foreach.posts.first && $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="first last"{else}{if $smarty.foreach.posts.first}class="first"{elseif $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="last"{/if}{/if}>
 						<div class="thumb">
-							<a class="thumb" href="pages/blogs/post.php?id={$post->id}"><img src="pages/getphoto/GetPhoto.php?id={$post->thumbnail}&size=80x80" width="80" height="80" /></a>
+							<a class="thumb" href="pages/blogs/post.php?id={$post->id}"><img src="pages/getphoto/GetPhoto.php?id={$post->thumbnail}&size=80x80" width="50" height="50" /></a>
 						</div>
 						<div class="description">
 							<h4><a href="pages/blogs/post.php?id={$post->id}">{$post->title}</a></h4>
