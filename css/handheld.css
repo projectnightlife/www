@@ -73,7 +73,7 @@ a:hover {
 #header .mainheader .site_logo { 
 	height: 40px; 
 	width: 125px; 
-	background: url(../images/core/mobile/mobile_logo.png) no-repeat center; 
+	background: url(../../images/core/mobile/mobile_logo.png) no-repeat center; 
 	padding: 5px; 
 	display: block; 
 	margin-left: 5px; 
