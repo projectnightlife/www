@@ -100,6 +100,7 @@ foreach ($posts as $key => $post)
 $resourceManager = new ResourceDependancyManager('blogs/blogs', 'css');
 require_once($globalDir.'pages\\includes\\core_css.php');
 $resourceManager->addResource('blogs.css');
+$resourceManager->addResource('featureApps.css');
 $pageData['cssFile'] = $resourceManager->build();
 
 $resourceManager = new ResourceDependancyManager('blogs/blogs', 'js');

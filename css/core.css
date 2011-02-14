@@ -191,6 +191,25 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 .dialogPositioner .dialog .body .notifications .notification h3 a { font-size: 12px; }
 .dialogPositioner .dialog .body .notifications .notification p { font-size: 11px; margin-bottom: 0px; width: 265px; }
 
+/* buttons */
+
+.uiButton input { background: none; border: 0px; color: #eee; cursor: pointer; display: inline-block; font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif; font-size: 11px; margin: 0px; outline: none; padding: 1px 0px 2px; white-space: nowrap; }
+.uiButton,
+.uiButtonSuppressed:active,
+.uiButtonSuppressed:focus,
+.uiButtonSuppressed:hover{ background:#222 url(../../../../images/core/buttons/buttonset.png) repeat 0 0;border:1px solid #222;border-bottom-color:#111;box-shadow:0 1px 0 rgba(0, 0, 0, .1);-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .1);-webkit-box-shadow:0 1px 0 rgba(0, 0, 0, .1);color:#333;cursor:pointer;display:-moz-inline-box;display:inline-block;font-size:11px;line-height:normal !important;margin: 1.5em 0; padding:3px 7px;*position:relative;text-align:center;text-decoration:none;white-space:nowrap }
+.uiButton + .uiButton{ margin-right:8px }
+.uiButton:hover{ text-decoration:none }
+.uiButton:active,
+.uiButtonDepressed{ background:#191919;border-bottom-color:#111;box-shadow:0 1px 0 rgba(0, 0, 0, .05);-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .05);-webkit-box-shadow:0 1px 0 rgba(0, 0, 0, .05) }
+.uiButtonConfirm {
+background-color: #aaa;
+background-position: 0px -23px;
+border-color: #777 #777 #666;
+color: #1d1d1d !important; }
+.uiButtonConfirm:active { background:#7a7a7a;border-color:#555; border-bottom-color: #696969;}
+.uiButtonConfirm input { color:#1f1f1f; font-weight:bold;}
+
 /* notifications */
 
 .notifications .notification { border-bottom: #222 1px solid; padding: 10px 0; overflow: auto; }
@@ -304,29 +323,11 @@ a.thumb:active, a.thumb:focus { border: 1px solid #666; }
 
 a.thumb img { margin: 3px; }
 
-/* photo uploading preview */
-
-.mediaPreviewControl { position: relative; float: left; margin: 0 10px 10px 0; width: 168px; }
-.mediaPreviewControl img { width: 160px; height: 120px; padding: 3px; border: 1px solid #242424; }
-.mediaPreviewControl object { display: block; padding: 3px; border: 1px solid #242424; }
-.mediaPreviewControl > div { padding: 2px 1px; font-size: 11px; overflow: hidden; }
-.mediaPreviewControl input { margin-left: 5px; }
-.mediaPreviewControl label { font-weight: normal; }
-.mediaPreviewControl .remove { position: absolute; top: 8px; right: 8px; display: inline-block; }
-.mediaPreviewControl .remove img { width: 16px; height: 16px; border: none !important; padding: 0 !important; }
-
-/* photo uploaders */
-
-.UIsinglePhotoUpload .uploadPhotoText { margin: 0 0 10px; display: block; font-weight: bold; }
-.UIsinglePhotoUpload #photo_upload { display: none; overflow: hidden; }
-.UIsinglePhotoUpload #upload_iframe { width: 300px; height: 22px; }
-.UIsinglePhotoUpload #uploading { display: none; padding-left: 3px; color: #ccc; width: 40%; height: 21px; overflow: hidden; }
-
 /* drop down menus */
 
-.dropDown { display: none; position: absolute; top: 100%; width: 210px; background: #0f0f0f; border-left: 1px solid #1e1e1e; border-right: 1px solid #1e1e1e; border-bottom: 1px solid #1e1e1e; cursor: pointer; left: 0; }
+.dropDown { display: none; position: absolute; top: 100%; width: 210px; border-left: 1px solid #161616; border-right: 1px solid #161616; border-bottom: 1px solid #161616; cursor: pointer; left: 0; background: url(../../images/core/transparency/dropdown.png) repeat; }
 .dropDownOption { padding: 2px 4px 2px 4px; }
-.dropDown .selected { background: #444; }
+.dropDown .selected { background: #1a1a1a; }
 
 /* Embedded message boxes */
 
@@ -421,66 +422,3 @@ a.previous { display: block; float: left; width: 130px; height: 21px; background
 a:hover.previous { background: url(../../images/core/buttons/previous.png) 0px -26px no-repeat; text-decoration: none; color: #ddd; }
 
 a:active.previous { background: url(../../images/core/buttons/previous.png) 0px -51px no-repeat; color: #aaa; }
-
-/* feature items */
-
-#mainFeaturedApp { background: url(../../images/core/gradients/box.png) bottom repeat-x #121212; height: 312px; overflow: auto; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
-
-#mainFeaturedApp > #descriptionWindow { position: relative; overflow: hidden; float: left; width: 220px; height: 312px; padding: 0 20px; }
-
-#mainFeaturedApp > #descriptionWindow > #descriptionReel { position: absolute; }
-
-#mainFeaturedApp > #descriptionWindow > #descriptionReel > div { padding: 20px 0; width: 220px; height: 272px; }
-
-#mainFeaturedApp > #descriptionWindow > #descriptionReel > div h2 { color: #ABA0C0; padding: 0; font-size: 27px; }
-
-#mainFeaturedApp > #descriptionWindow > #descriptionReel > div p { color: #ccc; }
-
-#mainFeaturedApp > #imageWindow { position: relative; overflow: hidden; float: left; width: 608px; height: 312px; }
-
-#mainFeaturedApp > #imageWindow > #imageReel { position: absolute; top: 0; left: 0; }
-
-#mainFeaturedApp > #imageWindow > #imageReel img { margin: 0 auto; display: block; }
-
-#mainFeaturedApp > #imageWindow > #imageReel > a { float: left; display: inline-block; height: 312px; width: 608px; }
-
-#mainFeaturedApp > #pagingWindow { overflow: auto; float: left; width: 52px; height: 312px; font-size: 24px; padding: 0 20px 0; }
-
-#mainFeaturedApp > #pagingWindow > a { display: block; margin: 20px 0 0; padding: 8px; border: #333 3px solid; width: 30px; height: 30px; text-align: center; }
-
-#mainFeaturedApp > #pagingWindow > a:hover { text-decoration: none; }
-
-#mainFeaturedApp > #pagingWindow > a.active { border: #ABA0C0 3px solid !important; }
-
-/* tempory */
-
-.addedContent { display: none; margin-top: 0.5em; overflow: auto; }
-.addContentContainer { margin: 12px 0 10px; overflow: auto; }
-
-table.UIform { border: none; padding: 5px 10px 10px; overflow: auto; }
-table.UIform th { width: 110px; text-align: right; padding-top: 16px; padding-right: 10px; font-weight: normal !important; vertical-align: top;}
-table.UIform th label { font-weight: normal !important; }
-table.UIform input[type="text"], table.UIform input[type="password"], table.UIform textarea, table.UIform select { font-size: 12px !important; font-family: Tahoma, Geneva, sans-serif; color: #ccc; background: #0f0f0f !important; border: 1px solid #1e1e1e !important; width: 570px; padding: 7px 5px; }
-table.UIform select { padding: 0 !important; font-size: 12px !important; }
-table.UIform hr { color: #141414; background: #141414; }
-.UIoptionInput { width: 200px !important; padding: 7px 5px !important; margin-right:10px !important; margin-bottom: 0 !important; }
-.UIoptions { width: 212px !important; margin-bottom: 0 !important; display: block !important; }
-
-/* buttons */
-
-.uiButton input { background: none; border: 0px; color: #eee; cursor: pointer; display: inline-block; font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif; font-size: 11px; margin: 0px; outline: none; padding: 1px 0px 2px; white-space: nowrap; }
-.uiButton,
-.uiButtonSuppressed:active,
-.uiButtonSuppressed:focus,
-.uiButtonSuppressed:hover{ background:#222 url(../../../../images/core/buttons/buttonset.png) repeat 0 0;border:1px solid #222;border-bottom-color:#111;box-shadow:0 1px 0 rgba(0, 0, 0, .1);-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .1);-webkit-box-shadow:0 1px 0 rgba(0, 0, 0, .1);color:#333;cursor:pointer;display:-moz-inline-box;display:inline-block;font-size:11px;line-height:normal !important;margin: 1.5em 0; padding:3px 7px;*position:relative;text-align:center;text-decoration:none;white-space:nowrap }
-.uiButton + .uiButton{ margin-right:8px }
-.uiButton:hover{ text-decoration:none }
-.uiButton:active,
-.uiButtonDepressed{ background:#191919;border-bottom-color:#111;box-shadow:0 1px 0 rgba(0, 0, 0, .05);-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .05);-webkit-box-shadow:0 1px 0 rgba(0, 0, 0, .05) }
-.uiButtonConfirm {
-background-color: #aaa;
-background-position: 0px -23px;
-border-color: #777 #777 #666;
-color: #1d1d1d !important; }
-.uiButtonConfirm:active { background:#7a7a7a;border-color:#555; border-bottom-color: #696969;}
-.uiButtonConfirm input { color:#1f1f1f; font-weight:bold;}
