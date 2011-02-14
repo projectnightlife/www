@@ -1,6 +1,5 @@
 @charset "utf-8";
 /** Mobile-device optimised CSS
-    Last updated 14/02/2011 
 -----------------------------------------------------------------------**/
 
 body, html { 
@@ -28,6 +27,12 @@ a:hover {
 	text-decoration: underline;
 }
 
+.clear { 
+	height: 1px; 
+	overflow: hidden; 
+	clear: both; 
+}
+
 /** Header
 -----------------------------------------------------------------------**/
 #header { 
@@ -35,7 +40,7 @@ a:hover {
 }
 
 #header .mainheader { 
-	background: #482f6f url(img/mobile_headbg.png); 
+	background: #482f6f url(../images/core/mobile/mobile_headbg.png); 
 	height: 50px; 
 }
 
@@ -84,7 +89,7 @@ a:hover {
 
 /** Tabs
 -----------------------------------------------------------------------**/
-#tabs ul { 
+#tabs ul.tabNavigation { 
 	background: #222; 
 	padding: 0; 
 	margin: 0; 
@@ -92,7 +97,7 @@ a:hover {
 	height: 40px; 
 }
 
-#tabs li { 
+#tabs ul.tabNavigation li { 
 	width: 49%; 
 	height: 35px; 
 	margin-top: 5px; 
@@ -100,19 +105,45 @@ a:hover {
 	line-height: 35px; 
 }
 
-#tabs li a { 
+#tabs ul.tabNavigation li a { 
 	display: block; 
 	padding: 0 0.4em; 
 }
 
-#tabs li a.selected { 
+#tabs ul.tabNavigation li a.selected { 
 	background: #000; 
 }
 
-#tabs > div { 
+#tabs ul.tabNavigation > div { 
 	padding: 0.2em 0.4em; 
 }
 
+/** Content
+-----------------------------------------------------------------------**/
+.UIobjectlist { 
+	margin: 0; 
+	padding: 0; 
+} 
 
+.UIobjectlist > li { 
+	list-style: none; 
+	border-bottom: 1px solid #333; 
+	padding: 0 1em; 
+}
 
+.UIobjectlist > li > div.thumb {
+	float: left; 
+	height: 55px; 
+	width: 55px; 
+	margin-right: 1em; 
+	margin-bottom: 8px; 
+}
+
+.UIobjectlist > li > div.thumb img {
+	border: 1px solid #666; 
+	padding: 3px; 
+}
+
+.UIobjectlist > li > div.description h4 { 
+}
 

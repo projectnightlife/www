@@ -1,3 +1,4 @@
+	<div id="header">
 		<div class="mainheader">
 			&nbsp;
 		</div>
@@ -7,3 +8,4 @@
 				<p>Blah blah blah blah</p>
 			</div>
 		</div>
+	</div>
