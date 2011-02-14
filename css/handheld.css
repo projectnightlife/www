@@ -40,7 +40,7 @@ a:hover {
 }
 
 #header .mainheader { 
-	background: #482f6f url(../images/core/mobile/mobile_headbg.png); 
+	background: #482f6f url(../../images/core/mobile/mobile_headbg.png); 
 	height: 50px; 
 }
 
@@ -133,6 +133,7 @@ a:hover {
 	list-style: none; 
 	border-bottom: 1px solid #333; 
 	padding: 0 1em; 
+	width: auto; 
 }
 
 .UIobjectlist > li > div.thumb {

@@ -24,5 +24,11 @@
 				
 				
 			});
+			
+			$("body").css("width", $(window).width() + 'px';
+			
+			$(window).resize(function() { 
+				$("body").css("width", $(window).width() + 'px';
+			});
 		});
 	</script>
