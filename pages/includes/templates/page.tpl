@@ -14,3 +14,4 @@
 <!--[if lte IE 7]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
 <!--[if IE]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
 <link rel="stylesheet" href="css/core.css" type="text/css" media="screen, projection">
+<meta name="viewport" content="initial-scale=1.0">
