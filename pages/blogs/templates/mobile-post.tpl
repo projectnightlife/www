@@ -12,17 +12,16 @@
 	<div id="content">
 		<div class="masthead">
 			<div class="heading">
-				<h1 class="left">{$blog->name}</h1><h1 class="right">Blog Post</h1>
+				<h1 class="left">{$blog->name}</h1>
 			</div>
-			<hr />
-			<div class="breadcrumbs"><a href="">Home</a><a href="pages/blogs/blogs.php">Blogs</a><a href="pages/blogs/blog.php?id={$blog->id}">{$blog->name}</a></div>
+			<div class="breadcrumbs"><a href="/">Home&nbsp;&nbsp;&raquo;</a><a href="pages/blogs/blogs.php">Blogs&nbsp;&nbsp;&raquo;</a><a href="pages/blogs/blog.php?id={$blog->id}">{$blog->name}</a></div>
 		</div>
 		
 		<div class="UIpanel">
 			<h1 class="postHeading left">{$post->title}</h1>
-						<div class="post word-wrap">
+			<div class="post word-wrap">
 				{$post->body}
-						</div>
+			</div>
 		</div>
 		
 		<div class="UIpanel topspcr" id="comments">

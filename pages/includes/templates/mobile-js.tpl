@@ -26,9 +26,11 @@
 			});
 			
 			$(".widthfix").css("width", $(window).width() + 'px');
+			$("#commentBox").css("width", $(window).width() - 40 + 'px');
 			
 			$(window).resize(function() {
 				$(".widthfix").css("width", $(window).width() + 'px');
+				$("#commentBox").css("width", $(window).width() - 40 + 'px');
 			});
 		});
 	</script>

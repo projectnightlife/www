@@ -33,6 +33,10 @@ a:hover {
 	clear: both; 
 }
 
+h1 { 
+	font-size: 1.6em; 
+}
+
 .ajaxSpinner { display: inline-block; float: right; width: 16px; height: 16px; }
 
 /** Header
@@ -100,6 +104,29 @@ a:hover {
 
 #header .pulldown_spacer p { 
 	margin-top: 0; 
+}
+
+#content > div.masthead { 
+}
+
+#content > div.masthead h1 { 
+	padding: 0 1em; 
+}
+
+div.breadcrumbs { 
+	height: 30px;
+	padding: 0; 
+	background: #333;
+	padding: 0 1em; 
+}
+
+div.breadcrumbs > a { 
+	padding: 0 0.4em; 
+	height: 30px; 
+	line-height: 30px; 
+	display: block; 
+	float: left; 
+	width: auto; 
 }
 
 /** Tabs
@@ -186,5 +213,11 @@ a:hover {
 	text-align: center; 
 }
 
+.UIpanel { 
+	padding: 0 20px; 
+}
 
+.UIpanel .comments textarea { 
+	width: auto; 
+}
 
