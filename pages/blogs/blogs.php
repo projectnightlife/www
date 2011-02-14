@@ -99,8 +99,10 @@ foreach ($posts as $key => $post)
 
 $resourceManager = new ResourceDependancyManager('blogs/blogs', 'css');
 require_once($globalDir.'pages\\includes\\core_css.php');
-$resourceManager->addResource('blogs.css');
-$resourceManager->addResource('featureApps.css');
+if ($ismobile == false) {
+	$resourceManager->addResource('blogs.css');
+	$resourceManager->addResource('featureApps.css');
+}
 $pageData['cssFile'] = $resourceManager->build();
 
 $resourceManager = new ResourceDependancyManager('blogs/blogs', 'js');
@@ -116,7 +118,7 @@ $smarty->assign('posts', $posts);
 $smarty->assign('blogs', $blogs);
 
 $smarty->loadFilter('output', 'trimwhitespace');
-$smarty->display('templates/blogs.tpl');
+$smarty->display('templates/'.$mobilepfx.'blogs.tpl');
 
 $timeparts = explode(" ",microtime());
 $endTime = bcadd(($timeparts[0]*1000),bcmul($timeparts[1],1000));

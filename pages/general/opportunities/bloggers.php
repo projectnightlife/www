@@ -26,5 +26,5 @@ $pageData['jsFile'] = $resourceManager->build();
 $smarty->assign('pageData', $pageData);
 $smarty->assign('genres', $genres);
 $smarty->loadFilter('output', 'trimwhitespace');
-$smarty->display('templates/bloggers.tpl');
+$smarty->display('templates/'.$mobilepfx.'bloggers.tpl');
 ?>

@@ -13,5 +13,5 @@ $pageData['jsFile'] = $resourceManager->build();
 
 $smarty->assign('pageData', $pageData);
 $smarty->loadFilter('output', 'trimwhitespace');
-$smarty->display('templates/about.tpl');
+$smarty->display('templates/'.$mobilepfx.'about.tpl');
 ?>

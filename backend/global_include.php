@@ -10,6 +10,6 @@ include_once($globalDir."backend\\api.php");
 include_once($globalDir."backend\\facebook.php");
 include_once($globalDir."backend\\notification.php");
 include_once($globalDir."backend\\ResourceDependancyManager.php");
-
+require_once($globalDir."backend\\Mobile_Detect.php");
 
 ?>

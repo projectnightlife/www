@@ -42,5 +42,5 @@ $pageData['jsFile'] = $resourceManager->build();
 $smarty->assign('pageData', $pageData);
 $smarty->assign('notifications', $notifications);
 $smarty->loadFilter('output', 'trimwhitespace');
-$smarty->display('templates/notifications.tpl');
+$smarty->display('templates/'.$mobilepfx.'notifications.tpl');
 ?>

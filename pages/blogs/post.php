@@ -140,7 +140,9 @@ foreach ($comments as $key => $comment)
 
 $resourceManager = new ResourceDependancyManager('blogs/post', 'css');
 require_once($globalDir.'pages\\includes\\core_css.php');
-$resourceManager->addResource('blogs.css');
+if ($ismobile == false) {
+	$resourceManager->addResource('blogs.css');
+}
 $pageData['cssFile'] = $resourceManager->build();
 
 $resourceManager = new ResourceDependancyManager('blogs/post', 'js');
@@ -163,5 +165,5 @@ if ($relatedBlogs->count() != 0)
 }
 $smarty->assign('pageData', $pageData);
 $smarty->loadFilter('output', 'trimwhitespace');
-$smarty->display('templates/post.tpl');
+$smarty->display('templates/'.$mobilepfx.'post.tpl');
 ?>
