@@ -1,10 +1,10 @@
 {include file='../../includes/templates/page.tpl'}
 <title>{$post->title} - {$blog->name} | Project Nightlife</title>
 <meta property="og:title" content="{$post->title}"/>
-<meta property="og:image" content="http://photos.projectnightlife.co.uk/{$post->thumbnail}_1.jpg"/>
+<meta property="og:image" content="http://www.projectnightlife.co.uk/photo/{$post->thumbnail}/80x80"/>
 <meta property="og:description" content="{$post->excerpt}"/>
 <meta name="medium" content="blog" />
-<link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
 </head>
 
 <body id="blogs{if $ismobile == "true"} mobile{/if}">
@@ -29,7 +29,7 @@
             {if $isContributor}
               <div style="overflow: auto;">
                 <h1 class="postHeading left" style="width: 540px;">{$post->title}</h1>
-                <a class="edit right" style="margin-top: 5px;" href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit Post</a>
+                <a class="edit right" style="margin-top: 5px;" href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit Post &#8364;</a>
               </div>
             {else}
               <h1 class="postHeading word-wrap">{$post->title}</h1>
@@ -114,7 +114,7 @@
               <li {if $smarty.foreach.relatedPosts.last}class="last"{/if}>
                 <div class="thumb"><a class="thumb" href="pages/blogs/post.php?id={$post->id}"><img src="pages/getphoto/GetPhoto.php?id={$post->thumbnail}&size=80x80" width="80" height="80" /></a></div>
                 <div class="description">
-                  <h4 style="margin-bottom: 5px;"><a href="blogpost.php?id={$post->id}">{$post->title}</a></h4>
+                  <h4 style="margin-bottom: 5px;"><a href="pages/blogs/post.php?id={$post->id}">{$post->title}</a></h4>
                   <span style="color: #999; display: block;">{$post->blogName}</span>
                 </div>
               </li>
@@ -153,8 +153,8 @@
   <div id="fb-root"></div>
 </body>
 </html>
+{include file='../../includes/templates/critical_js.tpl'}
+<script type="text/javascript" src="{$pageData['jsFile']}"></script>
 {include file='../../includes/templates/js.tpl'}
-<script type="text/javascript" src="js/ba-linkify.min.js"></script>
-<script type="text/javascript" src="js/blogs/post.js"></script>
 <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
 <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>

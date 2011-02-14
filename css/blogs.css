@@ -1,4 +1,4 @@
-#blogs .leftColumn .section { padding: 10px; background: url(../images/core/gradients/blogpost.png) top repeat-x #030303; }
+#blogs .leftColumn .section { padding: 10px; background: url(../../images/core/gradients/blogpost.png) top repeat-x #030303; }
 
 #blogs h1.postHeading { color: #ABA0C0; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 25px; line-height: 1.2em; }
 
@@ -9,7 +9,7 @@
 
 #blogs .postMeta .posted { display: block; float: left; }
 
-#blogs .postMeta .numComments { display: block; float: right; background: url(../images/core/icons/comments.png) left no-repeat; padding-left: 19px; }
+#blogs .postMeta .numComments { display: block; float: right; background: url(../../images/core/icons/comments.png) left no-repeat; padding-left: 19px; }
 
 #blogs .post img { border: 1px solid #555; margin: 0 auto 15px; display: block; }
 

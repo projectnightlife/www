@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/screen.css" type="text/css" media="screen, projection">
 <link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/print.css" type="text/css" media="print">
 <!--[if lte IE 7]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-<!--[if IE]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
 <link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/core.css" type="text/css" media="screen, projection">
 <title>Page Not Found | Project Nightlife</title>
 </head>
@@ -79,7 +78,7 @@
     <div id="stamp">
       <img src="http://www.projectnightlife.co.uk/images/core/footerlogo.png" width="180" height="35" alt="Project Nightlife" />
       <p>Project Nightlife is not responsible for the content of external websites</p>
-      <p>Copyright &copy; 2011</p>
+      <p>Copyright &copy; {$pageData['year']}</p>
     </div>
     <div id="columns">
       <div id="company-column"class="column">

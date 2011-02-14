@@ -85,6 +85,17 @@ foreach ($posts as $key => $post)
   $post->created = API::GetDateString((int)$post->created);
 }
 
+$resourceManager = new ResourceDependancyManager('blogs/blog', 'css');
+require_once($globalDir.'pages\\includes\\core_css.php');
+$resourceManager->addResource('blogs.css');
+$pageData['cssFile'] = $resourceManager->build();
+
+$resourceManager = new ResourceDependancyManager('blogs/blog', 'js');
+require_once($globalDir.'pages\\includes\\core_js.php');
+$resourceManager->addResource('corners.js');
+$resourceManager->addResource('blogs/blog.js');
+$pageData['jsFile'] = $resourceManager->build();
+
 $smarty->assign('blog', $blog);
 $smarty->assign('isContributor', $isContributor);
 $smarty->assign('blogContributors', $blogContributors);
@@ -98,5 +109,7 @@ if ($subscribers->count() != 0)
 {
   $smarty->assign('subscribers', $subscribers);
 }
+$smarty->assign('pageData', $pageData);
+$smarty->loadFilter('output', 'trimwhitespace');
 $smarty->display('templates/blog.tpl');
 ?>

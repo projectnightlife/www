@@ -1,6 +1,6 @@
 {include file='../../includes/templates/page.tpl'}
 <title>Guide | Project Nightlife</title>
-<link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
   <style type="text/css">
     .tutorial h3 { font-size: 20px; color: #ABA0C0; margin-bottom: 12px; line-height: 22px; }
 	.tutorial h4 { color: #777; }
@@ -59,10 +59,10 @@
               
               <h4>Formatting</h4>
               <p>To format text in your post, simply surround it with the appropriate tag pairing.</p>
-              <p><b>Bold text</b> is achieved by typing &lt;b&gt;This text will be bold&lt;/b&gt;.<br />
-                 <i>Italic text</i> is achieved by typing &lt;i&gt;This text will be italic&lt;/i&gt;.<br />
-                 <u>Underlined text</u> is achieved by typing &lt;u&gt;This text will be underlined&lt;/u&gt;.<br /></p>
-              <p>You can also combine these tags to create more complex text formatting such as <b><i>bold italic</i></b>. This is achieved like this &lt;b&gt;&lt;i&gt;This text will be bold italic&lt;/i&gt;&lt;/b&gt;.</p>
+              <p><b>Bold text</b> is achieved by typing [b]This text will be bold[/b].<br />
+                 <i>Italic text</i> is achieved by typing [i]This text will be italic[/i].<br />
+                 <u>Underlined text</u> is achieved by typing [u]This text will be underlined[/u].<br /></p>
+              <p>You can also combine these tags to create more complex text formatting such as <b><i>bold italic</i></b>. This is achieved like this [b][i]This text will be bold italic[/i][/b].</p>
               <img src="images/tutorials/bloggers/formatting.jpg" alt="Formatting text in your posts" />
               <p>Ensure you have both an opening and closing tag around your desired text and that the closing tag contains a forward slash before the b, i or u. If you're layering formatting, ensure you close inner tags before outter tags.</p>
               
@@ -194,4 +194,6 @@
   <div id="fb-root"></div>
 </body>
 </html>
+{include file='../../includes/templates/critical_js.tpl'}
+<script type="text/javascript" src="{$pageData['jsFile']}"></script>
 {include file='../../includes/templates/js.tpl'}

@@ -15,6 +15,16 @@ catch (Exception $e)
   	exit(); 	
 }
 
+$resourceManager = new ResourceDependancyManager('bloggers', 'css');
+require_once($globalDir.'pages\\includes\\core_css.php');
+$pageData['cssFile'] = $resourceManager->build();
+
+$resourceManager = new ResourceDependancyManager('bloggers', 'js');
+require_once($globalDir.'pages\\includes\\core_js.php');
+$pageData['jsFile'] = $resourceManager->build();
+
+$smarty->assign('pageData', $pageData);
 $smarty->assign('genres', $genres);
+$smarty->loadFilter('output', 'trimwhitespace');
 $smarty->display('templates/bloggers.tpl');
 ?>

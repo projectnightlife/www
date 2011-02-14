@@ -8,10 +8,5 @@
 <link rel="apple-touch-icon" href="images/core/icons/favicon.png" />
 <meta http-equiv="Content-language" content="en" /> 
 <meta name="robots" content="noodp,noydir" />
-<meta name="description" content="Project Nightlife is your essential guide to nightlife and music. Catch the latest updates from your favorite artists or get the latest music news from our bloggers." /> 
-<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
-<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+<meta name="description" content="Project Nightlife is your essential guide to nightlife and music. Catch the latest updates from your favorite artists or get the latest music news from our bloggers." />
 <!--[if lte IE 7]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-<!--[if IE]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
-<link rel="stylesheet" href="css/core.css" type="text/css" media="screen, projection">
-<meta name="viewport" content="initial-scale=1.0">

@@ -1,0 +1,29 @@
+/* feature items */
+
+#mainFeaturedApp { background: url(../../images/core/gradients/box.png) bottom repeat-x #121212; height: 312px; overflow: auto; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
+
+#mainFeaturedApp > #descriptionWindow { position: relative; overflow: hidden; float: left; width: 220px; height: 312px; padding: 0 20px; }
+
+#mainFeaturedApp > #descriptionWindow > #descriptionReel { position: absolute; }
+
+#mainFeaturedApp > #descriptionWindow > #descriptionReel > div { padding: 20px 0; width: 220px; height: 272px; }
+
+#mainFeaturedApp > #descriptionWindow > #descriptionReel > div h2 { color: #ABA0C0; padding: 0; font-size: 27px; }
+
+#mainFeaturedApp > #descriptionWindow > #descriptionReel > div p { color: #ccc; }
+
+#mainFeaturedApp > #imageWindow { position: relative; overflow: hidden; float: left; width: 608px; height: 312px; }
+
+#mainFeaturedApp > #imageWindow > #imageReel { position: absolute; top: 0; left: 0; }
+
+#mainFeaturedApp > #imageWindow > #imageReel img { margin: 0 auto; display: block; }
+
+#mainFeaturedApp > #imageWindow > #imageReel > a { float: left; display: inline-block; height: 312px; width: 608px; }
+
+#mainFeaturedApp > #pagingWindow { overflow: auto; float: left; width: 52px; height: 312px; font-size: 24px; padding: 0 20px 0; }
+
+#mainFeaturedApp > #pagingWindow > a { display: block; margin: 20px 0 0; padding: 8px; border: #333 3px solid; width: 30px; height: 30px; text-align: center; }
+
+#mainFeaturedApp > #pagingWindow > a:hover { text-decoration: none; }
+
+#mainFeaturedApp > #pagingWindow > a.active { border: #ABA0C0 3px solid !important; }

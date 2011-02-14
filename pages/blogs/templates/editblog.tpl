@@ -1,6 +1,6 @@
 {include file='../../includes/templates/page.tpl'}
 <title>Edit Blog | Project Nightlife</title>
-<link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
 </head>
 
 <body id="blogs{if $ismobile == "true"} mobile{/if}">
@@ -82,7 +82,7 @@
                     <th><label>Genres / Styles</label></th>
                     <td>
                       <div style="position: relative; z-index: 100;" id="genreContainer">
-                        <input id="genreInput" name="helper" class="UIoptionInput" type="text" /><span class="italic">Genre or style not listed? <a href="#" onClick="return requestGenre();">Request it</a></span>
+                        <input id="genreInput" name="helper" class="UIoptionInput" type="text" /><span class="italic">Genre or style not listed? <a href="#" onClick="return requestGenre();">Request it</a> or <a href="genres.php" target="_blank">See all</a></span>
                         <div id="genreFilter" class="dropDown"></div>
                       </div>
                       <select id="genres" name="genres" class="UIoptions" serializable="serializeGenres" validator="validateGenres" size="{if $blogGenres|@count > 3}{$blogGenres|@count}{else}3{/if}">
@@ -130,10 +130,9 @@
   <input type="hidden" id="blogPhotoId" value="{if $blog->thumbnail != 1}{$blog->thumbnail}{/if}" />
 </body>
 </html>
+{include file='../../includes/templates/critical_js.tpl'}
+<script type="text/javascript" src="{$pageData['jsFile']}"></script>
 {include file='../../includes/templates/js.tpl'}
-<script type="text/javascript" src="js/pnobject-linkify.js"></script>
-<script type="text/javascript" src="js/jquery.textarea-expander.js"></script>
-<script type="text/javascript" src="js/blogs/editblog.js"></script>
 <script type="text/javascript">
 var genres = new Array(
 {foreach from=$genres item=genre name=genres}

@@ -101,7 +101,7 @@ $pageData['postCreated'] = API::GetDynamicDateString((int)$post->created);
 $pageData['numCommentsLiteral'] = (int)$post->numComments == 1 ? ' comment' : ' comments';
 
 // escape invalid characters
-$post->body = (string) preg_replace("/&/", "&amp;", $post->body);
+$post->body = (string) preg_replace("/ & /", "&amp;", $post->body);
 $post->body = (string) preg_replace("/<(?!(pnobject|b>|u>|i>|\/b>|\/u>|\/i>))/", "&lt;", $post->body);
 
 //perform the XSL transformation to change object types into actual html
@@ -138,6 +138,17 @@ foreach ($comments as $key => $comment)
   }
 }
 
+$resourceManager = new ResourceDependancyManager('blogs/post', 'css');
+require_once($globalDir.'pages\\includes\\core_css.php');
+$resourceManager->addResource('blogs.css');
+$pageData['cssFile'] = $resourceManager->build();
+
+$resourceManager = new ResourceDependancyManager('blogs/post', 'js');
+require_once($globalDir.'pages\\includes\\core_js.php');
+$resourceManager->addResource('ba-linkify.min.js');
+$resourceManager->addResource('blogs/post.js');
+$pageData['jsFile'] = $resourceManager->build();
+
 $smarty->assign('post', $post);
 $smarty->assign('comments', $comments);
 $smarty->assign('blog', $blog);
@@ -151,6 +162,6 @@ if ($relatedBlogs->count() != 0)
   $smarty->assign('relatedBlogs', $relatedBlogs);
 }
 $smarty->assign('pageData', $pageData);
-
+$smarty->loadFilter('output', 'trimwhitespace');
 $smarty->display('templates/post.tpl');
 ?>

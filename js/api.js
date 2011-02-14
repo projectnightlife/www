@@ -14,11 +14,15 @@ function API()
   this.mousePageCoords = { x : null, y : null };
   this.contactus = function() {
 	  if (api.session.data.userId == 0)
-	    return '<input type="hidden" name="userId" value="0" /><div class="fieldSet"><div class="label">Name</div><input type="text" name="name" validator="api.validation.name" /></div><div class="fieldSet"><div class="label">Email</div><input type="text" name="email" validator="api.validation.email"/></div><div class="fieldSet"><div class="label">Subject</div><input type="text" name="subject" validator="api.validation.nonEmpty" /></div><div class="fieldSet last"><div class="label">Body</div><textarea id="messageBody" name="body" validator="api.validation.nonEmpty"></textarea></div>';
+	    return '<input type="hidden" name="userId" value="0" autocomplete="off" /><div class="fieldSet"><div class="label">Name</div><input type="text" name="name" validator="api.validation.name" autocomplete="off" /></div><div class="fieldSet"><div class="label">Email</div><input type="text" name="email" validator="api.validation.email" autocomplete="off" /></div><div class="fieldSet"><div class="label">Subject</div><input type="text" name="subject" validator="api.validation.nonEmpty" autocomplete="off" /></div><div class="fieldSet last"><div class="label">Body</div><textarea id="messageBody" name="body" validator="api.validation.nonEmpty"></textarea></div>';
 	  else if (api.session.data.email == "")
-	    return '<input type="hidden" name="userId" value="'+api.session.data.userId+'" /><input type="hidden" name="name" value="'+api.session.data.firstname+' '+api.session.data.lastname+'" /><div class="fieldSet"><div class="label">Email</div><input type="text" name="email" validator="api.validation.email" /></div><div class="fieldSet"><div class="label">Subject</div><input type="text" name="subject" validator="api.validation.nonEmpty" /></div><div class="fieldSet last"><div class="label">Body</div><textarea id="messageBody" name="body" validator="api.validation.nonEmpty"></textarea></div>';
+	    return '<input type="hidden" name="userId" value="'+api.session.data.userId+'" autocomplete="off" /><input type="hidden" name="name" value="'+api.session.data.firstname+' '+api.session.data.lastname+'" autocomplete="off" /><div class="fieldSet"><div class="label">Email</div><input type="text" name="email" validator="api.validation.email" autocomplete="off" /></div><div class="fieldSet"><div class="label">Subject</div><input type="text" name="subject" validator="api.validation.nonEmpty" autocomplete="off" /></div><div class="fieldSet last"><div class="label">Body</div><textarea id="messageBody" name="body" validator="api.validation.nonEmpty"></textarea></div>';
 	  else
-	    return '<input type="hidden" name="userId" value="'+api.session.data.userId+'" /><input type="hidden" name="name" value="'+api.session.data.firstname+' '+api.session.data.lastname+'" /><input type="hidden" name="email" value="'+api.session.data.email+'" /><div class="fieldSet"><div class="label">Subject</div><input type="text" name="subject" validator="api.validation.nonEmpty" /></div><div class="fieldSet last"><div class="label">Body</div><textarea id="messageBody" name="body" validator="api.validation.nonEmpty"></textarea></div>';
+	    return '<input type="hidden" name="userId" value="'+api.session.data.userId+'" autocomplete="off" /><input type="hidden" name="name" value="'+api.session.data.firstname+' '+api.session.data.lastname+'" autocomplete="off" /><input type="hidden" name="email" value="'+api.session.data.email+'" autocomplete="off" /><div class="fieldSet"><div class="label">Subject</div><input type="text" name="subject" validator="api.validation.nonEmpty" autocomplete="off" /></div><div class="fieldSet last"><div class="label">Body</div><textarea id="messageBody" name="body" validator="api.validation.nonEmpty"></textarea></div>';
+  };
+  this.getElem = function(id)
+  {
+	  return document.getElementById(id);
   };
   
   // Javascript bootstraper //
@@ -178,7 +182,7 @@ function API()
 			var spinner = id.split(':');
 			if (spinner.length == 1)
 			  spinner.push("001");
-			var element = document.getElementById(spinner[0]);
+			var element = api.getElem(spinner[0]);
 			element.style.backgroundImage = "url(http://"+window.location.hostname+"/images/core/spinners/"+spinner[1]+".gif)";
 			element.style.backgroundRepeat = "no-repeat";
 			element.style.backgroundPosition = "center";
@@ -196,7 +200,7 @@ function API()
 	  {
 		try {
 			var spinner = id.split(':')
-			var element = document.getElementById(spinner[0]);
+			var element = api.getElem(spinner[0]);
 			element.style.backgroundImage = "none";
 			try {
 				element.disabled = false;
@@ -349,7 +353,7 @@ function API()
   // assumes margin is outside element - a mouse hovering over the element's margin is not over the element
   this.mouseOverElement = function (element) {
 	  var marginTop = 0, marginLeft = 0, width = 0, height = 0, top = 0, bottom = 0, left = 0, right = 0;
-	  element = document.getElementById(element);
+	  element = api.getElem(element);
 	  
 	  element.style.marginLeft == "" ? null : marginLeft += parseInt(element.style.marginLeft, 10);
 	  element.style.marginTop == "" ? null : marginTop += parseInt(element.style.marginTop, 10);
@@ -494,7 +498,7 @@ function API()
   };
   
   this.existsDialog = function() {
-	return (document.getElementById(this.dialog) != null);
+	return (api.getElem(this.dialog) != null);
   };
   
   this.closeDialog = function() {
@@ -508,7 +512,7 @@ function API()
   // should really only ever be called internally within the api
   this.forceCloseDialog = function() {
 	  if (this.existsDialog()) {
-	    document.body.removeChild(document.getElementById(this.dialog));
+	    document.body.removeChild(api.getElem(this.dialog));
 	  }
   };
   
@@ -562,8 +566,8 @@ function API()
   };
   
   this.sendMessage = function() {
-	  document.getElementById('sendMsg').disabled = true;
-	  document.getElementById('messageBody').disabled = true;
+	  api.getElem('sendMsg').disabled = true;
+	  api.getElem('messageBody').disabled = true;
 	  $('#msgErrorNotification').fadeOut('normal').delay(300, function() { $('#'+api.msgDialog+' form > .content > .last').empty().remove(); $('#'+api.msgDialog+' form > .content > div:last').addClass('last'); });
   };
   
@@ -575,15 +579,15 @@ function API()
   };
   
   this.messageError = function() {
-	  document.getElementById('sendMsg').disabled = false;
-	  document.getElementById('messageBody').disabled = false;
+	  api.getElem('sendMsg').disabled = false;
+	  api.getElem('messageBody').disabled = false;
 	  $('#'+this.msgDialog+' form > .content .last').removeClass('last');
 	  $('<div class="fieldSet last" style="padding-top: 0;"><div id="msgErrorNotification" style="margin: 0px 11px;" class="UIembeddedMsg">We were unable to send your message, please retry in a moment</div></div>').appendTo('#'+this.msgDialog+' form > .content');
 	  $('#msgErrorNotification').fadeIn('normal');
   };
   
   this.existsMsgDialog = function() {
-	return (document.getElementById(this.msgDialog) != null);
+	return (api.getElem(this.msgDialog) != null);
   };
   
   this.closeMsgDialog = function() {
@@ -597,7 +601,7 @@ function API()
   // should really only ever be called internally within the api
   this.forceCloseMsgDialog = function() {
 	  if (this.existsMsgDialog()) {
-	    document.body.removeChild(document.getElementById(this.msgDialog));
+	    document.body.removeChild(api.getElem(this.msgDialog));
 	  }
   };
   
@@ -636,10 +640,11 @@ function API()
 	  return this.internalSerializeString(content, false);
   };
   
-  // serializes string into utf-8 compliant string. internal line breaks (\n character) converted into \ and n characters
+  // serializes string to be utf-8 compliant. Internal line breaks (\n character) converted into \ and n characters
   this.internalSerializeString = function (content, formatting) {
-	  content = content.replace( /\u2018|\u2019|\u201A|\uFFFD/g, "'" );
-   	  content = content.replace( /\u201c|\u201d|\u201e/g, '"' );
+	  content = content.replace(/&/g, "&#38;"); // needs to be the first thing we do otherwise it will replace all & in entities
+	  content = content.replace( /\u2018|\u2019|\u201A|\uFFFD|\u0027/g, "&#39;" );
+   	  content = content.replace( /\u201c|\u201d|\u201e|\u0022/g, '&#34;' );
       content = content.replace( /\u02C6/g, '^' );
       content = content.replace( /\u2039/g, '<' );
       content = content.replace( /\u203A/g, '>' );
@@ -652,7 +657,8 @@ function API()
       content = content.replace( /\u00BC/g, '1/4' );
       content = content.replace( /\u00BD/g, '1/2' );
       content = content.replace( /\u00BE/g, '3/4' );
-      content = content.replace(/[\u02DC|\u00A0]/g, " ");
+	  content = content.replace(/\u20AC/g, "&#8364;");
+	  content = content.replace(/[\u02DC|\u00A0]/g, " ");
 	  var paragraphs = content.split("\n");
       var newcontent = new Array();
 	  var pattern = /\s+/g; // all white space characters (selecting consecutive as one) not stopping at the first (\n \t space etc...)
@@ -1003,7 +1009,6 @@ function transition()
 
 $(document).ready(function()
 {
-  FB.init({appId: '131359770249054', status: true, cookie: true, xfbml: true});
   $('.profileButton').bind('mouseenter mouseleave', function() {
     $(this).toggleClass('hover');
   });

@@ -2,12 +2,12 @@
 <meta property="og:title" content="{$blog->name}"/>
 <meta property="og:type" content="blog"/>
 <meta property="og:url" content="http://www.projectnightlife.co.uk/blog/{$blog->id}"/>
-<meta property="og:image" content="http://photos.projectnightlife.co.uk/uploads/{$blog->thumbnail}.jpg"/>
+<meta property="og:image" content="http://www.projectnightlife.co.uk/photo/{$blog->thumbnail}/80x80"/>
 <meta property="og:site_name" content="Project Nightlife"/>
 <meta property="fb:app_id" content="131359770249054"/>
 <meta property="og:description" content="{$blog->slogan}"/>
 <title>{$blog->name} | Project Nightlife</title>
-<link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
 </head>
 
 <body id="blogs{if $ismobile == "true"} mobile{/if}">
@@ -137,6 +137,6 @@
   <div id="fb-root"></div>
 </body>
 </html>
+{include file='../../includes/templates/critical_js.tpl'}
+<script type="text/javascript" src="{$pageData['jsFile']}"></script>
 {include file='../../includes/templates/js.tpl'}
-<script type="text/javascript" src="js/corners.js"></script>
-<script type="text/javascript" src="js/blogs/blog.js"></script>

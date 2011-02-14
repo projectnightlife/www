@@ -1,5 +1,6 @@
 {include file='../../includes/templates/page.tpl'}
 <title>About Us | Project Nightlife</title>
+<link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
 </head>
 
 <body>
@@ -44,4 +45,6 @@
   <div id="fb-root"></div>
 </body>
 </html>
+{include file='../../includes/templates/critical_js.tpl'}
+<script type="text/javascript" src="{$pageData['jsFile']}"></script>
 {include file='../../includes/templates/js.tpl'}

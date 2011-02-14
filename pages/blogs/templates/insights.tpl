@@ -1,15 +1,13 @@
 {include file='../../includes/templates/page.tpl'}
 <title>Insights | Project Nightlife</title>
-<link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
 <script language="javascript">AC_FL_RunContent = 0;</script>
 <script language="javascript"> DetectFlashVer = 0; </script>
 <script src="js/AC_RunActiveContent.js" language="javascript"></script>
 <script language="JavaScript" type="text/javascript">
-<!--
 var requiredMajorVersion = 10;
 var requiredMinorVersion = 0;
 var requiredRevision = 45;
--->
 </script>
 </head>
 
@@ -39,7 +37,6 @@ var requiredRevision = 45;
               
             <div>
 <script language="JavaScript" type="text/javascript">
-<!--
 if (AC_FL_RunContent == 0 || DetectFlashVer == 0) {
 	alert("This page requires AC_RunActiveContent.js.");
 } else {
@@ -139,7 +136,6 @@ if (AC_FL_RunContent == 0 || DetectFlashVer == 0) {
 		document.write(alternateContent); 
 	}
 }
-// -->
 </script>
 
             </div>
@@ -155,4 +151,6 @@ if (AC_FL_RunContent == 0 || DetectFlashVer == 0) {
   <div id="fb-root"></div>
 </body>
 </html>
+{include file='../../includes/templates/critical_js.tpl'}
+<script type="text/javascript" src="{$pageData['jsFile']}"></script>
 {include file='../../includes/templates/js.tpl'}

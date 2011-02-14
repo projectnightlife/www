@@ -1,0 +1,17 @@
+/* photo uploading preview */
+
+.mediaPreviewControl { position: relative; float: left; margin: 0 10px 10px 0; width: 168px; }
+.mediaPreviewControl img { width: 160px; height: 120px; padding: 3px; border: 1px solid #242424; }
+.mediaPreviewControl object { display: block; padding: 3px; border: 1px solid #242424; }
+.mediaPreviewControl > div { padding: 2px 1px; font-size: 11px; overflow: hidden; }
+.mediaPreviewControl input { margin-left: 5px; }
+.mediaPreviewControl label { font-weight: normal; }
+.mediaPreviewControl .remove { position: absolute; top: 8px; right: 8px; display: inline-block; }
+.mediaPreviewControl .remove img { width: 16px; height: 16px; border: none !important; padding: 0 !important; }
+
+/* photo uploaders */
+
+.UIsinglePhotoUpload .uploadPhotoText { margin: 0 0 10px; display: block; font-weight: bold; }
+.UIsinglePhotoUpload #photo_upload { display: none; overflow: hidden; }
+.UIsinglePhotoUpload #upload_iframe { width: 300px; height: 22px; }
+.UIsinglePhotoUpload #uploading { display: none; padding-left: 3px; color: #ccc; width: 40%; height: 21px; overflow: hidden; }

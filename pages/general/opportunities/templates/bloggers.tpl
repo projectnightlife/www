@@ -1,6 +1,6 @@
 {include file='../../includes/templates/page.tpl'}
 <title>Blog For Us | Project Nightlife</title>
-<link rel="stylesheet" href="css/blogs.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
   <style type="text/css">
 input[type="text"] { float: left; width: 465px; background: #121212; border-color: #252525; padding: 7px; color: #ccc; font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
 textarea { float: left; width: 425px; height: 125px; background: #121212; border-color: #252525; padding: 7px; color: #ccc; margin: 0; font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
@@ -35,9 +35,9 @@ select { font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', s
                 <h1 style="margin: 0; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 28px; color: #ABA0C0; line-height: 36px;">Blog for Project Nightlife</h1>
                 <h2 style="margin-top: 5px; font-size: 18px; line-height: 26px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">The wait is finally over. We're ready for you to become part of<!--join--> the web's hottest new music and fashion resource.</h2>
                 {if $session['loggedIn']}
-                <a class="join" href="#" onclick="return slideLeft();">Join Now</a>
+                <a class="join" href="#" onClick="return slideLeft();">Join Now</a>
                 {else}
-                <a class="join" href="#" onclick="location.hash = '#resume'; api.fbregister(); return false;">Join Now</a>
+                <a class="join" href="#" onClick="location.hash = '#resume'; api.fbregister(); return false;">Join Now</a>
                 {/if}
               </div>
             </div> <!-- slide -->
@@ -60,7 +60,7 @@ select { font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', s
                   <!--</form>-->
                 </div> <!-- padding: 50px 0; -->
               </div>
-              <a class="next" href="#" onclick="return slideLeft();">Next</a>
+              <a class="next" href="#" onClick="return slideLeft();">Next</a>
             </div> <!-- slide -->
             <div class="slide">
               <div style="height: 330px;">
@@ -68,13 +68,13 @@ select { font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', s
                 <div style="padding: 30px 0;">
                   <div class="UIinputPanel" style="margin: 6px auto; width: 595px;">
                     <h3 class="UIinputPanelHeading" style="margin-bottom: 15px;">Enter a description</h3>
-                    <textarea id="description" validator="validateDescription" name="description" onKeyDown="api.limitText(this,4000);" onKeyUp="api.limitText(this,4000);" onchange="api.limitText(this,4000);"></textarea>
+                    <textarea id="description" validator="validateDescription" name="description" onKeyDown="api.limitText(this,4000);" onKeyUp="api.limitText(this,4000);" onChange="api.limitText(this,4000);"></textarea>
                     <div style="float: left; padding: 0 15px;">A brief description<br /> of who you are and<br />  what you blog about.<br /><br />You can enter a short<br /> description now and<br /> update it later.</div>
                   </div>
                 </div> <!-- padding: 50px 0; -->
               </div>
-              <a class="previous" href="#" onclick="return slideRight();">Previous</a>
-              <a class="next" href="#" onclick="return slideLeft();">Next</a>
+              <a class="previous" href="#" onClick="return slideRight();">Previous</a>
+              <a class="next" href="#" onClick="return slideLeft();">Next</a>
             </div> <!-- slide -->
             <div class="slide">
               <div style="height: 330px;">
@@ -108,15 +108,15 @@ select { font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', s
                         </div>
                         <select id="genres" name="genres" class="UIoptions" serializable="serializeGenres" validator="validateGenres" size="3"></select>
                         <label class="uiButton" style="margin: 1em 0;">
-                          <input type="button" onclick="removeGenreOption()" value="Remove genre" />
+                          <input type="button" onClick="removeGenreOption()" value="Remove genre" />
                         </label>
                       </div>
                     </div>
                   </div>
                 </div> <!-- padding: 50px 0; -->
               </div>
-              <a class="previous" href="#" onclick="return slideRight();">Previous</a>
-              <a class="next" href="#" style="width: 95px;" onclick="return submitHandler();">Finish</a>
+              <a class="previous" href="#" onClick="return slideRight();">Previous</a>
+              <a class="next" href="#" style="width: 95px;" onClick="return submitHandler();">Finish</a>
             </div> <!-- slide -->
             <div class="slide">
               <h1 class="slideHeading" id="confirmation">Contacting Server</h1>
@@ -161,6 +161,8 @@ select { font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', s
   <div id="fb-root"></div>
 </body>
 </html>
+{include file='../../includes/templates/critical_js.tpl'}
+<script type="text/javascript" src="{$pageData['jsFile']}"></script>
 {include file='../../includes/templates/js.tpl'}
 {if $session['loggedIn']}
 <script type="text/javascript">

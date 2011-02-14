@@ -19,19 +19,19 @@
 <!-- text formatting -->
 <xsl:template match="//b">
   <b>
-	<xsl:value-of select="./text()" />
+	<xsl:apply-templates />
   </b>
 </xsl:template>
 
 <xsl:template match="//i">
   <i>
-	<xsl:value-of select="./text()" />
+	<xsl:apply-templates />
   </i>
 </xsl:template>
 
 <xsl:template match="//u">
   <u>
-	<xsl:value-of select="./text()" />
+	<xsl:apply-templates />
   </u>
 </xsl:template>
 
