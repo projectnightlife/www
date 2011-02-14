@@ -3,13 +3,13 @@
 
 $globalDir = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
 
-include_once($globalDir."backend\\Credentials.php");
-include_once($globalDir."backend\\FacebookAuth.php");
-include_once($globalDir."backend\\WebService.php");
-include_once($globalDir."backend\\api.php");
-include_once($globalDir."backend\\facebook.php");
-include_once($globalDir."backend\\notification.php");
-include_once($globalDir."backend\\ResourceDependancyManager.php");
+require_once($globalDir."backend\\Credentials.php");
+require_once($globalDir."backend\\FacebookAuth.php");
+require_once($globalDir."backend\\WebService.php");
+require_once($globalDir."backend\\api.php");
+require_once($globalDir."backend\\facebook.php");
+require_once($globalDir."backend\\notification.php");
+require_once($globalDir."backend\\ResourceDependancyManager.php");
 require_once($globalDir."backend\\Mobile_Detect.php");
 
 ?>

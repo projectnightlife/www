@@ -643,8 +643,8 @@ function API()
   // serializes string to be utf-8 compliant. Internal line breaks (\n character) converted into \ and n characters
   this.internalSerializeString = function (content, formatting) {
 	  content = content.replace(/&/g, "&#38;"); // needs to be the first thing we do otherwise it will replace all & in entities
-	  content = content.replace( /\u2018|\u2019|\u201A|\uFFFD|\u0027/g, "&#39;" );
-   	  content = content.replace( /\u201c|\u201d|\u201e|\u0022/g, '&#34;' );
+	  content = content.replace( /\u2018|\u2019|\u201A|\uFFFD/g, "&#39;" );
+   	  content = content.replace( /\u201c|\u201d|\u201e/g, '&#34;' );
       content = content.replace( /\u02C6/g, '^' );
       content = content.replace( /\u2039/g, '<' );
       content = content.replace( /\u203A/g, '>' );

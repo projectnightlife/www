@@ -99,7 +99,7 @@ foreach ($posts as $key => $post)
 
 $resourceManager = new ResourceDependancyManager('blogs/blogs', 'css');
 require_once($globalDir.'pages\\includes\\core_css.php');
-if ($ismobile == false) {
+if (!$ismobile) { // tidied the code up a lil here - just appended ! - marcus
 	$resourceManager->addResource('blogs.css');
 	$resourceManager->addResource('featureApps.css');
 }

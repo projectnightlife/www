@@ -6,8 +6,36 @@
     <category>Blogs</category>
     <copyright>Copyright © 2011 - Project Nightlife</copyright>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 14 Feb 2011 00:12:53 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 14 Feb 2011 15:54:54 GMT</lastBuildDate>
     <ttl>15</ttl>
+    <item>
+      <category>Acid House</category>
+      <title>testing post warning patch</title>
+      <description>should have patched embedded content</description>
+      <author>The Essential Selection</author>
+      <link>http://projectnightlife.co.uk/post/226</link>
+      <guid>http://projectnightlife.co.uk/post/226</guid>
+      <pubDate>Mon, 14 Feb 2011 15:54:54 GMT</pubDate>
+    </item>
+    <item>
+      <category>Acid House</category>
+      <title>Testing embedding</title>
+      <description>Oops, i know whats causing those warnings!</description>
+      <author>The Essential Selection</author>
+      <link>http://projectnightlife.co.uk/post/225</link>
+      <guid>http://projectnightlife.co.uk/post/225</guid>
+      <pubDate>Mon, 14 Feb 2011 15:42:33 GMT</pubDate>
+    </item>
+    <item>
+      <category>Dubstep</category>
+      <title>I cannot wait to drive across America!</title>
+      <description>
+      </description>
+      <author>A Crazy New Blog</author>
+      <link>http://projectnightlife.co.uk/post/224</link>
+      <guid>http://projectnightlife.co.uk/post/224</guid>
+      <pubDate>Mon, 14 Feb 2011 15:33:53 GMT</pubDate>
+    </item>
     <item>
       <category>Indie</category>
       <title>Testing xsl</title>
@@ -47,7 +75,7 @@
     <item>
       <category>Acid House</category>
       <title>Where have all the notifications gone!</title>
-      <description>ON MAY 10th &amp;#38;European&amp;#38; finance ministers meeting in Brussels produced a three-year â?¬750 billion rescue package for the euro zone, designed to convince financial markets that the weaker members of the single currency would not be abandoned.</description>
+      <description>ON MAY 10th &amp;#39;European&amp;#38; finance ministers meeting in Brussels produced a three-year &amp;#8364;750 billion rescue package for the euro zone, designed to convince financial markets that the weaker members of the single currency would not be...</description>
       <author>The Essential Selection</author>
       <link>http://projectnightlife.co.uk/post/219</link>
       <guid>http://projectnightlife.co.uk/post/219</guid>
@@ -255,33 +283,6 @@
       <link>http://projectnightlife.co.uk/post/192</link>
       <guid>http://projectnightlife.co.uk/post/192</guid>
       <pubDate>Sun, 23 Jan 2011 00:48:27 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>Testing new image upload logic</title>
-      <description>Almost finished!</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/191</link>
-      <guid>http://projectnightlife.co.uk/post/191</guid>
-      <pubDate>Sat, 22 Jan 2011 01:08:10 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>Bringing images back to life!</title>
-      <description>Unsurprisingly that February's Most Popular is Tek One! With a huge following, these boys tunes are in demand and with a release coming out on HENCH later this month we hope many represses will follow!</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/184</link>
-      <guid>http://projectnightlife.co.uk/post/184</guid>
-      <pubDate>Sat, 15 Jan 2011 18:19:21 GMT</pubDate>
-    </item>
-    <item>
-      <category>Indie</category>
-      <title>Another round of image testing</title>
-      <description>This is another round of image testing</description>
-      <author>Alt.ernative</author>
-      <link>http://projectnightlife.co.uk/post/183</link>
-      <guid>http://projectnightlife.co.uk/post/183</guid>
-      <pubDate>Sat, 15 Jan 2011 00:55:34 GMT</pubDate>
     </item>
   </channel>
 </rss>

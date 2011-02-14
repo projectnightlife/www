@@ -140,7 +140,7 @@ foreach ($comments as $key => $comment)
 
 $resourceManager = new ResourceDependancyManager('blogs/post', 'css');
 require_once($globalDir.'pages\\includes\\core_css.php');
-if ($ismobile == false) {
+if (!$ismobile) { // tidied code - marcus
 	$resourceManager->addResource('blogs.css');
 }
 $pageData['cssFile'] = $resourceManager->build();
@@ -148,6 +148,7 @@ $pageData['cssFile'] = $resourceManager->build();
 $resourceManager = new ResourceDependancyManager('blogs/post', 'js');
 require_once($globalDir.'pages\\includes\\core_js.php');
 $resourceManager->addResource('ba-linkify.min.js');
+$resourceManager->addResource('jquery.textarea-expander.js');
 $resourceManager->addResource('blogs/post.js');
 $pageData['jsFile'] = $resourceManager->build();
 
