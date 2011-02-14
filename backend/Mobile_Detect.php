@@ -89,7 +89,7 @@
 	// Detect me!
 	@$mobiledetect = new Mobile_Detect();
 	
-	if ($mobiledetect->isMobile()) {
+	if ($mobiledetect->isMobile() || $_SERVER['REMOTE_HOST'] == "home.michaelgreenhill.net") {
 		$ismobile 	= true; 
 		$mobilepfx 	= "mobile-";
 	} else {
