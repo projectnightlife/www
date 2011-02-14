@@ -14,7 +14,7 @@
 			<div class="heading">
 				<h1 class="left">{$blog->name}</h1>
 			</div>
-			<div class="breadcrumbs"><a href="/">Home&nbsp;&nbsp;&raquo;</a><a href="pages/blogs/blogs.php">Blogs&nbsp;&nbsp;&raquo;</a><a href="pages/blogs/blog.php?id={$blog->id}">{$blog->name}</a></div>
+			<div class="breadcrumbs"><a href="/">Home &raquo;</a><a href="pages/blogs/blogs.php">Blogs &raquo;</a><a href="pages/blogs/blog.php?id={$blog->id}">{$blog->name}</a></div>
 		</div>
 		
 		<div class="UIpanel">

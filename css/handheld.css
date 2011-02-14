@@ -102,26 +102,35 @@ h1 {
 	padding: 0.4em; 
 }
 
-#header .pulldown_spacer p { 
-	margin-top: 0; 
+#header .pulldown_spacer ul { 
+	margin: 0; 
+	padding: 0.6em 1em; 
+	list-style: none;
+}
+
+#header .pulldown_spacer li a { 
+	background: url(../images/core/icons/single_pink_chevron.png) no-repeat left; 
+	padding-left: 20px; 
+	color: #000; 
 }
 
 #content > div.masthead { 
 }
 
 #content > div.masthead h1 { 
-	padding: 0 1em; 
+	padding: 0 10px; 
+	text-align: center; 
 }
 
 div.breadcrumbs { 
 	height: 30px;
 	padding: 0; 
 	background: #333;
-	padding: 0 1em; 
+	padding: 0 10px; 
 }
 
 div.breadcrumbs > a { 
-	padding: 0 0.4em; 
+	padding-right: 0.2em; 
 	height: 30px; 
 	line-height: 30px; 
 	display: block; 
@@ -214,7 +223,7 @@ div.breadcrumbs > a {
 }
 
 .UIpanel { 
-	padding: 0 20px; 
+	padding: 0 10px; 
 }
 
 .UIpanel .comments textarea { 
