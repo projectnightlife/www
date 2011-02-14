@@ -82,7 +82,7 @@
                     <th><label>Genres / Styles</label></th>
                     <td>
                       <div style="position: relative; z-index: 100;" id="genreContainer">
-                        <input id="genreInput" name="helper" class="UIoptionInput" type="text" /><span class="italic">Genre or style not listed? <a href="#" onClick="return requestGenre();">Request it</a></span>
+                        <input id="genreInput" name="helper" class="UIoptionInput" type="text" /><span class="italic">Genre or style not listed? <a href="#" onClick="return requestGenre();">Request it</a> or <a href="genres.php" target="_blank">See all</a></span>
                         <div id="genreFilter" class="dropDown"></div>
                       </div>
                       <select id="genres" name="genres" class="UIoptions" serializable="serializeGenres" validator="validateGenres" size="{if $blogGenres|@count > 3}{$blogGenres|@count}{else}3{/if}">
