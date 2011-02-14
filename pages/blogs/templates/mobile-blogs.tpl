@@ -40,7 +40,7 @@
 				<ul id="blogs" class="UIobjectlist">
 					{foreach from=$blogs item=blog name=blogs}
 					<li>
-						<h4><span class="tilename">{$blog->name}</span></h4>
+						<h4><a href="pages/blogs/blog.php?id={$blog->id}"><span class="tilename">{$blog->name}</span></a></h4>
 					</li>
 					{/foreach}
 				</ul>

@@ -112,6 +112,10 @@ a:hover {
 
 #tabs ul.tabNavigation li a.selected { 
 	background: #000; 
+	border: 1px solid #000; 
+	
+	border-top-right-radius: 5px; 
+	border-top-left-radius: 5px; 
 }
 
 #tabs ul.tabNavigation > div { 
@@ -142,6 +146,8 @@ a:hover {
 .UIobjectlist > li > div.thumb img {
 	border: 1px solid #666; 
 	padding: 3px; 
+	height: 50px; 
+	width: 50px; 
 }
 
 .UIobjectlist > li > div.description h4 { 
