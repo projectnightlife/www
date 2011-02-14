@@ -66,6 +66,19 @@ a:hover {
 	border: 1px solid rgba(0, 0, 0, 0.7); 
 }
 
+#header .mainheader .site_logo span { 
+	display: none; 
+}
+
+#header .mainheader .site_logo { 
+	height: 40px; 
+	width: 125px; 
+	background: url(../images/core/mobile/mobile_logo.png) no-repeat center; 
+	padding: 5px; 
+	display: block; 
+	margin-left: 5px; 
+}
+
 #header #pulldown { 
 	position: absolute; 
 	top: 50px; 
@@ -109,7 +122,7 @@ a:hover {
 
 #tabs ul.tabNavigation li a { 
 	display: block; 
-	padding: 0 0.4em; 
+	padding: 0 1em; 
 }
 
 #tabs ul.tabNavigation li a.selected { 
@@ -166,8 +179,8 @@ a:hover {
 .UIobjectlist > li.last a { 
 	display: block !important; 
 	width: 100% !important; 
-	line-height: 30px !important; 
-	height: 30px; 
+	line-height: 40px !important; 
+	height: 40px !important; 
 	background: #333; 
 	font-weight: bold; 
 	text-align: center; 

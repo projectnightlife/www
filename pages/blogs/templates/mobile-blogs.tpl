@@ -41,6 +41,7 @@
 					{foreach from=$blogs item=blog name=blogs}
 					<li>
 						<h4><a href="pages/blogs/blog.php?id={$blog->id}"><span class="tilename">{$blog->name}</span></a></h4>
+						<p>{$blog->description}</p>
 					</li>
 					{/foreach}
 				</ul>

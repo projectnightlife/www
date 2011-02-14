@@ -1,6 +1,6 @@
 	<div id="header">
 		<div class="mainheader">
-			&nbsp;
+			<a href="/" class="site_logo"><span>Project Nightlife</span></a>
 		</div>
 		<a class="mainheader_pulldown" href="#pulldown">&nbsp;</a>
 		<div id="pulldown">
