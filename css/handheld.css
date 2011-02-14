@@ -33,6 +33,8 @@ a:hover {
 	clear: both; 
 }
 
+.ajaxSpinner { display: inline-block; float: right; width: 16px; height: 16px; }
+
 /** Header
 -----------------------------------------------------------------------**/
 #header { 
@@ -162,12 +164,13 @@ a:hover {
 }
 
 .UIobjectlist > li.last a { 
-	display: block; 
-	width: 100%; 
-	line-height: 30px; 
+	display: block !important; 
+	width: 100% !important; 
+	line-height: 30px !important; 
 	height: 30px; 
 	background: #333; 
 	font-weight: bold; 
+	text-align: center; 
 }
 
 
