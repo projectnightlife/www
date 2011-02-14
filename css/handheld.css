@@ -155,6 +155,12 @@ a:hover {
 
 }
 
+.UIobjectlist > li.last { 
+	padding: 0; 
+	margin: 0; 
+	border-bottom: none;
+}
+
 .UIobjectlist > li .viewmorelink { 
 	display: block; 
 	width: 100%; 
