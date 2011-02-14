@@ -2,16 +2,7 @@
   <ul class="mainnav left">
     <li id="nav-home"><a class="" href=""><div class="logo"></div><span>home</span></a></li>
     <li id="nav-blogs"><a href="pages/blogs/blogs.php">Blogs</a></li>
-    <!--<li id="nav-faq"><a href="pages/general/site/faq.php">Faq</a></li>
-    <li id="nav-photos"><a href="index.htm">Photos</a></li>
-    <li id="nav-venues"><a href="index.htm">Venues</a></li>
-    <li id="nav-events"><a href="index.htm">Events</a></li>
-    <li id="nav-photos"><a href="index.htm">Photos</a></li>
-    <li id="nav-music"><a href="index.htm">Music</a></li>
-    <li id="nav-tickets"><a href="index.htm">Tickets</a></li>
-    <li id="nav-lifestyle"><a href="">Lifestyle</a></li>-->
   </ul>
-  <!--<div id="mainsearch" class="right"><input type="text" /></div>-->
   <ul class="mainnav right">
     {if $session['loggedIn']}
       {if $session['notifications']|@count > 0}

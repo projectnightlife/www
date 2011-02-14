@@ -31,8 +31,7 @@ switch ($action)
    							exit(); 
 						}
 						$resourceManager = new ResourceDependancyManager('blogs/dashboard', 'js');
-						$resourceManager->addResource('jquery.js');
-						$resourceManager->addResource('api.js');
+						require_once($globalDir.'pages\\includes\\core_js.php');
 						$pageData['jsFile'] = $resourceManager->build();
 						$smarty->assign('blogContributors', $blogContributors);
 						$page = 'templates/dashboard.tpl';
@@ -40,8 +39,7 @@ switch ($action)
 					 
 	case 'new' :        $page = 'templates/editpost.tpl';
 						$resourceManager = new ResourceDependancyManager('blogs/editpost', 'js');
-						$resourceManager->addResource('jquery.js');
-						$resourceManager->addResource('api.js');
+						require_once($globalDir.'pages\\includes\\core_js.php');
 						$resourceManager->addResource('pnobject-linkify.js');
 						$resourceManager->addResource('jquery.textarea-expander.js');
 						$resourceManager->addResource('blogs/editpost.js');
@@ -77,8 +75,7 @@ switch ($action)
         					exit(); 
 					    }
 						$resourceManager = new ResourceDependancyManager('blogs/editpost', 'js');
-						$resourceManager->addResource('jquery.js');
-						$resourceManager->addResource('api.js');
+						require_once($globalDir.'pages\\includes\\core_js.php');
 						$resourceManager->addResource('pnobject-linkify.js');
 						$resourceManager->addResource('jquery.textarea-expander.js');
 						$resourceManager->addResource('blogs/editpost.js');
@@ -103,8 +100,7 @@ switch ($action)
                           $post->created = API::GetDateString((int)$post->created);
                         }
 						$resourceManager = new ResourceDependancyManager('blogs/manage', 'js');
-						$resourceManager->addResource('jquery.js');
-						$resourceManager->addResource('api.js');
+						require_once($globalDir.'pages\\includes\\core_js.php');
 						$resourceManager->addResource('corners.js');
 						$resourceManager->addResource('blogs/manage.js');
 						$pageData['jsFile'] = $resourceManager->build();
@@ -134,8 +130,7 @@ switch ($action)
        						exit(); 
 					    }
 						$resourceManager = new ResourceDependancyManager('blogs/editblog', 'js');
-						$resourceManager->addResource('jquery.js');
-						$resourceManager->addResource('api.js');
+						require_once($globalDir.'pages\\includes\\core_js.php');
 						$resourceManager->addResource('jquery.textarea-expander.js');
 						$resourceManager->addResource('blogs/editblog.js');
 						$pageData['jsFile'] = $resourceManager->build();
@@ -147,34 +142,31 @@ switch ($action)
 						$pageData['blogIdHash'] = md5($blog->id);
 						$page = 'templates/insights.tpl';
 						$resourceManager = new ResourceDependancyManager('blogs/insights', 'js');
-						$resourceManager->addResource('jquery.js');
-						$resourceManager->addResource('api.js');
+						require_once($globalDir.'pages\\includes\\core_js.php');
 						$pageData['jsFile'] = $resourceManager->build();
 	                    break;
 					 
 	case 'guide' :      $page = 'templates/guide.tpl';
 						$resourceManager = new ResourceDependancyManager('blogs/guide', 'js');
-						$resourceManager->addResource('jquery.js');
-						$resourceManager->addResource('api.js');
+						require_once($globalDir.'pages\\includes\\core_js.php');
 						$pageData['jsFile'] = $resourceManager->build();
 	                    break;
 					 
 	default :           $page = 'templates/overview.tpl';
 						$resourceManager = new ResourceDependancyManager('blogs/dashboard', 'js');
-						$resourceManager->addResource('jquery.js');
-						$resourceManager->addResource('api.js');
+						require_once($globalDir.'pages\\includes\\core_js.php');
 						$pageData['jsFile'] = $resourceManager->build();
 	                    break;
 }
 
 $resourceManager = new ResourceDependancyManager('blogs/editblog', 'css');
-$resourceManager->addResource('blueprint/screen.css');
-$resourceManager->addResource('core.css');
+require_once($globalDir.'pages\\includes\\core_css.php');
 $resourceManager->addResource('blogs.css');
 $pageData['cssFile'] = $resourceManager->build();
 
 $smarty->assign('pageData', $pageData);
 $smarty->assign('uri', $_SERVER['REQUEST_URI']);
 $smarty->assign('blog', $blog);
+$smarty->loadFilter('output', 'trimwhitespace');
 $smarty->display($page);
 ?>

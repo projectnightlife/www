@@ -5,11 +5,9 @@
 <script language="javascript"> DetectFlashVer = 0; </script>
 <script src="js/AC_RunActiveContent.js" language="javascript"></script>
 <script language="JavaScript" type="text/javascript">
-<!--
 var requiredMajorVersion = 10;
 var requiredMinorVersion = 0;
 var requiredRevision = 45;
--->
 </script>
 </head>
 
@@ -39,7 +37,6 @@ var requiredRevision = 45;
               
             <div>
 <script language="JavaScript" type="text/javascript">
-<!--
 if (AC_FL_RunContent == 0 || DetectFlashVer == 0) {
 	alert("This page requires AC_RunActiveContent.js.");
 } else {
@@ -139,7 +136,6 @@ if (AC_FL_RunContent == 0 || DetectFlashVer == 0) {
 		document.write(alternateContent); 
 	}
 }
-// -->
 </script>
 
             </div>

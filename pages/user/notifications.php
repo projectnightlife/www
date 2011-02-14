@@ -32,16 +32,15 @@ foreach ($rawNotifications as $notification)
 }
 
 $resourceManager = new ResourceDependancyManager('notifications', 'css');
-$resourceManager->addResource('blueprint/screen.css');
-$resourceManager->addResource('core.css');
+require_once($globalDir.'pages\\includes\\core_css.php');
 $pageData['cssFile'] = $resourceManager->build();
 
 $resourceManager = new ResourceDependancyManager('notifications', 'js');
-$resourceManager->addResource('jquery.js');
-$resourceManager->addResource('api.js');
+require_once($globalDir.'pages\\includes\\core_js.php');
 $pageData['jsFile'] = $resourceManager->build();
 
 $smarty->assign('pageData', $pageData);
 $smarty->assign('notifications', $notifications);
+$smarty->loadFilter('output', 'trimwhitespace');
 $smarty->display('templates/notifications.tpl');
 ?>

@@ -1,7 +1,7 @@
 {include file='../../includes/templates/page.tpl'}
 <title>{$post->title} - {$blog->name} | Project Nightlife</title>
 <meta property="og:title" content="{$post->title}"/>
-<meta property="og:image" content="http://photos.projectnightlife.co.uk/{$post->thumbnail}_1.jpg"/>
+<meta property="og:image" content="http://www.projectnightlife.co.uk/photo/{$post->thumbnail}/80x80"/>
 <meta property="og:description" content="{$post->excerpt}"/>
 <meta name="medium" content="blog" />
 <link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
@@ -29,7 +29,7 @@
             {if $isContributor}
               <div style="overflow: auto;">
                 <h1 class="postHeading left" style="width: 540px;">{$post->title}</h1>
-                <a class="edit right" style="margin-top: 5px;" href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit Post</a>
+                <a class="edit right" style="margin-top: 5px;" href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit Post &#8364;</a>
               </div>
             {else}
               <h1 class="postHeading word-wrap">{$post->title}</h1>

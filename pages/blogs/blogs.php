@@ -98,14 +98,12 @@ foreach ($posts as $key => $post)
 }
 
 $resourceManager = new ResourceDependancyManager('blogs/blogs', 'css');
-$resourceManager->addResource('blueprint/screen.css');
-$resourceManager->addResource('core.css');
+require_once($globalDir.'pages\\includes\\core_css.php');
 $resourceManager->addResource('blogs.css');
 $pageData['cssFile'] = $resourceManager->build();
 
 $resourceManager = new ResourceDependancyManager('blogs/blogs', 'js');
-$resourceManager->addResource('jquery.js');
-$resourceManager->addResource('api.js');
+require_once($globalDir.'pages\\includes\\core_js.php');
 $resourceManager->addResource('jquery.color.js');
 $resourceManager->addResource('corners.js');
 $resourceManager->addResource('blogs/blogs.js');
@@ -115,6 +113,8 @@ $smarty->assign('pageData', $pageData);
 $smarty->assign('featuredPosts', $featuredPosts);
 $smarty->assign('posts', $posts);
 $smarty->assign('blogs', $blogs);
+
+$smarty->loadFilter('output', 'trimwhitespace');
 $smarty->display('templates/blogs.tpl');
 
 $timeparts = explode(" ",microtime());

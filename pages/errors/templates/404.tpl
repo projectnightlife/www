@@ -78,7 +78,7 @@
     <div id="stamp">
       <img src="http://www.projectnightlife.co.uk/images/core/footerlogo.png" width="180" height="35" alt="Project Nightlife" />
       <p>Project Nightlife is not responsible for the content of external websites</p>
-      <p>Copyright &copy; 2011</p>
+      <p>Copyright &copy; {$pageData['year']}</p>
     </div>
     <div id="columns">
       <div id="company-column"class="column">

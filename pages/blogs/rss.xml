@@ -6,8 +6,53 @@
     <category>Blogs</category>
     <copyright>Copyright © 2011 - Project Nightlife</copyright>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 12 Feb 2011 20:55:27 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 14 Feb 2011 00:12:53 GMT</lastBuildDate>
     <ttl>15</ttl>
+    <item>
+      <category>Indie</category>
+      <title>Testing xsl</title>
+      <description>this is bold</description>
+      <author>Alt.ernative</author>
+      <link>http://projectnightlife.co.uk/post/223</link>
+      <guid>http://projectnightlife.co.uk/post/223</guid>
+      <pubDate>Mon, 14 Feb 2011 00:12:53 GMT</pubDate>
+    </item>
+    <item>
+      <category>Acid House</category>
+      <title>Testing symbols</title>
+      <description>&amp;#8364; blah &amp;#34;should work&amp;#34; blah &amp;#38; blah &amp;#39;should work&amp;#39; blah</description>
+      <author>The Essential Selection</author>
+      <link>http://projectnightlife.co.uk/post/222</link>
+      <guid>http://projectnightlife.co.uk/post/222</guid>
+      <pubDate>Sun, 13 Feb 2011 22:18:21 GMT</pubDate>
+    </item>
+    <item>
+      <category>Acid House</category>
+      <title>Testing ie 7</title>
+      <description>blah blah blah</description>
+      <author>The Essential Selection</author>
+      <link>http://projectnightlife.co.uk/post/221</link>
+      <guid>http://projectnightlife.co.uk/post/221</guid>
+      <pubDate>Sun, 13 Feb 2011 22:03:25 GMT</pubDate>
+    </item>
+    <item>
+      <category>Dubstep</category>
+      <title>The PIIGS that won't fly:</title>
+      <description>ON MAY 10th European finance ministers meeting in Brussels produced a three-year â?¬750 billion rescue package for the euro zone, designed to convince financial markets that the weaker members of the single currency would not be abandoned. The scale</description>
+      <author>A Crazy New Blog</author>
+      <link>http://projectnightlife.co.uk/post/220</link>
+      <guid>http://projectnightlife.co.uk/post/220</guid>
+      <pubDate>Sun, 13 Feb 2011 15:40:45 GMT</pubDate>
+    </item>
+    <item>
+      <category>Acid House</category>
+      <title>Where have all the notifications gone!</title>
+      <description>ON MAY 10th &amp;#38;European&amp;#38; finance ministers meeting in Brussels produced a three-year â?¬750 billion rescue package for the euro zone, designed to convince financial markets that the weaker members of the single currency would not be abandoned.</description>
+      <author>The Essential Selection</author>
+      <link>http://projectnightlife.co.uk/post/219</link>
+      <guid>http://projectnightlife.co.uk/post/219</guid>
+      <pubDate>Sun, 13 Feb 2011 14:26:19 GMT</pubDate>
+    </item>
     <item>
       <category>Acid House</category>
       <title>Testing new resource dependency manager</title>
@@ -237,51 +282,6 @@
       <link>http://projectnightlife.co.uk/post/183</link>
       <guid>http://projectnightlife.co.uk/post/183</guid>
       <pubDate>Sat, 15 Jan 2011 00:55:34 GMT</pubDate>
-    </item>
-    <item>
-      <category>Techno</category>
-      <title>Check my main man: Dizz to the ee....</title>
-      <description>Listen up for a bit of his freestyle where he's naming chicks he's hooked up with. This guy is sick!</description>
-      <author>Ainsley's Blog</author>
-      <link>http://projectnightlife.co.uk/post/181</link>
-      <guid>http://projectnightlife.co.uk/post/181</guid>
-      <pubDate>Fri, 14 Jan 2011 21:17:19 GMT</pubDate>
-    </item>
-    <item>
-      <category>Indie</category>
-      <title>This is a Test post</title>
-      <description>This is a test post blah blah blah blah blah</description>
-      <author>Alt.ernative</author>
-      <link>http://projectnightlife.co.uk/post/180</link>
-      <guid>http://projectnightlife.co.uk/post/180</guid>
-      <pubDate>Fri, 14 Jan 2011 11:31:26 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>Testing insights</title>
-      <description>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/179</link>
-      <guid>http://projectnightlife.co.uk/post/179</guid>
-      <pubDate>Fri, 14 Jan 2011 02:32:47 GMT</pubDate>
-    </item>
-    <item>
-      <category>Techno</category>
-      <title>Look out for the ginger kid getting knocked down...</title>
-      <description>triple j and all the bands rocked Cowra in central NSW for the One Night Stand for 2007,</description>
-      <author>Ainsley's Blog</author>
-      <link>http://projectnightlife.co.uk/post/178</link>
-      <guid>http://projectnightlife.co.uk/post/178</guid>
-      <pubDate>Thu, 13 Jan 2011 13:55:25 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>testing rss categories</title>
-      <description>fuckin minimum words</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/177</link>
-      <guid>http://projectnightlife.co.uk/post/177</guid>
-      <pubDate>Wed, 12 Jan 2011 02:19:31 GMT</pubDate>
     </item>
   </channel>
 </rss>

@@ -51,8 +51,9 @@ var objects = new Array();
 	  {
 		  content = content.replace("<Object "+i+">", "");
 	  }
-	  content = content.replace( /\u2018|\u2019|\u201A|\uFFFD/g, "'" );
-   	  content = content.replace( /\u201c|\u201d|\u201e/g, '"' );
+      content = content.replace(/&/g, "&#38;"); // needs to be the first thing we do otherwise it will replace all & in entities
+	  content = content.replace( /\u2018|\u2019|\u201A|\uFFFD|\u0027/g, "&#39;" );
+   	  content = content.replace( /\u201c|\u201d|\u201e|\u0022/g, '&#34;' );
       content = content.replace( /\u02C6/g, '^' );
       content = content.replace( /\u2039/g, '<' );
       content = content.replace( /\u203A/g, '>' );
@@ -65,7 +66,8 @@ var objects = new Array();
       content = content.replace( /\u00BC/g, '1/4' );
       content = content.replace( /\u00BD/g, '1/2' );
       content = content.replace( /\u00BE/g, '3/4' );
-      content = content.replace(/[\u02DC|\u00A0]/g, " ");
+	  content = content.replace(/\u20AC/g, "&#8364;");
+	  content = content.replace(/[\u02DC|\u00A0]/g, " ");
 	  var paragraphs = content.split("\n");
       var newcontent = new Array();
 	  var pattern = /\s+/g; // all white space characters (selecting consecutive as one) not stopping at the first (\n \t space etc...)
@@ -94,9 +96,9 @@ var objects = new Array();
 	  {
 	    var end = excerpt.lastIndexOf(' ');
 	    if (end != -1)
-	      excerpt = excerpt.substring(0, end);
+	      excerpt = excerpt.substring(0, end)+'...';
 	  }
-	  return excerpt;
+	  return encodeURIComponent(excerpt);
   }
   
   function serializeThumbnail(element) // causing problems in ie7 if first photo was deleted
@@ -155,12 +157,12 @@ var objects = new Array();
 		}
 	  }
 	  // keeps backward <> compatability with objects - converts to bbcode
-	  body = body.replace("<u>", "[u]");
-	  body = body.replace("</u>", "[/u]");
-	  body = body.replace("<i>", "[i]");
-	  body = body.replace("</i>", "[/i]");
-	  body = body.replace("<b>", "[b]");
-	  body = body.replace("</b>", "[/b]");
+	  body = body.replace(/<u>/g, "[u]");
+	  body = body.replace(/<\/u>/g, "[/u]");
+	  body = body.replace(/<i>/g, "[i]");
+	  body = body.replace(/<\/i>/g, "[/i]");
+	  body = body.replace(/<b>/g, "[b]");
+	  body = body.replace(/<\/b>/g, "[/b]");
 	  
 	  return body;
   }
@@ -564,6 +566,13 @@ function unpackPost(response)
 	    addLink(newLink);
 	  }
 	}
+	// keeps backward <> compatability with objects - converts to bbcode
+	$('#originalPostBody').val($('#originalPostBody').val().replace(/<u>/g, "[u]"));
+	$('#originalPostBody').val($('#originalPostBody').val().replace(/<\/u>/g, "[/u]"));
+	$('#originalPostBody').val($('#originalPostBody').val().replace(/<i>/g, "[i]"));
+	$('#originalPostBody').val($('#originalPostBody').val().replace(/<\/i>/g, "[/i]"));
+	$('#originalPostBody').val($('#originalPostBody').val().replace(/<b>/g, "[b]"));
+	$('#originalPostBody').val($('#originalPostBody').val().replace(/<\/b>/g, "[/b]"));
 	$('#postBody').val($('#originalPostBody').val());
 	$('#originalPostBody').empty().remove();
 	$('#postBody').TextAreaExpander(260, 1000);

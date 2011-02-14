@@ -86,14 +86,12 @@ foreach ($posts as $key => $post)
 }
 
 $resourceManager = new ResourceDependancyManager('blogs/blog', 'css');
-$resourceManager->addResource('blueprint/screen.css');
-$resourceManager->addResource('core.css');
+require_once($globalDir.'pages\\includes\\core_css.php');
 $resourceManager->addResource('blogs.css');
 $pageData['cssFile'] = $resourceManager->build();
 
 $resourceManager = new ResourceDependancyManager('blogs/blog', 'js');
-$resourceManager->addResource('jquery.js');
-$resourceManager->addResource('api.js');
+require_once($globalDir.'pages\\includes\\core_js.php');
 $resourceManager->addResource('corners.js');
 $resourceManager->addResource('blogs/blog.js');
 $pageData['jsFile'] = $resourceManager->build();
@@ -112,5 +110,6 @@ if ($subscribers->count() != 0)
   $smarty->assign('subscribers', $subscribers);
 }
 $smarty->assign('pageData', $pageData);
+$smarty->loadFilter('output', 'trimwhitespace');
 $smarty->display('templates/blog.tpl');
 ?>

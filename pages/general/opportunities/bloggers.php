@@ -16,16 +16,15 @@ catch (Exception $e)
 }
 
 $resourceManager = new ResourceDependancyManager('bloggers', 'css');
-$resourceManager->addResource('blueprint/screen.css');
-$resourceManager->addResource('core.css');
+require_once($globalDir.'pages\\includes\\core_css.php');
 $pageData['cssFile'] = $resourceManager->build();
 
 $resourceManager = new ResourceDependancyManager('bloggers', 'js');
-$resourceManager->addResource('jquery.js');
-$resourceManager->addResource('api.js');
+require_once($globalDir.'pages\\includes\\core_js.php');
 $pageData['jsFile'] = $resourceManager->build();
 
 $smarty->assign('pageData', $pageData);
 $smarty->assign('genres', $genres);
+$smarty->loadFilter('output', 'trimwhitespace');
 $smarty->display('templates/bloggers.tpl');
 ?>

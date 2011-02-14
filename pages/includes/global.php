@@ -1,11 +1,11 @@
 <?php
 
-$global = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
+// $globalDir; already set in calling php page
 
 // load Smarty library
 require('Smarty.class.php');
-require($global.'backend\\global_include.php');
-require($global.'pages\\includes\\autolink.php');
+require($globalDir.'backend\\global_include.php');
+require($globalDir.'pages\\includes\\autolink.php');
 
 // Authenticate with the Project Nightlife api
 API::Authenticate();
@@ -61,6 +61,11 @@ if (API::isUserLoggedIn())
 			$post = $blogService->GetPost($notification->information, false);
 			$session['notifications'][] = new notification($post->thumbnail, $post->title, "http://www.projectnightlife.co.uk/post/".$post->id, $post->excerpt,  API::GetDynamicDateString((int)$notification->date));
 		}
+		else if (strcmp($notification->type, "Comment") == 0)
+		{
+			$post = $blogService->GetPost($notification->information, false);
+			$session['notifications'][] = new notification($post->thumbnail, "New comments", "http://www.projectnightlife.co.uk/post/".$post->id."#comments", "On your post ".$post->title,  API::GetDynamicDateString((int)$notification->date));
+		}
 	}
 }
 
@@ -69,7 +74,7 @@ $smarty->assign('session', $session);
 //print '<div style="margin: 20px; background-color: #FDF07E; border: 1px solid #e7d118; color: #111; padding: 10px;"><p>We\'re currently reworking the genre system and as a result, its broken quite a lot of pages which rely on the old system.</p></div>';
 
 // Greenhill - 12/02/2011 - Load mobiledetect
-require_once($global."browscap\Mobile_Detect.php");
+require_once($globalDir."browscap\Mobile_Detect.php");
 @$mobiledetect = new Mobile_Detect();
 if ($mobiledetect->isMobile()) {
 	$smarty->assign("ismobile", "true");

@@ -640,10 +640,11 @@ function API()
 	  return this.internalSerializeString(content, false);
   };
   
-  // serializes string into utf-8 compliant string. internal line breaks (\n character) converted into \ and n characters
+  // serializes string to be utf-8 compliant. Internal line breaks (\n character) converted into \ and n characters
   this.internalSerializeString = function (content, formatting) {
-	  content = content.replace( /\u2018|\u2019|\u201A|\uFFFD/g, "'" );
-   	  content = content.replace( /\u201c|\u201d|\u201e/g, '"' );
+	  content = content.replace(/&/g, "&#38;"); // needs to be the first thing we do otherwise it will replace all & in entities
+	  content = content.replace( /\u2018|\u2019|\u201A|\uFFFD|\u0027/g, "&#39;" );
+   	  content = content.replace( /\u201c|\u201d|\u201e|\u0022/g, '&#34;' );
       content = content.replace( /\u02C6/g, '^' );
       content = content.replace( /\u2039/g, '<' );
       content = content.replace( /\u203A/g, '>' );
@@ -656,7 +657,8 @@ function API()
       content = content.replace( /\u00BC/g, '1/4' );
       content = content.replace( /\u00BD/g, '1/2' );
       content = content.replace( /\u00BE/g, '3/4' );
-      content = content.replace(/[\u02DC|\u00A0]/g, " ");
+	  content = content.replace(/\u20AC/g, "&#8364;");
+	  content = content.replace(/[\u02DC|\u00A0]/g, " ");
 	  var paragraphs = content.split("\n");
       var newcontent = new Array();
 	  var pattern = /\s+/g; // all white space characters (selecting consecutive as one) not stopping at the first (\n \t space etc...)
