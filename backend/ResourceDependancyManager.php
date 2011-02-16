@@ -36,8 +36,6 @@ class ResourceDependancyManager
 	private static $cssPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\css\\';
 	private static $cssBuildPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\css\\build\\';
 	
-	public $mobilesfx = "";
-	
 	public function __construct($URI, $resourceType)
 	{
 		$this->URI = strtolower($URI);
@@ -51,9 +49,12 @@ class ResourceDependancyManager
 	
 	public function build()
 	{
-		$buildPath = strcmp($this->resourceType, 'js') == 0 ? self::$jsBuildPath : self::$cssBuildPath;
-		$sourcePath = strcmp($this->resourceType, 'js') == 0 ? self::$jsPath : self::$cssPath;
-		$filename = md5($this->URI.$this->mobilesfx).'.'.$this->resourceType;
+		global $ismobile; 
+		
+		$mobilesfx	= ($ismobile == true) ? "-mobile" : ""; 
+		$buildPath	= strcmp($this->resourceType, 'js') == 0 ? self::$jsBuildPath : self::$cssBuildPath;
+		$sourcePath	= strcmp($this->resourceType, 'js') == 0 ? self::$jsPath : self::$cssPath;
+		$filename	= md5($this->URI).$mobilesfx.'.'.$this->resourceType;
 		if ($this->resourceExpired($buildPath, $filename))
 		{
 			try {
