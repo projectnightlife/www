@@ -31,10 +31,14 @@ class ResourceDependancyManager
 	private $resources = array();
 	
 	private static $cacheTime = 3600; // num seconds to cache built resource
-	private static $jsPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\js\\';
+	private static $jsPath = '..\\js\\';
+	private static $jsBuildPath = '..\\js\\build\\';
+	private static $cssPath = '..\\css\\';
+	private static $cssBuildPath = '..\\css\\build\\';
+	/*private static $jsPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\js\\';
 	private static $jsBuildPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\js\\build\\';
 	private static $cssPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\css\\';
-	private static $cssBuildPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\css\\build\\';
+	private static $cssBuildPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\css\\build\\';*/
 	
 	public function __construct($URI, $resourceType)
 	{
