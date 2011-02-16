@@ -7,7 +7,7 @@ function blogSaved(response)
 	// delete old blog photo if there was one
 	if (existedBlogPhoto && (photos.length > 1 || $('#photo1').size() == 0))
 	{
-	  api.sendSimpleRequest("http://www.projectnightlife.co.uk/backend/ajax.php?service=image&method=RemovePhoto&id="+photos[0].id, null, null, true);
+	  api.sendSimpleRequest(api.hostname+"/backend/ajax.php?service=image&method=RemovePhoto&id="+photos[0].id, null, null, true);
 	}
 	
 	saved = true;
@@ -122,7 +122,7 @@ function requestGenre()
 	  return false; // cancel was pressed which for some reason seems to throw return null or something... strange! So we better deal with it nicely!
 	genre = genre.replace(pattern, " "); // replace all multiple white space chars with one space
 	if (genre.replace(pattern, "").length != 0) // remove all spaces and see if input box is empty
-	  api.sendSimpleRequest('http://www.projectnightlife.co.uk/backend/ajax.php?service=genre&method=RequestGenre&genre='+genre, "genreRequested", null, false);
+	  api.sendSimpleRequest(api.hostname+'/backend/ajax.php?service=genre&method=RequestGenre&genre='+genre, "genreRequested", null, false);
 	return false;
 }
 
@@ -172,7 +172,7 @@ function addPhoto(photo)
 	  
 	var addedPhotos = document.getElementById('addedPhotos');
 	var image = document.createElement('img');
-    image.src = "http://www.projectnightlife.co.uk/photo/"+newPhoto.id+"/80x80";
+    image.src = api.hostname+"/photo/"+newPhoto.id+"/80x80";
 	image.style.height = "80px";
 	image.style.width = "80px";
 	var holder = document.createElement('div');
@@ -196,7 +196,7 @@ function removePhoto(photoNum)
 {
 	if (!(photoNum == 1 && existedBlogPhoto))
 	{
-	  api.sendSimpleRequest("http://www.projectnightlife.co.uk/backend/ajax.php?service=image&method=RemovePhoto&id="+photos[photoNum - 1].id, null, null, true);
+	  api.sendSimpleRequest(api.hostname+"/backend/ajax.php?service=image&method=RemovePhoto&id="+photos[photoNum - 1].id, null, null, true);
       photos[photoNum - 1] = null;
 	}
 	$('#photo'+photoNum).empty().remove();
@@ -383,7 +383,7 @@ function blogDispose() // remove unused photo if there is one
 {
 	if ($('#photo'+photos.length).size() > 0 && (photos.length > 1 || !existedBlogPhoto))
 	{
-	  api.sendSimpleRequest("http://www.projectnightlife.co.uk/backend/ajax.php?service=image&method=RemovePhoto&id="+photos[photos.length - 1].id, null, null, true);
+	  api.sendSimpleRequest(api.hostname+"/backend/ajax.php?service=image&method=RemovePhoto&id="+photos[photos.length - 1].id, null, null, true);
 	}
 }
 
