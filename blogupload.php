@@ -54,7 +54,7 @@ function initUploader()
 <form id="uploadForm" action="http://upload.projectnightlife.co.uk/photo.php" method="post" name="upload" enctype="multipart/form-data">
   <input id="file" name="image" class="text" type="file" />
   <input type="hidden" name="caption" value="" />
-  <input type="hidden" name="return" id="return" value="{$pageData['hostname']}/blogupload.php" />
+  <input type="hidden" name="return" id="return" value="<?php print $_SERVER['HTTP_HOST']; ?>/blogupload.php" />
 </form>
 </body>
 </html>
