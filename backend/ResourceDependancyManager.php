@@ -30,18 +30,21 @@ class ResourceDependancyManager
 	private $resourceType;
 	private $resources = array();
 	
-	private static $cacheTime = 3600; // num seconds to cache built resource
-	private static $jsPath = '..\\js\\';
-	private static $jsBuildPath = '..\\js\\build\\';
-	private static $cssPath = '..\\css\\';
-	private static $cssBuildPath = '..\\css\\build\\';
-	/*private static $jsPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\js\\';
+	private static $cacheTime = 1; // num seconds to cache built resource
+
+	private static $jsPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\js\\';
 	private static $jsBuildPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\js\\build\\';
 	private static $cssPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\css\\';
-	private static $cssBuildPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\css\\build\\';*/
+	private static $cssBuildPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\css\\build\\';
 	
 	public function __construct($URI, $resourceType)
 	{
+		// Adjust for developer host
+		self::$jsPath = ($_SERVER['HTTP_HOST'] == 'developer.projectnightlife.co.uk') ? str_replace('www.projectnightlife.co.uk', 'developer.projectnightlife.co.uk', self::$jsPath) : self::$jsPath;
+		self::$jsBuildPath = ($_SERVER['HTTP_HOST'] == 'developer.projectnightlife.co.uk') ? str_replace('www.projectnightlife.co.uk', 'developer.projectnightlife.co.uk', self::$jsBuildPath) : self::$jsBuildPath;
+		self::$cssPath = ($_SERVER['HTTP_HOST'] == 'developer.projectnightlife.co.uk') ? str_replace('www.projectnightlife.co.uk', 'developer.projectnightlife.co.uk', self::$cssPath) : self::$cssPath;
+		self::$cssBuildPath = ($_SERVER['HTTP_HOST'] == 'developer.projectnightlife.co.uk') ? str_replace('www.projectnightlife.co.uk', 'developer.projectnightlife.co.uk', self::$cssBuildPath) : self::$cssBuildPath;
+		
 		$this->URI = strtolower($URI);
 		$this->resourceType = strtolower($resourceType);
 	}
@@ -59,6 +62,7 @@ class ResourceDependancyManager
 		$buildPath	= strcmp($this->resourceType, 'js') == 0 ? self::$jsBuildPath : self::$cssBuildPath;
 		$sourcePath	= strcmp($this->resourceType, 'js') == 0 ? self::$jsPath : self::$cssPath;
 		$filename	= md5($this->URI).$mobilesfx.'.'.$this->resourceType;
+		
 		if ($this->resourceExpired($buildPath, $filename))
 		{
 			try {
@@ -74,7 +78,7 @@ class ResourceDependancyManager
 				
 				// compress (removes standard comments so need to add meta comments after compression)
 				exec('java -jar "c:\\Program Files (x86)\\Yui\\compressor\\yuicompressor-2.4.2.jar" "'.$buildPath.$filename.'" -o "'.$buildPath.$filename.'" --charset utf-8');
-				
+				//print 'my wang is huge';
 				// need to add meta data comment to first line of file
 				$optimisedResource = file_get_contents($buildPath.$filename);
 				$fh = fopen($buildPath.$filename, 'w');
@@ -99,6 +103,7 @@ class ResourceDependancyManager
 	private function resourceExpired($buildPath, $filename)
 	{
 		$expired = false;
+		
 		if (file_exists($buildPath.$filename))
 		{
 			$fh = fopen($buildPath.$filename, 'r');

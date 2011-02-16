@@ -1,7 +1,10 @@
 <?php
 //remeber this will be called in context of pages... so paths start from root
 
-$globalDir = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
+//$globalDir = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
+$globalDir = dirname(dirname(__FILE__)).'\\';
+
+//$globalDir = "c:\\inetpub\\wwwroot\\developer.projectnightlife.co.uk\\";
 
 require_once($globalDir."backend\\Credentials.php");
 require_once($globalDir."backend\\FacebookAuth.php");
