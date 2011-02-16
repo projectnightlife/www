@@ -89,10 +89,10 @@
               
               <h4>External images</h4>
               <p>If you wish to display a photo from another website, you'll need to save it to your computer first and then upload it to your blog post. This can usually be done by right clicking the photo you wish to use and selecting the menu option along the lines of <i>Save Image As</i>. Make a note of where the image has been saved so you can select it when uploading to Project Nightlife.</p>
-              <p>Please remember when using images from other websites, unless its a press photo or states otherwise, you'll need to cite the source of the photo in your post. We recommend having a section at the bottom of your post citing each photo. For example</p>
+              <!--<p>Please remember when using images from other websites, unless its a press photo or states otherwise, you'll need to cite the source of the photo in your post. We recommend having a section at the bottom of your post citing each photo. For example</p>
               <p>[1] Name of website<br />
                  [2] Name of website<br />
-                 etc...</p>
+                 etc...</p>-->
               
               <h4>Adding audio and video</h4>
               <p>To add flash audio or video, begin by clicking the <i>Add flash content</i> link, this will uncover the embed facility.</p>
