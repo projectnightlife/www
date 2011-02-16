@@ -51,21 +51,27 @@ $session['userId'] = $user['id'];
 $session['loggedIn'] = API::IsUserLoggedIn();
 if (API::isUserLoggedIn())
 {
-	$session['notificationsPending'] = $notificationService->GetUserHasPending();
-	$notifications = $notificationService->GetUserNotifications(5, 0);
-	$session['notifications'] = array();
-	foreach ($notifications as $notification)
+	try {
+		$session['notificationsPending'] = $notificationService->GetUserHasPending();
+		$notifications = $notificationService->GetUserNotifications(5, 0);
+		$session['notifications'] = array();
+		foreach ($notifications as $notification)
+		{
+			if (strcmp($notification->type, "Post") == 0)
+			{
+				$post = $blogService->GetPost($notification->information, false);
+				$session['notifications'][] = new notification($post->thumbnail, 'New post by '.$blogService->getBlog($post->blogId)->name, "http://www.projectnightlife.co.uk/post/".$post->id, $post->title,  API::GetDynamicDateString((int)$notification->date));
+			}
+			else if (strcmp($notification->type, "Comment") == 0)
+			{
+				$post = $blogService->GetPost($notification->information, false);
+				$session['notifications'][] = new notification($post->thumbnail, "New comments", "http://www.projectnightlife.co.uk/post/".$post->id."#comments", "On the post ".$post->title,  API::GetDynamicDateString((int)$notification->date));
+			}
+		}
+	}
+	catch (Exception $e)
 	{
-		if (strcmp($notification->type, "Post") == 0)
-		{
-			$post = $blogService->GetPost($notification->information, false);
-			$session['notifications'][] = new notification($post->thumbnail, $post->title, "http://www.projectnightlife.co.uk/post/".$post->id, $post->excerpt,  API::GetDynamicDateString((int)$notification->date));
-		}
-		else if (strcmp($notification->type, "Comment") == 0)
-		{
-			$post = $blogService->GetPost($notification->information, false);
-			$session['notifications'][] = new notification($post->thumbnail, "New comments", "http://www.projectnightlife.co.uk/post/".$post->id."#comments", "On your post ".$post->title,  API::GetDynamicDateString((int)$notification->date));
-		}
+		$logService->LogAppError($appId, 6, $_SERVER['HTTP_USER_AGENT'], "Unable to successfully get notifications for user ".$user['id']);
 	}
 }
 

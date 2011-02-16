@@ -6,283 +6,30 @@
     <category>Blogs</category>
     <copyright>Copyright © 2011 - Project Nightlife</copyright>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 14 Feb 2011 15:54:54 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 16 Feb 2011 02:11:37 GMT</lastBuildDate>
     <ttl>15</ttl>
     <item>
-      <category>Acid House</category>
-      <title>testing post warning patch</title>
-      <description>should have patched embedded content</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/226</link>
-      <guid>http://projectnightlife.co.uk/post/226</guid>
-      <pubDate>Mon, 14 Feb 2011 15:54:54 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>Testing embedding</title>
-      <description>Oops, i know whats causing those warnings!</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/225</link>
-      <guid>http://projectnightlife.co.uk/post/225</guid>
-      <pubDate>Mon, 14 Feb 2011 15:42:33 GMT</pubDate>
-    </item>
-    <item>
-      <category>Dubstep</category>
-      <title>I cannot wait to drive across America!</title>
-      <description>
-      </description>
-      <author>A Crazy New Blog</author>
-      <link>http://projectnightlife.co.uk/post/224</link>
-      <guid>http://projectnightlife.co.uk/post/224</guid>
-      <pubDate>Mon, 14 Feb 2011 15:33:53 GMT</pubDate>
-    </item>
-    <item>
       <category>Indie</category>
-      <title>Testing xsl</title>
-      <description>this is bold</description>
+      <category>Alternative</category>
+      <category>Punk</category>
+      <title>Welcome to Project Nightlife</title>
+      <description>Hi all,</description>
       <author>Alt.ernative</author>
-      <link>http://projectnightlife.co.uk/post/223</link>
-      <guid>http://projectnightlife.co.uk/post/223</guid>
-      <pubDate>Mon, 14 Feb 2011 00:12:53 GMT</pubDate>
+      <link>http://projectnightlife.co.uk/post/229</link>
+      <guid>http://projectnightlife.co.uk/post/229</guid>
+      <pubDate>Wed, 16 Feb 2011 02:11:37 GMT</pubDate>
     </item>
     <item>
-      <category>Acid House</category>
-      <title>Testing symbols</title>
-      <description>&amp;#8364; blah &amp;#34;should work&amp;#34; blah &amp;#38; blah &amp;#39;should work&amp;#39; blah</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/222</link>
-      <guid>http://projectnightlife.co.uk/post/222</guid>
-      <pubDate>Sun, 13 Feb 2011 22:18:21 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>Testing ie 7</title>
-      <description>blah blah blah</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/221</link>
-      <guid>http://projectnightlife.co.uk/post/221</guid>
-      <pubDate>Sun, 13 Feb 2011 22:03:25 GMT</pubDate>
-    </item>
-    <item>
-      <category>Dubstep</category>
-      <title>The PIIGS that won't fly:</title>
-      <description>ON MAY 10th European finance ministers meeting in Brussels produced a three-year â?¬750 billion rescue package for the euro zone, designed to convince financial markets that the weaker members of the single currency would not be abandoned. The scale</description>
-      <author>A Crazy New Blog</author>
-      <link>http://projectnightlife.co.uk/post/220</link>
-      <guid>http://projectnightlife.co.uk/post/220</guid>
-      <pubDate>Sun, 13 Feb 2011 15:40:45 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>Where have all the notifications gone!</title>
-      <description>ON MAY 10th &amp;#39;European&amp;#38; finance ministers meeting in Brussels produced a three-year &amp;#8364;750 billion rescue package for the euro zone, designed to convince financial markets that the weaker members of the single currency would not be...</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/219</link>
-      <guid>http://projectnightlife.co.uk/post/219</guid>
-      <pubDate>Sun, 13 Feb 2011 14:26:19 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>Testing new resource dependency manager</title>
-      <description>blah blah</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/218</link>
-      <guid>http://projectnightlife.co.uk/post/218</guid>
-      <pubDate>Sat, 12 Feb 2011 20:55:26 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>Testing image optimisation</title>
-      <description>Have made further optimisations to the image service to compress images by a further 40-80% without losing any quality.</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/217</link>
-      <guid>http://projectnightlife.co.uk/post/217</guid>
-      <pubDate>Sat, 12 Feb 2011 00:23:29 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>testing firefox 3.6 and 4</title>
-      <description>Adjusted a width issue with comments michael, added overflow-x hidden</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/216</link>
-      <guid>http://projectnightlife.co.uk/post/216</guid>
-      <pubDate>Fri, 11 Feb 2011 14:34:31 GMT</pubDate>
-    </item>
-    <item>
+      <category>Urban</category>
+      <category>Lifestyle</category>
+      <category>Electronic</category>
       <category>Rock</category>
-      <category>Metal</category>
-      <category>Thrash Metal</category>
-      <category>NWOBHM</category>
-      <category>Prog Metal</category>
-      <category>Prog Rock</category>
-      <title>Test post, bitches</title>
-      <description>Baaada</description>
-      <author>The Rocker</author>
-      <link>http://projectnightlife.co.uk/post/215</link>
-      <guid>http://projectnightlife.co.uk/post/215</guid>
-      <pubDate>Thu, 10 Feb 2011 20:07:21 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>a new post</title>
-      <description>blah blah blah gdsfgds</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/214</link>
-      <guid>http://projectnightlife.co.uk/post/214</guid>
-      <pubDate>Wed, 09 Feb 2011 23:56:56 GMT</pubDate>
-    </item>
-    <item>
-      <category>Indie</category>
-      <title>Hopefully the final test post</title>
-      <description>Just checking that I'm back on my old blog, and that everything still works ok</description>
-      <author>Alt.ernative</author>
-      <link>http://projectnightlife.co.uk/post/213</link>
-      <guid>http://projectnightlife.co.uk/post/213</guid>
-      <pubDate>Wed, 09 Feb 2011 19:17:51 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>Testing notifications</title>
-      <description>Should display anybody subscribed to my blog with a nice new notification</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/209</link>
-      <guid>http://projectnightlife.co.uk/post/209</guid>
-      <pubDate>Wed, 09 Feb 2011 01:14:46 GMT</pubDate>
-    </item>
-    <item>
-      <category>Dubstep</category>
-      <title>This should flag up in the notification system</title>
-      <description>This is a post designed to flag up the notifications system</description>
-      <author>A Crazy New Blog</author>
-      <link>http://projectnightlife.co.uk/post/208</link>
-      <guid>http://projectnightlife.co.uk/post/208</guid>
-      <pubDate>Tue, 08 Feb 2011 20:18:34 GMT</pubDate>
-    </item>
-    <item>
-      <category>Dubstep</category>
-      <title>Yeah, I broke the site again!</title>
-      <description>My Bad,</description>
-      <author>A Crazy New Blog</author>
-      <link>http://projectnightlife.co.uk/post/207</link>
-      <guid>http://projectnightlife.co.uk/post/207</guid>
-      <pubDate>Tue, 08 Feb 2011 02:12:02 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>We're back after that brief outage!</title>
-      <description>Everybody blame michael greenhill ;-) lol</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/206</link>
-      <guid>http://projectnightlife.co.uk/post/206</guid>
-      <pubDate>Sun, 06 Feb 2011 17:50:49 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>Can i still post?</title>
-      <description>sd</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/205</link>
-      <guid>http://projectnightlife.co.uk/post/205</guid>
-      <pubDate>Fri, 04 Feb 2011 20:52:14 GMT</pubDate>
-    </item>
-    <item>
-      <category>Dubstep</category>
-      <title>this guy needs to get to indias got talent...</title>
-      <description>Love this guy...Love this guy..Love this guy..Love this guy..Love this guy..Love this guy..Love this guy..Love this guy..Love this guy..Love this guy..Love this guy..Love this guy..Love this guy..Love this guy..Love this guy..Love this guy..Love</description>
-      <author>A Crazy New Blog</author>
-      <link>http://projectnightlife.co.uk/post/204</link>
-      <guid>http://projectnightlife.co.uk/post/204</guid>
-      <pubDate>Tue, 01 Feb 2011 22:27:34 GMT</pubDate>
-    </item>
-    <item>
-      <category>Dubstep</category>
-      <title>Testing the multiple author blog....</title>
-      <description>what you saying doggy dogs?</description>
-      <author>A Crazy New Blog</author>
-      <link>http://projectnightlife.co.uk/post/203</link>
-      <guid>http://projectnightlife.co.uk/post/203</guid>
-      <pubDate>Tue, 01 Feb 2011 17:42:43 GMT</pubDate>
-    </item>
-    <item>
-      <category>Dubstep</category>
-      <title>Checking i can post ok from the new multiple author blogs</title>
-      <description>asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf</description>
-      <author>A Crazy New Blog</author>
-      <link>http://projectnightlife.co.uk/post/202</link>
-      <guid>http://projectnightlife.co.uk/post/202</guid>
-      <pubDate>Tue, 01 Feb 2011 16:41:26 GMT</pubDate>
-    </item>
-    <item>
-      <category>Techno</category>
-      <title>Posted by Marcus ;-)</title>
-      <description>Checking i can pust under alans blog</description>
-      <author>Ainsley's Blog</author>
-      <link>http://projectnightlife.co.uk/post/201</link>
-      <guid>http://projectnightlife.co.uk/post/201</guid>
-      <pubDate>Tue, 01 Feb 2011 14:50:41 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>testing blog post authors</title>
-      <description>testing blog post authorstesting blog post authorstesting blog post authorstesting blog post authorstesting blog post authorstesting blog post authorstesting blog post authorstesting blog post authors</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/200</link>
-      <guid>http://projectnightlife.co.uk/post/200</guid>
-      <pubDate>Tue, 01 Feb 2011 13:35:01 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>Testing new way of embedding youtube into page</title>
-      <description>Embedding youtube content is now like facebook. Simply paste the url into the add object box.</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/199</link>
-      <guid>http://projectnightlife.co.uk/post/199</guid>
-      <pubDate>Mon, 31 Jan 2011 18:11:39 GMT</pubDate>
-    </item>
-    <item>
-      <category>Techno</category>
-      <title>julius de mattos film buff</title>
-      <description>testing for jdm</description>
-      <author>Ainsley's Blog</author>
-      <link>http://projectnightlife.co.uk/post/198</link>
-      <guid>http://projectnightlife.co.uk/post/198</guid>
-      <pubDate>Mon, 31 Jan 2011 12:44:25 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>testing ie 7 again</title>
-      <description>yea yea yea fuckers x</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/196</link>
-      <guid>http://projectnightlife.co.uk/post/196</guid>
-      <pubDate>Thu, 27 Jan 2011 17:58:32 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>testing from ie 7</title>
-      <description>erterterterterte</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/195</link>
-      <guid>http://projectnightlife.co.uk/post/195</guid>
-      <pubDate>Thu, 27 Jan 2011 16:30:45 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>testing smaller images</title>
-      <description>testing smaller imagestesting smaller imagestesting smaller imagestesting smaller imagestesting smaller imagestesting smaller imagestesting smaller imagestesting smaller imagestesting smaller imagestesting smaller images</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/194</link>
-      <guid>http://projectnightlife.co.uk/post/194</guid>
-      <pubDate>Wed, 26 Jan 2011 14:40:57 GMT</pubDate>
-    </item>
-    <item>
-      <category>Acid House</category>
-      <title>This post should have a thumbnail</title>
-      <description>This post should have no thumbnail</description>
-      <author>The Essential Selection</author>
-      <link>http://projectnightlife.co.uk/post/192</link>
-      <guid>http://projectnightlife.co.uk/post/192</guid>
-      <pubDate>Sun, 23 Jan 2011 00:48:27 GMT</pubDate>
+      <title>Welcome to Project Nightlife</title>
+      <description>Project Nightlife is the hottest new music, nightlife and fashion resource. We&amp;#39;ve recruited a team of excitingly talented bloggers whose passion and creativity will transpire to a wealth of information available to you at the click of a button.</description>
+      <author>Project Nightlife</author>
+      <link>http://projectnightlife.co.uk/post/228</link>
+      <guid>http://projectnightlife.co.uk/post/228</guid>
+      <pubDate>Wed, 16 Feb 2011 00:42:35 GMT</pubDate>
     </item>
   </channel>
 </rss>

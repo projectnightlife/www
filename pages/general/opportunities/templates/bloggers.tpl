@@ -33,7 +33,7 @@ select { font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', s
               <img style="display: block; float: left; padding: 30px;" src="images/blog_for_us.png" />
               <div style="float: left; padding: 130px 40px 0; width: 360px;">
                 <h1 style="margin: 0; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 28px; color: #ABA0C0; line-height: 36px;">Blog for Project Nightlife</h1>
-                <h2 style="margin-top: 5px; font-size: 18px; line-height: 26px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">The wait is finally over. We're ready for you to become part of<!--join--> the web's hottest new music and fashion resource.</h2>
+                <h2 style="margin-top: 5px; font-size: 18px; line-height: 26px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">The wait is finally over. We're ready for you to become part of<!--join--> the web's hottest new music and nightlife resource.</h2>
                 {if $session['loggedIn']}
                 <a class="join" href="#" onClick="return slideLeft();">Join Now</a>
                 {else}

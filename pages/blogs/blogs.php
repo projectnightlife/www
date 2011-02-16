@@ -12,7 +12,7 @@ if (isset($_GET['filter']))
 		case 'electronic' : $pageData['filter'] = 'electronic';
 	                	    break;
 							
-		case 'indie' :      $pageData['filter'] = 'indie';
+		case 'rock' :      $pageData['filter'] = 'rock';
 	                	    break;
 							
 		case 'urban' :      $pageData['filter'] = 'urban';

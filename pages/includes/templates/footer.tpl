@@ -21,7 +21,7 @@
       </div>
     </div>
   </div>
-   {if $session['loggedIn']}
+   <!--{if $session['loggedIn']}
   <div style="position: fixed; bottom: 0px; height: 30px; background: #111; width: 100%; border-top: 1px solid #222; overflow: auto; opacity:0.8;filter:alpha(opacity=80);">
     <div style="padding: 5px;">
       <div style="float: left; color: #bbb;">Just a little idea i'm toying with for the future ;-)</div>
@@ -37,4 +37,4 @@
       {/if}
     </div>
   </div>
-  {/if}
+  {/if}-->

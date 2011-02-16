@@ -13,7 +13,7 @@
         <div class="heading">
           <h1 class="left">Blogs</h1>
           <div class="right" style="margin: 10px 5px 0;">
-            <ul class="filter"><li>Filter:</li><li{if $pageData['filter'] eq 'all'} class="selected rnd8px"{/if}><a href="pages/blogs/blogs.php">All</a></li><li{if $pageData['filter'] eq 'electronic'} class="selected rnd8px"{/if}><a href="pages/blogs/blogs.php?filter=electronic">Electronic</a></li><li{if $pageData['filter'] eq 'indie'} class="selected rnd8px"{/if}><a href="pages/blogs/blogs.php?filter=indie">Indie</a></li><li{if $pageData['filter'] eq 'urban'} class="selected rnd8px"{/if}><a href="pages/blogs/blogs.php?filter=urban">Urban</a></li><li{if $pageData['filter'] eq 'lifestyle'} class="selected rnd8px"{/if}><a href="pages/blogs/blogs.php?filter=lifestyle">Lifestyle</a></li><li class="last{if $pageData['filter'] eq 'other'} selected rnd8px{/if}"><a href="pages/blogs/blogs.php?filter=other">{if $pageData['filter'] eq 'other'}{$pageData['filterOn']}{else}Other{/if}</a></li></ul>
+            <ul class="filter"><li>Filter:</li><li{if $pageData['filter'] eq 'all'} class="selected rnd8px"{/if}><a href="pages/blogs/blogs.php">All</a></li><li{if $pageData['filter'] eq 'electronic'} class="selected rnd8px"{/if}><a href="pages/blogs/blogs.php?filter=electronic">Electronic</a></li><li{if $pageData['filter'] eq 'rock'} class="selected rnd8px"{/if}><a href="pages/blogs/blogs.php?filter=rock">Rock</a></li><li{if $pageData['filter'] eq 'urban'} class="selected rnd8px"{/if}><a href="pages/blogs/blogs.php?filter=urban">Urban</a></li><li{if $pageData['filter'] != 'other'} class="last{/if}{if $pageData['filter'] eq 'lifestyle'} selected rnd8px{/if}{if $pageData['filter'] != 'other'}"{/if}><a href="pages/blogs/blogs.php?filter=lifestyle">Lifestyle</a></li>{if $pageData['filter'] eq 'other'}<li class="last selected rnd8px"><a href="pages/blogs/blogs.php?filter={$pageData['filterOn']}">{$pageData['filterOn']}</a></li>{/if}</ul>
           </div>
         </div>
         <hr />
@@ -50,9 +50,9 @@
           </div>
           <div id="pagingWindow">
             <a href="#" rel="1">1</a>
-            <a href="#" rel="2">2</a>
+            <!--<a href="#" rel="2">2</a>
             <a href="#" rel="3">3</a>
-            <a href="#" rel="4">4</a>
+            <a href="#" rel="4">4</a>-->
           </div>
         </div>
 		{/if}

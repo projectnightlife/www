@@ -17,14 +17,20 @@
       
       <div class="masthead">
         <div class="heading">
-          <h1 class="left">{$blog->name}</h1><h1 class="right">Blog</h1>
+          <h1 class="left">Conor Owen</h1><h1 class="right">Artist</h1>
         </div>
         <hr />
-        <div class="breadcrumbs"><a href="">Home</a> > <a href="pages/blogs/blogs.php">Blogs</a> > <a href="pages/blogs/blog.php?id={$blog->id}">{$blog->name}</a></div>
+        <div class="breadcrumbs"><a href="">Home</a> > <a href="pages/blogs/blogs.php">Artists</a> > <a href="pages/blogs/blog.php?id={$blog->id}">Conor Owen</a></div>
       </div>
       
       <div class="canvas">
-        
+        <div class="span960 btmspcr" style="position: relative;">
+          <img src="images/conor.png" style="border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;" />
+          <div style="position: absolute; z-index: 100; top: 50px; right: 30px; width: 200px; background: url(http://www.projectnightlife.co.uk/images/core/transparency/75.png) repeat; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 10px;">
+            <div><img src="images/core/icons/blue_chevron.png" /><span style="padding-left: 5px;">Age: 22</span></div>
+            <div><img src="images/core/icons/blue_chevron.png" /><span style="padding-left: 5px;">City: London</span></div>
+          </div>
+        </div>
         <div id="leftColumn" class="span200">
           <img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=200x600" style="display: block; margin: 0 auto;" />
           <div class="profileInteractions topspcr">

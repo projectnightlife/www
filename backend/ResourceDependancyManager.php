@@ -30,7 +30,7 @@ class ResourceDependancyManager
 	private $resourceType;
 	private $resources = array();
 	
-	private static $cacheTime = 1; // num seconds to cache built resource
+	private static $cacheTime = 3600; // num seconds to cache built resource
 	private static $jsPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\js\\';
 	private static $jsBuildPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\js\\build\\';
 	private static $cssPath = 'c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\css\\';

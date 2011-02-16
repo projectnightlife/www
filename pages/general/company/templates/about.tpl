@@ -19,21 +19,21 @@
       </form>
           
         <div class="span310 topspcr15">
-          <div class="UIpanel" style="height: 170px; border-color: #111; font-family: Tahoma, Geneva, sans-serif;">
+          <div class="UIpanel" style="height: 250px; border-color: #111; font-family: Tahoma, Geneva, sans-serif;">
             <h3 style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 24px; color: #ABA0C0; margin-bottom: 16px; line-height: 26px;">Who We Are</h3>
-		    <p>Project Nightlife are always on the look out for talented new bloggers.</p><p class="last-child">Are you passionate about an area we haven't got covered? Maybe you're studying to be a journalist? Or do you simply want to share your knowledge and opinions with others?</p>
+		    <p>At Project Nightlife we pride ourselves on our enthusiasm for what we do.</p><p class="last-child">Driven by our passion for nightlife and music in particular, we strive to bring you the latest, freshest and most up to date information available.</p>
           </div>
         </div>
         <div class="span310 leftspcr15 topspcr15">
-          <div class="UIpanel" style="height: 170px; border-color: #111; font-family: Tahoma, Geneva, sans-serif;">
+          <div class="UIpanel" style="height: 250px; border-color: #111; font-family: Tahoma, Geneva, sans-serif;">
             <h3 style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 24px; color: #ABA0C0; margin-bottom: 16px; line-height: 26px;">What We Do</h3>
-            <p>To make up for the time you dedicate to us, we'll give you the chance to go backstage at your favorite gigs and events or attend the hottest nights - absolutely free!<sup class="terms">1</sup></p><p class="last-child">And... to top it all off, we'll even pay you to write for us!<sup class="terms">2</sup></p>
+            <p>Before launching our full website which will provide the latest on music, fashion, drinks and the funkiest venues,  Project Nightlife aims to become the ultimate music resource.</p><p class="last-child">We've recruited a team of excitingly talented bloggers whose passion and creativity will transpire to a wealth of information available to all our users at the click of a button. Our site is friendly and simple to use, making yours and our love for music easier than ever before!</p>
           </div>
         </div>
         <div class="span310 leftspcr15 topspcr15">
-          <div class="UIpanel" style="height: 170px; border-color: #111; font-family: Tahoma, Geneva, sans-serif;">
+          <div class="UIpanel" style="height: 250px; border-color: #111; font-family: Tahoma, Geneva, sans-serif;">
             <h3 style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 24px; color: #ABA0C0; margin-bottom: 16px; line-height: 26px;">Our Vision</h3>
-            <p>We're currently looking to expand the music and fashion areas of our blogs.</p><p class="last-child">To become one of our bloggers, simply click Join Now</p><!--<p>If you want to know more, simply register your interest by click 'Apply Now' and we'll be in touch shortly.</p>-->
+            <p>At Project Nightlife we aim for the best. Our vision is to be the ultimate resource for those with a real interest in going out and experiencing the best UK nightlife has to offer.</p><p>This is an extremely exciting project to be part of and we are always on the hunt for people as passionate as we are.</p><p class="last-child">If you think you fit the mould, then don't hesitate, we would love to <a href="#" onclick="return api.composeMessage('Contact Us', api.contactus(), 'http://www.projectnightlife.co.uk/backend/communicate.php', 0);" title="Contact us">hear from you!</a></p>
           </div>
         </div>
         

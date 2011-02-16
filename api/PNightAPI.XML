@@ -4,9 +4,106 @@
         <name>PNightAPI</name>
     </assembly>
     <members>
+        <member name="T:RegistrationService">
+            <summary>
+            Summary description for RegistrationService
+            </summary>
+        </member>
+        <member name="T:PublicThinUser">
+            <summary>
+            Summary description for PublicUser
+            </summary>
+        </member>
+        <member name="T:Genre">
+            <summary>
+            Summary description for Genre
+            </summary>
+        </member>
+        <member name="T:BlogGenres">
+            <summary>
+            Summary description for Genre
+            </summary>
+        </member>
+        <member name="T:PublicBlogPost">
+            <summary>
+            Summary description for PublicBlogPost
+            </summary>
+        </member>
+        <member name="T:AuthenticationFailureException">
+            <summary>
+            Summary description for AuthenticationFailureException
+            </summary>
+        </member>
+        <member name="M:AuthenticationService.Authenticate(System.String,System.String,System.String,System.String)">
+            <summary>
+            Authenticate a client against the API
+            </summary>
+            <param name="wsApiId">The WebService API Key for the client <example>PNIGHT</example></param>
+            <param name="secretKey">The secret key for the client<example>SECRET</example></param>
+            <param name="user">Optional. Either a user name to authenticate against, or leave blank to authenticate as a guest</param>
+            <param name="token">Optional, Required with user. The Facebook auth token for the given user id</param>
+            <returns></returns>
+        </member>
+        <member name="M:AuthenticationService.IsGuestUser(System.String)">
+            <summary>
+            Discover if the currently authenticated user is a guest user
+            </summary>
+            <param name="authToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NotificationService">
+            <summary>
+            Summary description for NotificationService
+            </summary>
+        </member>
+        <member name="M:NotificationService.GetUserHasPending(System.String)">
+            <summary>
+            Determine if the logged in user has any notifications pending. Throws an exception if current user is guest
+            </summary>
+            <param name="authToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NotificationService.ClearUserHasPending(System.String)">
+            <summary>
+            Clear the notifications pending flag for the logged in user. Throws an exception if current user is guest
+            </summary>
+            <param name="authToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NotificationService.GetUserNotifications(System.String,System.Int32,System.Int32)">
+            <summary>
+            Get a list of notifications for the current user. Throws an exception if current user is guest.
+            
+            The list returned includes the type of notification, the date/time it was added, and some associated information (usually the id for whatever type, i.e. postId)
+            </summary>
+            <param name="authToken"></param>
+            <param name="numberRequired">The number of notifications to return, or 0 for all notifications <example>10</example></param>
+            <param name="startIndex">The index at which to start returning notifications, begining at 0 <example>0</example></param>
+            <returns></returns>
+        </member>
         <member name="T:Blog">
             <summary>
             Summary description for blog_Blog
+            </summary>
+        </member>
+        <member name="T:Utils">
+            <summary>
+            Summary description for Utils
+            </summary>
+        </member>
+        <member name="T:UserService">
+            <summary>
+            Summary description for UserService
+            </summary>
+        </member>
+        <member name="T:PublicBlogComment">
+            <summary>
+            Summary description for PublicBlogComment
+            </summary>
+        </member>
+        <member name="T:Response`1">
+            <summary>
+            Summary description for Response
             </summary>
         </member>
         <member name="T:GenreService">
@@ -53,20 +150,32 @@
             <param name="ip">The ip of the user making the request</param>
             <returns></returns>
         </member>
+        <member name="T:Database">
+            <summary>
+            Summary description for Database
+            </summary>
+        </member>
         <member name="T:User">
             <summary>
             Summary description for Account
             </summary>
         </member>
-        <member name="T:BlogComment">
+        <member name="T:SystemService">
             <summary>
-            Summary description for blog_Comment
+            Summary description for SystemService
             </summary>
         </member>
-        <member name="T:Database">
+        <member name="M:SystemService.GetMemoryOverview(System.String)">
             <summary>
-            Summary description for Database
+            Gets an overview of the Project Nightlife Platform's memory usage
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SystemService.GetCPUOverview(System.String)">
+            <summary>
+            Gets an overview of the Project Nightlife Platform's CPU usage
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:Facebook.FacebookAPI">
             <summary>
@@ -150,340 +259,6 @@
         <member name="P:Facebook.FacebookAPI.AccessToken">
             <summary>
             The access token used to authenticate API calls.
-            </summary>
-        </member>
-        <member name="T:Genre">
-            <summary>
-            Summary description for Genre
-            </summary>
-        </member>
-        <member name="T:PublicBlogComment">
-            <summary>
-            Summary description for PublicBlogComment
-            </summary>
-        </member>
-        <member name="T:Facebook.JSONObject">
-            <summary>
-            Represents an object encoded in JSON. Can be either a dictionary 
-            mapping strings to other objects, an array of objects, or a single 
-            object, which represents a scalar.
-            </summary>
-        </member>
-        <member name="M:Facebook.JSONObject.CreateFromString(System.String)">
-            <summary>
-            Creates a JSONObject by parsing a string.
-            This is the only correct way to create a JSONObject.
-            </summary>
-        </member>
-        <member name="M:Facebook.JSONObject.ToDisplayableString">
-            <summary>
-            Prints the JSONObject as a formatted string, suitable for viewing.
-            </summary>
-        </member>
-        <member name="M:Facebook.JSONObject.Create(System.Object)">
-            <summary>
-            Recursively constructs this JSONObject 
-            </summary>
-        </member>
-        <member name="P:Facebook.JSONObject.IsDictionary">
-            <summary>
-            Returns true if this JSONObject represents a dictionary.
-            </summary>
-        </member>
-        <member name="P:Facebook.JSONObject.IsArray">
-            <summary>
-            Returns true if this JSONObject represents an array.
-            </summary>
-        </member>
-        <member name="P:Facebook.JSONObject.IsString">
-            <summary>
-            Returns true if this JSONObject represents a string value. 
-            </summary>
-        </member>
-        <member name="P:Facebook.JSONObject.IsInteger">
-            <summary>
-            Returns true if this JSONObject represents an integer value.
-            </summary>
-        </member>
-        <member name="P:Facebook.JSONObject.IsBoolean">
-            <summary>
-            Returns true if this JSONOBject represents a boolean value.
-            </summary>
-        </member>
-        <member name="P:Facebook.JSONObject.Dictionary">
-            <summary>
-            Returns this JSONObject as a dictionary
-            </summary>
-        </member>
-        <member name="P:Facebook.JSONObject.Array">
-            <summary>
-            Returns this JSONObject as an array
-            </summary>
-        </member>
-        <member name="P:Facebook.JSONObject.String">
-            <summary>
-            Returns this JSONObject as a string
-            </summary>
-        </member>
-        <member name="P:Facebook.JSONObject.Integer">
-            <summary>
-            Returns this JSONObject as an integer
-            </summary>
-        </member>
-        <member name="P:Facebook.JSONObject.Boolean">
-            <summary>
-            Returns this JSONObject as a boolean
-            </summary>
-        </member>
-        <member name="T:BlogGenres">
-            <summary>
-            Summary description for Genre
-            </summary>
-        </member>
-        <member name="T:Utils">
-            <summary>
-            Summary description for Utils
-            </summary>
-        </member>
-        <member name="T:DatabaseFactory">
-            <summary>
-            Summary description for DatabaseFactory
-            </summary>
-        </member>
-        <member name="T:BlogPost">
-            <summary>
-            Summary description for blog_Post
-            </summary>
-        </member>
-        <member name="T:UserService">
-            <summary>
-            Summary description for UserService
-            </summary>
-        </member>
-        <member name="T:Session">
-            <summary>
-            Summary description for Session
-            </summary>
-        </member>
-        <member name="T:NotAuthorizedException">
-            <summary>
-            Summary description for NotAuthorisedException
-            </summary>
-        </member>
-        <member name="T:LogService">
-            <summary>
-            Summary description for LogService
-            </summary>
-        </member>
-        <member name="M:LogService.GetErrorTypes(System.String)">
-            <summary>
-            Get the id's of the error types supported by Project Nightlife
-            </summary>
-            <param name="authToken"></param>
-            <returns></returns>
-        </member>
-        <member name="M:LogService.LogAppHit(System.String,System.Int32,System.String,System.String,System.String)">
-            <summary>
-            Log an application hit. These hits will appear in your applications insights.
-            </summary>
-            <param name="authToken"></param>
-            <param name="appId">Your application id</param>
-            <param name="details">Details about the hit e.g. Page name (Limited to 50 characters)</param>
-            <param name="ip">The ip initiating the request</param>
-            <returns></returns>
-        </member>
-        <member name="M:LogService.LogAppError(System.String,System.Int32,System.Int32,System.String,System.String)">
-            <summary>
-            Log an error which occured between your application and the Project Nightlife Platform.
-            </summary>
-            <param name="authToken"></param>
-            <param name="appId">Your application id</param>
-            <param name="type">The type of error which occured. Must be a valid error id returned by GetErrorTypes().</param>
-            <param name="userAgent">Provide the user agent used when the error occured (Limited to 128 characters)</param>
-            <param name="details">Provide details of the error. e.g. The requested ajax call, php call, database call, platform exception etc... (Limited to 50 characters)</param>
-            <returns></returns>
-        </member>
-        <member name="M:LogService.LogResponseTime(System.String,System.Int32,System.String,System.Int32)">
-            <summary>
-            Log how long it took the Project Nightlife Platform to serve a Project Nightlife Application's request.
-            </summary>
-            <param name="authToken"></param>
-            <param name="appId">Your application id</param>
-            <param name="details">Details about the content e.g. Page name (Limited to 50 characters)</param>
-            <param name="milliseconds">The number of milliseconds elapsed since sending your first request to receiving your last response in order to generate a specific page in your applciation</param>
-            <returns></returns>
-        </member>
-        <member name="M:LogService.NotifyError(System.String,System.Int32,System.String)">
-            <summary>
-            Allow user to log details about persistant errors in your application.
-            </summary>
-            <param name="authToken"></param>
-            <param name="appId">Your application id</param>
-            <param name="details">Details about the error</param>
-            <returns></returns>
-        </member>
-        <member name="M:LogService.GetTrafficInsights(System.String,System.Int32,System.Double,System.Double)">
-            <summary>
-            Get the general traffic insights for a Project Nightlife Application.
-            </summary>
-            <param name="authtoken"></param>
-            <param name="appId">Your Application's id. <example>1</example></param>
-            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
-            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294971976</example></param>
-            <returns></returns>
-        </member>
-        <member name="M:LogService.GetErrorInsights(System.String,System.Int32,System.Double,System.Double)">
-            <summary>
-            Get the general error insights for a Project Nightlife Application.
-            </summary>
-            <param name="authtoken"></param>
-            <param name="appId">Your Application's id. <example>1</example></param>
-            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
-            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294971976</example></param>
-            <returns></returns>
-        </member>
-        <member name="M:LogService.GetMostViewedPages(System.String,System.Int32,System.Double,System.Double,System.Int32)">
-            <summary>
-            Get the most common occuring hits for a Project Nightlife Application.
-            </summary>
-            <param name="authtoken"></param>
-            <param name="appId">Your Application's id. <example>1</example></param>
-            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
-            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294971976</example></param>
-            <param name="numRequired">The number of pages required - will return as many as possible if numRequired is greater than the number that exist. A value of 0 indicates all.<example>5</example></param>
-            <returns></returns>
-        </member>
-        <member name="M:LogService.GetMostActiveUsers(System.String,System.Int32,System.Double,System.Double,System.Int32)">
-            <summary>
-            Get the most active users of a Project Nightlife Application.
-            </summary>
-            <param name="authtoken"></param>
-            <param name="appId">Your Application's id. <example>1</example></param>
-            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
-            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294971976</example></param>
-            <param name="numRequired">The number of pages required - will return as many as possible if numRequired is greater than the number that exist. A value of 0 indicates all.<example>5</example></param>
-            <returns></returns>
-        </member>
-        <member name="M:LogService.GetMostPopularUserAgents(System.String,System.Int32,System.Double,System.Double)">
-            <summary>
-            Get the most popular User Agents of a Project Nightlife Application. Note - The User Agent named "IE" represents IE6, 7 and 8. IE 9 is represented by its own User Agent.
-            </summary>
-            <param name="authtoken"></param>
-            <param name="appId">Your Application's id. <example>1</example></param>
-            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
-            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294971976</example></param>
-            <returns></returns>
-        </member>
-        <member name="M:LogService.GetMostCommonErrors(System.String,System.Int32,System.Double,System.Double,System.Int32)">
-            <summary>
-            Get the most common errors from a Project Nightlife Application.
-            </summary>
-            <param name="authtoken"></param>
-            <param name="appId">Your Application's id. <example>1</example></param>
-            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
-            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294970976</example></param>
-            <param name="numRequired">The number of pages required - will return as many as possible if numRequired is greater than the number that exist. A value of 0 indicates all.<example>5</example></param>
-            <returns></returns>
-        </member>
-        <member name="M:LogService.GetUserAgentErrors(System.String,System.Int32,System.Double,System.Double)">
-            <summary>
-            Get the User Agent error counts of a Project Nightlife Application. Note - The User Agent named "IE" represents IE6, 7 and 8. IE 9 is represented by its own User Agent.
-            </summary>
-            <param name="authtoken"></param>
-            <param name="appId">Your Application's id. <example>1</example></param>
-            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
-            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294971976</example></param>
-            <returns></returns>
-        </member>
-        <member name="M:LogService.GetAvgResponseTime(System.String,System.Int32,System.Double,System.Double,System.String)">
-            <summary>
-            Get the Project Nightlife Platform's average response time (in milliseconds) for a Project Nightlife Application page.
-            </summary>
-            <param name="authtoken"></param>
-            <param name="appId">Your Application's id. <example>1</example></param>
-            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
-            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294971976</example></param>
-            <param name="page">The page you wish to receive times for (the 'details' parameter when logging the times)<example>/blogs</example></param>
-            <returns></returns>
-        </member>
-        <member name="T:SystemService">
-            <summary>
-            Summary description for SystemService
-            </summary>
-        </member>
-        <member name="M:SystemService.GetMemoryOverview(System.String)">
-            <summary>
-            Gets an overview of the Project Nightlife Platform's memory usage
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:SystemService.GetCPUOverview(System.String)">
-            <summary>
-            Gets an overview of the Project Nightlife Platform's CPU usage
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:ImageService">
-            <summary>
-            Summary description for ImageService
-            </summary>
-        </member>
-        <member name="M:ImageService.GetPhotoLocations(System.String,System.Int32)">
-            <summary>
-            Get a list of photo sizes and locations for a given photoId
-            </summary>
-            <param name="authToken"></param>
-            <param name="photoId">The id of the photo to get sizes for <example>125</example></param>
-            <returns></returns>
-        </member>
-        <member name="M:ImageService.BlogUploadPhoto(System.String,System.String,System.String)">
-            <summary>
-            Upload an image to be used in content for a blog
-            </summary>
-            <param name="authToken"></param>
-            <param name="base64Image">The base64 encoded string of the image</param>
-            <param name="ip">The ip of the user uploading the photo</param>
-            <returns></returns>
-        </member>
-        <member name="M:ImageService.BlogUploadProfile(System.String,System.String,System.String)">
-            <summary>
-            Upload a blog's thumbnail photo
-            </summary>
-            <param name="authToken"></param>
-            <param name="base64Image">The base64 encoded string of the image</param>
-            <param name="ip">The ip of the user uploading the photo</param>
-            <returns></returns>
-        </member>
-        <member name="M:ImageService.BlogMakeMainPhoto(System.String,System.Int32,System.String)">
-            <summary>
-            Create the extra images required for a photo to become a post's main image. Creates the 80x80 thumbnail and the homepage featured image.
-            </summary>
-            <param name="authToken"></param>
-            <param name="photoId">The id of the photo you wish to make the main photo for a post</param>
-            <param name="ip">The ip of the user making the request</param>
-            <returns></returns>
-        </member>
-        <member name="M:ImageService.RemovePhoto(System.String,System.Int32,System.String)">
-            <summary>
-            Remove an image
-            </summary>
-            <param name="authToken"></param>
-            <param name="photoId">The ID of the photo to be removed</param>
-            <param name="ip">The ip of the user making the request</param>
-            <returns></returns>
-        </member>
-        <member name="M:ImageService.BlogDeallocateMainPhoto(System.String,System.Int32,System.String)">
-            <summary>
-            Deallocate an image as the blog post's main photo
-            </summary>
-            <param name="authToken"></param>
-            <param name="photoId">The ID of the photo to be deallocated as a post's main photo</param>
-            <param name="ip">The ip of the user making the request</param>
-            <returns></returns>
-        </member>
-        <member name="T:AuthenticationFailureException">
-            <summary>
-            Summary description for AuthenticationFailureException
             </summary>
         </member>
         <member name="T:BlogService">
@@ -761,81 +536,306 @@
             <param name="ip">The ip removing the post</param>
             <returns></returns>
         </member>
-        <member name="T:RegistrationService">
+        <member name="T:ImageService">
             <summary>
-            Summary description for RegistrationService
+            Summary description for ImageService
             </summary>
         </member>
-        <member name="T:PublicThinUser">
+        <member name="M:ImageService.GetPhotoLocations(System.String,System.Int32)">
             <summary>
-            Summary description for PublicUser
-            </summary>
-        </member>
-        <member name="T:PublicBlogPost">
-            <summary>
-            Summary description for PublicBlogPost
-            </summary>
-        </member>
-        <member name="T:NotificationService">
-            <summary>
-            Summary description for NotificationService
-            </summary>
-        </member>
-        <member name="M:NotificationService.GetUserHasPending(System.String)">
-            <summary>
-            Determine if the logged in user has any notifications pending. Throws an exception if current user is guest
+            Get a list of photo sizes and locations for a given photoId
             </summary>
             <param name="authToken"></param>
+            <param name="photoId">The id of the photo to get sizes for <example>125</example></param>
             <returns></returns>
         </member>
-        <member name="M:NotificationService.ClearUserHasPending(System.String)">
+        <member name="M:ImageService.BlogUploadPhoto(System.String,System.String,System.String)">
             <summary>
-            Clear the notifications pending flag for the logged in user. Throws an exception if current user is guest
+            Upload an image to be used in content for a blog
             </summary>
             <param name="authToken"></param>
+            <param name="base64Image">The base64 encoded string of the image</param>
+            <param name="ip">The ip of the user uploading the photo</param>
             <returns></returns>
         </member>
-        <member name="M:NotificationService.GetUserNotifications(System.String,System.Int32,System.Int32)">
+        <member name="M:ImageService.BlogUploadProfile(System.String,System.String,System.String)">
             <summary>
-            Get a list of notifications for the current user. Throws an exception if current user is guest.
-            
-            The list returned includes the type of notification, the date/time it was added, and some associated information (usually the id for whatever type, i.e. postId)
+            Upload a blog's thumbnail photo
             </summary>
             <param name="authToken"></param>
-            <param name="numberRequired">The number of notifications to return, or 0 for all notifications <example>10</example></param>
-            <param name="startIndex">The index at which to start returning notifications, begining at 0 <example>0</example></param>
+            <param name="base64Image">The base64 encoded string of the image</param>
+            <param name="ip">The ip of the user uploading the photo</param>
             <returns></returns>
         </member>
-        <member name="M:AuthenticationService.Authenticate(System.String,System.String,System.String,System.String)">
+        <member name="M:ImageService.BlogMakeMainPhoto(System.String,System.Int32,System.String)">
             <summary>
-            Authenticate a client against the API
-            </summary>
-            <param name="wsApiId">The WebService API Key for the client <example>PNIGHT</example></param>
-            <param name="secretKey">The secret key for the client<example>SECRET</example></param>
-            <param name="user">Optional. Either a user name to authenticate against, or leave blank to authenticate as a guest</param>
-            <param name="token">Optional, Required with user. The Facebook auth token for the given user id</param>
-            <returns></returns>
-        </member>
-        <member name="M:AuthenticationService.IsGuestUser(System.String)">
-            <summary>
-            Discover if the currently authenticated user is a guest user
+            Create the extra images required for a photo to become a post's main image. Creates the 80x80 thumbnail and the homepage featured image.
             </summary>
             <param name="authToken"></param>
+            <param name="photoId">The id of the photo you wish to make the main photo for a post</param>
+            <param name="ip">The ip of the user making the request</param>
             <returns></returns>
         </member>
-        <member name="T:Response`1">
+        <member name="M:ImageService.RemovePhoto(System.String,System.Int32,System.String)">
             <summary>
-            Summary description for Response
+            Remove an image
+            </summary>
+            <param name="authToken"></param>
+            <param name="photoId">The ID of the photo to be removed</param>
+            <param name="ip">The ip of the user making the request</param>
+            <returns></returns>
+        </member>
+        <member name="M:ImageService.BlogDeallocateMainPhoto(System.String,System.Int32,System.String)">
+            <summary>
+            Deallocate an image as the blog post's main photo
+            </summary>
+            <param name="authToken"></param>
+            <param name="photoId">The ID of the photo to be deallocated as a post's main photo</param>
+            <param name="ip">The ip of the user making the request</param>
+            <returns></returns>
+        </member>
+        <member name="T:BlogComment">
+            <summary>
+            Summary description for blog_Comment
             </summary>
         </member>
-        <member name="T:VenueService">
+        <member name="T:Facebook.JSONObject">
             <summary>
-            Summary description for VenueService
+            Represents an object encoded in JSON. Can be either a dictionary 
+            mapping strings to other objects, an array of objects, or a single 
+            object, which represents a scalar.
+            </summary>
+        </member>
+        <member name="M:Facebook.JSONObject.CreateFromString(System.String)">
+            <summary>
+            Creates a JSONObject by parsing a string.
+            This is the only correct way to create a JSONObject.
+            </summary>
+        </member>
+        <member name="M:Facebook.JSONObject.ToDisplayableString">
+            <summary>
+            Prints the JSONObject as a formatted string, suitable for viewing.
+            </summary>
+        </member>
+        <member name="M:Facebook.JSONObject.Create(System.Object)">
+            <summary>
+            Recursively constructs this JSONObject 
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.IsDictionary">
+            <summary>
+            Returns true if this JSONObject represents a dictionary.
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.IsArray">
+            <summary>
+            Returns true if this JSONObject represents an array.
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.IsString">
+            <summary>
+            Returns true if this JSONObject represents a string value. 
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.IsInteger">
+            <summary>
+            Returns true if this JSONObject represents an integer value.
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.IsBoolean">
+            <summary>
+            Returns true if this JSONOBject represents a boolean value.
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.Dictionary">
+            <summary>
+            Returns this JSONObject as a dictionary
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.Array">
+            <summary>
+            Returns this JSONObject as an array
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.String">
+            <summary>
+            Returns this JSONObject as a string
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.Integer">
+            <summary>
+            Returns this JSONObject as an integer
+            </summary>
+        </member>
+        <member name="P:Facebook.JSONObject.Boolean">
+            <summary>
+            Returns this JSONObject as a boolean
+            </summary>
+        </member>
+        <member name="T:NotAuthorizedException">
+            <summary>
+            Summary description for NotAuthorisedException
+            </summary>
+        </member>
+        <member name="T:Session">
+            <summary>
+            Summary description for Session
             </summary>
         </member>
         <member name="T:PublicBlog">
             <summary>
             Summary description for PublicBlog
+            </summary>
+        </member>
+        <member name="T:LogService">
+            <summary>
+            Summary description for LogService
+            </summary>
+        </member>
+        <member name="M:LogService.GetErrorTypes(System.String)">
+            <summary>
+            Get the id's of the error types supported by Project Nightlife
+            </summary>
+            <param name="authToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogService.LogAppHit(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Log an application hit. These hits will appear in your applications insights.
+            </summary>
+            <param name="authToken"></param>
+            <param name="appId">Your application id</param>
+            <param name="details">Details about the hit e.g. Page name (Limited to 50 characters)</param>
+            <param name="ip">The ip initiating the request</param>
+            <returns></returns>
+        </member>
+        <member name="M:LogService.LogAppError(System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Log an error which occured between your application and the Project Nightlife Platform.
+            </summary>
+            <param name="authToken"></param>
+            <param name="appId">Your application id</param>
+            <param name="type">The type of error which occured. Must be a valid error id returned by GetErrorTypes().</param>
+            <param name="userAgent">Provide the user agent used when the error occured (Limited to 128 characters)</param>
+            <param name="details">Provide details of the error. e.g. The requested ajax call, php call, database call, platform exception etc... (Limited to 50 characters)</param>
+            <returns></returns>
+        </member>
+        <member name="M:LogService.LogResponseTime(System.String,System.Int32,System.String,System.Int32)">
+            <summary>
+            Log how long it took the Project Nightlife Platform to serve a Project Nightlife Application's request.
+            </summary>
+            <param name="authToken"></param>
+            <param name="appId">Your application id</param>
+            <param name="details">Details about the content e.g. Page name (Limited to 50 characters)</param>
+            <param name="milliseconds">The number of milliseconds elapsed since sending your first request to receiving your last response in order to generate a specific page in your applciation</param>
+            <returns></returns>
+        </member>
+        <member name="M:LogService.NotifyError(System.String,System.Int32,System.String)">
+            <summary>
+            Allow user to log details about persistant errors in your application.
+            </summary>
+            <param name="authToken"></param>
+            <param name="appId">Your application id</param>
+            <param name="details">Details about the error</param>
+            <returns></returns>
+        </member>
+        <member name="M:LogService.GetTrafficInsights(System.String,System.Int32,System.Double,System.Double)">
+            <summary>
+            Get the general traffic insights for a Project Nightlife Application.
+            </summary>
+            <param name="authtoken"></param>
+            <param name="appId">Your Application's id. <example>1</example></param>
+            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
+            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294971976</example></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogService.GetErrorInsights(System.String,System.Int32,System.Double,System.Double)">
+            <summary>
+            Get the general error insights for a Project Nightlife Application.
+            </summary>
+            <param name="authtoken"></param>
+            <param name="appId">Your Application's id. <example>1</example></param>
+            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
+            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294971976</example></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogService.GetMostViewedPages(System.String,System.Int32,System.Double,System.Double,System.Int32)">
+            <summary>
+            Get the most common occuring hits for a Project Nightlife Application.
+            </summary>
+            <param name="authtoken"></param>
+            <param name="appId">Your Application's id. <example>1</example></param>
+            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
+            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294971976</example></param>
+            <param name="numRequired">The number of pages required - will return as many as possible if numRequired is greater than the number that exist. A value of 0 indicates all.<example>5</example></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogService.GetMostActiveUsers(System.String,System.Int32,System.Double,System.Double,System.Int32)">
+            <summary>
+            Get the most active users of a Project Nightlife Application.
+            </summary>
+            <param name="authtoken"></param>
+            <param name="appId">Your Application's id. <example>1</example></param>
+            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
+            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294971976</example></param>
+            <param name="numRequired">The number of pages required - will return as many as possible if numRequired is greater than the number that exist. A value of 0 indicates all.<example>5</example></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogService.GetMostPopularUserAgents(System.String,System.Int32,System.Double,System.Double)">
+            <summary>
+            Get the most popular User Agents of a Project Nightlife Application. Note - The User Agent named "IE" represents IE6, 7 and 8. IE 9 is represented by its own User Agent.
+            </summary>
+            <param name="authtoken"></param>
+            <param name="appId">Your Application's id. <example>1</example></param>
+            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
+            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294971976</example></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogService.GetMostCommonErrors(System.String,System.Int32,System.Double,System.Double,System.Int32)">
+            <summary>
+            Get the most common errors from a Project Nightlife Application.
+            </summary>
+            <param name="authtoken"></param>
+            <param name="appId">Your Application's id. <example>1</example></param>
+            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
+            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294970976</example></param>
+            <param name="numRequired">The number of pages required - will return as many as possible if numRequired is greater than the number that exist. A value of 0 indicates all.<example>5</example></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogService.GetUserAgentErrors(System.String,System.Int32,System.Double,System.Double)">
+            <summary>
+            Get the User Agent error counts of a Project Nightlife Application. Note - The User Agent named "IE" represents IE6, 7 and 8. IE 9 is represented by its own User Agent.
+            </summary>
+            <param name="authtoken"></param>
+            <param name="appId">Your Application's id. <example>1</example></param>
+            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
+            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294971976</example></param>
+            <returns></returns>
+        </member>
+        <member name="M:LogService.GetAvgResponseTime(System.String,System.Int32,System.Double,System.Double,System.String)">
+            <summary>
+            Get the Project Nightlife Platform's average response time (in milliseconds) for a Project Nightlife Application page.
+            </summary>
+            <param name="authtoken"></param>
+            <param name="appId">Your Application's id. <example>1</example></param>
+            <param name="dateFrom">A UNIX timestamp representing the start point of the window to return posts from. A value of 0 indicates 'now'.<example>0</example></param>
+            <param name="dateTo">A UNIX timestamp representing the end point of the window to return posts from. A value of 0 indicates as far back as records go.<example>1294971976</example></param>
+            <param name="page">The page you wish to receive times for (the 'details' parameter when logging the times)<example>/blogs</example></param>
+            <returns></returns>
+        </member>
+        <member name="T:DatabaseFactory">
+            <summary>
+            Summary description for DatabaseFactory
+            </summary>
+        </member>
+        <member name="T:BlogPost">
+            <summary>
+            Summary description for blog_Post
+            </summary>
+        </member>
+        <member name="T:VenueService">
+            <summary>
+            Summary description for VenueService
             </summary>
         </member>
     </members>
