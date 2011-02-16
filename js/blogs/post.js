@@ -7,7 +7,7 @@ function addComment(response)
 	form.elements['content'].style.height = '18px';
 	form.elements['content'].onfocus = function(e) {
   	  e = e || window.event;
-      e.srcElement.style.height = '70px';
+      e.srcElement.style.height = '80px';
 	};
 	document.getElementById('submitComment').disabled = false;
 	var comments = new Array();

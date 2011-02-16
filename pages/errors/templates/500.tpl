@@ -20,7 +20,7 @@
   <div class="wrapper">
     <div class="header">
       <ul class="mainnav left">
-        <li id="nav-home"><a class="" href="{$pageData['hostname']}/"><img src="{$pageData['hostname']}/images/core/header/logo.png" height="33" width="101" alt="home" /><span>home</span></a></li>
+        <li id="nav-home"><a class="" href="{$pageData['hostname']}/"><div class="logo"></div><span>home</span></a></li>
         <li id="nav-blogs"><a href="{$pageData['hostname']}/blogs">Blogs</a></li>
         <!--<li id="nav-photos"><a href="/">Photos</a></li>-->
         <!--<li id="nav-venues"><a href="index.htm">Venues</a></li>
