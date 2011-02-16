@@ -27,8 +27,7 @@ $smarty->compile_dir = 'c:/smarty/templates_c';
 $session = array();
 $pageData = array();
 $pageData['year'] = gmDate("Y");
-$pageData['hostname'] = $_SERVER['HTTP_HOST'];
-print $_SERVER['HTTP_HOST'];
+$pageData['hostname'] = 'http://'.$_SERVER['HTTP_HOST'];
 
 if (strcmp(substr($_SERVER['REQUEST_URI'], strlen($_SERVER['REQUEST_URI']) - 1), "/") == 0)
 	$pageData['URIDetectTrailingSlash'] = "/";

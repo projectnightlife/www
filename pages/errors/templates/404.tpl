@@ -3,16 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link rel="shortcut icon" href="http://www.projectnightlife.co.uk/images/core/icons/favicon.ico" type="image/x-icon" />
-<link rel="icon" type="image/png" href="http://www.projectnightlife.co.uk/images/core/icons/favicon.png" />
-<link rel="apple-touch-icon" href="http://www.projectnightlife.co.uk/images/core/icons/favicon.png" />
+<link rel="shortcut icon" href="{$pageData['hostname']}/images/core/icons/favicon.ico" type="image/x-icon" />
+<link rel="icon" type="image/png" href="{$pageData['hostname']}/images/core/icons/favicon.png" />
+<link rel="apple-touch-icon" href="{$pageData['hostname']}/images/core/icons/favicon.png" />
 <meta http-equiv="Content-language" content="en" /> 
 <meta name="robots" content="noodp,noydir" />
 <meta name="description" content="Project Nightlife is your essential guide to nightlife and music. Catch the latest updates from your favorite artists or get the latest music news from our bloggers." /> 
-<link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/screen.css" type="text/css" media="screen, projection">
-<link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/print.css" type="text/css" media="print">
-<!--[if lte IE 7]><link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-<link rel="stylesheet" href="http://www.projectnightlife.co.uk/css/core.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="{$pageData['hostname']}/css/blueprint/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="{$pageData['hostname']}/css/blueprint/print.css" type="text/css" media="print">
+<!--[if lte IE 7]><link rel="stylesheet" href="{$pageData['hostname']}/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+<link rel="stylesheet" href="{$pageData['hostname']}/css/core.css" type="text/css" media="screen, projection">
 <title>Page Not Found | Project Nightlife</title>
 </head>
 
@@ -20,8 +20,8 @@
   <div class="wrapper">
     <div class="header">
       <ul class="mainnav left">
-        <li id="nav-home"><a class="" href="http://www.projectnightlife.co.uk"><img src="http://www.projectnightlife.co.uk/images/core/header/logo.png" height="33" width="101" alt="home" /><span>home</span></a></li>
-        <li id="nav-blogs"><a href="http://www.projectnightlife.co.uk/blogs">Blogs</a></li>
+        <li id="nav-home"><a class="" href="{$pageData['hostname']}"><img src="{$pageData['hostname']}/images/core/header/logo.png" height="33" width="101" alt="home" /><span>home</span></a></li>
+        <li id="nav-blogs"><a href="{$pageData['hostname']}/blogs">Blogs</a></li>
         <!--<li id="nav-photos"><a href="/">Photos</a></li>-->
         <!--<li id="nav-venues"><a href="index.htm">Venues</a></li>
         <li id="nav-events"><a href="index.htm">Events</a></li>
@@ -37,7 +37,7 @@
             <li><a href="#" ajaxify="1" id="notifications">{if $session['notificationsPending'] eq 'true'}New {/if}Notifications</a></li>
           {/if}
           {if $session['ownsBlog']}
-            <li><a href="http://www.projectnightlife.co.uk/blog/edit">Dashboard</a></li>
+            <li><a href="{$pageData['hostname']}/blog/edit">Dashboard</a></li>
           {/if}
           <li id="nav-logout"><a id="fblogout" ajaxify="1" href="">Logout</a></li>
         {else}
@@ -64,7 +64,7 @@
             </div>
             <p style="margin-top: 5px; margin-bottom: 1em;">You may have mistyped the address or the page is currently experiencing problems.</p>
             <ul style="list-style-type: square; font-size: 11px; padding-left: 2em; margin-bottom: 1em;">
-              <li><a href="http://www.projectnightlife.co.uk">Return home</a></li>
+              <li><a href="{$pageData['hostname']}">Return home</a></li>
               <li><a href="#" onclick="history.back(); return false;">Go back to the previous page</a></li>
             </ul>
           </div>
@@ -76,7 +76,7 @@
   </div> <!-- wrapper -->
   <div class="footer">
     <div id="stamp">
-      <img src="http://www.projectnightlife.co.uk/images/core/footerlogo.png" width="180" height="35" alt="Project Nightlife" />
+      <img src="{$pageData['hostname']}/images/core/footerlogo.png" width="180" height="35" alt="Project Nightlife" />
       <p>Project Nightlife is not responsible for the content of external websites</p>
       <p>Copyright &copy; {$pageData['year']}</p>
     </div>
@@ -84,10 +84,10 @@
       <div id="company-column"class="column">
         <span>The Company</span>
         <ul>
-          <li><a href="http://www.projectnightlife.co.uk/about">About us</a></li>
+          <li><a href="{$pageData['hostname']}/about">About us</a></li>
           <!--<li>Partners</li>
           <li>Work with us</li>-->
-          <li><a href="#" onclick="return api.composeMessage('Contact Us', api.contactus(), 'http://www.projectnightlife.co.uk/backend/communicate.php', 0);" title="Contact us">Contact us</a></li>
+          <li><a href="#" onclick="return api.composeMessage('Contact Us', api.contactus(), '{$pageData['hostname']}/backend/communicate.php', 0);" title="Contact us">Contact us</a></li>
         </ul>
       </div>
       <div id="opportunities-column" class="column">
@@ -96,7 +96,7 @@
           <li>Advertising</li>
           <!--<li>Industry</li>
           <li>Photographers</li>-->
-          <li><a href="http://www.projectnightlife.co.uk/bloggers">Bloggers</a></li>
+          <li><a href="{$pageData['hostname']}/bloggers">Bloggers</a></li>
         </ul>
       </div>
       <!--<div id="feature-column" class="column">
@@ -114,8 +114,8 @@
 </body>
 </html>
 <script src="http://connect.facebook.net/en_US/all.js"></script>
-<script type="text/javascript" src="http://www.projectnightlife.co.uk/js/jquery.js"></script>
-<script type="text/javascript" src="http://www.projectnightlife.co.uk/js/api.js"></script>
+<script type="text/javascript" src="{$pageData['hostname']}/js/jquery.js"></script>
+<script type="text/javascript" src="{$pageData['hostname']}/js/api.js"></script>
 <!--[if lte IE 6]><script>api.upgradeBrowser();</script><![endif]-->
 <script type="text/javascript">
   api.session.populate({$session['userId']}, "{$session['user']['first_name']}", "{$session['user']['last_name']}", "{$session['user']['email']}");

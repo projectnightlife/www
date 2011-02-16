@@ -44,7 +44,7 @@
             <div id="imageReel">
               <a href="pages/general/opportunities/bloggers.php"><img src="images/blog_feature.jpg" width="608" height="312" /></a>
               {foreach from=$featuredPosts item=post name=featuredPosts2}
-              <a href="post/{$post->id}"><img src="http://www.projectnightlife.co.uk/photo/{$post->thumbnail}/608x312" width="608" height="312" /></a>
+              <a href="post/{$post->id}"><img src="photo/{$post->thumbnail}/608x312" width="608" height="312" /></a>
               {/foreach}
             </div>  
           </div>

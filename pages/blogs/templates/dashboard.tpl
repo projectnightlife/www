@@ -89,6 +89,6 @@
 $(document).ready(function()
 {
 	if (window.location.href.lastIndexOf("#welcome") != -1)
-	  api.launchDialog("Welcome to your blog dashboard", '<p>Before you get started, we recommend you take a moment to read the guide we\'ve prepared. It\'ll give you a brief introduction to our blogging system as well as how to get the most from your blog.</p><p>The guide is available at any time under the \'Guide\' option from the left menu.</p><p><a href="blog/edit?v=guide" style="background: url(http://www.projectnightlife.co.uk/images/core/icons/single_pink_chevron.png) no-repeat 0 2px; padding-left: 12px;">Read the guide</a></p>');
+	  api.launchDialog("Welcome to your blog dashboard", '<p>Before you get started, we recommend you take a moment to read the guide we\'ve prepared. It\'ll give you a brief introduction to our blogging system as well as how to get the most from your blog.</p><p>The guide is available at any time under the \'Guide\' option from the left menu.</p><p><a href="blog/edit?v=guide" style="background: url({$pageData["hostname"]}/images/core/icons/single_pink_chevron.png) no-repeat 0 2px; padding-left: 12px;">Read the guide</a></p>');
 });
 </script>

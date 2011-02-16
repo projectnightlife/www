@@ -9,7 +9,7 @@
         <span>The Company</span>
         <ul>
           <li><a href="pages/general/company/about.php">About us</a></li>
-          <li><a href="#" onclick="return api.composeMessage('Contact Us', api.contactus(), 'http://www.projectnightlife.co.uk/backend/communicate.php', 0);" title="Contact us">Contact us</a></li>
+          <li><a href="#" onclick="return api.composeMessage('Contact Us', api.contactus(), '{$pageData['hostname']}/backend/communicate.php', 0);" title="Contact us">Contact us</a></li>
         </ul>
       </div>
       <div id="opportunities-column" class="column">

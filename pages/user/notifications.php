@@ -5,7 +5,7 @@ require_once($globalDir.'pages\\includes\\global.php');
 
 if (!API::isUserLoggedIn())
 {
-	header('Location: http://www.projectnightlife.co.uk');
+	header('Location: '.$pageData['hostname']);
 	exit();
 }
 
@@ -28,12 +28,12 @@ foreach ($rawNotifications as $notification)
 	if (strcmp($notification->type, "Post") == 0)
 	{
 			$post = $blogService->GetPost($notification->information, false);
-			$notifications[] = new notification($post->thumbnail, 'New post by '.$blogService->getBlog($post->blogId)->name, "http://www.projectnightlife.co.uk/post/".$post->id, $post->title,  API::GetDynamicDateString((int)$notification->date));
+			$notifications[] = new notification($post->thumbnail, 'New post by '.$blogService->getBlog($post->blogId)->name, $pageData['hostname']."/post/".$post->id, $post->title,  API::GetDynamicDateString((int)$notification->date));
 	}
 	else if (strcmp($notification->type, "Comment") == 0)
 	{
 		$post = $blogService->GetPost($notification->information, false);
-		$notifications[] = new notification($post->thumbnail, "New comments", "http://www.projectnightlife.co.uk/post/".$post->id."#comments", "On the post ".$post->title,  API::GetDynamicDateString((int)$notification->date));
+		$notifications[] = new notification($post->thumbnail, "New comments", $pageData['hostname']."/post/".$post->id."#comments", "On the post ".$post->title,  API::GetDynamicDateString((int)$notification->date));
 	}
 }
 
