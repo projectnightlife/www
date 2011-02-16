@@ -75,7 +75,7 @@
             </div>
             <ul id="posts" class="UIobjectlist listw630">
               {if $posts|@count == 0}
-                <div style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0;">No posts in this style yet</div>
+                <div style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0; color: #ABA0C0;">No posts under this style yet</div>
               {/if}
               {foreach from=$posts item=post name=posts}
               <li {if $smarty.foreach.posts.first && $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="first last"{else}{if $smarty.foreach.posts.first}class="first"{elseif $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="last"{/if}{/if}>
@@ -109,7 +109,7 @@
             </div>
             <ul class="UItileview" style="margin: 0 8px;">
             {if $blogs|@count == 0}
-                <div style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0;">No blogs in this style yet</div>
+                <div style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0; color: #ABA0C0;">No blogs under this style yet</div>
               {/if}
             {foreach from=$blogs item=blog name=blogs}
               {if $smarty.foreach.blogs.index % 2 == 0}
