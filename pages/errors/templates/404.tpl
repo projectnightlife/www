@@ -76,7 +76,7 @@
   </div> <!-- wrapper -->
   <div class="footer">
     <div id="stamp">
-      <img src="{$pageData['hostname']}/images/core/footerlogo.png" width="180" height="35" alt="Project Nightlife" />
+      <div class="name"></div>
       <p>Project Nightlife is not responsible for the content of external websites</p>
       <p>Copyright &copy; {$pageData['year']}</p>
     </div>
