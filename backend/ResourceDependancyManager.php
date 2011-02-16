@@ -49,9 +49,12 @@ class ResourceDependancyManager
 	
 	public function build()
 	{
-		$buildPath = strcmp($this->resourceType, 'js') == 0 ? self::$jsBuildPath : self::$cssBuildPath;
-		$sourcePath = strcmp($this->resourceType, 'js') == 0 ? self::$jsPath : self::$cssPath;
-		$filename = md5($this->URI).'.'.$this->resourceType;
+		global $ismobile; 
+		
+		$mobilesfx	= ($ismobile == true) ? "-mobile" : ""; 
+		$buildPath	= strcmp($this->resourceType, 'js') == 0 ? self::$jsBuildPath : self::$cssBuildPath;
+		$sourcePath	= strcmp($this->resourceType, 'js') == 0 ? self::$jsPath : self::$cssPath;
+		$filename	= md5($this->URI.$mobilesfx).'.'.$this->resourceType;
 		if ($this->resourceExpired($buildPath, $filename))
 		{
 			try {

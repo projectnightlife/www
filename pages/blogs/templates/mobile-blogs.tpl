@@ -1,7 +1,7 @@
 {include file='../../includes/templates/mobile-page.tpl'}
 <title>Blogs | Project Nightlife</title>
 <link rel="alternate" type="application/rss+xml" title="Project Nightlife | Blogs (RSS 2.0)" href="blogs/rss" />
-<link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="">
 </head>
 
 <body id="blogs mobile">
@@ -15,7 +15,7 @@
 			<div id="tabs-1">
 				<ul id="posts" class="UIobjectlist">
 					{foreach from=$posts item=post name=posts}
-					<li {if $smarty.foreach.posts.first && $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="first last"{else}{if $smarty.foreach.posts.first}class="first"{elseif $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="last"{/if}{/if}>
+					<li {if $smarty.foreach.posts.first && $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="first"{else}{if $smarty.foreach.posts.first}class="first"{elseif $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class=""{/if}{/if}>
 						<div class="thumb">
 							<a class="thumb" href="pages/blogs/post.php?id={$post->id}"><img src="pages/getphoto/GetPhoto.php?id={$post->thumbnail}&size=80x80" width="50" height="50" /></a>
 						</div>
