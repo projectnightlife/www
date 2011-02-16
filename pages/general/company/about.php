@@ -1,6 +1,7 @@
 <?php
 
-$globalDir = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
+//$globalDir = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
+$globalDir = dirname(dirname(dirname(dirname(__FILE__)))).'\\';
 require_once($globalDir.'pages\\includes\\global.php');
 
 $resourceManager = new ResourceDependancyManager('about', 'css');
