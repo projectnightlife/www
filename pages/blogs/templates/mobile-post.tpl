@@ -4,7 +4,7 @@
 <meta property="og:image" content="http://www.projectnightlife.co.uk/photo/{$post->thumbnail}/80x80"/>
 <meta property="og:description" content="{$post->excerpt}"/>
 <meta name="medium" content="blog" />
-<link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="">
 </head>
 
 <body id="blogs mobile">
