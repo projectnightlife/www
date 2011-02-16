@@ -92,10 +92,10 @@
 	if ($mobiledetect->isMobile()) {
 		$ismobile 	= true; 
 		$mobilepfx 	= "mobile-";
-		$ResourceDependancyManager->mobilesfx = "-mobile";
+		$resourceManager->mobilesfx = "-mobile";
 	} else {
 		$ismobile 	= false; 
 		$mobilepfx	= "";
-		$ResourceDependancyManager->mobilesfx = "";
+		$resourceManager->mobilesfx = "";
 	}
 ?>
