@@ -1,0 +1,233 @@
+@charset "utf-8";
+/** Mobile-device optimised CSS
+-----------------------------------------------------------------------**/
+
+body, html { 
+	margin: 0; 
+	padding: 0; 
+	background: #000; 
+	color: #ccc; 
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.floatLeft { 
+	float: left; 
+} 
+
+.floatRight { 
+	float: right; 
+}
+
+a { 
+	color: #aba0c0; 
+	text-decoration: none; 
+} 
+
+a:hover { 
+	text-decoration: underline;
+}
+
+.clear { 
+	height: 1px; 
+	overflow: hidden; 
+	clear: both; 
+}
+
+h1 { 
+	font-size: 1.6em; 
+}
+
+.ajaxSpinner { display: inline-block; float: right; width: 16px; height: 16px; }
+
+/** Header
+-----------------------------------------------------------------------**/
+#header { 
+	
+}
+
+#header .mainheader { 
+	background: #482f6f url(../../images/core/mobile/mobile_headbg.png); 
+	height: 50px; 
+}
+
+#header .mainheader_pulldown { 
+	width: 38px; 
+	height: 38px; 
+	display: block; 
+	position: absolute; 
+	top: 5px; 
+	right: 5px; 
+	background: rgba(255, 255, 255, 0.3); 
+	border: 1px solid rgba(0, 0, 0, 0.5); 
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	border-radius: 3px; 
+	text-decoration: none; 
+	cursor: pointer; 
+}
+
+#header .mainheader_pulldown:hover { 
+	background: rgba(255, 255, 255, 0.5); 
+	border: 1px solid rgba(0, 0, 0, 0.7); 
+}
+
+#header .mainheader .site_logo span { 
+	display: none; 
+}
+
+#header .mainheader .site_logo { 
+	height: 40px; 
+	width: 125px; 
+	background: url(../../images/core/mobile/mobile_logo.png) no-repeat center; 
+	padding: 5px; 
+	display: block; 
+	margin-left: 5px; 
+}
+
+#header #pulldown { 
+	position: absolute; 
+	top: 50px; 
+	z-index: 5; 
+	display: none; 
+	background: rgba(255, 255, 255, 0.8); 
+	color: #000; 
+	width: 98%; 
+	margin-right: 1%; 
+	margin-left: 1%; 
+	
+	border-bottom-left-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+}
+
+#header .pulldown_spacer { 
+	padding: 0.4em; 
+}
+
+#header .pulldown_spacer ul { 
+	margin: 0; 
+	padding: 0.6em 1em; 
+	list-style: none;
+}
+
+#header .pulldown_spacer li a { 
+	background: url(../images/core/icons/single_pink_chevron.png) no-repeat left; 
+	padding-left: 20px; 
+	color: #000; 
+}
+
+#content > div.masthead { 
+}
+
+#content > div.masthead h1 { 
+	padding: 0 10px; 
+	text-align: center; 
+}
+
+div.breadcrumbs { 
+	height: 30px;
+	padding: 0; 
+	background: #333;
+	padding: 0 10px; 
+}
+
+div.breadcrumbs > a { 
+	padding-right: 0.2em; 
+	height: 30px; 
+	line-height: 30px; 
+	display: block; 
+	float: left; 
+	width: auto; 
+}
+
+/** Tabs
+-----------------------------------------------------------------------**/
+#tabs ul.tabNavigation { 
+	background: #222; 
+	padding: 0; 
+	margin: 0; 
+	width: 100%;
+	height: 40px; 
+}
+
+#tabs ul.tabNavigation li { 
+	width: 49%; 
+	height: 35px; 
+	margin-top: 5px; 
+	list-style: none; 
+	line-height: 35px; 
+}
+
+#tabs ul.tabNavigation li a { 
+	display: block; 
+	padding: 0 1em; 
+}
+
+#tabs ul.tabNavigation li a.selected { 
+	background: #000; 
+	border: 1px solid #000; 
+	
+	border-top-right-radius: 5px; 
+	border-top-left-radius: 5px; 
+}
+
+#tabs ul.tabNavigation > div { 
+	padding: 0.2em 0.4em; 
+}
+
+/** Content
+-----------------------------------------------------------------------**/
+.UIobjectlist { 
+	margin: 0; 
+	padding: 0; 
+} 
+
+.UIobjectlist > li { 
+	list-style: none; 
+	border-bottom: 1px solid #333; 
+	padding: 0 1em; 
+	width: auto; 
+}
+
+.UIobjectlist > li > div.thumb {
+	float: left; 
+	height: 55px; 
+	width: 55px; 
+	margin-right: 1em; 
+	margin-bottom: 8px; 
+}
+
+.UIobjectlist > li > div.thumb img {
+	border: 1px solid #666; 
+	padding: 3px; 
+	height: 50px; 
+	width: 50px; 
+}
+
+.UIobjectlist > li > div.description h4 { 
+
+}
+
+.UIobjectlist > li.last { 
+	padding: 0 !important; 
+	margin: 0; 
+	border-bottom: none;
+}
+
+.UIobjectlist > li.last a { 
+	display: block !important; 
+	width: 100% !important; 
+	line-height: 40px !important; 
+	height: 40px !important; 
+	background: #333; 
+	font-weight: bold; 
+	text-align: center; 
+}
+
+.UIpanel { 
+	padding: 0 10px; 
+}
+
+.UIpanel .comments textarea { 
+	width: auto; 
+}
+

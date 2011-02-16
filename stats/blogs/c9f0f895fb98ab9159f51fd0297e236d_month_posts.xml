@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<chart>
+	<chart_type>line</chart_type>
+    <chart_rect x="113" y="60" width="564" height="196" positive_color="0a0a0a"/>
+    <chart_grid_h color="5a5a5a"/>
+    <chart_border color="666666"/> 
+	<axis_category font="Tahoma" bold="false" size="11" color="aaaaaa"/>
+	<series_color>
+		<color>fc1e75</color>
+	</series_color>
+	<legend layout="vertical" fill_color="0a0a0a" color="aaaaaa" size="12" bold="false" font="Tahoma"/>
+	<axis_value size="11" color="aaaaaa"/>
+	<tooltip color="FFFFFF" alpha="75" size="11" background_color_1="282828" background_alpha="85" shadow="low"/>
+<chart_data><row><null></null><string>Mon 17 Jan 2011 to 
+Sun 23 Jan 2011</string><string>Mon 24 Jan 2011 to 
+Sun 30 Jan 2011</string><string>Mon 31 Jan 2011 to 
+Sun 6 Feb 2011</string><string>Mon 7 Feb 2011
+to now</string></row><row><string>Posts you've made</string><number tooltip="0 posts">0</number><number tooltip="0 posts">0</number><number tooltip="0 posts">0</number><number tooltip="0 posts">0</number></row></chart_data></chart>

@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Project Nightlife | Register</title>
+<!--[if lte IE 7]><meta http-equiv="X-UA-Compatible" content="IE=7"><![endif]-->
+<!--[if IE 8]><meta http-equiv="X-UA-Compatible" content="IE=8"><![endif]-->
+<!--[if lte IE 8]>
+<style type="text/css">
+body { margin-top: 0; }
+</style>
+<![endif]-->
+<script language="javascript">
+var errString = "";
+
+function passwordChanged() {
+    var strength = document.getElementById('strength');
+    var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+    var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+    var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+    var pwd = document.getElementById("password");
+    if (pwd.value.length==0) {
+		strength.style.color = 'white';
+        strength.innerHTML = 'Type Password';
+    } else if (!enoughRegex.test(pwd.value)) {
+		strength.style.color = 'white';
+        strength.innerHTML = 'Not Secure Enough!';
+    } else if (strongRegex.test(pwd.value)) {
+        strength.style.color = 'green';
+        strength.innerHTML = 'Strong!';
+    } else if (mediumRegex.test(pwd.value)) {
+        strength.style.color = 'orange';
+        strength.innerHTML = 'Medium!';
+    } else {
+		strength.style.color = 'red';
+        strength.innerHTML = 'Weak!';
+    }
+}
+
+function GetXmlHttpObject()
+{
+  var xmlHttp=null;
+  try
+  {
+    // Firefox, Opera 8.0+, Safari
+    xmlHttp=new XMLHttpRequest();
+  }
+  catch (e)
+  {
+    // Internet Explorer
+    try
+    {
+      xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+    }
+    catch (e)
+    {
+      xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+  }
+  return xmlHttp;
+}
+
+function transmitData(xml)
+{
+  var xmlHttp=GetXmlHttpObject();
+  if (xmlHttp==null)
+  {
+    alert ("Your browser does not support AJAX!");
+    return;
+  }
+  xmlHttp.open("POST", "ajax/register.php", true);
+  var params = "xmlData="+xml;
+  xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xmlHttp.setRequestHeader("Content-length", params.length);
+  xmlHttp.setRequestHeader("Connection", "close");
+
+  xmlHttp.onreadystatechange = function() {
+	  //if(xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+		//document.getElementById('firstName').value = xmlHttp.responseText;
+		//}
+  }
+  xmlHttp.send(params);
+}
+
+function setCookie(c_name,value,expiredays)
+{
+  var exdate=new Date();
+  exdate.setDate(exdate.getDate()+expiredays);
+  document.cookie=c_name+ "=" +escape(value)+
+  ((expiredays==null) ? "" : ";expires="+exdate.toUTCString());
+}
+
+function submitRegistrationForm()
+{
+	var firstName = sanitise(document.getElementById('firstName').value);
+	var lastName = sanitise(document.getElementById('lastName').value);
+	var mobile = sanitiseMobile(document.getElementById('mobile').value);
+	var email = document.getElementById('email').value.toLowerCase();
+	var confirmEmail = document.getElementById('confirmEmail').value.toLowerCase();
+	var password = document.getElementById('password').value;
+	var gender = document.getElementById('gender').value;
+	var birthDay = parseInt(document.getElementById('birthdayDay').value, 10);
+	var birthMonth = parseInt(document.getElementById('birthdayMonth').value, 10);
+	var birthYear = parseInt(document.getElementById('birthdayYear').value, 10);
+	if (!validateName('first', firstName) || !validateName('last', lastName) || !validateMobile(mobile) || !validateEmail(email, confirmEmail) || !validatePassword(password) || !validateGender(gender) || !validateBirthday(birthDay, birthMonth, birthYear)) {
+	  document.getElementById('valid').style.background = "url(images/core/icons/validation.png) 0 -28px no-repeat";
+	  alert(errString);
+	}
+	else {
+	  document.getElementById('valid').style.background = "url(images/core/icons/validation.png) 0 -56px no-repeat";
+	  var xml = '<?xml version="1.0" standalone="yes"?><users><user>';
+	  xml = xml+'<firstName>'+firstName+'</firstName>';
+	  xml = xml+'<lastName>'+lastName+'</lastName>';
+	  xml = xml+'<mobile>'+mobile+'</mobile>';
+	  xml = xml+'<email>'+email+'</email>';
+	  xml = xml+'<password>'+password+'</password>';
+	  xml = xml+'<gender>'+gender+'</gender>';
+	  xml = xml+'<day>'+birthDay+'</day>';
+	  xml = xml+'<month>'+birthMonth+'</month>';
+	  xml = xml+'<year>'+birthYear+'</year></user></users>';
+	  transmitData(xml);
+	  setCookie('barcrawl', 'true', 60);
+	  parent.$('a.pp_close').click();
+	}
+	return false;
+}
+
+function sanitise(string)
+{
+	while (string.charAt(string.length - 1) == " ") {
+	  string = string.slice(0, string.length - 1);
+	}
+	string = string.replace(string.charAt(0), string.charAt(0).toUpperCase());
+	return string;
+}
+
+function sanitiseMobile(string)
+{
+    if(string.charAt(5) == ' ') {
+	  var newMobile = '';
+	  string = newMobile.concat(string.substr(0, 5), string.substr(6, 6));
+	}
+	return string;
+}
+
+function validateName(type, string)
+{
+	var valid = true;
+	var expr = new RegExp("^[A-Z][A-Za-z -]*[a-z]$", "g"); //crude, needs work ; new RegExp("^([A-Z][a-z]+)([ -](?=[A-Z][a-z]+))*$", "g");
+	if (!expr.test(string)) {
+	  errString = "Invalid " + type + " name";
+	  valid = false;
+	}
+	return valid;
+}
+
+function validateMobile(mobile)
+{
+	var valid = true;
+	var expr = new RegExp("^[0-9]{5}[0-9]{6}$", "g"); //crude, needs work ; new RegExp("^([A-Z][a-z]+)([ -](?=[A-Z][a-z]+))*$", "g");
+	if (!expr.test(mobile)) {
+	  errString = "Invalid mobile number";
+	  valid = false;
+	}
+	return valid;
+}
+
+function validateEmail(email, confEmail)
+{
+	var valid = true;
+	var expr = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+	if (!expr.test(email)) {
+	  errString = "Invalid email";
+	  return false;
+	}
+	if (email != confEmail) {
+	  errString = "Emails don't match";
+	  return false;
+	}
+	return valid;
+}
+
+function validatePassword(password)
+{
+	var valid = true;
+    var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+    var mediumRegex = new RegExp("^(?=.{8,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+    var enoughRegex = new RegExp("(?=.{8,}).*", "g");
+    if (password.length==0) {
+		errString = "Please enter a password";
+        valid = false;
+    } else if (!enoughRegex.test(password) && !mediumRegex.test(password) && !strongRegex.test(password)) {
+        errString = "Your password isn't secure enough";
+        valid = false;
+    }
+	return valid;
+}
+
+function validateGender(gender)
+{
+	var valid = true;
+	if (gender != 'false' && gender != 'true') {
+	  errString = "Please select your gender";
+	  valid = false;
+	}
+	return valid;
+}
+
+function validateBirthday(day, month, year)
+{
+	var valid = true;
+	if (!validateDate(day, month, year)) {
+	  errString = "Please select your birthday";
+	  valid = false;
+	}
+	return valid;
+}
+</script>
+<style type="text/css">
+form { padding: 20px 0; width: 480px; margin: 0 auto;}
+td.label { text-align: right; padding-right: 5px; }
+input, select { font-size: 14px; padding: 4px; }
+input { width: 240px; float: left; }
+select { margin-left: 0; }
+.validate { width: 28px; height: 28px; margin: 2px 0; background: url(images/core/icons/validation.png) 0 0 no-repeat; float: left; }
+#strength { margin: 8px 10px; float: left;}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/corners.js"></script>
+<script type="text/javascript" src="js/core.js"></script>
+<script type="text/javascript" src="js/calendar.js"></script>
+<script type="text/javascript" src="js/prettyphoto.js"></script>
+</head>
+
+<body style="background: #000; color: #fff; font: 12px Arial, Helvetica, sans-serif;">
+  <div class="rndtop6px" style="overflow: hidden; height: 50px; width: 100%; background: url(images/core/header/colours.png) 0 -350px repeat;">
+    <img style="margin: 10px; float: left;" src="images/core/header/logo.png" /><div style="float: right; padding: 7px 10px; font-size: 30px;">The Halloween Bar Crawl</div>
+  </div>
+  <div style="padding: 10px 5px; margin: 0 auto;">
+    <div>To view the photos, simply enter your details and we'll notify you about the next bar crawl! <em>(will prevent this box from popping up)</em></div>
+    <form id="registration">
+      <table>
+        <tr><td class="label"><label for="firstName">First Name:</label></td><td><input type="text" name="firstName" id="firstName" /></td></tr>
+        <tr><td class="label"><label for="lastName">Last Name:</label></td><td><input type="text" name="lastName" id="lastName" /></td></tr>
+        <tr><td class="label"><label for="mobile">Mobile:</label></td><td><input type="text" name="mobile" id="mobile" /></td></tr>
+        <tr><td class="label"><label for="email">Email:</label></td><td><input type="text" name="email" id="email" /></td></tr>
+        <tr><td class="label"><label for="confirmEmail">Confirm Email:</label></td><td><input type="text" name="confirmEmail" id="confirmEmail" /></td></tr>
+        <tr><td class="label"><label for="password">Password:</label></td><td><input type="password" name="password" id="password" onkeyup="return passwordChanged();"/><div id="strength">Type Password</div></td></tr>
+        <tr><td class="label"><label for="gender">I am:</label></td><td><select name="gender" id="gender"><option value="-1">Select Gender:</option><option value="false">Female</option><option value="true">Male</option></select></td></tr>
+        <tr><td class="label"><label for="birthday">Birthday:</label></td>
+          <td>
+            <select name="birthdayDay" id="birthdayDay" onchange="dateChange(&quot;birthdayDay&quot;, &quot;birthdayMonth&quot;, &quot;birthdayYear&quot;)">
+              <option value="-1">Day:</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+            <select name="birthdayMonth" id="birthdayMonth" onchange="dateChange(&quot;birthdayDay&quot;, &quot;birthdayMonth&quot;, &quot;birthdayYear&quot;)">
+              <option value="-1">Month:</option>
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+            <select name="birthdayYear" id="birthdayYear" onchange="dateChange(&quot;birthdayDay&quot;, &quot;birthdayMonth&quot;, &quot;birthdayYear&quot;)">
+              <option value="-1">Year:</option>
+              <option value="1995">1995</option>
+              <option value="1994">1994</option>
+              <option value="1993">1993</option>
+              <option value="1992">1992</option>
+              <option value="1991">1991</option>
+              <option value="1990">1990</option>
+              <option value="1989">1989</option>
+              <option value="1988">1988</option>
+              <option value="1987">1987</option>
+              <option value="1986">1986</option>
+              <option value="1985">1985</option>
+              <option value="1984">1984</option>
+              <option value="1983">1983</option>
+              <option value="1982">1982</option>
+              <option value="1981">1981</option>
+              <option value="1980">1980</option>
+              <option value="1979">1979</option>
+              <option value="1978">1978</option>
+              <option value="1977">1977</option>
+              <option value="1976">1976</option>
+              <option value="1975">1975</option>
+              <option value="1974">1974</option>
+              <option value="1973">1973</option>
+              <option value="1972">1972</option>
+              <option value="1971">1971</option>
+              <option value="1970">1970</option>
+              <option value="1969">1969</option>
+              <option value="1968">1968</option>
+              <option value="1967">1967</option>
+              <option value="1966">1966</option>
+              <option value="1965">1965</option>
+              <option value="1964">1964</option>
+              <option value="1963">1963</option>
+              <option value="1962">1962</option>
+              <option value="1961">1961</option>
+              <option value="1960">1960</option>
+              <option value="1959">1959</option>
+              <option value="1958">1958</option>
+              <option value="1957">1957</option>
+              <option value="1956">1956</option>
+              <option value="1955">1955</option>
+              <option value="1954">1954</option>
+              <option value="1953">1953</option>
+              <option value="1952">1952</option>
+              <option value="1951">1951</option>
+              <option value="1950">1950</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><div class="validate" id="valid"></div></td><td><input type="submit" value="Register/Keep Me Informed!" name="submit" onclick="return submitRegistrationForm()"/></td></tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>

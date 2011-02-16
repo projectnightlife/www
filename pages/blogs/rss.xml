@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Project Nightlife Blogs</title>
+    <description>The latest blog posts from Project Nightlife</description>
+    <category>Blogs</category>
+    <copyright>Copyright © 2011 - Project Nightlife</copyright>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 16 Feb 2011 02:11:37 GMT</lastBuildDate>
+    <ttl>15</ttl>
+    <item>
+      <category>Indie</category>
+      <category>Alternative</category>
+      <category>Punk</category>
+      <title>Welcome to Project Nightlife</title>
+      <description>Hi all,</description>
+      <author>Alt.ernative</author>
+      <link>http://projectnightlife.co.uk/post/229</link>
+      <guid>http://projectnightlife.co.uk/post/229</guid>
+      <pubDate>Wed, 16 Feb 2011 02:11:37 GMT</pubDate>
+    </item>
+    <item>
+      <category>Urban</category>
+      <category>Lifestyle</category>
+      <category>Electronic</category>
+      <category>Rock</category>
+      <title>Welcome to Project Nightlife</title>
+      <description>Project Nightlife is the hottest new music, nightlife and fashion resource. We&amp;#39;ve recruited a team of excitingly talented bloggers whose passion and creativity will transpire to a wealth of information available to you at the click of a button.</description>
+      <author>Project Nightlife</author>
+      <link>http://projectnightlife.co.uk/post/228</link>
+      <guid>http://projectnightlife.co.uk/post/228</guid>
+      <pubDate>Wed, 16 Feb 2011 00:42:35 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

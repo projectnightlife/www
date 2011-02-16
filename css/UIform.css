@@ -1,0 +1,13 @@
+/* tempory */
+
+.addedContent { display: none; margin-top: 0.5em; overflow: auto; }
+.addContentContainer { margin: 12px 0 10px; overflow: auto; }
+
+table.UIform { border: none; padding: 5px 10px 10px; overflow: auto; }
+table.UIform th { width: 110px; text-align: right; padding-top: 16px; padding-right: 10px; font-weight: normal !important; vertical-align: top;}
+table.UIform th label { font-weight: normal !important; }
+table.UIform input[type="text"], table.UIform input[type="password"], table.UIform textarea, table.UIform select { font-size: 12px !important; font-family: Tahoma, Geneva, sans-serif; color: #ccc; background: #0f0f0f !important; border: 1px solid #1e1e1e !important; width: 570px; padding: 7px 5px; }
+table.UIform select { padding: 0 !important; font-size: 12px !important; }
+table.UIform hr { color: #141414; background: #141414; }
+.UIoptionInput { width: 200px !important; padding: 7px 5px !important; margin-right:10px !important; margin-bottom: 0 !important; }
+.UIoptions { width: 212px !important; margin-bottom: 0 !important; display: block !important; margin-top: 0.5em !important; }

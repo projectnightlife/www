@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Project Nightlife</title>
+  <!-- Framework CSS -->
+  <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+  <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+  <link rel="stylesheet" href="css/theme.css" type="text/css">
+  <link rel="stylesheet" href="css/navigation.css" type="text/css">
+  
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/cycle.js"></script>
+  <script type="text/javascript" src="js/corners.js"></script>
+  <script type="text/javascript" src="js/jquery.textarea-expander.js"></script>
+  <script  type="text/javascript">
+    DD_roundies.addRule('.rounded', '8px', true);
+	DD_roundies.addRule('.rounded2', '6px', true);
+	DD_roundies.addRule('.rounded3', '6px 6px 0px 0px', true);
+	DD_roundies.addRule('.rounded4', '0px 0px 6px 6px', true);
+	DD_roundies.addRule('.rounded5', '8px 0px 0px 8px', true);
+	$(document).ready(function(){
+		
+		// hero cycle
+		
+	  	$('#hero').cycle({ 
+		    fx:    'fade', 
+		    speed:  1100,
+			timeout:  10000,
+		 });
+		
+		$('#hero').mouseenter(function() { 
+          $('#hero').cycle('pause'); 
+        });
+		
+		$('#hero').mouseleave(function() { 
+          $('#hero').cycle('resume'); 
+        });
+	});
+	var N = 8;
+	var i = 1;
+	function cycleHeader()
+	{
+	  i = (i % N) + 1;
+	  switch (i)
+	  {
+		  case 1: document.getElementById('header').src = 'images/headers/black.png';
+		          break;
+	      case 2: document.getElementById('header').src = 'images/headers/blue.png';
+		          break;
+		  case 3: document.getElementById('header').src = 'images/headers/blue2.png';
+		          break;
+		  case 4: document.getElementById('header').src = 'images/headers/green.png';
+		          break;
+		  case 5: document.getElementById('header').src = 'images/headers/pink.png';
+		          break;
+	      case 6: document.getElementById('header').src = 'images/headers/purple.png';
+		          break;
+		  case 7: document.getElementById('header').src = 'images/headers/turquoise.png';
+		          break;
+		  case 8: document.getElementById('header').src = 'images/headers/violet.png';
+		          break;
+		  default: break;
+	  }
+	}
+	function editText(node)
+	{
+	  var p = node.getElementsByTagName('p');
+	  var textBox = node.getElementsByTagName('div').item(0);
+	  var textArea = ''; 
+	  var height = textBox.offsetHeight;
+	  for (var j = 0; j < p.length; j++) {
+        textArea += p.item(j).innerHTML; //innerHTML replaces firstChild.nodeValue
+		if (j != p.length - 1) {
+		  textArea += "\n\n";
+		}
+	  }
+	  // removing an element removes it from both the dom structure and from the collection you're storing a reference,
+	  // so we record the original length and use that instead as p.length changes with each iteration.
+	  var lengthOfP = p.length;
+	  for (var j = 0; j < lengthOfP; j++) {
+        textBox.removeChild(p.item(0));
+	  }
+	  x = document.createElement('textarea');
+	  x.className = "expand";
+	  x.style.background = "transparent";
+	  x.style.border = "none";
+	  x.style.width = "100%";
+	  x.style.color = "#bbb";
+	  x.style.font = "12px arial";
+	  x.style.margin = "0";
+	  x.style.padding = "0";
+	  x.style.lineHeight = "16px";
+	  x.style.height = height+"px";
+	  x.value = textArea;
+	  textBox.appendChild(x);
+	  $('.expand').TextAreaExpander();
+	  x.focus();
+	  x.addEventListener('blur',function (e) {
+        var paragraphs = x.value.split("\n\n"); // needs to be more advanced to strip more combinations of \n
+		textBox.removeChild(x);
+		var k = 0;
+		var pattern = /\s+/g; // all white space characters (selecting consecutive as one) not stopping at the first (\n \t space etc...)
+		  var pattern2 = /^\s/; // leading white space
+		for (var j = 0; j < paragraphs.length; j++) {
+		  var cleanedText = paragraphs[j].replace(pattern, " ");
+		  cleanedText = cleanedText.replace(pattern2, "");
+		  if(cleanedText.length != 0) {
+		    var element = document.createElement('p');
+		    if (j == k) { // ensures the first non empty paragraph is bold
+			  element.style.fontWeight = "bold";
+		    }
+			element.innerHTML = cleanedText;
+		    textBox.appendChild(element);
+		  }
+		  else { k++; }
+		}
+      },false);
+	}
+	</script>
+  
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container"> <!-- inner framework wrapper -->
+      <div class="header"><img class="rounded4" id="header" onclick="cycleHeader()" src="images/headers/black.png" /></div>
+      <div class="container">
+        <div class="venueApps" style="margin-top: 7px;">
+          <div style="float: left; width: 250px; font-size: 24px; font-weight: bold; color: #fff; padding: 8px 0 2px 8px;">Michael Woods</div>
+          <div style="float: right; padding-top: 12px; padding-right: 4px;"><img src="images/layout/venuelinks.png" /></div>
+        </div>
+        <!--
+        <div class="venueApps">
+          <div style="float: left; width: 200px; font-size: 18px; font-weight: bold; color: #fff; padding: 8px 0 0 8px;">Cocoon In The Park</div>
+          <ul class="nav">
+            <li><a href="">Tickets</a></li>
+            <li><a href="">Galleries</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Home</a></li>
+          </ul>
+        </div>
+        -->
+        <div id="venueHero">
+          <div id="hero">
+            <div style="position: relative;">
+              <img class="rounded" src="images/heros/mwoods.jpg" width="920" height="406" title="hover to pause" />
+              <div class="rounded5" style="position: absolute; top: 235px; right: 0px; background: #000; filter:alpha(opacity=85); -moz-opacity:0.85; -khtml-opacity: 0.85; opacity: 0.85;"><p style="font-size: 50px; margin: 0; padding: 5px 10px; padding-top: 8px; color: #fff">Michael Woods</p></div>
+            </div>
+          </div>
+        </div>
+        <div style="float: right;">
+          <div class="details rounded">
+            <img style="padding: 14px; padding-bottom: 12px;" title="logo" src="images/layout/ccitplogo.png" />
+            <p style="color: #ccc; padding-left: 15px; padding-bottom: 10px; font-size: 11px; margin: 0;">London, GB</p>
+            <p style="color: #ccc; padding-left: 15px; padding-bottom: 10px; font-size: 11px; margin: 0;">Tech/Electro/House</p>
+            <p style="color: #ccc; padding-left: 15px; padding-bottom: 10px; font-size: 11px; margin: 0;">Visit the official website</p>
+          </div>
+          <div class="details rounded" style="background: url(images/layout/venuegradient.png) top repeat-x #121212;">
+            <div class="rounded3" style="color: #ccc; background: #0c0c0c; font-size: 14px; font-weight: bold;  padding: 5px 0 4px 10px;">5 Things You Didn't Know</div>
+            <p style="color: #ccc; padding-left: 15px; padding-top: 10px; padding-bottom: 10px; font-size: 11px; margin: 0;">Favourite Food</p>
+            <p style="color: #ccc; padding-left: 15px; padding-bottom: 10px; font-size: 11px; margin: 0;">Favourite Film</p>
+            <p style="color: #ccc; padding-left: 15px; padding-bottom: 10px; font-size: 11px; margin: 0;">Football Team</p>
+            <p style="color: #ccc; padding-left: 15px; padding-bottom: 10px; font-size: 11px; margin: 0;">Favourite Club</p>
+            <p style="color: #ccc; padding-left: 15px; padding-bottom: 10px; font-size: 11px; margin: 0;">Musical Inspiration</p>
+          </div>
+          <div class="details rounded" style="height: 281px; background: url(images/layout/venuegradient.png) bottom repeat-x #121212;">
+            <div class="rounded3" style="color: #ccc; background: #0c0c0c; font-size: 14px; font-weight: bold;  padding: 5px 0 4px 10px;">Mini Feed</div>
+            <div style="padding: 12px; color: #ddd; font-size: 11px;">
+              <div style="overflow: auto; float: left; padding: 2px; width: 15px;"><img src="images/icons/tickets.png" /></div>
+              <div style="overflow: auto; float: left; width: 170px; padding-left: 5px;">Tickets are now on sale for Cocoon In The Park 2010 - buy here</div>
+            </div>
+            <div style="clear: both; padding: 12px; margin-top: 10px; color: #ddd; font-size: 11px;">
+              <div style="overflow: auto; float: left; padding: 2px; width: 15px;"><img src="images/icons/event.png" /></div>
+              <div style="overflow: auto; float: left; width: 170px; padding-left: 5px;">Cocoon In The Park created the event Cocoon In The Park 2010</div>
+            </div>
+            <div style="clear: both; padding: 12px; margin-top: 10px; color: #ddd; font-size: 11px;">
+              <div style="overflow: auto; float: left; padding: 2px; width: 16px;"><img src="images/icons/photos.png" /></div>
+              <div style="overflow: auto; float: left; width: 170px; padding-left: 4px;">Cocoon In The Park added photos to the gallery Cocoon In The Park 2009</div>
+            </div>
+          </div>
+        </div>
+        <div class="contentArea" style="color: #fafafa; font-size: 11px;">
+          <ul class="subLinks rounded2">
+            <li><a href="">Biography</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Tracks</a></li>
+            <li><a href="">Gigs</a></li>
+            <li><a href="">Chart</a></li>
+            <li><a href="">Bookings</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+          <div class="introducing rounded" style="color: #bbb;" ondblclick="editText(this)">
+            <h3 style="color: #db3291; padding-top: 5px; font-size: 18px;">Introducting Michael Woods</h3>
+            <div style="overflow: auto;">
+              <p>Genius can be measured in a number of ways: ability, originality and accomplishment. In Michael’s short career he has managed to touch on every cornerstone, leaving proof of his musical competence at producing big room, progressive and tech-house tracks, along with a discernible motivation to better the quality of music being distributed. This has not gone unnoticed, with DJs like Pete Tong jumping at the chance to document Michael's rise, featuring him on shows such as Radio 1’s 15 minutes of Fame.</p>
+
+<p>From Argentinean & Guyanese decent, he was born and raised in Hackney London which he still calls home running his studio from there. Classically trained in a range of instruments at an early age provided Michael with a catalogue of creative skills including the keys—which he learned to play at the tender age of 3—guitar, drums and trumpet, practically making him a one man band. When not in the studio messing around with Cubase developing his craft, he would be found at Pimlico’s Trinity Music College where he contracted a love for musicality, often using his spare time orchestrating with the percussion section of the London Symphony Orchestra. Earlier achievements include the Michael Woods Remix of Energy 52’s Café Del Mar which held pride of place on the acclaimed Chilled Ibiza Gold Album and is a prime example of the ever growing popularity of the Woods marque. It has never ceased to be continually played and is still considered a classic among DJs and fans alike.</p>
+
+<p>Collaboration’s with the likes of Chris Lake on Domino’s are proof of his skillful production abilities. These, however, are not the sole examples of his talent; many established artists have hired Mr Woods to renovate their sound into a style which emulates Michael’s musical vision. His remixes include Feels Like A Prayer on Toolroom Records, Deadmau5’s Strobe on mau5trap, Deadmau5 & Chris Lake with I Said as well as the more mainstream artists: Adele, Nate James, Xenomania signing Gabriella Cilmi, The Temper Trap, Way Out West and more recently, Estelle (I Can Be A Freak). Each have turned to Michael to help send shock waves through the music world with their sound, upping his status as a respected artist, track-after-track. His ability to rework music with an exceptionally sharp ear for quality production has left him in high regard with many artists and labels across the industry, with direct Tweets from the likes of Tiesto hailing his skill as one of the many examples.</p>
+
+<p>Diffused Music has become his major priority since he founded the label in September 2008. Using it as a platform from which to promulgate his perfected sound, the label has released numerous acclaimed records: Yemba, Dropzone and the Envolver EP. As Michael’s career continues to escalate he has lined up countless events to build on his current success, touring with Deadmau5, setting a number of UK based gigs and also earning a coveted residency spot at one of the most sought after places in the clubbing realm, Cream’s Amnesia in Ibiza. Along with Mark Knights Toolroom Knights events and Pete Tongs Wonderland, the Woods fan base and clientele continues to sky rocket. It is apparent that this is not the height of his creativity, but rather a preview into what assuredly will be an illustrious career.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="wrapper" style="background: url(images/layout/footergradient.png); height: 175px; min-height: 0;">
+    <div style="float: right; margin: 20px; margin-right: 60px; color:#ddd;">The Company
+      <ul style="font-size: 11px; list-style: none; padding: 0; padding-top: 10px;">
+        <li>About us</li>
+        <li>Partners</li>
+        <li>Work with us</li>
+        <li>Press centre</li>
+        <li>The team</li>
+        <li>Contact us</li>
+      </ul>
+    </div>
+    <div style="float: right; margin: 20px; margin-right: 30px; color:#ddd;">Opportunities
+      <ul style="font-size: 11px; list-style: none; padding: 0; padding-top: 10px;">
+        <li>Advertising</li>
+        <li>Industry</li>
+        <li>Venues</li>
+        <li>Promoters</li>
+        <li>Photographers</li>
+        <li>Festivals</li>
+      </ul>
+    </div>
+    <div style="float: right; margin: 20px; margin-right: 30px; color:#ddd;">Platform
+      <ul style="font-size: 11px; list-style: none; padding: 0; padding-top: 10px;">
+        <li>Details</li>
+        <li>Possibilities</li>
+        <li>Access</li>
+        <li>API</li>
+      </ul>
+    </div>
+    <div style="float: left; margin: 20px; margin-top: 17px; width: 200px; font-size: 11px; color: #666;"><img src="images/layout/logo.png" width="200" height="35"/><div style="padding-left: 10px;">Project Nightlife is not responsible for the content of external websites</div></div>
+  </div>
+</body>
+</html>
