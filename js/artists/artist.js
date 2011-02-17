@@ -57,7 +57,7 @@ $(document).ready(function()
   var tabContainers = $("#tabs > div");
 			
 			// Tabbed navigation
-			/*$("#tabs ul a").click(function () {
+			$("#tabs ul a").click(function () {
 				tabContainers.hide().filter(this.hash).show();
 				
 				$("#tabs ul a").removeClass("selected");
@@ -67,16 +67,10 @@ $(document).ready(function()
 				tabIndex = $tabs.tabs('option', 'selected');
 				
 				return false;
-			}).filter(":first").click();*/
+			}).filter(":first").click();
 			
 			$( "#tabs" ).bind( "tabsselect", function(event, ui) {
- tabContainers.hide().filter(this.hash).show();
-				
-				$("#tabs ul a").removeClass("selected");
-				$(this).addClass("selected");
-				
 				$tabs = $('#tabs').tabs();
 				tabIndex = $tabs.tabs('option', 'selected');
-				return false;
-}).filter(":first").click();
+});
 });
