@@ -8,6 +8,7 @@
 <meta property="og:description" content="{$blog->slogan}"/>
 <title>{$blog->name} | Project Nightlife</title>
 <link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
+ <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body id="blogs{if $ismobile == "true"} mobile{/if}">
