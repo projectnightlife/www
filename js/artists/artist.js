@@ -50,7 +50,6 @@ function subscription()
 	return false;
 }
   var tabIndex = 0;
-  var tabIndex2 = 0;
 $(document).ready(function()
 {  
   $('.rnd8px').corner("8px");
@@ -72,7 +71,6 @@ $(document).ready(function()
 			
 			$( "#tabs" ).bind( "tabsselect", function(event, ui) {
 				
-				tabIndex = ui;
-				tabIndex2 = event;
+				tabIndex = ui.tab.offsetLeft;
 });
 });
