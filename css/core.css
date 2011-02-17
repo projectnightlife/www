@@ -152,7 +152,7 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 /* UI panels */
 
 .UIpanel { background: #0a0a0a; border: 1px solid #0e0e0e; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
-.UIpanel .UItabs { position: relative; padding: 7px; background: #0d0d0d; border-bottom: 1px solid #111; text-align: center; }
+.UIpanel .UItabs { font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; position: relative; padding: 7px; background: #0d0d0d; border-bottom: 1px solid #111; text-align: center; }
 .UIpanel .UItabs .UIcaret { position: absolute; width: 13px; height: 8px; background: url(../../images/core/UIpanel_caret.png) no-repeat; bottom: -1px; left: 238px; }
 .UIpanel .UIcontainer { overflow: auto; padding: 10px; }
 .UIpanel .UIcontainer .UIheading { overflow: auto; margin-bottom: 10px; color: #777; }
