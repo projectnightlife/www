@@ -118,7 +118,12 @@ h1 {
 #header .pulldown_spacer ul { 
 	margin: 0; 
 	padding: 0.6em 1em; 
+	padding-bottom: 0.2em; 
 	list-style: none;
+}
+
+#header .pulldown_spacer li { 
+	margin-bottom: 0.4em;
 }
 
 #header .pulldown_spacer li a { 

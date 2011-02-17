@@ -44,7 +44,7 @@
             <div id="imageReel">
               <a href="pages/general/opportunities/bloggers.php"><img src="images/blog_feature.jpg" width="608" height="312" /></a>
               {foreach from=$featuredPosts item=post name=featuredPosts2}
-              <a href="post/{$post->id}"><img src="http://www.projectnightlife.co.uk/photo/{$post->thumbnail}/608x312" width="608" height="312" /></a>
+              <a href="post/{$post->id}"><img src="photo/{$post->thumbnail}/608x312" width="608" height="312" /></a>
               {/foreach}
             </div>  
           </div>
@@ -74,6 +74,9 @@
               </div>
             </div>
             <ul id="posts" class="UIobjectlist listw630">
+              {if $posts|@count == 0}
+                <div style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0; color: #ABA0C0;">No posts under this style yet</div>
+              {/if}
               {foreach from=$posts item=post name=posts}
               <li {if $smarty.foreach.posts.first && $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="first last"{else}{if $smarty.foreach.posts.first}class="first"{elseif $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="last"{/if}{/if}>
                 <div class="thumb"><a class="thumb" href="pages/blogs/post.php?id={$post->id}"><img src="pages/getphoto/GetPhoto.php?id={$post->thumbnail}&size=80x80" width="80" height="80" /></a></div>
@@ -105,6 +108,9 @@
               <h3>Blogs</h3>
             </div>
             <ul class="UItileview" style="margin: 0 8px;">
+            {if $blogs|@count == 0}
+                <div style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0; color: #ABA0C0;">No blogs under this style yet</div>
+              {/if}
             {foreach from=$blogs item=blog name=blogs}
               {if $smarty.foreach.blogs.index % 2 == 0}
                 <div style="overflow: auto;">

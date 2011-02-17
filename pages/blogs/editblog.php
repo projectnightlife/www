@@ -6,7 +6,7 @@ require_once($globalDir.'pages\\includes\\global.php');
 if (!$session['ownsBlog'])
 {
 	//die("User doesn't own a blog"); // tempory
-	header('Location: http://projectnightlife.co.uk/blogs');
+	header('Location: '.$pageData['hostname'].'/blogs');
 	exit();
 }
 
@@ -78,7 +78,7 @@ switch ($action)
 					      }
 					    }
 					    catch (Exception $e) {
-						    header('Location: http://projectnightlife.co.uk/blog/edit?v=manage');
+						    header('Location: '.$pageData['hostname'].'/blog/edit?v=manage');
 							exit();
 					    }
 					    try {

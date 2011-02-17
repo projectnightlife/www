@@ -10,7 +10,7 @@ try {
 }
 catch (Exception $e)
 {
-	header('Location: http://projectnightlife.co.uk/blogs');
+	header('Location: '.$pageData['hostname'].'/blogs');
 	exit();
 }
 

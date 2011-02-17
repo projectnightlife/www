@@ -33,7 +33,7 @@
         <div class="span310 leftspcr15 topspcr15">
           <div class="UIpanel" style="height: 250px; border-color: #111; font-family: Tahoma, Geneva, sans-serif;">
             <h3 style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 24px; color: #ABA0C0; margin-bottom: 16px; line-height: 26px;">Our Vision</h3>
-            <p>At Project Nightlife we aim for the best. Our vision is to be the ultimate resource for those with a real interest in going out and experiencing the best UK nightlife has to offer.</p><p>This is an extremely exciting project to be part of and we are always on the hunt for people as passionate as we are.</p><p class="last-child">If you think you fit the mould, then don't hesitate, we would love to <a href="#" onclick="return api.composeMessage('Contact Us', api.contactus(), 'http://www.projectnightlife.co.uk/backend/communicate.php', 0);" title="Contact us">hear from you!</a></p>
+            <p>At Project Nightlife we aim for the best. Our vision is to be the ultimate resource for those with a real interest in going out and experiencing the best UK nightlife has to offer.</p><p>This is an extremely exciting project to be part of and we are always on the hunt for people as passionate as we are.</p><p class="last-child">If you think you fit the mould, then don't hesitate, we would love to <a href="#" onClick="return api.composeMessage('Contact Us', api.contactus(), '{$pageData['hostname']}/backend/communicate.php', 0);" title="Contact us">hear from you!</a></p>
           </div>
         </div>
         

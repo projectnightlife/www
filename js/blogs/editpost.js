@@ -117,19 +117,19 @@ var objects = new Array();
 	{
 		if (thumbnail) // post will have a thumbnail
 		{
-		  api.sendSimpleRequest("http://www.projectnightlife.co.uk/backend/ajax.php?service=image&method=BlogMakeMainPhoto&id="+thumbnail, null, null, true);
+		  api.sendSimpleRequest(api.hostname+"/backend/ajax.php?service=image&method=BlogMakeMainPhoto&id="+thumbnail, null, null, true);
 		}
 	}
 	else // original thumbnail existed
 	{
 		if (!thumbnail) // post will have no thumbnail
 		{
-		  api.sendSimpleRequest("http://www.projectnightlife.co.uk/backend/ajax.php?service=image&method=BlogDeallocateMainPhoto&id="+$('#postThumbnailId').val(), null, null, true);
+		  api.sendSimpleRequest(api.hostname+"/backend/ajax.php?service=image&method=BlogDeallocateMainPhoto&id="+$('#postThumbnailId').val(), null, null, true);
 		}
 		else if (parseInt($('#postThumbnailId').val(), 10) != thumbnail) // post will have new thumbnail
 		{
-			api.sendSimpleRequest("http://www.projectnightlife.co.uk/backend/ajax.php?service=image&method=BlogDeallocateMainPhoto&id="+$('#postThumbnailId').val(), null, null, true);
-			api.sendSimpleRequest("http://www.projectnightlife.co.uk/backend/ajax.php?service=image&method=BlogMakeMainPhoto&id="+thumbnail, null, null, true);
+			api.sendSimpleRequest(api.hostname+"/backend/ajax.php?service=image&method=BlogDeallocateMainPhoto&id="+$('#postThumbnailId').val(), null, null, true);
+			api.sendSimpleRequest(api.hostname+"/backend/ajax.php?service=image&method=BlogMakeMainPhoto&id="+thumbnail, null, null, true);
 		}
 	}
 				
@@ -291,7 +291,7 @@ function addPhoto(photo, loadingPage)
 	  
 	var addedPhotos = document.getElementById('addedPhotos');
 	var image = document.createElement('img');
-    image.src = "http://www.projectnightlife.co.uk/photo/"+newPhoto.id+"/160x120";
+    image.src = api.hostname+"/photo/"+newPhoto.id+"/160x120";
 	image.style.width = "160px";
 	image.style.height = "120px";
 	var holder = document.createElement('div');
@@ -592,7 +592,7 @@ function unpackPost(response)
 
 function removePost(id)
 {
-  api.sendSimpleRequest("http://www.projectnightlife.co.uk/backend/ajax.php?service=blog&method=RemovePost&id="+id, "postRemoved", "postSpinner:002");
+  api.sendSimpleRequest(api.hostname+"/backend/ajax.php?service=blog&method=RemovePost&id="+id, "postRemoved", "postSpinner:002");
   document.getElementById('submitPost').disabled = true;
   document.getElementById('savingNotification').style.display = 'block';
 }
@@ -610,7 +610,7 @@ function cleanUpPhotos()
 	  if (document.getElementById('postBody').value.search("<Photo "+(photo + 1)+">") == -1)
 	  {
 		  // no callback, no spinner and suppress all warnings
-		  api.sendSimpleRequest("http://www.projectnightlife.co.uk/backend/ajax.php?service=image&method=RemovePhoto&id="+photos[photo].id, "photoRemoved", null, true);
+		  api.sendSimpleRequest(api.hostname+"/backend/ajax.php?service=image&method=RemovePhoto&id="+photos[photo].id, "photoRemoved", null, true);
 	  }
 	}
 }
@@ -621,7 +621,7 @@ function cleanAllPhotos()
 	for (var photo = 0; photo < photos.length; photo++)
 	{
 	  // no callback, no spinner and suppress all warnings
-	  api.sendSimpleRequest("http://www.projectnightlife.co.uk/backend/ajax.php?service=image&method=RemovePhoto&id="+photos[photo].id, null, null, true);
+	  api.sendSimpleRequest(api.hostname+"/backend/ajax.php?service=image&method=RemovePhoto&id="+photos[photo].id, null, null, true);
 	}
 }
 
@@ -668,7 +668,7 @@ $(document).ready(function()
 {
   if (window.location.href.indexOf("v=edit") != -1) // if in edit mode, load the post initialisation routine
   {
-	api.sendXmlRequest("http://www.projectnightlife.co.uk/get_objects.php", encodeURIComponent(document.getElementById('originalPostBody').value), "unpackPost", null, false);
+	api.sendXmlRequest(api.hostname+"/get_objects.php", encodeURIComponent(document.getElementById('originalPostBody').value), "unpackPost", null, false);
   }
   else
   {
