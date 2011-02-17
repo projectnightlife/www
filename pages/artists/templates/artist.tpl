@@ -55,7 +55,7 @@
             </div>
           
           <div class="UIpanel topspcr">
-            <div class="UIheading" style="text-align: center;">
+            <div class="UIheading" style="text-align: center; overflow: auto; border-bottom: 1px solid #252525; background: #111;">
               <a href="" style="padding: 10px;">Updates</a>
               <a href="" style="padding: 10px;">Album</a>
               <a href="" style="padding: 10px;">Tour</a>
