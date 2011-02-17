@@ -31,34 +31,6 @@
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">City: London</span></div>
           </div>
         </div>
-        <!--<div id="leftColumn" class="span200">
-          <img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=200x600" style="display: block; margin: 0 auto;" />
-          <div class="profileInteractions topspcr">
-            {if $blog->subscribed == "false" && $session['userId'] != 0 && !$isContributor}
-            <a href="backend/ajax.php?service=blog&method=Subscribe&blogId={$blog->id}" class="profileButton subscription" rel="subscribe" ajaxify="1" callback="subscription">Subscribe to this blog</a>
-            {else if $blog->subscribed == "true" && $session['userId'] != 0 && !$isContributor}
-            <a href="backend/ajax.php?service=blog&method=Unsubscribe&blogId={$blog->id}" class="profileButton subscription" rel="unsubscribe" ajaxify="1" callback="subscription">Unsubscribe from this blog</a>
-            {/if}
-          </div>
-          <div class="UIpanel topspcr">
-            <div class="UIheading">
-              <h3>Info</h3>
-            </div>
-            {$blog->description}
-          </div>
-          {if isset($subscribers)}
-          <div class="UIpanel topspcr">
-            <div class="UIheading">
-              <h3>Subscribers</h3>
-            </div>
-            <div id="subscriptions">
-              {foreach from=$subscribers item=subscriber name=subscribers}
-              <a id="subscription[{$subscriber->id}]" href="http://www.facebook.com/profile.php?id={$subscriber->id}" class="fbSquareProfilePic" title="{$subscriber->firstname} {$subscriber->lastname}" target="_blank"><img src="https://graph.facebook.com/{$subscriber->id}/picture" alt="{$subscriber->firstname} {$subscriber->lastname}" width="50" height="50" /></a>
-              {/foreach}
-            </div>
-          </div>
-          {/if}
-        </div>-->
         
         <div class="span600">
           <div class="UIpanel">
@@ -120,16 +92,15 @@
         
         
         <div class="span350 leftspcr">
-          {if isset($subscribers)}
           <div class="UIpanel">
             <div class="UIheading">
               <h3>Conor's Subscribers</h3>
               <div class="UIcontrol">
                 <div class="filter" id="postFilter">
                   {if $blog->subscribed == "false" && $session['userId'] != 0 && !$isContributor}
-                  <a class="plus" href="backend/ajax.php?service=blog&method=Subscribe&blogId={$blog->id}" rel="subscribe" ajaxify="1" callback="subscribe" title="Subscribe">Subscribe</a>
+                  <a class="plus subscription" href="backend/ajax.php?service=blog&method=Subscribe&blogId={$blog->id}" rel="subscribe" ajaxify="1" callback="subscribe" title="Subscribe">Subscribe</a>
                   {else if $blog->subscribed == "true" && $session['userId'] != 0 && !$isContributor}
-                  <a class="minus" href="backend/ajax.php?service=blog&method=Unsubscribe&blogId={$blog->id}" rel="unsubscribe" ajaxify="1" callback="unsubscribe" title="Unsubscribe">Unsubscribe</a>
+                  <a class="minus subscription" href="backend/ajax.php?service=blog&method=Unsubscribe&blogId={$blog->id}" rel="unsubscribe" ajaxify="1" callback="unsubscribe" title="Unsubscribe">Unsubscribe</a>
                   {/if}
                 </div>
               </div>
@@ -140,7 +111,6 @@
               {/foreach}
             </div>
           </div>
-          {/if}
           
           <div class="UIpanel topspcr">
             <div class="UIheading">
