@@ -57,6 +57,7 @@
           
           <div class="UIpanel topspcr">
             <div class="UItabs">
+              <div class="UIcaret"></div>
               <a href="" style="padding: 0 10px;">Updates</a>
               <a href="" style="padding: 0 10px;">Album</a>
               <a href="" style="padding: 0 10px;">Tour</a>
