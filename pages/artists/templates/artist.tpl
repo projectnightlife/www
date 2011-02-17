@@ -98,9 +98,9 @@
               <div class="UIcontrol">
                 <div class="filter" id="postFilter">
                   {if $blog->subscribed == "false" && $session['userId'] != 0 && !$isContributor}
-                  <a class="plus subscription" href="backend/ajax.php?service=blog&method=Subscribe&blogId={$blog->id}" rel="subscribe" ajaxify="1" callback="subscribe" title="Subscribe">Subscribe</a>
+                  <a class="plus subscription" href="backend/ajax.php?service=blog&method=Subscribe&blogId={$blog->id}" rel="subscribe" ajaxify="1" callback="subscription" title="Subscribe">Subscribe</a>
                   {else if $blog->subscribed == "true" && $session['userId'] != 0 && !$isContributor}
-                  <a class="minus subscription" href="backend/ajax.php?service=blog&method=Unsubscribe&blogId={$blog->id}" rel="unsubscribe" ajaxify="1" callback="unsubscribe" title="Unsubscribe">Unsubscribe</a>
+                  <a class="minus subscription" href="backend/ajax.php?service=blog&method=Unsubscribe&blogId={$blog->id}" rel="unsubscribe" ajaxify="1" callback="subscription" title="Unsubscribe">Unsubscribe</a>
                   {/if}
                 </div>
               </div>
