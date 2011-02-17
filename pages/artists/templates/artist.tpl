@@ -17,10 +17,10 @@
       
       <div class="masthead">
         <div class="heading">
-          <h1 class="left">Conor Owen</h1><h1 class="right">Artist</h1>
+          <h1 class="left">{$blog->name}</h1><h1 class="right">Artist</h1>
         </div>
         <hr />
-        <div class="breadcrumbs"><a href="">Home</a> > <a href="pages/blogs/blogs.php">Artists</a> > <a href="pages/blogs/blog.php?id={$blog->id}">Conor Owen</a></div>
+        <div class="breadcrumbs"><a href="">Home</a> > <a href="pages/blogs/blogs.php">Artists</a> > <a href="pages/artists/artist.php">{$blog->name}</a></div>
       </div>
       
       <div class="canvas">
@@ -60,27 +60,26 @@
           {/if}
         </div>-->
         
-        <div class="span600 leftspcr">
+        <div class="span600">
           <div class="UIpanel">
             
               <div style="width: 520px; float: left;">
-                <h3 style="line-height: 1em; padding-bottom: 5px; color: #ABA0C0;">Conor Owen</h3>
+                <h3 style="line-height: 1em; padding-bottom: 5px; color: #ABA0C0;">{$blog->name}</h3>
                 {if isset($blog->slogan)}
                 <span>{$blog->slogan}</span>
                 {/if}
-                <p>By 
-                {foreach from=$blogContributors item=contributor name=contributors}{if $smarty.foreach.contributors.first}<a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{elseif $smarty.foreach.contributors.last} and <a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{else}, <a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{/if}{/foreach}
-                </p>
+                <div class="stylesIconList">
                 {foreach from=$genres item=genre name=genres}
                   <a href="pages/blogs/blogs.php?filter={$genre->name}" title="{$genre->name} homepage"><img src="images/genres/{$genre->id}.png" alt="{$genre->name}" style="margin-right: 3px;" height="19" /></a>
                 {/foreach}
+                </div>
               </div>
               <div class="right fblike fblikecount">
                 <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;action=like&amp;colorscheme=dark&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:65px;" allowTransparency="true"></iframe>
               </div>
             </div>
           
-          <div class="UIpanel topspcr">
+          <div class="UIpanel">
             <div class="UIheading">
               <h3>Latest updates</h3>
               <div class="UIcontrol">
@@ -90,7 +89,9 @@
               </div>
             </div>
             <ul id="posts" class="UIobjectlist listw580">
-              
+              {if $posts|@count == 0}
+                <div style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0; color: #ABA0C0;">No updates yet</div>
+              {/if}
               {foreach from=$posts item=post name=posts}
               <li {if $smarty.foreach.posts.first && $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="first last"{else}{if $smarty.foreach.posts.first}class="first"{elseif $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="last"{/if}{/if}>
                 <div class="thumb"><a class="thumb" href="pages/blogs/post.php?id={$post->id}"><img src="pages/getphoto/GetPhoto.php?id={$post->thumbnail}&size=80x80" width="80" height="80" /></a></div>
@@ -120,7 +121,7 @@
         
         <div class="span350 leftspcr">
           {if isset($subscribers)}
-          <div class="UIpanel topspcr">
+          <div class="UIpanel">
             <div class="UIheading">
               <h3>Conor's Subscribers</h3>
             </div>
@@ -131,8 +132,15 @@
             </div>
           </div>
           {/if}
-        </div>
-        </div> <!-- span140 -->
+          
+          <div class="UIpanel topspcr">
+            <div class="UIheading">
+              <h3>Bio</h3>
+            </div>
+            {$blog->description}
+          </div>
+        
+        </div> <!-- span350 -->
           
       </div> <!-- canvas -->
     </div> <!-- container -->

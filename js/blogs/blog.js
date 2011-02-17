@@ -28,7 +28,7 @@ function subscription()
 {
 	if ($(".profileInteractions .subscription").attr("rel") == "subscribe" && api.session.data.userId != 0)
 	{
-		api.launchDialog("Subscription", "<p>We'll now ensure you're always right up to date with this blog.</p><p>Whenever it publishes a new piece of content, we'll send you a  notification to let you know.</p>");
+		api.launchDialog("Subscription", "<p>We'll now ensure you're always right up to date with this blog.</p><p>Whenever they publish a new piece of content, we'll send you a  notification to let you know.</p>");
 		$(".profileInteractions .subscription").html("Unsubscribe from this blog");
 		$(".profileInteractions .subscription").attr("rel", "unsubscribe");
 		$(".profileInteractions .subscription").attr("href", $(".profileInteractions .subscription").attr("href").replace("Subscribe", "Unsubscribe"));
