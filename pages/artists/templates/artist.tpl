@@ -83,13 +83,9 @@
             <div class="UIheading">
               <h3>Latest updates</h3>
               <div class="UIcontrol">
-                <div class="filter" id="postFilter">
-                  {if $blog->subscribed == "false" && $session['userId'] != 0 && !$isContributor}
-                  <a class="plus" href="backend/ajax.php?service=blog&method=Subscribe&blogId={$blog->id}" rel="subscribe" ajaxify="1" callback="subscribe" title="Subscribe">Subscribe</a>
-                  {else if $blog->subscribed == "true" && $session['userId'] != 0 && !$isContributor}
-                  <a class="minus" href="backend/ajax.php?service=blog&method=Unsubscribe&blogId={$blog->id}" rel="unsubscribe" ajaxify="1" callback="unsubscribe" title="Unsubscribe">Unsubscribe</a>
-                  {/if}
-                </duv>
+                <ul class="filter" id="postFilter">
+                  <li class="selected rnd8px last" style="color: #222;">Most recent</li>
+                </ul>
               </div>
             </div>
             <ul id="posts" class="UIobjectlist listw580">
@@ -128,7 +124,15 @@
           <div class="UIpanel">
             <div class="UIheading">
               <h3>Conor's Subscribers</h3>
-              <a class="next" href="#" onClick="return slideLeft();">Next</a>
+              <div class="UIcontrol">
+                <div class="filter" id="postFilter">
+                  {if $blog->subscribed == "false" && $session['userId'] != 0 && !$isContributor}
+                  <a class="plus" href="backend/ajax.php?service=blog&method=Subscribe&blogId={$blog->id}" rel="subscribe" ajaxify="1" callback="subscribe" title="Subscribe">Subscribe</a>
+                  {else if $blog->subscribed == "true" && $session['userId'] != 0 && !$isContributor}
+                  <a class="minus" href="backend/ajax.php?service=blog&method=Unsubscribe&blogId={$blog->id}" rel="unsubscribe" ajaxify="1" callback="unsubscribe" title="Unsubscribe">Unsubscribe</a>
+                  {/if}
+                </div>
+              </div>
             </div>
             <div id="subscriptions">
               {foreach from=$subscribers item=subscriber name=subscribers}
