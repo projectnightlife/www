@@ -167,10 +167,4 @@
 {include file='../../includes/templates/critical_js.tpl'}
 <script type="text/javascript" src="{$pageData['jsFile']}"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function()
-{  
-			$("#tabs").tabs();
-});
-</script>
 {include file='../../includes/templates/js.tpl'}

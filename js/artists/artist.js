@@ -53,7 +53,7 @@ function subscription()
 $(document).ready(function()
 {  
   $('.rnd8px').corner("8px");
-  /*var tabContainers = $("#tabs > div");
+  var tabContainers = $("#tabs > div");
 			
 			// Tabbed navigation
 			$("#tabs ul a").click(function () {
@@ -63,6 +63,5 @@ $(document).ready(function()
 				$(this).addClass("selected");
 				
 				return false;
-			}).filter(":first").click();*/
-			//$("#tabs").tabs();
+			}).filter(":first").click();
 });
