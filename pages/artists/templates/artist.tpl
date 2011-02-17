@@ -60,13 +60,13 @@
           {/if}
         </div>-->
         
-        <div class="span600 topspcr">
+        <div class="span600">
           <div class="UIpanel">
             
               <div style="width: 520px; float: left;">
                 <h3 style="line-height: 1em; padding-bottom: 5px; color: #ABA0C0;">Conor Owen</h3>
                 {if isset($blog->slogan)}
-                <span>{$blog->slogan}</span>
+                <div>{$blog->slogan}</div>
                 {/if}
                 {foreach from=$genres item=genre name=genres}
                   <a href="pages/blogs/blogs.php?filter={$genre->name}" title="{$genre->name} homepage"><img src="images/genres/{$genre->id}.png" alt="{$genre->name}" style="margin-right: 3px;" height="19" /></a>
@@ -117,7 +117,7 @@
         
         <div class="span350 leftspcr">
           {if isset($subscribers)}
-          <div class="UIpanel topspcr">
+          <div class="UIpanel">
             <div class="UIheading">
               <h3>Conor's Subscribers</h3>
             </div>
