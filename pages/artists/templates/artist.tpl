@@ -17,7 +17,7 @@
       
       <div class="masthead">
         <div class="heading">
-          <h1 class="left">Conor Owen</h1><h1 class="right">Artist</h1>
+          <h1 class="left">{$blog->title}</h1><h1 class="right">Artist</h1>
         </div>
         <hr />
         <div class="breadcrumbs"><a href="">Home</a> > <a href="pages/blogs/blogs.php">Artists</a> > <a href="pages/blogs/blog.php?id={$blog->id}">Conor Owen</a></div>
@@ -64,7 +64,7 @@
           <div class="UIpanel">
             
               <div style="width: 520px; float: left;">
-                <h3 style="line-height: 1em; padding-bottom: 5px; color: #ABA0C0;">Conor Owen</h3>
+                <h3 style="line-height: 1em; padding-bottom: 5px; color: #ABA0C0;">{$blog->title}</h3>
                 {if isset($blog->slogan)}
                 <span>{$blog->slogan}</span>
                 {/if}
@@ -79,7 +79,7 @@
               </div>
             </div>
           
-          <div class="UIpanel topspcr">
+          <div class="UIpanel">
             <div class="UIheading">
               <h3>Latest updates</h3>
               <div class="UIcontrol">
