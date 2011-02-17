@@ -58,9 +58,9 @@
           <div class="UIpanel topspcr" id="tabs">
             <ul class="UItabs">
               <div class="UIcaret"></div>
-              <li><a href="pages/artists/artist.php#tabs-1" style="padding: 0 10px;">Updates</a></li>
-              <li><a href="pages/artists/artist.php#tabs-2" style="padding: 0 10px;">Album</a></li>
-              <li><a href="pages/artists/artist.php#tabs-3" style="padding: 0 10px;">Tour</a></li>
+              <li><a href="#tabs-1" style="padding: 0 10px;">Updates</a></li>
+              <li><a href="#tabs-2" style="padding: 0 10px;">Album</a></li>
+              <li><a href="#tabs-3" style="padding: 0 10px;">Tour</a></li>
             </ul>
             <div id="tabs-1">tab 1</div>
             <div id="tabs-2">tab 2</div>
