@@ -62,9 +62,63 @@
               <li><a href="#tabs-2" style="padding: 0 10px;">Album</a></li>
               <li><a href="#tabs-3" style="padding: 0 10px;">Tour</a></li>
             </ul>
-            <div id="tabs-1">tab 1</div>
-            <div id="tabs-2">tab 2</div>
-            <div id="tabs-3">tab 3</div>
+            <div class="UIcontainer" id="tabs-1">
+              <div class="UIheading">
+                <h3>Latest updates</h3>
+                <div class="UIcontrol">
+                  <ul class="filter" id="postFilter">
+                    <li class="selected rnd8px last" style="color: #222;">Most recent</li>
+                  </ul>
+                </div>
+              </div>
+              <ul id="posts" class="UIobjectlist listw580">
+                {if $posts|@count == 0}
+                  <div style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0; color: #ABA0C0;">No updates yet</div>
+                {/if}
+                {foreach from=$posts item=post name=posts}
+                <li {if $smarty.foreach.posts.first && $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="first last"{else}{if $smarty.foreach.posts.first}class="first"{elseif $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="last"{/if}{/if}>
+                  <div class="thumb"><a class="thumb" href="pages/blogs/post.php?id={$post->id}"><img src="pages/getphoto/GetPhoto.php?id={$post->thumbnail}&size=80x80" width="80" height="80" /></a></div>
+                  <div class="description">
+                    <div class="heading">
+                      <h4 class="left text-overflow"><a href="pages/blogs/post.php?id={$post->id}">{$post->title}</a></h4>
+                      <span class="datetime right">{$post->created}</span>
+                    </div>
+                    <p class="word-wrap">{$post->excerpt}</p>
+                  </div>
+                </li>
+                {/foreach}
+                {if $smarty.foreach.posts.total eq 8}
+                <li class="last">
+                  <div style="width: 500px; margin: 0 auto; padding: 5px; text-align: center;">
+                    <a href="backend/ajax.php?service=blog&method=GetPostsByBlog&id={$blog->id}&amount=8&start=8" ajaxify="1" callback="injectPosts" onClick="this.style.display = 'none'; document.getElementById('morePostsSpinner').style.display = 'inline-block';" spinner="morePostsSpinner" offset="8" pagesize="8">View more</a>
+                    <div id="morePostsSpinner" class="ajaxSpinner" style="display: none; float: none; margin: 1px;"></div>
+                  </div> 
+                </li>
+              {/if}
+              </ul>
+            </div> <!-- UIcontainer -->
+            <div class="UIcontainer" id="tabs-2">
+              <div class="UIheading">
+                <h3>Latest updates</h3>
+                <div class="UIcontrol">
+                  <ul class="filter" id="postFilter">
+                    <li class="selected rnd8px last" style="color: #222;">Most recent</li>
+                  </ul>
+                </div>
+              </div>
+              <div style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0; color: #ABA0C0;">No album info yet</div>
+            </div> <!-- UIcontainer -->
+            <div class="UIcontainer" id="tabs-3">
+              <div class="UIheading">
+                <h3>Latest updates</h3>
+                <div class="UIcontrol">
+                  <ul class="filter" id="postFilter">
+                    <li class="selected rnd8px last" style="color: #222;">Most recent</li>
+                  </ul>
+                </div>
+              </div>
+              <div style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0; color: #ABA0C0;">No tour info yet</div>
+            </div> <!-- UIcontainer -->
           </div>
           
         </div> <!-- span630 -->
@@ -112,11 +166,5 @@
 </html>
 {include file='../../includes/templates/critical_js.tpl'}
 <script type="text/javascript" src="{$pageData['jsFile']}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-    // Tabbed navigation
-			$("#tabs").tabs();
-  });
-</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 {include file='../../includes/templates/js.tpl'}

@@ -52,5 +52,16 @@ function subscription()
 
 $(document).ready(function()
 {  
-  //$('.rnd8px').corner("8px");
+  $('.rnd8px').corner("8px");
+  var tabContainers = $("#tabs > div");
+			
+			// Tabbed navigation
+			$("#tabs ul a").click(function () {
+				tabContainers.hide().filter(this.hash).show();
+				
+				$("#tabs ul a").removeClass("selected");
+				$(this).addClass("selected");
+				
+				return false;
+			}).filter(":first").click();
 });
