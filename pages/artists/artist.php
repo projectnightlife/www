@@ -4,7 +4,7 @@ require_once($globalDir.'pages\\includes\\global.php');
 
 $blogService = API::GetService("blog");
 try {
-  $blog = $blogService->GetBlog($_GET['id']);
+  $blog = $blogService->GetBlog(19);
 }
 catch(Exception $e)
 {
