@@ -114,5 +114,8 @@ if ($subscribers->count() != 0)
 }
 $smarty->assign('pageData', $pageData);
 $smarty->loadFilter('output', 'trimwhitespace');
+if ($blog->id == 19)
+  $smarty->display('../artists/templates/blog.tpl');
+else
 $smarty->display('templates/'.$mobilepfx.'blog.tpl');
 ?>
