@@ -64,7 +64,7 @@
           <div class="UIpanel">
             
               <div style="width: 520px; float: left;">
-                <h3 style="line-height: 1em; padding-bottom: 5px; color: #ABA0C0;">{$blog->name}</h3>
+                <h3 style="line-height: 1em; padding-bottom: 5px; color: #ABA0C0;">Conor Owen</h3>
                 {if isset($blog->slogan)}
                 <span>{$blog->slogan}</span>
                 {/if}
@@ -82,7 +82,7 @@
           
           <div class="UIpanel topspcr">
             <div class="UIheading">
-              <h3>Blog posts</h3>
+              <h3>Latest updates</h3>
               <div class="UIcontrol">
                 <ul class="filter" id="postFilter">
                   <li class="selected rnd8px last" style="color: #222;">Most recent</li>
@@ -122,7 +122,7 @@
           {if isset($subscribers)}
           <div class="UIpanel topspcr">
             <div class="UIheading">
-              <h3>Concor's Subscribers</h3>
+              <h3>Conor's Subscribers</h3>
             </div>
             <div id="subscriptions">
               {foreach from=$subscribers item=subscriber name=subscribers}
