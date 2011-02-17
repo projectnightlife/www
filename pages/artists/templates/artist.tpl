@@ -55,6 +55,11 @@
             </div>
           
           <div class="UIpanel topspcr">
+            <div class="UIheading" style="text-align: center;">
+              <a href="" style="padding: 10px;">Updates</a>
+              <a href="" style="padding: 10px;">Album</a>
+              <a href="" style="padding: 10px;">Tour</a>
+            </div>
             <div class="UIheading">
               <h3>Latest updates</h3>
               <div class="UIcontrol">
