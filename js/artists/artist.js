@@ -49,11 +49,11 @@ function subscription()
 	}
 	return false;
 }
-
+  var tabIndex = 0;
 $(document).ready(function()
 {  
   $('.rnd8px').corner("8px");
-  var tabIndex = 0;
+
   var tabContainers = $("#tabs > div");
 			
 			// Tabbed navigation
