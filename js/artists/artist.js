@@ -69,7 +69,7 @@ $(document).ready(function()
 				return false;
 			}).filter(":first").click();*/
 			
-			$( ".selector" ).bind( "tabsselect", function(event, ui) {
+			$( "#tabs" ).bind( "tabsselect", function(event, ui) {
  tabContainers.hide().filter(this.hash).show();
 				
 				$("#tabs ul a").removeClass("selected");
@@ -77,5 +77,6 @@ $(document).ready(function()
 				
 				$tabs = $('#tabs').tabs();
 				tabIndex = $tabs.tabs('option', 'selected');
+				return false;
 }).filter(":first").click();
 });
