@@ -45,6 +45,8 @@ class ResourceDependancyManager
 		self::$cssPath = ($_SERVER['HTTP_HOST'] == 'developer.projectnightlife.co.uk') ? str_replace('www.projectnightlife.co.uk', 'developer.projectnightlife.co.uk', self::$cssPath) : self::$cssPath;
 		self::$cssBuildPath = ($_SERVER['HTTP_HOST'] == 'developer.projectnightlife.co.uk') ? str_replace('www.projectnightlife.co.uk', 'developer.projectnightlife.co.uk', self::$cssBuildPath) : self::$cssBuildPath;
 		
+		self::$cacheTime = ($_SERVER['HTTP_HOST'] == 'developer.projectnightlife.co.uk') ? 1 : 604800;
+		
 		$this->URI = strtolower($URI);
 		$this->resourceType = strtolower($resourceType);
 	}
