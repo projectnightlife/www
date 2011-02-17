@@ -60,7 +60,7 @@
           {/if}
         </div>-->
         
-        <div class="span600 leftspcr">
+        <div class="span600 topspcr">
           <div class="UIpanel">
             
               <div style="width: 520px; float: left;">
@@ -68,9 +68,6 @@
                 {if isset($blog->slogan)}
                 <span>{$blog->slogan}</span>
                 {/if}
-                <p>By 
-                {foreach from=$blogContributors item=contributor name=contributors}{if $smarty.foreach.contributors.first}<a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{elseif $smarty.foreach.contributors.last} and <a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{else}, <a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{/if}{/foreach}
-                </p>
                 {foreach from=$genres item=genre name=genres}
                   <a href="pages/blogs/blogs.php?filter={$genre->name}" title="{$genre->name} homepage"><img src="images/genres/{$genre->id}.png" alt="{$genre->name}" style="margin-right: 3px;" height="19" /></a>
                 {/foreach}
@@ -131,8 +128,15 @@
             </div>
           </div>
           {/if}
-        </div>
-        </div> <!-- span140 -->
+          
+          <div class="UIpanel topspcr">
+            <div class="UIheading">
+              <h3>Bio</h3>
+            </div>
+            {$blog->description}
+          </div>
+        
+        </div> <!-- span350 -->
           
       </div> <!-- canvas -->
     </div> <!-- container -->
