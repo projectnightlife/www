@@ -64,5 +64,5 @@ $(document).ready(function()
 				
 				return false;
 			}).filter(":first").click();*/
-			$("#tabs").tabs();
+			//$("#tabs").tabs();
 });
