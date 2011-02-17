@@ -53,6 +53,7 @@ function subscription()
 $(document).ready(function()
 {  
   $('.rnd8px').corner("8px");
+  var tabIndex = 0;
   var tabContainers = $("#tabs > div");
 			
 			// Tabbed navigation
@@ -63,7 +64,7 @@ $(document).ready(function()
 				$(this).addClass("selected");
 				
 				$tabs = $('#tabs').tabs();
-				alert($tabs.tabs('option', 'selected'));
+				tabIndex = $tabs.tabs('option', 'selected');
 				
 				return false;
 			}).filter(":first").click();
