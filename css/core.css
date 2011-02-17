@@ -356,6 +356,8 @@ table.socialPlugins th { font-weight: normal; }
 a.fbSquareProfilePic { display: inline-block; margin: 3px 3px 0 0; padding: 1px; border: 1px solid #222; }
 a.fbSquareProfilePic:hover { border: 1px solid #ABA0C0; }
 
+.stylesIconList { margin-top: 15px; }
+
 /* links */
 
 a { color: #fff; text-decoration: none; }
