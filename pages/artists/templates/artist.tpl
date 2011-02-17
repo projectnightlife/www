@@ -112,19 +112,11 @@
 </html>
 {include file='../../includes/templates/critical_js.tpl'}
 <script type="text/javascript" src="{$pageData['jsFile']}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function() {
     // Tabbed navigation
-			$("#tabs ul a").click(function () {
-				var tabContainers = $("#tabs > div");
-				tabContainers.hide().filter(this.hash).show();
-				
-				$("#tabs ul a").removeClass("selected");
-				$(this).addClass("selected");
-				
-				return false;
-			}).filter(":first").click();
+			$("#tabs").tabs();
   });
 </script>
 {include file='../../includes/templates/js.tpl'}
