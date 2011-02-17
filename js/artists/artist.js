@@ -33,6 +33,7 @@ function subscription()
 		$(".subscription").removeClass("plus");
 		$(".subscription").addClass("minus");
 		$(".subscription").attr("rel", "unsubscribe");
+		$(".subscription").attr("title", "Unsubscribe");
 		$(".subscription").attr("href", $(".subscription").attr("href").replace("Subscribe", "Unsubscribe"));
 	    $('<a id="subscription['+api.session.data.userId+']"href="http://www.facebook.com/profile.php?id='+api.session.data.userId+'" class="fbSquareProfilePic" title="'+api.session.data.firstname+' '+api.session.data.lastname+'" target="_blank" style="display: none;"><img src="https://graph.facebook.com/'+api.session.data.userId+'/picture" alt="'+api.session.data.firstname+' '+api.session.data.lastname+'"></a>').appendTo("#subscriptions").fadeIn('slow');
 	}
@@ -42,6 +43,7 @@ function subscription()
 		$(".subscription").removeClass("minus");
 		$(".subscription").addClass("plus");
 		$(".subscription").attr("rel", "subscribe");
+		$(".subscription").attr("title", "Subscribe");
 		$(".subscription").attr("href", $(".subscription").attr("href").replace("Unsubscribe", "Subscribe"));
 		$('#subscriptions #subscription\\\['+api.session.data.userId+'\\\]').fadeOut('slow').delay(300, function() { $(this).empty().remove(); });
 	}
