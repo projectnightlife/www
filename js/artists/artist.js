@@ -77,5 +77,5 @@ $(document).ready(function()
 				
 				$tabs = $('#tabs').tabs();
 				tabIndex = $tabs.tabs('option', 'selected');
-});
+}).filter(":first").click();
 });
