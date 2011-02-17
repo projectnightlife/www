@@ -432,8 +432,8 @@ a:hover.plus { background: url(../../images/core/buttons/plus.png) 0 -22px no-re
 
 a:active.plus { background: url(../../images/core/buttons/plus.png) 0 -44px no-repeat; color: #aaa; }
 
-a.minus { display: block; float: right; width: 21px; height: 21px; background: url(../../images/core/buttons/minus.png) 0 0 no-repeat; overflow: hidden; line-height: 20px; font-size: 22px; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+a.minus { display: block; width: 21px; height: 21px; background: url(../../images/core/buttons/minus.png) 0 0 no-repeat; overflow: hidden; text-indent: -9999px; }
 
-a:hover.minus { background: url(../../images/core/buttons/minus.png) 0 -22px no-repeat; text-decoration: none; color: #ddd; }
+a:hover.minus { background: url(../../images/core/buttons/minus.png) 0 -22px no-repeat; }
 
-a:active.minus { background: url(../../images/core/buttons/minus.png) 0 -44px no-repeat; color: #aaa; }
+a:active.minus { background: url(../../images/core/buttons/minus.png) 0 -44px no-repeat; }
