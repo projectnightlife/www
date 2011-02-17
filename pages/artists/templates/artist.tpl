@@ -58,9 +58,9 @@
           <div class="UIpanel topspcr" id="tabs">
             <ul class="UItabs">
               <div class="UIcaret"></div>
-              <li><a href="#tabs-1" style="padding: 0 10px;">Updates</a></li>
-              <li><a href="#tabs-2" style="padding: 0 10px;">Album</a></li>
-              <li><a href="#tabs-3" style="padding: 0 10px;">Tour</a></li>
+              <li><a href="#tabs-1">Updates</a></li>
+              <li><a href="#tabs-2">Album</a></li>
+              <li><a href="#tabs-3">Tour</a></li>
             </ul>
             <div class="UIcontainer" id="tabs-1">
               <div class="UIheading">
