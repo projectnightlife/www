@@ -49,7 +49,7 @@ function subscription()
 	}
 	return false;
 }
-  var left = 0, width = 0;
+
 $(document).ready(function()
 {  
   $('.rnd8px').corner("8px");
@@ -71,7 +71,8 @@ $(document).ready(function()
 			
 			$( "#tabs" ).bind( "tabsselect", function(event, ui) {
 				
-				left = ui.tab.offsetLeft;
-				width = ui.tab.offsetWidth;
+				var left = ui.tab.offsetLeft;
+				var width = ui.tab.offsetWidth;
+				$('#UIcaret').animate({left: left + width / 2});
 });
 });
