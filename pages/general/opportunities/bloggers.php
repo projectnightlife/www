@@ -18,6 +18,8 @@ catch (Exception $e)
 
 $resourceManager = new ResourceDependancyManager('bloggers', 'css');
 require_once($globalDir.'pages\\includes\\core_css.php');
+$resourceManager->addResource('UIform.css');
+$resourceManager->addResource('media.css');
 $pageData['cssFile'] = $resourceManager->build();
 
 $resourceManager = new ResourceDependancyManager('bloggers', 'js');
