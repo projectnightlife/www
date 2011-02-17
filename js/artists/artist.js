@@ -30,6 +30,8 @@ function subscription()
 	{
 		api.launchDialog("Subscription", "<p>We'll now ensure you're always right up to date with this blog.</p><p>Whenever they publish a new piece of content, we'll send you a  notification to let you know.</p>");
 		$(".subscription").html("Unsubscribe");
+		$(".subscription").removeClass("plus");
+		$(".subscription").addClass("minus");
 		$(".subscription").attr("rel", "unsubscribe");
 		$(".subscription").attr("href", $(".subscription").attr("href").replace("Subscribe", "Unsubscribe"));
 	    $('<a id="subscription['+api.session.data.userId+']"href="http://www.facebook.com/profile.php?id='+api.session.data.userId+'" class="fbSquareProfilePic" title="'+api.session.data.firstname+' '+api.session.data.lastname+'" target="_blank" style="display: none;"><img src="https://graph.facebook.com/'+api.session.data.userId+'/picture" alt="'+api.session.data.firstname+' '+api.session.data.lastname+'"></a>').appendTo("#subscriptions").fadeIn('slow');
@@ -37,6 +39,8 @@ function subscription()
 	else if (api.session.userId != 0)
 	{
 		$(".subscription").html("Subscribe");
+		$(".subscription").removeClass("minus");
+		$(".subscription").addClass("plus");
 		$(".subscription").attr("rel", "subscribe");
 		$(".subscription").attr("href", $(".subscription").attr("href").replace("Unsubscribe", "Subscribe"));
 		$('#subscriptions #subscription\\\['+api.session.data.userId+'\\\]').fadeOut('slow').delay(300, function() { $(this).empty().remove(); });
