@@ -62,8 +62,10 @@ $(document).ready(function()
 				$("#tabs ul a").removeClass("selected");
 				$(this).addClass("selected");
 				
+				$tabs = $('#tabs').tabs();
+				alert($tabs.tabs('option', 'selected'));
+				
 				return false;
 			}).filter(":first").click();
 			$( "#tabs" ).tabs( "option", "fx", { opacity: 'toggle', duration: 'slow' } );
-			alert($('#tabs').tabs('option', 'selected'));
 });
