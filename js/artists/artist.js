@@ -73,6 +73,6 @@ $(document).ready(function()
 				
 				var left = ui.tab.offsetLeft;
 				var width = ui.tab.offsetWidth;
-				$('#UIcaret').animate({left: left + width / 2});
+				$('#UIcaret').animate({left: left + width / 2}, 500);
 });
 });
