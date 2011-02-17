@@ -79,7 +79,7 @@
               </div>
             </div>
           
-          <div class="UIpanel">
+          <div class="UIpanel topspcr">
             <div class="UIheading">
               <h3>Latest updates</h3>
               <div class="UIcontrol">
