@@ -11,11 +11,11 @@
 </head>
 
 <body id="blogs mobile">
-	{include file='../../includes/templates/header.tpl'}
-	<div class="content">
+	{include file='../../includes/templates/mobile-header.tpl'}
+	<div id="content">
 		<div class="masthead">
 			<div class="heading">
-				<h1 class="left">{$blog->name}</h1><h1 class="right">Blog</h1>
+				<h1 class="left">{$blog->name}</h1>
 			</div>
 			<div class="breadcrumbs"><a href="/">Home &raquo;</a><a href="pages/blogs/blogs.php">Blogs &raquo;</a><a href="pages/blogs/blog.php?id={$blog->id}">{$blog->name}</a></div>
 		</div>
@@ -55,9 +55,9 @@
 			{/if}
 		</ul>
 	</div>
-	{include file='../../includes/templates/footer.tpl'}
+	{include file='../../includes/templates/mobile-footer.tpl'}
 </body>
 </html>
-{include file='../../includes/templates/critical_js.tpl'}
+{include file='../../includes/templates/mobile-critical_js.tpl'}
 <script type="text/javascript" src="{$pageData['jsFile']}"></script>
-{include file='../../includes/templates/js.tpl'}
+{include file='../../includes/templates/mobile-js.tpl'}
