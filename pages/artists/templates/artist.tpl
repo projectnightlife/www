@@ -55,14 +55,14 @@
             </div>
           </div>
           
-          <div class="UIpanel topspcr">
+          <div class="UIpanel topspcr" id="tabs">
             <div class="UItabs">
               <div class="UIcaret"></div>
-              <a href="" style="padding: 0 10px;">Updates</a>
-              <a href="" style="padding: 0 10px;">Album</a>
-              <a href="" style="padding: 0 10px;">Tour</a>
+              <a href="" style="padding: 0 10px;" id="#tabs-1">Updates</a>
+              <a href="" style="padding: 0 10px;" id="#tabs-2">Album</a>
+              <a href="" style="padding: 0 10px;" id="#tabs-3">Tour</a>
             </div>
-            <div class="UIcontainer">
+            <div class="UIcontainer" id="tabs-1">
               <div class="UIheading">
                 <h3>Latest updates</h3>
                 <div class="UIcontrol">
@@ -96,6 +96,28 @@
                 </li>
               {/if}
               </ul>
+            </div> <!-- UIcontainer -->
+            <div class="UIcontainer" id="tabs-2">
+              <div class="UIheading">
+                <h3>Latest updates</h3>
+                <div class="UIcontrol">
+                  <ul class="filter" id="postFilter">
+                    <li class="selected rnd8px last" style="color: #222;">Most recent</li>
+                  </ul>
+                </div>
+              </div>
+              <div style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0; color: #ABA0C0;">No album info yet</div>
+            </div> <!-- UIcontainer -->
+            <div class="UIcontainer" id="tabs-3">
+              <div class="UIheading">
+                <h3>Latest updates</h3>
+                <div class="UIcontrol">
+                  <ul class="filter" id="postFilter">
+                    <li class="selected rnd8px last" style="color: #222;">Most recent</li>
+                  </ul>
+                </div>
+              </div>
+              <div style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0; color: #ABA0C0;">No tour info yet</div>
             </div> <!-- UIcontainer -->
           </div>
           
