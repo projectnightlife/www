@@ -6,14 +6,39 @@
     <category>Blogs</category>
     <copyright>Copyright © 2011 - Project Nightlife</copyright>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 16 Feb 2011 02:11:37 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 16 Feb 2011 13:11:53 GMT</lastBuildDate>
     <ttl>15</ttl>
     <item>
       <category>Indie</category>
       <category>Alternative</category>
       <category>Punk</category>
-      <title>Welcome to Project Nightlife</title>
-      <description>Hi all,</description>
+      <title>Delete me</title>
+      <description>This is a very quick post</description>
+      <author>Alt.ernative</author>
+      <link>http://projectnightlife.co.uk/post/231</link>
+      <guid>http://projectnightlife.co.uk/post/231</guid>
+      <pubDate>Wed, 16 Feb 2011 13:11:53 GMT</pubDate>
+    </item>
+    <item>
+      <category>Rock</category>
+      <category>Metal</category>
+      <category>Thrash Metal</category>
+      <category>NWOBHM</category>
+      <category>Prog Metal</category>
+      <category>Prog Rock</category>
+      <title>Review: The Final Frontier</title>
+      <description>Iron Maiden&amp;#39;s latest album, &amp;#34;The Final Frontier&amp;#34;, is the truest return to form any metal band has made in the last decade. Without a shadow of a doubt.</description>
+      <author>The Rocker</author>
+      <link>http://projectnightlife.co.uk/post/230</link>
+      <guid>http://projectnightlife.co.uk/post/230</guid>
+      <pubDate>Wed, 16 Feb 2011 11:27:32 GMT</pubDate>
+    </item>
+    <item>
+      <category>Indie</category>
+      <category>Alternative</category>
+      <category>Punk</category>
+      <title>Welcome to Alt.ernative</title>
+      <description>Welcome to the newly launched Project Nightlife!</description>
       <author>Alt.ernative</author>
       <link>http://projectnightlife.co.uk/post/229</link>
       <guid>http://projectnightlife.co.uk/post/229</guid>
