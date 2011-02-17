@@ -2,7 +2,7 @@
 <title>Blog For Us | Project Nightlife</title>
 <link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
   <style type="text/css">
-input[type="text"] { float: left; width: 465px; background: #121212; border-color: #252525; padding: 7px; color: #ccc; font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
+input[type="text"] { float: left; width: 465px; background: #121212; border: 1px solid #1E1E1E; padding: 7px; color: #ccc; font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
 textarea { float: left; width: 425px; height: 125px; background: #121212; border-color: #252525; padding: 7px; color: #ccc; margin: 0; font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
 div#reel { position: absolute; width: 4790px; height: 377px; left: 0; top: 0; }
 div#reel div.slide { display: block; float: left; width: 938px; height: 357px; margin: 10px; }
