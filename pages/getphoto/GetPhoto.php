@@ -2,7 +2,8 @@
 header('Cache-Control: max-age=1209600 public');
 header("Expires: ".gmdate('r', strtotime('+2 weeks'))." GMT"); 
 header('Content-type: image/jpeg');
-$globalDir = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
+//$globalDir = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
+$globalDir = dirname(dirname(dirname(__FILE__))).'\\';
 require_once($globalDir.'backend\\global_include.php');
 
 API::Authenticate();

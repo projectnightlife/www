@@ -6,7 +6,7 @@ function injectPosts(response)
 	for (var post in response.local)
 	{
 		var li = document.createElement('li');
-		li.innerHTML = '<div class="thumb"><a class="thumb" href="/post/'+response.local[post].id+'"><img src="http://www.projectnightlife.co.uk/photo/'+response.local[post].thumbnail+'/80x80" width="80" height="80" /></a></div><div class="description"><div class="heading"><h4 class="left text-overflow"><a href="/post/'+response.local[post].id+'">'+response.local[post].title+'</a></h4><span class="datetime right">'+response.local[post].created+'</span></div><p class="word-wrap">'+response.local[post].excerpt+'</p></div>';
+		li.innerHTML = '<div class="thumb"><a class="thumb" href="/post/'+response.local[post].id+'"><img src="'+api.hostname+'/photo/'+response.local[post].thumbnail+'/80x80" width="80" height="80" /></a></div><div class="description"><div class="heading"><h4 class="left text-overflow"><a href="/post/'+response.local[post].id+'">'+response.local[post].title+'</a></h4><span class="datetime right">'+response.local[post].created+'</span></div><p class="word-wrap">'+response.local[post].excerpt+'</p></div>';
 		$('#posts')[0].appendChild(li);
 	}
 	if (posts == pageSize)

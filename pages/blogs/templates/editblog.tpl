@@ -62,7 +62,7 @@
                         <a href="#" onClick="return initAddPhotos();" id="addPhotoText">Add photos</a>
                         <div id="photo_upload">
                           <span class="uploadPhotoText">Upload a photo</span>
-                          <iframe id="upload_iframe" src="http://www.projectnightlife.co.uk/blogupload.php?type=BlogUploadProfile" frameborder="0" scrolling="no"></iframe>
+                          <iframe id="upload_iframe" src="blogupload.php?type=BlogUploadProfile" frameborder="0" scrolling="no"></iframe>
                         </div>
                         <div id="uploading">
                           <img src="images/core/spinners/001.gif" />

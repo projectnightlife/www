@@ -1,10 +1,11 @@
 function API()
 {
   this.appId = "1"; // Website application id for platform communication
+  this.hostname = "http://"+window.location.hostname;
   this.dialog = "dialogPositioner"; // enables us to change the name of the dialog id
   this.msgDialog = "msgDialogPositioner"; // enables us to change the name of the dialog id
   this.dialogErrorTitle = "Oops, something went wrong";
-  this.dialogErrorMessage = '<p style="margin-bottom: 1em;">Please try again in a moment.</p><p><a href="#" onclick="return api.NotifyOfError();" style="background: url(http://www.projectnightlife.co.uk/images/core/icons/single_pink_chevron.png) no-repeat 0 2px; padding-left: 12px;">If this problem persists, please let us know</a>.</p>';
+  this.dialogErrorMessage = '<p style="margin-bottom: 1em;">Please try again in a moment.</p><p><a href="#" onclick="return api.NotifyOfError();" style="background: url('+this.hostname+'/images/core/icons/single_pink_chevron.png) no-repeat 0 2px; padding-left: 12px;">If this problem persists, please let us know</a>.</p>';
   this.ajaxNotSupportedMsg = "Your browser is too old to interact properly with this page, please update it to the latest version.";
   this.upgradeBrowser = "Your browser is too old to view this webpage, please upgrade to Internet Explorer 9";
   this.debug = false;
@@ -125,7 +126,7 @@ function API()
   
   this.fbregister = function() {
 	  api.launchRegisterDialog('<div id="registerDialog"><div id="registerSpinner" class="ajaxSpinner" style="display: block; float: none; margin: 10px auto 0;"></div></div>', 700);
-	  api.sendSimpleRequest("http://www.projectnightlife.co.uk/backend/ajax/register.php", "api.registerPopup", "registerSpinner", false);
+	  api.sendSimpleRequest(this.hostname+"/backend/ajax/register.php", "api.registerPopup", "registerSpinner", false);
   };
   
   this.registerPopup = function(response) {
@@ -140,7 +141,7 @@ function API()
   {
 	  this.fbconnect();
 	  $('#registerDialog').empty().remove();
-	  $("<div style=\"margin: 120px auto 81px;\"><div style=\"font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; text-align: center; font-size: 18px; line-height: 26px;\">Just one moment</div><div id=\"requestSpinner\" class=\"ajaxSpinner\" style=\"display: block; background: url(http://www.projectnightlife.co.uk/images/core/spinners/001.gif); float: none; margin: 15px auto 7px;\"></div></div>").appendTo(".dialog .content");
+	  $("<div style=\"margin: 120px auto 81px;\"><div style=\"font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; text-align: center; font-size: 18px; line-height: 26px;\">Just one moment</div><div id=\"requestSpinner\" class=\"ajaxSpinner\" style=\"display: block; background: url("+this.hostname+"/images/core/spinners/001.gif); float: none; margin: 15px auto 7px;\"></div></div>").appendTo(".dialog .content");
 	  $('#'+this.dialog+' .buttonSet input').val('Close');
 	  return false;
   };
@@ -183,7 +184,7 @@ function API()
 			if (spinner.length == 1)
 			  spinner.push("001");
 			var element = api.getElem(spinner[0]);
-			element.style.backgroundImage = "url(http://"+window.location.hostname+"/images/core/spinners/"+spinner[1]+".gif)";
+			element.style.backgroundImage = "url("+this.hostname+"/images/core/spinners/"+spinner[1]+".gif)";
 			element.style.backgroundRepeat = "no-repeat";
 			element.style.backgroundPosition = "center";
 			try {
@@ -260,7 +261,7 @@ function API()
 			  'email':email
 		  }
 		  if (userId != 0) // check to see if their session has expired
-		    setTimeout("api.sendSimpleRequest('http://www.projectnightlife.co.uk/backend/ajax.php?service=authentication&method=IsGuestUser', 'api.session.monitor', null, true);", 60000);
+		    setTimeout("api.sendSimpleRequest('"+this.hostname+"/backend/ajax.php?service=authentication&method=IsGuestUser', 'api.session.monitor', null, true);", 60000);
 	  },
 	  monitor : function(response)
 	  {
@@ -270,7 +271,7 @@ function API()
 		     api.launchLoggedOutDialog();
 		  }
 		  else // recursively monitor session every 30 seconds
-		    setTimeout("api.sendSimpleRequest('http://www.projectnightlife.co.uk/backend/ajax.php?service=authentication&method=IsGuestUser', 'api.session.monitor', null, true);", 30000);
+		    setTimeout("api.sendSimpleRequest('"+this.hostname+"/backend/ajax.php?service=authentication&method=IsGuestUser', 'api.session.monitor', null, true);", 30000);
 	  }
   };
   
@@ -301,9 +302,9 @@ function API()
 			  var position = ""; // the position within the list of notifications
 			  if (notification == 0)
 			    position = " first";
-			  response += '<div class="notification'+position+'"><a href="'+this.data[notification].url+'"><img src="http://www.projectnightlife.co.uk/photo/'+this.data[notification].thumbnail+'/50x50" /></a><div class="details"><h3 class="text-overflow"><a href="'+this.data[notification].url+'">'+this.data[notification].title+'</a></h3><p class="text-overflow">'+this.data[notification].excerpt+'</p><div class="datetime">'+this.data[notification].time+'</div></div></div>';
+			  response += '<div class="notification'+position+'"><a href="'+this.data[notification].url+'"><img src="'+this.hostname+'/photo/'+this.data[notification].thumbnail+'/50x50" /></a><div class="details"><h3 class="text-overflow"><a href="'+this.data[notification].url+'">'+this.data[notification].title+'</a></h3><p class="text-overflow">'+this.data[notification].excerpt+'</p><div class="datetime">'+this.data[notification].time+'</div></div></div>';
 			}
-			response += '<div class="notification last" style="text-align: center;"><a href="http://www.projectnightlife.co.uk/notifications">View all</a></div>';
+			response += '<div class="notification last" style="text-align: center;"><a href="'+this.hostname+'/notifications">View all</a></div>';
 			response += '</div>';
 			return response;
 		  }
@@ -556,7 +557,7 @@ function API()
 	  dialog.appendChild(dialogBody);
 	  positioner.appendChild(dialog);
 	  document.body.appendChild(positioner);
-	  this.bootstrap.loadjs("http://www.projectnightlife.co.uk/js/jquery.textarea-expander.js", function ()
+	  this.bootstrap.loadjs(this.hostname+"/js/jquery.textarea-expander.js", function ()
 	  {
 	  	$('#messageBody').TextAreaExpander(100, 300);
 	  });
@@ -722,7 +723,7 @@ function API()
 	error = error.replace(pattern, " "); // replace all multiple white space chars with one space
 	if (error.replace(pattern, "").length != 0) // remove all spaces and see if input box is empty
 	{
-	  api.sendSimpleRequest('http://www.projectnightlife.co.uk/backend/ajax.php?service=log&method=NotifyError&appId='+this.appId+'&error='+api.serializeString(error), null, null, true);
+	  api.sendSimpleRequest(this.hostname+'/backend/ajax.php?service=log&method=NotifyError&appId='+this.appId+'&error='+api.serializeString(error), null, null, true);
 	  api.launchDialog("Thanks", "<p>We'll have one of our engineers look into this straight away.</p><p>We appreciate your help in making Project Nightlife a better experience.</p>");
 	}
 	return false;
@@ -734,7 +735,7 @@ function API()
 	  var xmlHttp = this.getXmlHttpObject();
       if(xmlHttp == null)
         return false;
-	  var address = "http://www.projectnightlife.co.uk/backend/ajax.php?service=log&method=LogAppError&appId="+api.appId+"&type="+type+"&userAgent="+navigator.userAgent+"&details="+details;
+	  var address = this.hostname+"/backend/ajax.php?service=log&method=LogAppError&appId="+api.appId+"&type="+type+"&userAgent="+navigator.userAgent+"&details="+details;
       xmlHttp.open("GET", address, true);
       xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	  xmlHttp.onreadystatechange = function() { };
@@ -981,7 +982,7 @@ document.documentElement.onclick = function(event)
 	{
 	  api.launchDialog("Notifications", api.notifications.get(), 350);
 	  target.innerHTML = "Notifications";
-	  api.sendSimpleRequest('http://www.projectnightlife.co.uk/backend/ajax.php?service=notification&method=ClearUserHasPending', null, null, true);
+	  api.sendSimpleRequest(this.hostname+'/backend/ajax.php?service=notification&method=ClearUserHasPending', null, null, true);
 	}
 	else
 	{

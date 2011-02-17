@@ -88,7 +88,7 @@ select { font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', s
                         <div id="addedPhotos" class="addedContent" style="display: block; margin: 0.5em auto; width: 88px; height: 118px;"></div>
                         <div class="addContentContainer" style="margin: 0;">
                           <div id="photo_upload" style="display: block;">
-                            <iframe style="width: 240px !important; margin: 0 auto !important; display: block; overflow: hidden;" id="upload_iframe" src="http://www.projectnightlife.co.uk/blogupload.php?type=BlogUploadProfile" frameborder="0" scrolling="no"></iframe>
+                            <iframe style="width: 240px !important; margin: 0 auto !important; display: block; overflow: hidden;" id="upload_iframe" src="blogupload.php?type=BlogUploadProfile" frameborder="0" scrolling="no"></iframe>
                           </div>
                           <div id="uploading" style="width: 140px; margin: 0 auto;">
                             <img src="images/core/spinners/001.gif" />
@@ -362,7 +362,7 @@ function addPhoto(photo)
 	  
 	var addedPhotos = document.getElementById('addedPhotos');
 	var image = document.createElement('img');
-    image.src = "http://www.projectnightlife.co.uk/photo/"+newPhoto.id+"/80x80";
+    image.src = "{$pageData['hostname']}/photo/"+newPhoto.id+"/80x80";
 	image.style.height = "80px";
 	image.style.width = "80px";
 	var holder = document.createElement('div');
@@ -382,7 +382,7 @@ function removePhoto(photoNum)
 {
 	if (!(photoNum == 1))
 	{
-	  api.sendSimpleRequest("http://www.projectnightlife.co.uk/backend/ajax.php?service=image&method=RemovePhoto&id="+photos[photoNum - 1].id, null, null, true);
+	  api.sendSimpleRequest("{$pageData['hostname']}/backend/ajax.php?service=image&method=RemovePhoto&id="+photos[photoNum - 1].id, null, null, true);
       photos[photoNum - 1] = null;
 	}
 	$('#photo'+photoNum).empty().remove();

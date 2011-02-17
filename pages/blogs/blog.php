@@ -1,5 +1,6 @@
 <?php
-$globalDir = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
+//$globalDir = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
+$globalDir = dirname(dirname(dirname(__FILE__))).'\\';
 require_once($globalDir.'pages\\includes\\global.php');
 
 $blogService = API::GetService("blog");
@@ -8,7 +9,7 @@ try {
 }
 catch(Exception $e)
 {
-	header('Location: http://projectnightlife.co.uk/blogs');
+	header('Location: '.$pageData['hostname'].'/blogs');
 	exit();
 }
 

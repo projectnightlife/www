@@ -6,7 +6,7 @@ function injectPosts(response)
 	for (var post in response.local)
 	{
 		var li = document.createElement('li');
-		li.innerHTML = '<div class="thumb"><a class="thumb" href="/post/'+response.local[post].id+'"><img src="http://www.projectnightlife.co.uk/photo/'+response.local[post].thumbnail+'/80x80" width="80" height="80" /></a></div><div class="description"><div class="heading"><h4 class="left text-overflow" style="margin-bottom: 0;"><a href="/post/'+response.local[post].id+'">'+response.local[post].title+'</a></h4><span class="datetime right">'+response.local[post].created+'</span></div><span class="datetime" style="margin-bottom: 8px; display: block;">'+response.local[post].blogName+'</span><p class="word-wrap">'+response.local[post].excerpt+'</p></div>';
+		li.innerHTML = '<div class="thumb"><a class="thumb" href="/post/'+response.local[post].id+'"><img src="'+api.hostname+'/photo/'+response.local[post].thumbnail+'/80x80" width="80" height="80" /></a></div><div class="description"><div class="heading"><h4 class="left text-overflow" style="margin-bottom: 0;"><a href="/post/'+response.local[post].id+'">'+response.local[post].title+'</a></h4><span class="datetime right">'+response.local[post].created+'</span></div><span class="datetime" style="margin-bottom: 8px; display: block;">'+response.local[post].blogName+'</span><p class="word-wrap">'+response.local[post].excerpt+'</p></div>';
 		$('#posts')[0].appendChild(li);
 	}
 	if (posts == pageSize)
@@ -39,7 +39,7 @@ function unpackTrendingPosts(response)
 	for (var post in response.local)
 	{
 		var li = document.createElement('li');
-		li.innerHTML = '<div class="thumb"><a class="thumb" href="/post/'+response.local[post].id+'"><img src="http://www.projectnightlife.co.uk/photo/'+response.local[post].thumbnail+'/80x80" width="80" height="80" /></a></div><div class="description"><div class="heading"><h4 class="left text-overflow" style="margin-bottom: 0;"><a href="/post/'+response.local[post].id+'">'+response.local[post].title+'</a></h4><span class="datetime right">'+response.local[post].created+'</span></div><span class="datetime" style="margin-bottom: 8px; display: block;">'+response.local[post].blogName+'</span><p class="word-wrap">'+response.local[post].excerpt+'</p></div>';
+		li.innerHTML = '<div class="thumb"><a class="thumb" href="/post/'+response.local[post].id+'"><img src="'+api.hostname+'/photo/'+response.local[post].thumbnail+'/80x80" width="80" height="80" /></a></div><div class="description"><div class="heading"><h4 class="left text-overflow" style="margin-bottom: 0;"><a href="/post/'+response.local[post].id+'">'+response.local[post].title+'</a></h4><span class="datetime right">'+response.local[post].created+'</span></div><span class="datetime" style="margin-bottom: 8px; display: block;">'+response.local[post].blogName+'</span><p class="word-wrap">'+response.local[post].excerpt+'</p></div>';
 		trendingPosts.appendChild(li);
 	}
 	$('#posts').parent()[0].appendChild(trendingPosts);
@@ -77,7 +77,7 @@ function togglePostsSwitch(toggle)
   if (togglePosts != toggle) // ensure only toggles when clicking on the unselected switch
   {
 	if (togglePosts && !existsTrending)
-	  api.sendSimpleRequest("http://www.projectnightlife.co.uk/backend/ajax.php?service=blog&method=GetTrendingPosts&&amount=8", "unpackTrendingPosts", "togglePostsSpinner", false);
+	  api.sendSimpleRequest(api.hostname+"/backend/ajax.php?service=blog&method=GetTrendingPosts&&amount=8", "unpackTrendingPosts", "togglePostsSpinner", false);
 	
 	if (togglePosts)
 	  $('#posts').fadeOut("slow");

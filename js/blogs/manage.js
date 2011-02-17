@@ -6,7 +6,7 @@ function injectPosts(response)
 	for (var post in response.local)
 	{
 		var li = document.createElement('li');
-		li.innerHTML = '<div class="thumb"><a class="thumb" href="/post/'+response.local[post].id+'"><img src="http://www.projectnightlife.co.uk/photo/'+response.local[post].thumbnail+'/80x80" width="80" height="80" /></a></div><div class="description"><div class="heading"><h4 class="left text-overflow"><a href="/post/'+response.local[post].id+'">'+response.local[post].title+'</a></h4><span class="datetime right">'+response.local[post].created+'</span></div><p class="word-wrap">'+response.local[post].excerpt+'</p><ul class="inline-links"><li><i>Live</i></li><li><a href="/blog/editv=edit&p='+response.local[post].id+'">Edit</a></li><li><a href="#" onclick="api.launchConfirmDialog(&quot;Do you wish to delete this post?&quot;, &quot;removePost&quot;, &quot;'+response.local[post].id+'&quot;); return false;">Delete</a></li><li><div class="ajaxSpinner" id="postSpinner'+response.local[post].id+'"></div></li></ul></div>';
+		li.innerHTML = '<div class="thumb"><a class="thumb" href="/post/'+response.local[post].id+'"><img src="'+api.hostname+'/photo/'+response.local[post].thumbnail+'/80x80" width="80" height="80" /></a></div><div class="description"><div class="heading"><h4 class="left text-overflow"><a href="/post/'+response.local[post].id+'">'+response.local[post].title+'</a></h4><span class="datetime right">'+response.local[post].created+'</span></div><p class="word-wrap">'+response.local[post].excerpt+'</p><ul class="inline-links"><li><i>Live</i></li><li><a href="/blog/editv=edit&p='+response.local[post].id+'">Edit</a></li><li><a href="#" onclick="api.launchConfirmDialog(&quot;Do you wish to delete this post?&quot;, &quot;removePost&quot;, &quot;'+response.local[post].id+'&quot;); return false;">Delete</a></li><li><div class="ajaxSpinner" id="postSpinner'+response.local[post].id+'"></div></li></ul></div>';
 		$('#posts')[0].appendChild(li);
 	}
 	if (posts == pageSize)
@@ -26,7 +26,7 @@ function injectPosts(response)
 
 function removePost(id)
 {
-	api.sendSimpleRequest("http://www.projectnightlife.co.uk/backend/ajax.php?service=blog&method=RemovePost&id="+id, "postRemoved", "postSpinner"+id);
+	api.sendSimpleRequest(api.hostname+"/backend/ajax.php?service=blog&method=RemovePost&id="+id, "postRemoved", "postSpinner"+id);
 }
 
 function postRemoved(response)
