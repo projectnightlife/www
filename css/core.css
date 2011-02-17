@@ -152,7 +152,7 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 /* UI panels */
 
 .UIpanel { overflow: auto; background: #0a0a0a; border: 1px solid #0e0e0e; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
-.UIpanel .UItabs { padding: 10px; background: #0b0b0b; border-bottom: 1px solid #161616; }
+.UIpanel .UItabs { padding: 10px; background: #0b0b0b; border-bottom: 1px solid #161616; text-align: center; }
 .UIpanel .UIcontainer { padding: 10px; }
 .UIpanel .UIcontainer .UIheading { overflow: auto; margin-bottom: 10px; color: #777; }
 .UIpanel .UIcontainer .UIheading h3 { float: left; margin: 0; color: #ddd; line-height: 1.33em; padding-left: 12px; background: url(../../images/core/sprite.png) -169px -52px no-repeat; } /* remove color attribute to restore heading style */
