@@ -70,7 +70,7 @@ $(document).ready(function()
 			}).filter(":first").click();
 			
 			$( "#tabs" ).bind( "tabsselect", function(event, ui) {
-				$tabs = $('#tabs').tabs();
-				tabIndex = $tabs.tabs('option', 'selected');
+				
+				tabIndex = ui.tab;
 });
 });
