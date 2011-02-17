@@ -49,7 +49,7 @@ function subscription()
 	}
 	return false;
 }
-  var tabIndex = 0;
+  var left = 0, width = 0;
 $(document).ready(function()
 {  
   $('.rnd8px').corner("8px");
@@ -71,6 +71,7 @@ $(document).ready(function()
 			
 			$( "#tabs" ).bind( "tabsselect", function(event, ui) {
 				
-				tabIndex = ui.tab.offsetLeft;
+				left = ui.tab.offsetLeft;
+				width = ui.tab.offsetWidth;
 });
 });
