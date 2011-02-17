@@ -56,12 +56,12 @@
           </div>
           
           <div class="UIpanel topspcr" id="tabs">
-            <div class="UItabs">
+            <ul class="UItabs">
               <div class="UIcaret"></div>
-              <a href="" style="padding: 0 10px;" id="#tabs-1">Updates</a>
-              <a href="" style="padding: 0 10px;" id="#tabs-2">Album</a>
-              <a href="" style="padding: 0 10px;" id="#tabs-3">Tour</a>
-            </div>
+              <li><a href="" style="padding: 0 10px;" id="#tabs-1">Updates</a></li>
+              <li><a href="" style="padding: 0 10px;" id="#tabs-2">Album</a></li>
+              <li><a href="" style="padding: 0 10px;" id="#tabs-3">Tour</a></li>
+            </ul>
             <div class="UIcontainer" id="tabs-1">
               <div class="UIheading">
                 <h3>Latest updates</h3>
