@@ -95,7 +95,7 @@ $pageData['cssFile'] = $resourceManager->build();
 
 $resourceManager = new ResourceDependancyManager('blogs/blog', 'js');
 require_once($globalDir.'pages\\includes\\core_js.php');
-$resourceManager->addResource('corners.js');
+//$resourceManager->addResource('corners.js');
 $resourceManager->addResource('artists/artist.js');
 $pageData['jsFile'] = $resourceManager->build();
 

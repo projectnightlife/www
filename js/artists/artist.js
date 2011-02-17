@@ -52,5 +52,5 @@ function subscription()
 
 $(document).ready(function()
 {  
-  $('.rnd8px').corner("8px");
+  //$('.rnd8px').corner("8px");
 });
