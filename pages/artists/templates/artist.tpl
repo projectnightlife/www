@@ -31,7 +31,7 @@
             <div><img src="images/core/icons/blue_chevron.png" /><span style="padding-left: 5px;">City: London</span></div>
           </div>
         </div>
-        <div id="leftColumn" class="span200">
+        <!--<div id="leftColumn" class="span200">
           <img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=200x600" style="display: block; margin: 0 auto;" />
           <div class="profileInteractions topspcr">
             {if $blog->subscribed == "false" && $session['userId'] != 0 && !$isContributor}
@@ -58,7 +58,7 @@
             </div>
           </div>
           {/if}
-        </div>
+        </div>-->
         
         <div class="span600 leftspcr">
           <div class="UIpanel">
@@ -118,21 +118,20 @@
         </div> <!-- span630 -->
         
         
-        <div class="span140 leftspcr">
-          {if isset($relatedBlogs)}
-          <div class="UIpanel">
+        <div class="span350 leftspcr">
+          {if isset($subscribers)}
+          <div class="UIpanel topspcr">
             <div class="UIheading">
-              <h3>Similar Blogs</h3>
+              <h3>Concor's Subscribers</h3>
             </div>
-            <ul class="UItileview single">
-            {foreach from=$relatedBlogs item=relatedBlog name=blogs}
-              <li>
-                <a class="thumb" href="pages/blogs/blog.php?id={$relatedBlog->id}"><img src="pages/getphoto/GetPhoto.php?id={$relatedBlog->thumbnail}&size=80x80" width="80" height="80" /></a><span class="tilename">{$relatedBlog->name}</span>
-              </li>
-            {/foreach}
-            </ul>
+            <div id="subscriptions">
+              {foreach from=$subscribers item=subscriber name=subscribers}
+              <a id="subscription[{$subscriber->id}]" href="http://www.facebook.com/profile.php?id={$subscriber->id}" class="fbSquareProfilePic" title="{$subscriber->firstname} {$subscriber->lastname}" target="_blank"><img src="https://graph.facebook.com/{$subscriber->id}/picture" alt="{$subscriber->firstname} {$subscriber->lastname}" width="50" height="50" /></a>
+              {/foreach}
+            </div>
           </div>
           {/if}
+        </div>
         </div> <!-- span140 -->
           
       </div> <!-- canvas -->

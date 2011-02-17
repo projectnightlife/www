@@ -133,6 +133,7 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 .span300 { width: 300px; }
 .span310 { width: 310px; }
 .span320 { width: 320px; }
+.span350 { width: 350px; }
 .span500 { width: 500px; }
 .span580 { width: 580px; }
 .span600 { width: 600px; }
@@ -146,7 +147,7 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 .span790 { width: 790px; }
 .span960 { width: 960px; }
 
-.span10, .span20, .span140, .span160, .span180, .span200, .span220, .span300, .span310, .span320, .span500, .span580, .span600, .span620, .span630, .span650, .span720, .span750, .span770, .span780, .span790, .span960 { float: left; }
+.span10, .span20, .span140, .span160, .span180, .span200, .span220, .span300, .span310, .span320, .span350, .span500, .span580, .span600, .span620, .span630, .span650, .span720, .span750, .span770, .span780, .span790, .span960 { float: left; }
 
 /* UI panels */
 
