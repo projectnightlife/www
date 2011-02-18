@@ -77,9 +77,8 @@ $(document).ready(function()
   $('#hero').hover(function() {
 	  $('#heroNext').fadeIn(); 
 	  $('#heroPrev').fadeIn();
-  });
-  $('#hero').hover(function() {
-	  $('#heroNext').fadeOut();
-	  $('#heroPrev').fadeOut();
+  }, function() {
+  $('#heroNext').fadeOut();
+  $('#heroPrev').fadeOut();
   });
 });
