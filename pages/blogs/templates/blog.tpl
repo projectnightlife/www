@@ -34,14 +34,14 @@
             <a href="backend/ajax.php?service=blog&method=Unsubscribe&blogId={$blog->id}" class="profileButton subscription" rel="unsubscribe" ajaxify="1" callback="subscription">Unsubscribe from this blog</a>
             {/if}
           </div>
-          <div class="UIpanel topspcr">
+          <div class="UIpanel UIcontainer topspcr">
             <div class="UIheading">
               <h3>Info</h3>
             </div>
             {$blog->description}
           </div>
           {if isset($subscribers)}
-          <div class="UIpanel topspcr">
+          <div class="UIpanel UIcontainer topspcr">
             <div class="UIheading">
               <h3>Subscribers</h3>
             </div>
@@ -55,7 +55,7 @@
         </div>
         
         <div class="span600 leftspcr">
-          <div class="UIpanel">
+          <div class="UIpanel UIcontainer">
             
               <div style="width: 520px; float: left;">
                 <h3 style="line-height: 1em; padding-bottom: 5px; color: #ABA0C0;">{$blog->name}</h3>
@@ -74,7 +74,7 @@
               </div>
             </div>
           
-          <div class="UIpanel topspcr">
+          <div class="UIpanel UIcontainer topspcr">
             <div class="UIheading">
               <h3>Blog posts</h3>
               <div class="UIcontrol">
@@ -116,7 +116,7 @@
         
         <div class="span140 leftspcr">
           {if isset($relatedBlogs)}
-          <div class="UIpanel">
+          <div class="UIpanel UIcontainer">
             <div class="UIheading">
               <h3>Similar Blogs</h3>
             </div>

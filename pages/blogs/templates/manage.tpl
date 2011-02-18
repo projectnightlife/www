@@ -22,7 +22,7 @@
         </div> <!-- span200 -->
           
         <div class="span600 leftspcr">
-          <div class="UIpanel">
+          <div class="UIpanel UIcontainer">
             <div class="UIheading">
               <h3>Manage your content</h3>
               <div class="UIcontrol">
@@ -65,10 +65,17 @@
         </div> <!-- span600 -->
         
         <div class="span160 leftspcr">
-          <div class="UIpanel">
+          <div class="UIpanel UIcontainer" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
             <div class="UIheading">
-              <h3>Sponsored</h3>
+              <h3>Tip</h3>
             </div>
+            <p>Rather than just sharing a song you like directly on facebook, why not create a post with the song and a quick paragraph containing your thoughts and share the post instead</p>
+          </div>
+          <div class="UIpanel UIcontainer btmspcr" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+            <div class="UIheading">
+              <h3>Tip</h3>
+            </div>
+            <p>Once you've written a post, don't forget to share it on facebook and twitter using the buttons on the post page.</p>
           </div>
         </div> <!-- span160 -->
         

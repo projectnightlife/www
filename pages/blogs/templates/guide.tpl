@@ -28,7 +28,7 @@
         </div> <!-- span200 -->
           
         <div class="span770 leftspcr">
-          <div class="UIpanel">
+          <div class="UIpanel UIcontainer">
             <div class="tutorial">
               <p>At Project Nightlife, we pride ourselves on the quality of our site. We want to ensure you guys know how to create quality posts which will be recognised both for their cutting edge, industry leading content and for how that content is presented to our readers.</p>
               <p>The following guide details how to use our blogging system as well as how to gain the best results from it. We've worked hard to make the site as user friendly and intuitive as possible, however if you feel we could improve something or even add new features, then we want to <a href="#" onClick="return api.composeMessage('Contact Us', api.contactus(), '{$pageData['hostname']}/backend/communicate.php', 0);" title="Contact us">hear your suggestions</a>.</p>

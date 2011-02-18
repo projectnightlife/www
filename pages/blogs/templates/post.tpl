@@ -25,7 +25,7 @@
       
         <div class="span630">
         
-          <div class="UIpanel">
+          <div class="UIpanel UIcontainer">
             {if $isContributor}
               <div style="overflow: auto;">
                 <h1 class="postHeading left" style="width: 540px;">{$post->title}</h1>
@@ -43,7 +43,7 @@
             </div>
           </div>
           
-          <div class="UIpanel topspcr" id="comments">
+          <div class="UIpanel UIcontainer topspcr" id="comments">
             <h1 class="postHeading">Comments</h1>
             {if $session['loggedIn']}
             <div class="comments">
@@ -78,7 +78,7 @@
       
         <div class="span320 leftspcr">
         
-          <div class="UIpanel">
+          <div class="UIpanel UIcontainer">
             <div class="blogvitals">
               <div class="clear left">
                 <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=80x80" width="80" height="80" /></a>
@@ -93,7 +93,7 @@
             </div>
           </div>
           
-          <div class="UIpanel topspcr">
+          <div class="UIpanel UIcontainer topspcr">
             <table class="socialPlugins">
               <tbody>
                 <tr>
@@ -105,7 +105,7 @@
           </div>
           
           {if isset($relatedPosts)}
-          <div class="UIpanel topspcr">
+          <div class="UIpanel UIcontainer topspcr">
             <div class="UIheading">
               <h3>Similar Posts</h3>
             </div>
@@ -124,7 +124,7 @@
           {/if}
           
           {if isset($relatedBlogs)}
-          <div class="UIpanel topspcr">
+          <div class="UIpanel UIcontainer topspcr">
             <div class="UIheading">
               <h3>Similar Blogs</h3>
             </div>

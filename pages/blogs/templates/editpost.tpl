@@ -22,7 +22,7 @@
         </div> <!-- span200 -->
           
         <div class="span770 leftspcr">
-          <div class="UIpanel">
+          <div class="UIpanel UIcontainer">
             <div class="UIheading">
               <h3>Blog post</h3>
             </div>
@@ -138,7 +138,7 @@
               </table>
             </form>
               
-          </div><!-- UIpanel -->
+          </div><!-- UIpanel UIcontainer -->
         </div> <!-- span750 -->
         
       </div> <!-- canvas -->
