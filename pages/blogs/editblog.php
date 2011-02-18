@@ -229,6 +229,8 @@ foreach ($exploded as $key => $paragraph)
 	$tip = API::ToHTMLParagraph(count($exploded), $key, $tip, $paragraph);
 }
 
+print count($exploded);
+
 $smarty->assign('pageData', $pageData);
 $smarty->assign('uri', $_SERVER['REQUEST_URI']);
 $smarty->assign('blog', $blog);
