@@ -217,7 +217,7 @@ switch ($action)
 }
 
 $tips = array();
-$tips[] = "Looking for an easy way to boost your blogs popularity?\\n\\nRather than sharing a tune directly on Facebook, why not create a quick post containing the song and a brief paragraph summarising your thoughts.\\n\\nThen simply share the post instead!";
+$tips[] = "Looking for an easy way to boost your blog's popularity?\\n\\nRather than sharing a tune directly on Facebook, why not create a quick post containing the song and a brief paragraph summarising your thoughts.\\n\\nThen simply share the post instead!";
 $tips[] = "For maximum exposure - once you've written a post, don't forget to share it on Facebook and Twitter using the social buttons on the post's page.";
 
 $random = rand(0, count($tips) - 1);
