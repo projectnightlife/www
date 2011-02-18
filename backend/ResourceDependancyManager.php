@@ -20,7 +20,7 @@
 	
 	Author: Marcus Williams
 	Created: 12 Feb 2011
-	Last revision: 12 Feb 2011 @ 22:43 GMT
+	Last revision: 18 Feb 2011 @ 20:20 GMT
 	
 */
 
@@ -68,6 +68,8 @@ class ResourceDependancyManager
 		if ($this->resourceExpired($buildPath, $filename))
 		{
 			try {
+				// incase compilation fails we can revert to the original
+				$originalContents = file_get_contents($buildPath.$filename);
 		   		$fh = fopen($buildPath.$filename, 'w');
 				
 				// add each resource
@@ -80,7 +82,7 @@ class ResourceDependancyManager
 				
 				// compress (removes standard comments so need to add meta comments after compression)
 				exec('java -jar "c:\\Program Files (x86)\\Yui\\compressor\\yuicompressor-2.4.2.jar" "'.$buildPath.$filename.'" -o "'.$buildPath.$filename.'" --charset utf-8');
-				//print 'my wang is huge';
+				
 				// need to add meta data comment to first line of file
 				$optimisedResource = file_get_contents($buildPath.$filename);
 				$fh = fopen($buildPath.$filename, 'w');
@@ -93,7 +95,16 @@ class ResourceDependancyManager
 			}
 			catch (Exception $e)
 			{
-				// file is prob locked due to another read, we'll try and build it next time
+				// File is prob locked due to another read, we'll try and build it next time
+				// In the meantime, we'll try and restore the previous copy. 
+				// Previous to this addition, the incomplete css file was being sent back to the browser!
+				try {
+					fclose($fh); // previous handle is still open due to exception being thrown.
+					$fh = fopen($buildPath.$filename, 'w');
+					fwrite($fh, $originalContents);
+					fclose($fh);
+				}
+				catch (Exception $e) {}
 			}
 		}
 		
