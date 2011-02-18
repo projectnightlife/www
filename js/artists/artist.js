@@ -50,31 +50,42 @@ function subscription()
 	return false;
 }
 
+function displayHeroControls()
+{
+	if (api.mouseOverElement('hero'))
+	{
+	  $('#heroNext').fadeIn();
+	  $('#heroPrev').fadeIn();
+	}
+	else
+	{
+	  $('#heroNext').fadeOut();
+	  $('#heroPrev').fadeOut();
+	}
+}
+
 $(document).ready(function()
 {  
   $('.rnd8px').corner("8px");
-
   var tabContainers = $("#tabs > div");
+  // Tabbed navigation
+  $("#tabs ul a").click(function () {
+	tabContainers.hide().filter(this.hash).show();
+				
+	$("#tabs ul a").removeClass("selected");
+	$(this).addClass("selected");
+				
+	$tabs = $('#tabs').tabs();
+	tabIndex = $tabs.tabs('option', 'selected');
+				
+	return false;
+  }).filter(":first").click();
+		
+  $( "#tabs" ).tabs( "option", "cache", true );
 			
-			// Tabbed navigation
-			$("#tabs ul a").click(function () {
-				tabContainers.hide().filter(this.hash).show();
-				
-				$("#tabs ul a").removeClass("selected");
-				$(this).addClass("selected");
-				
-				$tabs = $('#tabs').tabs();
-				tabIndex = $tabs.tabs('option', 'selected');
-				
-				return false;
-			}).filter(":first").click();
-			
-			$( "#tabs" ).tabs( "option", "cache", true );
-			
-			$( "#tabs" ).bind( "tabsselect", function(event, ui) {
-				
-				var left = ui.tab.offsetLeft;
-				var width = ui.tab.offsetWidth;
-				$('.UItabs .UIcaret').animate({left: (left + width / 2) - 6}, 500);
-});
+  $( "#tabs" ).bind( "tabsselect", function(event, ui) {
+	var left = ui.tab.offsetLeft;
+	var width = ui.tab.offsetWidth;
+	$('.UItabs .UIcaret').animate({left: (left + width / 2) - 6}, 500);
+  });
 });
