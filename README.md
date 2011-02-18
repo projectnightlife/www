@@ -36,6 +36,6 @@ Environment
 
 Hosted on Windows Server 2008 R2
 
-* Languages: HTML, CSS, PHP5 (Marcus to confirm)
-* Database: (Marcus to fill)
+* Languages: HTML, CSS, JS, PHP5, C#, MSSQL
+* Database: SQLSERVER EXPRESS 2008 R2, LINQ 
 * Webserver: IIS 7.5 
