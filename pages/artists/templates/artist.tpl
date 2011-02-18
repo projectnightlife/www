@@ -100,24 +100,17 @@
             <div class="UIcontainer" id="tabs-2">
               <div class="UIheading">
                 <h3>The Observationalist</h3>
-                <div class="UIcontrol">
-                  <ul class="filter" id="postFilter">
-                    <li class="selected rnd8px last" style="color: #222;">Most recent</li>
-                  </ul>
-                </div>
+                <object height="81" width="100%"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F8929002&amp;show_comments=true&amp;auto_play=false&amp;color=601c85"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F8929002&amp;show_comments=true&amp;auto_play=false&amp;color=601c85" type="application/x-shockwave-flash" width="100%"></embed> </object>   <span><a href="http://soundcloud.com/conor-owen/01-the-observationalist">The Observationalist</a> by <a href="http://soundcloud.com/conor-owen">Conor Owen</a></span>
+                <object height="81" width="100%"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F8930210&amp;show_comments=true&amp;auto_play=false&amp;color=601c85"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F8930210&amp;show_comments=true&amp;auto_play=false&amp;color=601c85" type="application/x-shockwave-flash" width="100%"></embed> </object>   <span><a href="http://soundcloud.com/conor-owen/theres-only-you">There's Only You</a> by <a href="http://soundcloud.com/conor-owen">Conor Owen</a></span>
+                <object height="81" width="100%"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F8929406&amp;show_comments=true&amp;auto_play=false&amp;color=601c85"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F8929406&amp;show_comments=true&amp;auto_play=false&amp;color=601c85" type="application/x-shockwave-flash" width="100%"></embed> </object>   <span><a href="http://soundcloud.com/conor-owen/01-softly-softly">Softly Softly</a> by <a href="http://soundcloud.com/conor-owen">Conor Owen</a></span>
+                <object height="81" width="100%"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F8929844&amp;show_comments=true&amp;auto_play=false&amp;color=601c85"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F8929844&amp;show_comments=true&amp;auto_play=false&amp;color=601c85" type="application/x-shockwave-flash" width="100%"></embed> </object>   <span><a href="http://soundcloud.com/conor-owen/the-good-we-could-do">The Good We Could Do</a> by <a href="http://soundcloud.com/conor-owen">Conor Owen</a></span>
               </div>
               
             </div> <!-- UIcontainer -->
             <div class="UIcontainer" id="tabs-3">
               <div class="UIheading">
                 <h3>Park Up and Play Tour March 2011</h3>
-                <div class="UIcontrol">
-                  <ul class="filter" id="postFilter">
-                    <li class="selected rnd8px last" style="color: #222;">Most recent</li>
-                  </ul>
-                </div>
               </div>
-              <div style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; ">
 <p>This tour is about taking music to the people of the U.K. From March 21st – 31st, Conor Owen will be embarking on a nationwide tour in his yellow van "Penelope" as they go on a one man/van mission to enlighten the ears of boys, girls, women and men around the country.</p>
 <p>This is a unique experience. This is a chance for live music lovers be part of a form of touring and entertainment that has never been done before. The location of the show could be anywhere, cobbled side streets, car parks, uni campus', city centres or abandoned warehouses.</p>
 <p>Conor will play at 17:30 everyday at a secret location in the city. Only to be announced at 14:00 on the day of the show via facebook, myspace and twitter. As well as the afternoon performance, Conor will also play an unplugged private set at fans house the same evening.</p>
@@ -133,7 +126,7 @@
 28/03 – Sheffield<br />
 29/03 – Leeds<br />
 30/03 – Manchester<br />
-31/03 – Liverpool</p></div>
+31/03 – Liverpool</p>
             </div> <!-- UIcontainer -->
           </div>
           
