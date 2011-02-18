@@ -447,13 +447,13 @@ a:hover.previous { background: url(../../images/core/buttons/previous.png) 0px -
 
 a:active.previous { background: url(../../images/core/buttons/previous.png) 0px -51px no-repeat; color: #aaa; }
 
-a.nextIcon { display: block; float: right; width: 21px; height: 21px; background: url(../../images/core/buttons/next.png) 100% -1px no-repeat; }
+a.nextIcon { display: block; float: right; width: 21px; height: 21px; background: url(../../images/core/buttons/next.png) 100% -1px no-repeat; text-indent: -9999px; }
 
 a:hover.nextIcon { background: url(../../images/core/buttons/next.png) 100% -26px no-repeat; }
 
 a:active.nextIcon { background: url(../../images/core/buttons/next.png) 100% -51px no-repeat; }
 
-a.previousIcon { display: block; float: left; width: 21px; height: 21px; background: url(../../images/core/buttons/previous.png) 0px -1px no-repeat; }
+a.previousIcon { display: block; float: left; width: 21px; height: 21px; background: url(../../images/core/buttons/previous.png) 0px -1px no-repeat; text-indent: -9999px; }
 
 a:hover.previousIcon { background: url(../../images/core/buttons/previous.png) 0px -26px no-repeat; }
 
