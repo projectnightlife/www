@@ -161,20 +161,6 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 	background-color: #0d0d0d; 
 	border-bottom: 1px solid #111; 
 	text-align: center; 
-	background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.33, rgb(12,12,12)),
-    color-stop(0.67, rgb(14,14,14)),
-    color-stop(0.84, rgb(17,17,17))
-);
-background-image: -moz-linear-gradient(
-    center bottom,
-    rgb(12,12,12) 33%,
-    rgb(14,14,14) 67%,
-    rgb(17,17,17) 84%
-);
 }
 .UIpanel ul.UItabs a:hover, .UIpanel ul.UItabs a:active, .UIpanel ul.UItabs a:focus { text-decoration: none; color: #777; } 
 .UIpanel ul.UItabs li { display: inline; margin: 0; padding: 0 10px; }
