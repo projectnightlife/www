@@ -26,14 +26,15 @@
       <div class="canvas">
       
         <div class="span960 btmspcr" style="position: relative;">
-          <img id="hero" src="images/conor.png" style="-moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;" onmouseover="displayHeroControls();" onmouseout="displayHeroControls();" />
-          <div id="heroNext" style="position: absolute; display: none; z-index: 100; bottom: 20px; right: 20px; width: 21px; height: 21px;" onmouseover="displayHeroControls();" onmouseout="displayHeroControls();">
+          <div style="position: absolute; width: 960px; height: 431px; z-index: 200px;" onmouseover="$('#heroNext').fadeIn(); $('#heroPrev').fadeIn();" onmouseout="$('#heroNext').fadeOut(); $('#heroPrev').fadeOut();"></div>
+          <img src="images/conor.png" style="-moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;" onmouseover="displayHeroControls();" onmouseout="$('#heroNext').fadeOut(); $('#heroPrev').fadeOut();" />
+          <div id="heroNext" style="position: absolute; display: none; z-index: 100; bottom: 20px; right: 20px; width: 21px; height: 21px;">
             <a href="" class="next">Next</a>
           </div>
-          <div id="heroPrev" style="position: absolute; display: none; z-index: 100; bottom: 20px; left: 20px; width: 83px; height: 21px;" onmouseover="displayHeroControls();" onmouseout="displayHeroControls();">
+          <div id="heroPrev" style="position: absolute; display: none; z-index: 100; bottom: 20px; left: 20px; width: 83px; height: 21px;">
             <a href="" class="previous">Previous</a>
           </div>
-          <div style="position: absolute; z-index: 100; top: 50px; right: 30px; width: 200px; background: url(http://www.projectnightlife.co.uk/images/core/transparency/75.png) repeat; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 10px; font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;" onmouseover="displayHeroControls();" onmouseout="displayHeroControls();">
+          <div style="position: absolute; z-index: 100; top: 50px; right: 30px; width: 200px; background: url(http://www.projectnightlife.co.uk/images/core/transparency/75.png) repeat; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 10px; font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Age: 22</span></div>
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">City: London</span></div>
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Listening to: The Swell Season</span></div>

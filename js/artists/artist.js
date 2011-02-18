@@ -50,20 +50,6 @@ function subscription()
 	return false;
 }
 
-function displayHeroControls()
-{
-	if (!api.mouseOverElement('hero'))
-	{
-	  $('#heroNext').fadeIn();
-	  $('#heroPrev').fadeIn();
-	}
-	else
-	{
-	  $('#heroNext').fadeOut();
-	  $('#heroPrev').fadeOut();
-	}
-}
-
 $(document).ready(function()
 {  
   $('.rnd8px').corner("8px");
