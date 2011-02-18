@@ -26,6 +26,9 @@
       <div class="canvas">
         <div class="span960 btmspcr" style="position: relative;">
           <img src="images/conor.png" style="-moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;" />
+          <div style="position: absolute; z-index: 100; bottom: 20px; right: 20px; width: 21px; height: 21px;">
+            <a href="" class="next">Next</a>
+          </div>
           <div style="position: absolute; z-index: 100; top: 50px; right: 30px; width: 200px; background: url(http://www.projectnightlife.co.uk/images/core/transparency/75.png) repeat; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 10px; font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Age: 22</span></div>
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">City: London</span></div>
