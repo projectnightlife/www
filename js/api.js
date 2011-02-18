@@ -261,7 +261,7 @@ function API()
 			  'email':email
 		  }
 		  if (userId != 0) // check to see if their session has expired
-		    setTimeout("api.sendSimpleRequest('"+this.hostname+"/backend/ajax.php?service=authentication&method=IsGuestUser', 'api.session.monitor', null, true);", 60000);
+		    setTimeout("api.sendSimpleRequest('/backend/ajax.php?service=authentication&method=IsGuestUser', 'api.session.monitor', null, true);", 60000);
 	  },
 	  monitor : function(response)
 	  {
@@ -271,7 +271,7 @@ function API()
 		     api.launchLoggedOutDialog();
 		  }
 		  else // recursively monitor session every 30 seconds
-		    setTimeout("api.sendSimpleRequest('"+this.hostname+"/backend/ajax.php?service=authentication&method=IsGuestUser', 'api.session.monitor', null, true);", 30000);
+		    setTimeout("api.sendSimpleRequest('/backend/ajax.php?service=authentication&method=IsGuestUser', 'api.session.monitor', null, true);", 30000);
 	  }
   };
   
