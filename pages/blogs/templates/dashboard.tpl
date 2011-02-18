@@ -67,17 +67,11 @@
         </div> <!-- span600 -->
         
         <div class="span160 leftspcr">
-          <div class="UIpanel UIcontainer btmspcr" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
-            <div class="UIheading">
-              <h3>Tip</h3>
-            </div>
-            <p>For maximum exposure - once you've written a post, don't forget to share it on Facebook and Twitter using the social buttons on the post's page.</p>
-          </div>
           <div class="UIpanel UIcontainer" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
             <div class="UIheading">
               <h3>Tip</h3>
             </div>
-            <p>Looking for an easy way to boost your blogs popularity? Rather than sharing a tune directly on Facebook, why not create a quick post containing the song and a brief paragraph summarising your thoughts. Then simply share the post instead!</p>
+            {$tip}
           </div>
         </div> <!-- span160 -->
         
