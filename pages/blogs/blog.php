@@ -4,7 +4,13 @@ $globalDir = dirname(dirname(dirname(__FILE__))).'\\';
 require_once($globalDir.'pages\\includes\\global.php');
 
 $blogService = API::GetService("blog");
+
 try {
+  if ($_GET['id'] == 19)
+  {
+	header('Location: '.$pageData['hostname'].'/pages/artists/artist.php');
+	exit();
+  }
   $blog = $blogService->GetBlog($_GET['id']);
 }
 catch(Exception $e)
@@ -88,7 +94,7 @@ foreach ($posts as $key => $post)
 
 $resourceManager = new ResourceDependancyManager('blogs/blog', 'css');
 require_once($globalDir.'pages\\includes\\core_css.php');
-if ($ismobile == false) {
+if (!$ismobile) {
 	$resourceManager->addResource('blogs.css');
 }
 $pageData['cssFile'] = $resourceManager->build();

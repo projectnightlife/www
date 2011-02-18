@@ -36,6 +36,7 @@ else
 
 $credentials = API::GetUserCredentials();
 $user = $credentials->getUser();
+//var_dump($credentials);
 
 $blogService = API::GetService("blog");
 try {

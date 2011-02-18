@@ -1,5 +1,6 @@
 <?php
-$globalDir = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
+//$globalDir = "c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\";
+$globalDir = dirname(dirname(dirname(__FILE__))).'\\';
 require_once($globalDir.'pages\\includes\\global.php');
 
 $blogService = API::GetService("blog");
@@ -87,7 +88,7 @@ foreach ($posts as $key => $post)
 
 $resourceManager = new ResourceDependancyManager('blogs/blog', 'css');
 require_once($globalDir.'pages\\includes\\core_css.php');
-if ($ismobile == false) {
+if (!$ismobile) {
 	$resourceManager->addResource('blogs.css');
 }
 $pageData['cssFile'] = $resourceManager->build();
@@ -95,7 +96,7 @@ $pageData['cssFile'] = $resourceManager->build();
 $resourceManager = new ResourceDependancyManager('blogs/blog', 'js');
 require_once($globalDir.'pages\\includes\\core_js.php');
 $resourceManager->addResource('corners.js');
-$resourceManager->addResource('blogs/blog.js');
+$resourceManager->addResource('artists/artist.js');
 $pageData['jsFile'] = $resourceManager->build();
 
 $smarty->assign('blog', $blog);
