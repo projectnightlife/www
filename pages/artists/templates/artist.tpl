@@ -26,7 +26,7 @@
       <div class="canvas">
       
         <div class="span960 btmspcr" style="position: relative;">
-          <div style="position: absolute; width: 960px; height: 431px; z-index: 200;" onmouseover="$('#heroNext').fadeIn(); $('#heroPrev').fadeIn();" onmouseout="$('#heroNext').fadeOut(); $('#heroPrev').fadeOut();">
+          <div style="position: absolute; width: 960px; height: 431px; z-index: 200;" onmouseover="$('#heroNext').fadeIn(); $('#heroPrev').fadeIn();" onmouseout="$('#heroNext').fadeOut(); $('#heroPrev').fadeOut();"></div>
           <img src="images/conor.png" style="-moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;" onmouseover="displayHeroControls();" onmouseout="$('#heroNext').fadeOut(); $('#heroPrev').fadeOut();" />
           <div id="heroNext" style="position: absolute; display: none; z-index: 100; bottom: 20px; right: 20px; width: 21px; height: 21px;">
             <a href="" class="next">Next</a>
@@ -40,7 +40,6 @@
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Listening to: The Swell Season</span></div>
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Supports: Liverpool</span></div>
             <!--<div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Random: James Corden stripped me of my shirt on the dancefloor at the Mayfair Hotel the other weekend!</span></div>-->
-          </div>
           </div>
         </div>
         
