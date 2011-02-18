@@ -99,14 +99,25 @@
             </div> <!-- UIcontainer -->
             <div class="UIcontainer" id="tabs-2">
               <div class="UIheading">
-                <h3>Latest updates</h3>
+                <h3>The Observationalist</h3>
                 <div class="UIcontrol">
                   <ul class="filter" id="postFilter">
                     <li class="selected rnd8px last" style="color: #222;">Most recent</li>
                   </ul>
                 </div>
               </div>
-              <div style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; "><p style="text-align: center; font-weight: bold;">Conor Owen Park Up and Play Tour March 2011</p>
+              
+            </div> <!-- UIcontainer -->
+            <div class="UIcontainer" id="tabs-3">
+              <div class="UIheading">
+                <h3>Park Up and Play Tour March 2011</h3>
+                <div class="UIcontrol">
+                  <ul class="filter" id="postFilter">
+                    <li class="selected rnd8px last" style="color: #222;">Most recent</li>
+                  </ul>
+                </div>
+              </div>
+              <div style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; ">
 <p>This tour is about taking music to the people of the U.K. From March 21st – 31st, Conor Owen will be embarking on a nationwide tour in his yellow van "Penelope" as they go on a one man/van mission to enlighten the ears of boys, girls, women and men around the country.</p>
 <p>This is a unique experience. This is a chance for live music lovers be part of a form of touring and entertainment that has never been done before. The location of the show could be anywhere, cobbled side streets, car parks, uni campus', city centres or abandoned warehouses.</p>
 <p>Conor will play at 17:30 everyday at a secret location in the city. Only to be announced at 14:00 on the day of the show via facebook, myspace and twitter. As well as the afternoon performance, Conor will also play an unplugged private set at fans house the same evening.</p>
@@ -122,18 +133,7 @@
 28/03 – Sheffield<br />
 29/03 – Leeds<br />
 30/03 – Manchester<br />
-31/03 – Liverpool</p>
-            </div> <!-- UIcontainer -->
-            <div class="UIcontainer" id="tabs-3">
-              <div class="UIheading">
-                <h3>Latest updates</h3>
-                <div class="UIcontrol">
-                  <ul class="filter" id="postFilter">
-                    <li class="selected rnd8px last" style="color: #222;">Most recent</li>
-                  </ul>
-                </div>
-              </div>
-              <div style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0; color: #ABA0C0;">No tour info yet</div>
+31/03 – Liverpool</p></div>
             </div> <!-- UIcontainer -->
           </div>
           
