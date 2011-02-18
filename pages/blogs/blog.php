@@ -6,11 +6,11 @@ require_once($globalDir.'pages\\includes\\global.php');
 $blogService = API::GetService("blog");
 
 try {
-  if ($_GET['id'] == 19)
+ /* if ($_GET['id'] == 19)
   {
 	header('Location: '.$pageData['hostname'].'/pages/artists/artist.php');
 	exit();
-  }
+  }*/
   $blog = $blogService->GetBlog($_GET['id']);
 }
 catch(Exception $e)
