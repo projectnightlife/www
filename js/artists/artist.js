@@ -52,7 +52,7 @@ function subscription()
 
 function displayHeroControls()
 {
-	if (api.mouseOverElement('hero'))
+	if (!api.mouseOverElement('hero'))
 	{
 	  $('#heroNext').fadeIn();
 	  $('#heroPrev').fadeIn();
