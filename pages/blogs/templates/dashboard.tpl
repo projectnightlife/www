@@ -71,13 +71,13 @@
             <div class="UIheading">
               <h3>Tip</h3>
             </div>
-            <p>Once you've written a post, don't forget to share it on facebook and twitter using the buttons on the post page.</p>
+            <p>For maximum exposure - once you've written a post, don't forget to share it on Facebook and Twitter using the social buttons on the post's page.</p>
           </div>
           <div class="UIpanel UIcontainer" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
             <div class="UIheading">
               <h3>Tip</h3>
             </div>
-            <p>Rather than just sharing a song you like directly on facebook, why not create a post with the song and a quick paragraph containing your thoughts and share the post instead</p>
+            <p>Looking for an easy way to boost your blogs popularity? Rather than sharing a tune directly on Facebook, why not create a quick post containing the song and a brief paragraph containing your thoughts. Then simply share the post instead!</p>
           </div>
         </div> <!-- span160 -->
         
