@@ -447,6 +447,18 @@ a:hover.previous { background: url(../../images/core/buttons/previous.png) 0px -
 
 a:active.previous { background: url(../../images/core/buttons/previous.png) 0px -51px no-repeat; color: #aaa; }
 
+a.nextIcon { display: block; float: right; width: 21px; height: 21px; background: url(../../images/core/buttons/next.png) 100% -1px no-repeat; }
+
+a:hover.nextIcon { background: url(../../images/core/buttons/next.png) 100% -26px no-repeat; }
+
+a:active.nextIcon { background: url(../../images/core/buttons/next.png) 100% -51px no-repeat; }
+
+a.previousIcon { display: block; float: left; width: 21px; height: 21px; background: url(../../images/core/buttons/previous.png) 0px -1px no-repeat; }
+
+a:hover.previousIcon { background: url(../../images/core/buttons/previous.png) 0px -26px no-repeat; }
+
+a:active.previousIcon { background: url(../../images/core/buttons/previous.png) 0px -51px no-repeat; }
+
 a.plus { display: block; float: right; width: 21px; height: 21px; background: url(../../images/core/buttons/plus.png) 0 0 no-repeat; overflow: hidden; text-indent: -9999px; }
 
 a:hover.plus { background: url(../../images/core/buttons/plus.png) 0 -22px no-repeat; }
