@@ -103,7 +103,7 @@ for ($i = count($month) - 1; $i >= 0; $i--)
     $elem->addAttribute('tooltip', $data->postsServed.' post view'.($data->postsServed == 1 ? '' : 's'));
 }
 
-$chart->asXML("c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\stats\\blogs\\".md5($blog->id)."_month_posts_served.xml");
+$chart->asXML("..\\..\\stats\\blogs\\".md5($blog->id)."_month_posts_served.xml");
 
 // month comments
 
@@ -129,7 +129,7 @@ for ($i = count($month) - 1; $i >= 0; $i--)
     $elem->addAttribute('tooltip', $data->comments.' comment'.($data->comments == 1 ? '' : 's'));
 }
 
-$chart->asXML("c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\stats\\blogs\\".md5($blog->id)."_month_comments.xml");
+$chart->asXML("..\\..\\stats\\blogs\\".md5($blog->id)."_month_comments.xml");
 
 // month subscribers
 
@@ -155,7 +155,7 @@ for ($i = count($month) - 1; $i >= 0; $i--)
     $elem->addAttribute('tooltip', $data->subscriptions.' subscriber'.($data->subscriptions == 1 ? '' : 's'));
 }
 
-$chart->asXML("c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\stats\\blogs\\".md5($blog->id)."_month_subscribers.xml");
+$chart->asXML("..\\..\\stats\\blogs\\".md5($blog->id)."_month_subscribers.xml");
 
 // month posts
 
@@ -181,6 +181,6 @@ for ($i = count($month) - 1; $i >= 0; $i--)
     $elem->addAttribute('tooltip', $data->posts.' post'.($data->posts == 1 ? '' : 's'));
 }
 
-$chart->asXML("c:\\inetpub\\wwwroot\\www.projectnightlife.co.uk\\stats\\blogs\\".md5($blog->id)."_month_posts.xml");
+$chart->asXML("..\\..\\stats\\blogs\\".md5($blog->id)."_month_posts.xml");
 
 ?>
