@@ -353,24 +353,31 @@ function API()
   
   // assumes margin is outside element - a mouse hovering over the element's margin is not over the element
   this.mouseOverElement = function (element) {
-	  var marginTop = 0, marginLeft = 0, width = 0, height = 0, top = 0, bottom = 0, left = 0, right = 0;
-	  element = api.getElem(element);
+	  try{
+	  	var marginTop = 0, marginLeft = 0, width = 0, height = 0, top = 0, bottom = 0, left = 0, right = 0;
+	  	element = api.getElem(element);
 	  
-	  element.style.marginLeft == "" ? null : marginLeft += parseInt(element.style.marginLeft, 10);
-	  element.style.marginTop == "" ? null : marginTop += parseInt(element.style.marginTop, 10);
+	  	element.style.marginLeft == "" ? null : marginLeft += parseInt(element.style.marginLeft, 10);
+	  	element.style.marginTop == "" ? null : marginTop += parseInt(element.style.marginTop, 10);
 	  
-	  width = $(element).outerWidth();
-	  height = $(element).outerHeight();
+	  	width = $(element).outerWidth();
+	  	height = $(element).outerHeight();
 	  
-	  top = $(element).offset().top + marginTop;
-	  bottom = $(element).offset().top + marginTop + height;
-	  left = $(element).offset().left + marginLeft;
-	  right = $(element).offset().left + marginLeft + width;
+	  	top = $(element).offset().top + marginTop;
+	  	bottom = $(element).offset().top + marginTop + height;
+	  	left = $(element).offset().left + marginLeft;
+	  	right = $(element).offset().left + marginLeft + width;
 	  
-	  if (this.mousePageCoords.y > top && this.mousePageCoords.y < bottom && this.mousePageCoords.x > left && this.mousePageCoords.x < right)
-	    return true;
-	  else
-	    return false;
+	  	if (this.mousePageCoords.y > top && this.mousePageCoords.y < bottom && this.mousePageCoords.x > left && this.mousePageCoords.x < right)
+	    	return true;
+	  	else
+	    	return false;
+	  }
+	  catch(e)
+	  {
+		  // element name may not exist
+		  return false;
+	  }
   };
 		  
   
