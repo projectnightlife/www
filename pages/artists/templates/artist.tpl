@@ -26,18 +26,18 @@
       <div class="canvas">
         <div class="span960 btmspcr" style="position: relative;">
           <img src="images/conor.png" style="-moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;" />
-          <div style="position: absolute; z-index: 100; top: 50px; right: 30px; width: 200px; background: url(http://www.projectnightlife.co.uk/images/core/transparency/75.png) repeat; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 10px;">
+          <div style="position: absolute; z-index: 100; top: 50px; right: 30px; width: 200px; background: url(http://www.projectnightlife.co.uk/images/core/transparency/75.png) repeat; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 10px; font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Age: 22</span></div>
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">City: London</span></div>
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Listening to: The Swell Season</span></div>
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Supports: Liverpool</span></div>
-            <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Random: James Corden stripped me of my shirt on the dancefloor at the Mayfair Hotel the other weekend!</span></div>
+            <!--<div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Random: James Corden stripped me of my shirt on the dancefloor at the Mayfair Hotel the other weekend!</span></div>-->
           </div>
         </div>
         
         <div class="span600">
           <div class="UIpanel">
-            <div class="UIcontainer">
+            <div class="UIcontainer" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
               <div style="width: 520px; float: left;">
                 <h3 style="line-height: 1em; padding-bottom: 5px; color: #ABA0C0;">{$blog->name}</h3>
                 {if isset($blog->slogan)}
@@ -97,7 +97,7 @@
               {/if}
               </ul>
             </div> <!-- UIcontainer -->
-            <div class="UIcontainer" id="tabs-2">
+            <div class="UIcontainer" id="tabs-2" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
               <div class="UIheading">
                 <h3>The Observationalist</h3>
               </div>
@@ -105,7 +105,7 @@
               <p>Here are four tracks taken from Conor's debut album</p>
               <p><object height="225" width="100%"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F511919&amp;show_comments=true&amp;auto_play=false&amp;show_playcount=true&amp;show_artwork=true&amp;color=601c85"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="225" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F511919&amp;show_comments=true&amp;auto_play=false&amp;show_playcount=true&amp;show_artwork=true&amp;color=601c85" type="application/x-shockwave-flash" width="100%"></embed> </object>   <span><a href="http://soundcloud.com/conor-owen/sets/the-observationalist">The Observationalist</a> by <a href="http://soundcloud.com/conor-owen">Conor Owen</a></span></p>
             </div> <!-- UIcontainer -->
-            <div class="UIcontainer" id="tabs-3">
+            <div class="UIcontainer" id="tabs-3" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
               <div class="UIheading">
                 <h3>Park Up and Play Tour March 2011</h3>
               </div>
@@ -152,7 +152,7 @@
             </div>
           </div>
           
-          <div class="UIpanel topspcr">
+          <div class="UIpanel topspcr" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
             <div class="UIcontainer">
               <div class="UIheading">
                 <h3>Bio</h3>
