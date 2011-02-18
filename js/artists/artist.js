@@ -69,6 +69,8 @@ $(document).ready(function()
 				return false;
 			}).filter(":first").click();
 			
+			$( "#tabs" ).tabs( "option", "cache", true );
+			
 			$( "#tabs" ).bind( "tabsselect", function(event, ui) {
 				
 				var left = ui.tab.offsetLeft;
