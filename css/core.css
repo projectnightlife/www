@@ -158,12 +158,23 @@ sup.terms { padding-left: 2px; color: #666; font-size: 10px; }
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; 
 	position: relative; 
 	padding: 7px; 
-	background: #0d0d0d; 
+	background-color: #0d0d0d; 
 	border-bottom: 1px solid #111; 
 	text-align: center; 
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#111111', endColorstr='#0a0a0a'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#111), to(#0a0a0a)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #111,  #0a0a0a); /* for firefox 3.6+ */
+	background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.33, rgb(12,12,12)),
+    color-stop(0.67, rgb(14,14,14)),
+    color-stop(0.84, rgb(17,17,17))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(12,12,12) 33%,
+    rgb(14,14,14) 67%,
+    rgb(17,17,17) 84%
+);
 }
 .UIpanel ul.UItabs a:hover, .UIpanel ul.UItabs a:active, .UIpanel ul.UItabs a:focus { text-decoration: none; color: #777; } 
 .UIpanel ul.UItabs li { display: inline; margin: 0; padding: 0 10px; }
