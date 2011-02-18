@@ -75,10 +75,22 @@ $(document).ready(function()
 	$('.UItabs .UIcaret').animate({left: (left + width / 2) - 6}, 500);
   });
   $('#hero').hover(function() {
-	  $('#heroNext').fadeIn(); 
-	  $('#heroPrev').fadeIn();
+	  $('#heroNext').stop(true, true).fadeIn(); 
+	  $('#heroPrev').stop(true, true).fadeIn();
   }, function() {
-  $('#heroNext').fadeOut();
-  $('#heroPrev').fadeOut();
+  	$('#heroNext').stop(true, true).fadeOut();
+  	$('#heroPrev').stop(true, true).fadeOut();
   });
+  $('#overlay').hover(function() {
+	  $('#heroNext').stop(true, true).fadeIn(); 
+	  $('#heroPrev').stop(true, true).fadeIn();
+  }, function() {});
+  $('#heroNext').hover(function() {
+	  $('#heroNext').stop(true, true).fadeIn(); 
+	  $('#heroPrev').stop(true, true).fadeIn();
+  }, function() {});
+  $('#heroPrev').hover(function() {
+	  $('#heroNext').stop(true, true).fadeIn(); 
+	  $('#heroPrev').stop(true, true).fadeIn();
+  }, function() {});
 });
