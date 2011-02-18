@@ -67,10 +67,12 @@
         </div> <!-- span600 -->
         
         <div class="span160 leftspcr">
-          <div class="UIpanel">
+          <div class="UIpanel" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0; color: #ABA0C0;">
             <div class="UIheading">
-              <h3>Sponsored</h3>
+              <h3>Tips</h3>
             </div>
+            <p>Once you've written a post, don't forget to share it on facebook and twitter using the buttons on the post page.</p>
+            <p>Rather than just sharing a song you like directly on facebook, why not create a post with the song and a quick paragraph containing your thoughts and share the post instead</p>
           </div>
         </div> <!-- span160 -->
         
