@@ -22,70 +22,62 @@
         </div> <!-- span200 --> 
         
         <div class="span600 leftspcr">
-          <div class="UIpanel">
-            <div class="UIcontainer">
-              <div class="blogvitals left">
-                <div class="clear left">
-                  <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=80x80" width="80" height="80" /></a>
-                </div>
-                <div class="info">
-                  <h3 style="line-height: 1em">{$blog->name}</h3>
-                  <p>{$blog->slogan}</p>
-                  <p>By 
-                  {foreach from=$blogContributors item=contributor name=contributors}{if $smarty.foreach.contributors.first}<a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{elseif $smarty.foreach.contributors.last} and <a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{else}, <a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{/if}{/foreach}
-                  </p>
-                </div>
+          <div class="UIpanel UIcontainer btmspcr">
+            <div class="blogvitals left">
+              <div class="clear left">
+                <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=80x80" width="80" height="80" /></a>
+              </div>
+              <div class="info">
+                <h3 style="line-height: 1em">{$blog->name}</h3>
+                <p>{$blog->slogan}</p>
+                <p>By 
+                {foreach from=$blogContributors item=contributor name=contributors}{if $smarty.foreach.contributors.first}<a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{elseif $smarty.foreach.contributors.last} and <a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{else}, <a href="http://www.facebook.com/profile.php?id={$contributor->userId}" target="_blank">{$contributor->firstname} {$contributor->lastname}</a>{/if}{/foreach}
+                </p>
               </div>
             </div>
           </div>
-          <div class="UIpanel topspcr">
-            <div class="UIcontainer">
-              <div class="UIheading">
-                <h3>Dashboard</h3>
-              </div>
-              <ul class="UIobjectlist listw580">
-                <li class="first">
-                  <div style="margin: 0 auto; width: 298px;">
-                    <ul class="blogstats">
-                      <li class="postCount">
-                        <span class="value">{$blog->numPosts}</span>
-                        <span>posts</span>
-                      </li>
-                      <li class="commentCount">
-                        <span class="value">{$blog->numComments}</span>
-                        <span>comments</span>
-                      </li>
-                      <li class="followerCount">
-                        <span class="value">{$blog->numSubscribers}</span>
-                        <span>subscribers</span>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="last">
-                  <div style="text-align: center; padding: 20px 0;">No messages</div>
-                </li>
-              </ul>
-            </div> 
+          <div class="UIpanel UIcontainer btmspcr">
+            <div class="UIheading">
+              <h3>Dashboard</h3>
+            </div>
+            <ul class="UIobjectlist listw580">
+              <li class="first">
+                <div style="margin: 0 auto; width: 298px;">
+                  <ul class="blogstats">
+                    <li class="postCount">
+                      <span class="value">{$blog->numPosts}</span>
+                      <span>posts</span>
+                    </li>
+                    <li class="commentCount">
+                      <span class="value">{$blog->numComments}</span>
+                      <span>comments</span>
+                    </li>
+                    <li class="followerCount">
+                      <span class="value">{$blog->numSubscribers}</span>
+                      <span>subscribers</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="last">
+                <div style="text-align: center; padding: 20px 0;">No messages</div>
+              </li>
+            </ul> 
           </div>
         </div> <!-- span600 -->
         
         <div class="span160 leftspcr">
-          <div class="UIpanel btmspcr" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
-            <div class="UIcontainer">
-              <div class="UIheading">
-                <h3>Tip</h3>
-              </div>
-              <p>Rather than just sharing a song you like directly on facebook, why not create a post with the song and a quick paragraph containing your thoughts and share the post instead</p>
+          <div class="UIpanel UIcontainer" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+            <div class="UIheading">
+              <h3>Tip</h3>
             </div>
+            <p>Once you've written a post, don't forget to share it on facebook and twitter using the buttons on the post page.</p>
           </div>
-          <div class="UIpanel btmspcr" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
-            <div class="UIcontainer">
-              <div class="UIheading">
-                <h3>Tip</h3>
-              </div>
-              <p>Rather than just sharing a song you like directly on facebook, why not create a post with the song and a quick paragraph containing your thoughts and share the post instead</p>
+          <div class="UIpanel UIcontainer" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+            <div class="UIheading">
+              <h3>Tip</h3>
             </div>
+            <p>Rather than just sharing a song you like directly on facebook, why not create a post with the song and a quick paragraph containing your thoughts and share the post instead</p>
           </div>
         </div> <!-- span160 -->
         

@@ -58,7 +58,7 @@
 		{/if}
         
         <div class="span650 topspcr15">
-          <div class="UIpanel">
+          <div class="UIpanel UIcontainer">
             <div class="UIheading">
               <h3>Blog posts</h3>
               <div class="UIcontrol">
@@ -103,7 +103,7 @@
         </div> <!-- span650 -->
         
         <div class="span300 leftspcr topspcr15">
-          <div class="UIpanel">
+          <div class="UIpanel UIcontainer">
             <div class="UIheading">
               <h3>Blogs</h3>
             </div>
