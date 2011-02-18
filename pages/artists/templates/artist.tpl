@@ -26,8 +26,7 @@
       <div class="canvas">
       
         <div class="span960 btmspcr" style="position: relative;">
-          <div style="position: absolute; width: 960px; height: 431px; z-index: 200;" onmouseover="$('#heroNext').fadeIn(); $('#heroPrev').fadeIn();" onmouseout="$('#heroNext').fadeOut(); $('#heroPrev').fadeOut();"></div>
-          <img src="images/conor.png" style="-moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;" onmouseover="displayHeroControls();" onmouseout="$('#heroNext').fadeOut(); $('#heroPrev').fadeOut();" />
+          <img id="hero" src="images/conor.png" style="-moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;" onmouseover="displayHeroControls();" />
           <div id="heroNext" style="position: absolute; display: none; z-index: 100; bottom: 20px; right: 20px; width: 21px; height: 21px;">
             <a href="" class="next">Next</a>
           </div>

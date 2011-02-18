@@ -74,4 +74,12 @@ $(document).ready(function()
 	var width = ui.tab.offsetWidth;
 	$('.UItabs .UIcaret').animate({left: (left + width / 2) - 6}, 500);
   });
+  $('#hero').hover(function() {
+	  $('#heroNext').fadeIn(); 
+	  $('#heroPrev').fadeIn();
+  });
+  $('#hero').hover(function() {
+	  $('#heroNext').fadeOut();
+	  $('#heroPrev').fadeOut();
+  });
 });
