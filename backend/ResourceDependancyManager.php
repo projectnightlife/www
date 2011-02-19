@@ -69,7 +69,10 @@ class ResourceDependancyManager
 		{
 			try {
 				// incase compilation fails we can revert to the original
-				$originalContents = file_get_contents($buildPath.$filename);
+				if (file_exists($buildPath.$filename))
+				{
+					$originalContents = file_get_contents($buildPath.$filename);
+				}
 		   		$fh = fopen($buildPath.$filename, 'w');
 				
 				// add each resource
@@ -100,9 +103,12 @@ class ResourceDependancyManager
 				// Previous to this addition, the incomplete css file was being sent back to the browser!
 				try {
 					fclose($fh); // previous handle is still open due to exception being thrown.
-					$fh = fopen($buildPath.$filename, 'w');
-					fwrite($fh, $originalContents);
-					fclose($fh);
+					if (isset($originalContents))
+					{
+						$fh = fopen($buildPath.$filename, 'w');
+						fwrite($fh, $originalContents);
+						fclose($fh);
+					}
 				}
 				catch (Exception $e) {}
 			}
