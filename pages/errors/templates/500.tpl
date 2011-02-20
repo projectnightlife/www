@@ -58,7 +58,7 @@
       <div class="canvas">
           
         <div class="span500 center">
-          <div class="UIpanel topspcr" style="border: 1px solid #222; background: #0f0f0f;">
+          <div class="UIpanel UIcontainer topspcr" style="border: 1px solid #222; background: #0f0f0f;">
             <div class="UIheading" style="margin-bottom: 0; padding-bottom: 5px; border-bottom: 1px solid #222;">
               <h3>We're sorry, but the page you were after is currently experiencing some problems</h3>
             </div>
