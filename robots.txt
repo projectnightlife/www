@@ -1,3 +1,14 @@
 User-agent: *
 Disallow: /blog/edit
 Disallow: /notifications
+Disallow: /backend
+Disallow: /api
+Disallow: /css
+Disallow: /js
+Disallow: /stats
+Disallow: /old
+Disallow: /pages/errors
+Disallow: /pages/getphoto
+Disallow: /pages/includes
+Disallow: /pages/user/notifications.php
+Disallow: /pages/blog/editblog.php
