@@ -83,15 +83,19 @@ function togglePostsSwitch(toggle)
 	  api.sendSimpleRequest(api.hostname+"/backend/ajax.php?service=blog&method=GetTrendingPosts&&amount=8", "unpackTrendingPosts", "togglePostsSpinner", false);
 	
 	if (togglePosts && existsTrending)
+	{
 	  $('#posts').fadeOut("normal", function()
 	  {
 		$('#trendingPosts').fadeIn("slow"); 
 	  });
+	}
 	else if (!togglePosts)
+	{
 	  $('#trendingPosts').fadeOut("normal", function()
 	  {
 		$('#posts').fadeIn("slow");
 	  });
+	}
 	  
 	if (existsTrending)
 	{
