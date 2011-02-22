@@ -162,7 +162,7 @@
           <div class="UIpanel topspcr" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
             <div class="UIcontainer">
               <div class="UIheading">
-                <!--<h3>Bio</h3>-->
+                <h3>Bio</h3>
               </div>
               {$blog->description}
             </div>

@@ -79,20 +79,21 @@ function togglePostsSwitch(toggle)
 	if (togglePosts && !existsTrending)
 	  api.sendSimpleRequest(api.hostname+"/backend/ajax.php?service=blog&method=GetTrendingPosts&&amount=8", "unpackTrendingPosts", "togglePostsSpinner", false);
 	
-	if (togglePosts)
-	  $('#posts').fadeOut("slow");
-	else
-	  $('#trendingPosts').fadeOut("slow");
+	if (togglePosts && existsTrending)
+	  $('#posts').fadeOut("slow", function()
+	  	{
+			$('#trendingPosts').fadeIn("slow"); 
+		});
+	else if (!togglePosts)
+	  $('#trendingPosts').fadeOut("slow", function()
+	  	{
+			$('#posts').fadeIn("slow");
+		});
 	  
 	if (existsTrending)
 	{
 	  animateSwitch();
 	}
-	
-	if (togglePosts && existsTrending)
-	  $('#trendingPosts').fadeIn("slow");
-	else if (!togglePosts)
-	  $('#posts').fadeIn("slow");
 	
 	togglePosts = !togglePosts;
   }
