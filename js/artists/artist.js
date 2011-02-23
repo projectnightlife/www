@@ -78,30 +78,30 @@ $(document).ready(function()
 	  $('#heroNext').stop(true, true).fadeIn('slow'); 
 	  $('#heroPrev').stop(true, true).fadeIn('slow');
   }, function() {});
-  $('#heroNext').bind('click', slideLeft);
-  $('#heroPrev').bind('click', slideRight);
-
-function slideLeft()
-{
-	var offset = (parseInt($("#imageReel").css("left"), 10));
-	$("#imageReel").animate({
-        left: -960 + offset
-    }, 800, function() {
-	  $('#imageReel').append($('#imageReel > img:first'));
-	  $("#imageReel").css("left", offset);
-	});
+  $('#heroNext').bind('click', function()
+  {
+	if($("#imageReel:animated").length == 0) {
+		var offset = (parseInt($("#imageReel").css("left"), 10));
+		$("#imageReel").animate({
+        	left: -960 + offset
+   		}, 800, function() {
+	  		$('#imageReel').append($('#imageReel > img:first'));
+	  		$("#imageReel").css("left", offset);
+		});
+	}
 	return false;
-}
-
-function slideRight()
-{
-	var offset = (parseInt($("#imageReel").css("left"), 10));
-	$("#imageReel").animate({
-          left: 960 + offset
-    }, 800, function() {
-	  $('#imageReel').prepend($('#imageReel > img:last'));
-	  $("#imageReel").css("left", offset);
-	});
+  });
+  $('#heroPrev').bind('click', function()
+  {
+	if($("#imageReel:animated").length == 0) {
+		var offset = (parseInt($("#imageReel").css("left"), 10));
+		$("#imageReel").animate({
+            left: 960 + offset
+   	 	}, 800, function() {
+	  		$('#imageReel').prepend($('#imageReel > img:last'));
+	  		$("#imageReel").css("left", offset);
+		});
+	}
 	return false;
-}
+  });
 });
