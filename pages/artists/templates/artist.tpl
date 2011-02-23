@@ -27,9 +27,9 @@
       
         <div class="span960 btmspcr" style="position: relative;">
           <div id="imageWindow" style="width: 960px; height: 431px;">
-            <div id="imageReel" style="width: 2880px;">
-              <img src="images/conor.png" />
+            <div id="imageReel" style="width: 2880px; left: -960px !important;">
               <img src="images/conor2.jpg" />
+              <img src="images/conor.png" />
               <img src="images/conor3.jpg" />
             </div>
           </div>
