@@ -78,4 +78,24 @@ $(document).ready(function()
 	  $('#heroNext').stop(true, true).fadeIn('slow'); 
 	  $('#heroPrev').stop(true, true).fadeIn('slow');
   }, function() {});
+  $('#heroNext').bind('click', slideLeft);
+  $('#heroPrev').bind('click', slideRight);
+
+function slideLeft()
+{
+	var offset = (parseInt($("#imageReel").css("left"), 10));
+	$("#imageReel").animate({
+        left: -960 + offset
+    });
+	return false;
+}
+
+function slideRight()
+{
+	var offset = (parseInt($("#imageReel").css("left"), 10));
+	$("#imageReel").animate({
+          left: 960 + offset
+      }, 1000 );
+	return false;
+}
 });
