@@ -1,5 +1,15 @@
 /* feature items */
 
+/* core stuff */
+
+#imageWindow { position: relative; overflow: hidden; }
+
+#imageWindow > #imageReel { position: absolute; top: 0; left: 0; }
+
+#imageWindow > #imageReel img { float: left; margin: 0 auto; display: block; }
+
+/* instance specific */
+
 #mainFeaturedApp { background: url(../../images/core/gradients/box.png) bottom repeat-x #121212; height: 312px; overflow: auto; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
 
 #mainFeaturedApp > #descriptionWindow { position: relative; overflow: hidden; float: left; width: 220px; height: 312px; padding: 0 20px; }
@@ -12,11 +22,7 @@
 
 #mainFeaturedApp > #descriptionWindow > #descriptionReel > div p { color: #ccc; }
 
-#mainFeaturedApp > #imageWindow { position: relative; overflow: hidden; float: left; width: 608px; height: 312px; }
-
-#mainFeaturedApp > #imageWindow > #imageReel { position: absolute; top: 0; left: 0; }
-
-#mainFeaturedApp > #imageWindow > #imageReel img { margin: 0 auto; display: block; }
+#mainFeaturedApp > #imageWindow { float: left; width: 608px; height: 312px; }
 
 #mainFeaturedApp > #imageWindow > #imageReel > a { float: left; display: inline-block; height: 312px; width: 608px; }
 

@@ -90,6 +90,7 @@ $resourceManager = new ResourceDependancyManager('blogs/blog', 'css');
 require_once($globalDir.'pages\\includes\\core_css.php');
 if (!$ismobile) {
 	$resourceManager->addResource('blogs.css');
+	$resourceManager->addResource('featureApps.css');
 }
 $pageData['cssFile'] = $resourceManager->build();
 
