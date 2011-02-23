@@ -27,7 +27,7 @@
       
         <div class="span960 btmspcr" style="position: relative;">
           <img id="hero" src="images/conor.png" />
-          <img src="images/core/hero_mask.png" style="position: absolute; z-index: 10;" />
+          <img src="images/core/hero_mask.png" style="position: absolute; z-index: 10; top: 0; left: 0;" />
           <div id="heroNext" style="position: absolute; display: none; z-index: 100; bottom: 20px; right: 20px; width: 21px; height: 21px;">
             <a href="" class="nextIcon">Next</a>
           </div>
