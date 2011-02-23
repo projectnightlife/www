@@ -26,8 +26,8 @@
       <div class="canvas">
       
         <div class="span960 btmspcr" style="position: relative;">
-          <div class="imageWindow" style="width: 960px; height: 431px;">
-            <div class="imageReel" style="width: 2880px;">
+          <div id="imageWindow" style="width: 960px; height: 431px;">
+            <div id="imageReel" style="width: 2880px;">
               <img src="images/conor.png" />
               <img src="images/conor2.jpg" />
               <img src="images/conor3.jpg" />
