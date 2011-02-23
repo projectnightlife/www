@@ -26,7 +26,13 @@
       <div class="canvas">
       
         <div class="span960 btmspcr" style="position: relative;">
-          <img id="hero" src="images/conor.png" />
+          <div class="imageWindow" style="position: relative; width: 960px; height: 431px;">
+            <div class="imageReel" style="position: absolute; top: 0; left: 0; width: 2880px;">
+              <img src="images/conor.png" />
+              <img src="images/conor2.jpg" />
+              <img src="images/conor3.jpg" />
+            </div>
+          </div>
           <img id="hero_mask" src="images/core/hero_mask.png" style="position: absolute; z-index: 10; top: 0; left: 0;" />
           <div id="heroNext" style="position: absolute; display: none; z-index: 100; bottom: 20px; right: 20px; width: 21px; height: 21px;">
             <a href="" class="nextIcon">Next</a>
