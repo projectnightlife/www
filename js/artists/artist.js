@@ -86,7 +86,8 @@ function slideLeft()
 	var offset = (parseInt($("#imageReel").css("left"), 10));
 	$("#imageReel").animate({
         left: -960 + offset
-    });
+    }, 800);
+	$('#imageReel').append('#imageReel > img:first');
 	return false;
 }
 
@@ -95,7 +96,8 @@ function slideRight()
 	var offset = (parseInt($("#imageReel").css("left"), 10));
 	$("#imageReel").animate({
           left: 960 + offset
-      }, 1000 );
+      }, 800);
+	$('#imageReel').prepend('#imageReel > img:last');
 	return false;
 }
 });
