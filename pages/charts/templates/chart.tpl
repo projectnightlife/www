@@ -41,12 +41,12 @@
           </div>
           <div class="topspcr">
             <div style="background: #0f0f0f; margin-bottom: 7px; overflow: auto;">
-              <div style="float: left; background: url(/images/core/icons/blue_ribbon.png) no-repeat; width: 22px; height: 32px; margin: -2px 10px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">10</div>
+              <div style="float: left; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 2px; width: 22px; height: 37px; margin: -2px 10px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">10</div>
               <img src="photo/{$post->thumbnail}/50x50" style="float: left; padding: 10px 0;" />
               <div style="float: left; padding: 10px">Blah blah blah</div>
             </div>
             <div style="background: #0c0c0c; margin-bottom: 7px; overflow: auto;">
-              <div style="float: left; background: url(/images/core/icons/blue_ribbon.png) no-repeat; width: 22px; height: 32px; margin: -2px 10px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">8</div>
+              <div style="float: left; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 2px; width: 22px; height: 37px; margin: -2px 10px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">8</div>
               <img src="photo/{$post->thumbnail}/50x50" style="float: left; padding: 10px 0;" />
               <div style="float: left; padding: 10px">Blah blah blah</div>
             </div>
