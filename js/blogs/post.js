@@ -4,7 +4,7 @@ function addComment(response)
 	var container = document.getElementById('commentsContainer');
 	var form = document.getElementById('commentForm');
 	form.elements['content'].value = '';
-	form.elements['content'].style.height = '28px';
+	form.elements['content'].style.height = '25px';
 	form.elements['content'].onfocus = function(e) {
   	  e = e || window.event;
       e.srcElement.style.height = '80px';
