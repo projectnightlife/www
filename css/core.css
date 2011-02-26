@@ -358,7 +358,7 @@ a.thumb img { margin: 3px; }
 /* social media pluggins */
 
 table.socialPlugins { margin: 0; }
-table.socialPlugins th { font-weight: normal; }
+table.socialPlugins th { font-weight: normal; width: 50%; text-align: center; }
 .fblike { width: 200px; overflow: hidden !important; }
 .fblikecount { width: 55px !important; }
 
