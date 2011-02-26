@@ -47,7 +47,7 @@
                 <div>DT8 Project</div>
                 <div style="color: #777;">Destination</div>
               </div>
-              <div style="display: block; float: left; padding: 15px 10px;">
+              <div style="display: block; float: left; padding: 20px 10px;">
                 <a class="listen" href="#" onClick="return false;">Listen</a>
               </div>
             </div>
@@ -58,7 +58,7 @@
                 <div>Atlantis vs. Avatar</div>
                 <div style="color: #777;">Fiji (Lange Remix)</div>
               </div>
-              <div style="display: block; float: left; padding: 15px 10px;">
+              <div style="display: block; float: left; padding: 20px 10px;">
                 <a class="listen" href="#" onClick="return false;">Listen</a>
               </div>
             </div>
@@ -69,7 +69,7 @@
                 <div>Terradia feat. Demona</div>
                 <div style="color: #777;">Drowning In Dreams</div>
               </div>
-              <div style="display: block; float: left; padding: 15px 10px;">
+              <div style="display: block; float: left; padding: 20px 10px;">
                 <a class="listen" href="#" onClick="return false;">Listen</a>
               </div>
             </div>
