@@ -40,14 +40,14 @@
             </div>
           </div>
           <div class="topspcr">
-            <div style="background: #0f0f0f; margin-bottom: 7px; overflow: auto;">
-              <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: -2px 12px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">1</div>
+            <div style="background: #0f0f0f; margin-bottom: 7px; overflow: auto; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+              <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: -2px 12px 0 10px; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">1</div>
               <img src="photo/{$post->thumbnail}/50x50" style="float: left; padding: 7px 0 7px 44px;" />
               <div style="float: left; padding: 7px; width: 400px;">
                 <div>DT8 Project</div>
                 <div style="color: #777;">Destination</div>
               </div>
-              <a style="display: block; float: left; padding-left: 10px;" class="next" href="#" onClick="return false;">Play</a>
+              <a style="display: block; float: left; padding: 15px 10px; font-size: 16px;" class="next" href="#" onClick="return false;">Play</a>
             </div>
             <div style="background: #0c0c0c; margin-bottom: 7px; overflow: auto;">
               <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: -2px 12px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">2</div>
