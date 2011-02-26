@@ -37,9 +37,6 @@
           </div>
           
           <div class="UIpanel UIcontainer topspcr">
-            <div class="UIheading">
-              <h3>Be Sociable</h3>
-            </div>
             <a href="http://twitter.com/share" class="twitter-share-button" data-via="pnightlife" data-text="{$post->title}">Tweet</a>
             <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fexample.com%2Fpage%2Fto%2Flike&amp;layout=button_count&amp;show_faces=false&amp;width=180&amp;action=recommend&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:180px; height:21px; display: block; padding-top: 10px;" allowTransparency="true"></iframe>
           </div>

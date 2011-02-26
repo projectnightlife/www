@@ -30,7 +30,7 @@
 
 #blogs .comments textarea { background: #0f0f0f; border: #191919 1px solid; color: #ccc; height: 60px; width: 518px; padding: 5px; font-family: Tahoma, Geneva, sans-serif; margin: 10px 0 10px; font-size: 12px; }
 
-#blogs .comments .comment { padding: 10px; color: #bbb; background: #111; margin-bottom: 2px; border: #0f0f0f solid 1px; }
+#blogs .comments .comment { overflow: auto; padding: 10px; color: #bbb; background: #111; margin-bottom: 2px; border: #0f0f0f solid 1px; }
 
 #blogs .comments .comment .meta { font-weight: bold; display: block; width: 200px; float: left; line-height: normal; margin-bottom: 2px; }
 
