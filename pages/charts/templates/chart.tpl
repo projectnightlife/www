@@ -15,7 +15,7 @@
       
       <div class="masthead">
         <div class="heading">
-          <h1 class="left">{$blog->name}</h1><h1 class="right">Chart</h1>
+          <h1 class="left">{$post->title}</h1><h1 class="right">Chart</h1>
         </div>
         <hr />
         <div class="breadcrumbs"><a href="">Home</a> > <a href="pages/blogs/blogs.php">Blogs</a> > <a href="pages/blogs/blog.php?id={$blog->id}">{$blog->name}</a></div>
@@ -27,13 +27,11 @@
           <div class="UIpanel UIcontainer">
             <div class="blogvitals">
               <div class="clear left">
-                <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=80x80" width="80" height="80" /></a>
+                <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=50x50" width="50" height="50" /></a>
               </div>
-              <div class="info thin" style="width: 83px !important;">
-                <h3 style="margin-bottom: 8px;">{$blog->name}</h3>
-                <div class="fblike" style="width: 83px;">
-                  <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
-                </div>
+              <div class="info thin" style="width: 113px !important; font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
+                <h3 style="margin-bottom: 5px;">{$blog->name}</h3>
+                <p style="font-size: 11px;">{$pageData['postCreated']}</p>
               </div>
             </div>
           </div>
@@ -57,21 +55,7 @@
       
         <div class="span600 leftspcr">
         
-          <div class="UIpanel UIcontainer">
-            {if $isContributor}
-              <div style="overflow: auto;">
-                <h1 class="postHeading left" style="width: 510px">{$post->title}</h1>
-                <a class="edit right" style="margin-top: 5px;" href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit Chart</a>
-              </div>
-            {else}
-              <h1 class="postHeading word-wrap">{$post->title}</h1>
-            {/if}
-            <div class="postMeta">
-              <span class="posted">Posted {$pageData['postCreated']}</span>
-              <span class="numComments"><a href="pages/blogs/post.php?id={$post->id}{$pageData['URIDetectTrailingSlash']}#comments" id="numComments">{$post->numComments}{$pageData['numCommentsLiteral']}</a></span>
-            </div>
-          </div>
-          <div class="topspcr">
+          <div>
             <div style="background: #0f0f0f; margin-bottom: 7px; overflow: auto; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
               <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: -2px 17px 0 15px; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">1</div>
               <img src="photo/{$post->thumbnail}/50x50" style="float: left; padding: 7px 0 7px 54px;" />
