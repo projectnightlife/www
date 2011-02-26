@@ -167,5 +167,5 @@ if ($relatedBlogs->count() != 0)
 }
 $smarty->assign('pageData', $pageData);
 $smarty->loadFilter('output', 'trimwhitespace');
-$smarty->display('templates/'.$mobilepfx.'post.tpl');
+$smarty->display('templates/'.$mobilepfx.'chart.tpl');
 ?>
