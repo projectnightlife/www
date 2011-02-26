@@ -4,7 +4,7 @@ function addComment(response)
 	var container = document.getElementById('commentsContainer');
 	var form = document.getElementById('commentForm');
 	form.elements['content'].value = '';
-	form.elements['content'].style.height = '18px';
+	form.elements['content'].style.height = '28px';
 	form.elements['content'].onfocus = function(e) {
   	  e = e || window.event;
       e.srcElement.style.height = '80px';
@@ -19,10 +19,11 @@ function addComment(response)
 	comment.className = 'comment';
 	comment.id = 'comment['+ response.local.id +']';
 	comment.style.display = 'none';
-	comment.innerHTML = '<a href="http://www.facebook.com/profile.php?id='+response.local.userId+'" class="fbSquareProfilePic photo" target="_blank"><img src="https://graph.facebook.com/'+response.local.userId+'/picture" width="50" height="50" /></a><div class="body"><a class="user" href="http://www.facebook.com/profile.php?id='+response.local.userId+'">'+ response.local.firstname +' '+ response.local.lastname +'</a>';
-  	comment.innerHTML += '<span class="remove"><a href="/backend/ajax.php?service=blog&method=RemoveComment&id='+ response.local.id +'" ajaxify="1" callback="removeComment" spinner="comment'+response.local.id+'Spinner" class="right">delete</a><div class="ajaxSpinner" id="comment'+response.local.id+'Spinner"></div></span>';
+	var innerComment = '<a href="http://www.facebook.com/profile.php?id='+response.local.userId+'" class="fbSquareProfilePic photo" target="_blank"><img src="https://graph.facebook.com/'+response.local.userId+'/picture" width="50" height="50" /></a><div class="body"><a class="user" href="http://www.facebook.com/profile.php?id='+response.local.userId+'">'+ response.local.firstname +' '+ response.local.lastname +'</a>';
+  	innerComment += '<span class="remove"><a href="/backend/ajax.php?service=blog&method=RemoveComment&id='+ response.local.id +'" ajaxify="1" callback="removeComment" spinner="comment'+response.local.id+'Spinner" class="right">delete</a><div class="ajaxSpinner" id="comment'+response.local.id+'Spinner"></div></span>';
 	response.local.body = linkify(response.local.body);
-	comment.innerHTML += '<span class="posted">a few seconds ago</span><span class="content word-wrap">'+ api.deserializeString(response.local.body); +'</span></div>';
+	innerComment += '<span class="posted">a few seconds ago</span><span class="content word-wrap">'+ api.deserializeString(response.local.body); +'</span></div>';
+	comment.innerHTML = innerComment;
 	container.appendChild(comment);
 	for (var i = comments.length - 1; i >= 0; i--)
 	{
@@ -60,13 +61,14 @@ function viewAllComments(response)
 	var comment = document.createElement("div");
     comment.className = "comment";
     comment.id = "comment["+response.local[index].id+"]";
-	comment.innerHTML = '<a href="http://www.facebook.com/profile.php?id='+response.local.userId+'" class="fbSquareProfilePic photo" target="_blank"><img src="https://graph.facebook.com/'+response.local.userId+'/picture" width="50" height="50" /></a><div class="body"><a class="user" href="http://www.facebook.com/profile.php?id='+response.local.userId+'">'+ response.local.firstname +' '+ response.local.lastname +'</a>';
+	var innerComment = '<a href="http://www.facebook.com/profile.php?id='+response.local.userId+'" class="fbSquareProfilePic photo" target="_blank"><img src="https://graph.facebook.com/'+response.local.userId+'/picture" width="50" height="50" /></a><div class="body"><a class="user" href="http://www.facebook.com/profile.php?id='+response.local.userId+'">'+ response.local.firstname +' '+ response.local.lastname +'</a>';
 	if (parseInt(response.local[index].userId, 10) == parseInt(response.global.userId, 10))
 	{
-  	  comment.innerHTML += '<span class="remove"><a href="/backend/ajax.php?service=blog&method=RemoveComment&id='+ response.local[index].id +'" ajaxify="1" callback="removeComment" spinner="comment'+response.local[index].id+'Spinner" class="right">delete</a><div class="ajaxSpinner" id="comment'+response.local[index].id+'Spinner"></div></span>';
+  	  innerComment += '<span class="remove"><a href="/backend/ajax.php?service=blog&method=RemoveComment&id='+ response.local[index].id +'" ajaxify="1" callback="removeComment" spinner="comment'+response.local[index].id+'Spinner" class="right">delete</a><div class="ajaxSpinner" id="comment'+response.local[index].id+'Spinner"></div></span>';
 	}
 	response.local[index].body = linkify(response.local[index].body);
-    comment.innerHTML += '<span class="posted">a few seconds ago</span><span class="content word-wrap">'+ api.deserializeString(response.local.body); +'</span></div>';
+    innerComment += '<span class="posted">a few seconds ago</span><span class="content word-wrap">'+ api.deserializeString(response.local.body); +'</span></div>';
+	comment.innerHTML = innerComment;
     comments.appendChild(comment);
   }
 
