@@ -39,9 +39,10 @@
               <span class="numComments"><a href="pages/blogs/post.php?id={$post->id}{$pageData['URIDetectTrailingSlash']}#comments" id="numComments">{$post->numComments}{$pageData['numCommentsLiteral']}</a></span>
             </div>
           </div>
-          <div class="topspcr" style="padding: 10px;">
+          <div class="topspcr">
             <div style="height: 60px; background: #111; margin-bottom: 10px;">
-              <div style="background: url(/images/core/icons/blue_ribbon.png) no-repeat; width: 19px; height: 28px; margin: -2px 10px 0 10px;" />
+              <div style="display: inline-block; background: url(/images/core/icons/blue_ribbon.png) no-repeat; width: 19px; height: 28px; margin: -2px 10px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px;>1</div>
+              <div>Blah blah blah</div>
             </div>
           </div>
           
