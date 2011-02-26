@@ -42,6 +42,14 @@
             <div class="UIheading">
               <h3>Chart Description</h3>
             </div>
+            <a href="http://twitter.com/share" class="twitter-share-button" data-via="pnightlife" data-text="{$post->title}">Tweet</a>
+            <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fexample.com%2Fpage%2Fto%2Flike&amp;layout=button_count&amp;show_faces=false&amp;width=180&amp;action=recommend&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px; display: block;" allowTransparency="true"></iframe>
+          </div>
+          
+          <div class="UIpanel UIcontainer topspcr">
+            <div class="UIheading">
+              <h3>Chart Description</h3>
+            </div>
             <div>A selection of February's hottest beats.</div>
           </div>
           
@@ -50,19 +58,19 @@
         <div class="span600 leftspcr">
         
           <div class="UIpanel UIcontainer">
-            <div class="left">
-              <h1 class="postHeading word-wrap left" style="width: 350px;">{$post->title}</h1>
-              <span class="posted">Posted {$pageData['postCreated']}</span>
-            </div>
-            <div class="right">
-              <a href="http://twitter.com/share" class="twitter-share-button" data-via="pnightlife" data-text="{$post->title}">Tweet</a>
-              <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fexample.com%2Fpage%2Fto%2Flike&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=recommend&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
-              <div class="postMeta">
-                <span class="numComments"><a href="pages/blogs/post.php?id={$post->id}{$pageData['URIDetectTrailingSlash']}#comments" id="numComments">{$post->numComments}{$pageData['numCommentsLiteral']}</a></span>
+            {if $isContributor}
+              <div style="overflow: auto;">
+                <h1 class="postHeading left" style="width: 510px">{$post->title}</h1>
+                <a class="edit right" style="margin-top: 5px;" href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit Chart</a>
               </div>
+            {else}
+              <h1 class="postHeading word-wrap">{$post->title}</h1>
+            {/if}
+            <div class="postMeta">
+              <span class="posted">Posted {$pageData['postCreated']}</span>
+              <span class="numComments"><a href="pages/blogs/post.php?id={$post->id}{$pageData['URIDetectTrailingSlash']}#comments" id="numComments">{$post->numComments}{$pageData['numCommentsLiteral']}</a></span>
             </div>
           </div>
-          
           <div class="topspcr">
             <div style="background: #0f0f0f; margin-bottom: 7px; overflow: auto; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
               <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: -2px 17px 0 15px; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">1</div>
