@@ -29,7 +29,7 @@
               <div class="clear left">
                 <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=80x80" width="80" height="80" /></a>
               </div>
-              <div class="info thin" style="width: 83px; margin-bottom: 8px;">
+              <div class="info thin" style="width: 83px !important; margin-bottom: 8px;">
                 <h3>{$blog->name}</h3>
                 <div class="fblike" style="width: 83px;">
                   <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
