@@ -23,12 +23,29 @@
       
       <div class="canvas">
       
-        <div class="span630">
+        <div id="leftColumn" class="span200">
+          <div class="UIpanel UIcontainer">
+            <div class="blogvitals">
+              <div class="clear left">
+                <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=80x80" width="80" height="80" /></a>
+              </div>
+              <div class="info thin">
+                <h3>{$blog->name}</h3>
+                <p style="margin-bottom: 10px;">By <a href="http://www.facebook.com/profile.php?id={$post->authorId}" target="_blank">{$post->firstname} {$post->lastname}</a></p>
+                <div class="fblike">
+                  <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- span200 -->
+      
+        <div class="span600 leftspcr">
         
           <div class="UIpanel UIcontainer">
             {if $isContributor}
               <div style="overflow: auto;">
-                <h1 class="postHeading left" style="width: 540px;">{$post->title}</h1>
+                <h1 class="postHeading left">{$post->title}</h1>
                 <a class="edit right" style="margin-top: 5px;" href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit Chart</a>
               </div>
             {else}
@@ -108,74 +125,22 @@
           </div>
         </div> <!-- span630 -->
       
-        <div class="span320 leftspcr">
-        
-          <div class="UIpanel UIcontainer">
-            <div class="blogvitals">
-              <div class="clear left">
-                <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=80x80" width="80" height="80" /></a>
-              </div>
-              <div class="info thin">
-                <h3>{$blog->name}</h3>
-                <p style="margin-bottom: 10px;">By <a href="http://www.facebook.com/profile.php?id={$post->authorId}" target="_blank">{$post->firstname} {$post->lastname}</a></p>
-                <div class="fblike">
-                  <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="UIpanel UIcontainer topspcr">
-            <table class="socialPlugins">
-              <tbody>
-                <tr>
-                  <th><a href="http://twitter.com/share" class="twitter-share-button" data-via="pnightlife" data-text="{$post->title}">Tweet</a></th>
-                  <th><a name="fb_share" type="icon_link">Share this post</a></th>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          
-          {if isset($relatedPosts)}
-          <div class="UIpanel UIcontainer topspcr">
-            <div class="UIheading">
-              <h3>Similar Posts</h3>
-            </div>
-            <ul class="UIobjectlist slim">
-              {foreach from=$relatedPosts item=post name=relatedPosts}
-              <li {if $smarty.foreach.relatedPosts.last}class="last"{/if}>
-                <div class="thumb"><a class="thumb" href="pages/blogs/post.php?id={$post->id}"><img src="pages/getphoto/GetPhoto.php?id={$post->thumbnail}&size=80x80" width="80" height="80" /></a></div>
-                <div class="description">
-                  <h4 style="margin-bottom: 5px;"><a href="pages/blogs/post.php?id={$post->id}">{$post->title}</a></h4>
-                  <span style="color: #999; display: block;">{$post->blogName}</span>
-                </div>
-              </li>
-              {/foreach}
-            </ul>
-          </div>
-          {/if}
-          
+        <div class="span140 leftspcr">
           {if isset($relatedBlogs)}
-          <div class="UIpanel UIcontainer topspcr">
+          <div class="UIpanel UIcontainer">
             <div class="UIheading">
               <h3>Similar Blogs</h3>
             </div>
-            <ul class="UItileview" style="margin: 0 18px;">
-            {foreach from=$relatedBlogs item=blog name=blogs}
-              {if $smarty.foreach.blogs.index % 2 == 0}
-                <div style="overflow: auto;">
-              {/if}
+            <ul class="UItileview single">
+            {foreach from=$relatedBlogs item=relatedBlog name=blogs}
               <li>
-                <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=80x80" width="80" height="80" /></a><span class="tilename">{$blog->name}</span>
+                <a class="thumb" href="pages/blogs/blog.php?id={$relatedBlog->id}"><img src="pages/getphoto/GetPhoto.php?id={$relatedBlog->thumbnail}&size=80x80" width="80" height="80" /></a><span class="tilename">{$relatedBlog->name}</span>
               </li>
-              {if $smarty.foreach.blogs.index % 2!= 0}
-                </div>
-              {/if}
             {/foreach}
             </ul>
           </div>
           {/if}
-        </div> <!-- span320 -->
+        </div> <!-- span140 -->
           
       </div> <!-- canvas -->
     </div> <!-- container -->

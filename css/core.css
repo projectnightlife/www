@@ -337,7 +337,7 @@ ul.slim > li > .description { width: 189px; padding: 7px 7px 7px 0 !important; }
 
 /* thumbnail link highlighting */
 
-a.thumb { margin: 0 auto; border: 1px solid #666; display: inline-block; }
+a.thumb { margin: 0 auto; border: 1px solid #555; display: inline-block; }
 
 a.thumb:hover { border: 1px solid #ABA0C0; }
 
