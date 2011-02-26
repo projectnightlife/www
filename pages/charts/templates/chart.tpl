@@ -39,8 +39,9 @@
               <span class="numComments"><a href="pages/blogs/post.php?id={$post->id}{$pageData['URIDetectTrailingSlash']}#comments" id="numComments">{$post->numComments}{$pageData['numCommentsLiteral']}</a></span>
             </div>
           </div>
-          <div style="height: 80px; background: #111;">
-            <img src="images/core/icons/blue_ribbon.png" style="margin: -3px 10px 0 10px;" />
+          <div class="topspcr" style="padding: 10px;">
+          <div style="height: 80px; background: #111; margin-bottom: 10px;">
+            <div style="background: url(images/core/icons/blue_ribbon.png) no-repeat; width: 19px; height: 28px; margin: -3px 10px 0 10px;" />
           </div>
           
           <div class="UIpanel UIcontainer topspcr" id="comments">

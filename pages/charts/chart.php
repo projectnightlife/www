@@ -101,30 +101,6 @@ $pageData['postCreated'] = API::GetDynamicDateString((int)$post->created);
 // determine number of comments literal
 $pageData['numCommentsLiteral'] = (int)$post->numComments == 1 ? ' comment' : ' comments';
 
-// escape invalid characters
-$post->body = (string) preg_replace("/ & /", "&amp;", $post->body);
-$post->body = (string) preg_replace("/<(?!(pnobject|b>|u>|i>|\/b>|\/u>|\/i>))/", "&lt;", $post->body);
-
-//perform the XSL transformation to change object types into actual html
-//This is just a quick hack, should probably think of a slightly nicer way of doing it
-
-$newBody = new DOMDocument(); 
-$processor = new XSLTProcessor(); 
-$transform = new DOMDocument(); 
-
-$newBody->loadXML("<body>".$post->body."</body>"); 
-$transform->load( 'embed_transform.xsl', LIBXML_NOCDATA); 
-$transform->substituteEntities = true;
-$processor ->importStylesheet( $transform ); 
-
-$post->body = $processor->transformToXML( $newBody );
-
-$exploded = explode (API::$SplitOn, $post->body);
-foreach ($exploded as $key => $paragraph)
-{
-	$post->body = API::ToHTMLParagraph(count($exploded), $key, $post->body, $paragraph);
-}
-
 // determine comment literals
 foreach ($comments as $key => $comment)
 {
