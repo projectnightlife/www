@@ -52,11 +52,12 @@
           <div class="UIpanel UIcontainer">
             {if $isContributor}
               <div style="overflow: auto;">
-                <h1 class="postHeading left">{$post->title}</h1>
+                <h1 class="postHeading left" style="width: 350px">{$post->title}</h1>
                 <a class="edit right" style="margin-top: 5px;" href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit Chart</a>
               </div>
             {else}
-              <h1 class="postHeading word-wrap">{$post->title}</h1>
+              <h1 class="postHeading word-wrap left" style="width: 350px;">{$post->title}</h1>
+              <div class="right"><a href="http://twitter.com/share" class="twitter-share-button" data-via="pnightlife" data-text="{$post->title}">Tweet</a></div>
             {/if}
             <div class="postMeta">
               <span class="posted">Posted {$pageData['postCreated']}</span>
