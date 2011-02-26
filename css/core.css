@@ -470,3 +470,9 @@ a.minus { display: block; width: 21px; height: 21px; background: url(../../image
 a:hover.minus { background: url(../../images/core/buttons/minus.png) 0 -22px no-repeat; }
 
 a:active.minus { background: url(../../images/core/buttons/minus.png) 0 -44px no-repeat; }
+
+a.listen { display: block; float: right; width: 100px; height: 21px; background: url(../../images/core/buttons/next.png) 100% -1px no-repeat; overflow: hidden; line-height: 18px; font-size: 16px; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+
+a:hover.listen { background: url(../../images/core/buttons/next.png) 100% -26px no-repeat; text-decoration: none; color: #ddd; }
+
+a:active.listen { background: url(../../images/core/buttons/next.png) 100% -51px no-repeat; color: #aaa; }
