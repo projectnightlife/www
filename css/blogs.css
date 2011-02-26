@@ -44,7 +44,7 @@
 
 #blogs .comments .comment .posted { display: block; color: #666; font-size: 11px; clear: both; }
 
-#blogs .comments .comment .content { display: block; margin-top: 10px; }
+#blogs .comments .comment .content { display: block; padding-top: 7px; }
 
 
 #blogs .blogvitals { display: inline-block; width: 100%; } /* overflow: auto; was removed to prevent ie 8 spazzing */

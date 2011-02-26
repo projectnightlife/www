@@ -106,12 +106,15 @@
             <div class="comments" id="commentsContainer">
               {foreach from=$comments item=comment name=comments}
               <div class="comment" id="comment[{$comment->id}]">
-                <span class="meta"><span class="user"><a href="http://www.facebook.com/profile.php?id={$comment->userId}" target="_blank">{$comment->firstname} {$comment->lastname}</a></span> says:</span>
-                {if $session['userId'] == $comment->userId}
-                <span class="remove"><a href="backend/ajax.php?service=blog&method=RemoveComment&id={$comment->id}" ajaxify="1" callback="removeComment" spinner="comment{$comment->id}Spinner" class="right">delete</a><div class="ajaxSpinner" id="comment{$comment->id}Spinner"></div></span>
+                <a href="http://www.facebook.com/profile.php?id={$comment->userId}" class="fbSquareProfilePic photo" target="_blank"><img src="https://graph.facebook.com/{$comment->userId}/picture" width="50" height="50" /></a>
+                <div class="body">
+                  <a class="meta user" href="http://www.facebook.com/profile.php?id={$comment->userId}" target="_blank">{$comment->firstname} {$comment->lastname}</a>
+                  {if $session['userId'] == $comment->userId}
+                  <span class="remove"><a href="backend/ajax.php?service=blog&method=RemoveComment&id={$comment->id}" ajaxify="1" callback="removeComment" spinner="comment{$comment->id}Spinner" class="right">delete</a><div class="ajaxSpinner" id="comment{$comment->id}Spinner"></div></span>
                 {/if}
-                <span class="posted">{$comment->created}</span>
-                <span class="body word-wrap">{$comment->body}</span>
+                  <span class="posted">{$comment->created}</span>
+                  <span class="content word-wrap">{$comment->body}</span>
+                </div>
               </div>
               {/foreach}
               {if $post->numComments > 10}
