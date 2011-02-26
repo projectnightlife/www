@@ -11,6 +11,8 @@
 
 #blogs .postMeta .numComments { display: block; float: right; background: url(../../images/core/icons/comments.png) left no-repeat; padding-left: 19px; }
 
+#blogs .post { padding-top: 7px; background: url(/images/core/divide.gif) repeat-x; }
+
 #blogs .post img { border: 1px solid #555; margin: 0 auto 15px; display: block; }
 
 

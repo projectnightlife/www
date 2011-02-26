@@ -473,6 +473,6 @@ a:active.minus { background: url(../../images/core/buttons/minus.png) 0 -44px no
 
 a.listen { display: block; float: right; width: 80px; height: 21px; background: url(../../images/core/buttons/next.png) 100% -1px no-repeat; overflow: hidden; line-height: 22px; font-size: 16px; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
 
-a:hover.listen { background: url(../../images/core/buttons/next.png) 100% -26px no-repeat; text-decoration: none; color: #ddd; }
+a:hover.listen { background: url(../../images/core/buttons/next.png) 100% -26px no-repeat; text-decoration: none; color: #ccc; }
 
 a:active.listen { background: url(../../images/core/buttons/next.png) 100% -51px no-repeat; color: #aaa; }
