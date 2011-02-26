@@ -471,8 +471,8 @@ a:hover.minus { background: url(../../images/core/buttons/minus.png) 0 -22px no-
 
 a:active.minus { background: url(../../images/core/buttons/minus.png) 0 -44px no-repeat; }
 
-a.listen { display: block; float: right; width: 76px; height: 21px; background: url(../../images/core/buttons/purple_left.png) 0 0 no-repeat; overflow: hidden; line-height: 22px; font-size: 16px; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+a.listen { display: block; float: right; width: 76px; height: 21px; background: url(../../images/core/buttons/purple_left.png) 100% 0 no-repeat; overflow: hidden; line-height: 22px; font-size: 16px; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
 
-a:hover.listen { background: url(../../images/core/buttons/purple_left.png) 0 -22px no-repeat; text-decoration: none; color: #ccc; }
+a:hover.listen { background: url(../../images/core/buttons/purple_left.png) 100% -22px no-repeat; text-decoration: none; color: #ccc; }
 
-a:active.listen { background: url(../../images/core/buttons/purple_left.png) 0 -44px no-repeat; color: #aaa; }
+a:active.listen { background: url(../../images/core/buttons/purple_left.png) 100% -44px no-repeat; color: #aaa; }
