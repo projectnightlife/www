@@ -15,7 +15,7 @@
       
       <div class="masthead">
         <div class="heading">
-          <h1 class="left">{$blog->name}</h1><h1 class="right">Blog Post</h1>
+          <h1 class="left">{$blog->name}</h1><h1 class="right">Chart</h1>
         </div>
         <hr />
         <div class="breadcrumbs"><a href="">Home</a> > <a href="pages/blogs/blogs.php">Blogs</a> > <a href="pages/blogs/blog.php?id={$blog->id}">{$blog->name}</a></div>
@@ -29,7 +29,7 @@
             {if $isContributor}
               <div style="overflow: auto;">
                 <h1 class="postHeading left" style="width: 540px;">{$post->title}</h1>
-                <a class="edit right" style="margin-top: 5px;" href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit Post &#8364;</a>
+                <a class="edit right" style="margin-top: 5px;" href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit Chart</a>
               </div>
             {else}
               <h1 class="postHeading word-wrap">{$post->title}</h1>
@@ -41,20 +41,31 @@
           </div>
           <div class="topspcr">
             <div style="background: #0f0f0f; margin-bottom: 7px; overflow: auto;">
-              <div style="float: left; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: -2px 12px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">1</div>
-              <img src="photo/{$post->thumbnail}/50x50" style="float: left; padding: 7px 0;" />
-              <div style="float: left; padding: 7px">
+              <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: -2px 12px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">1</div>
+              <img src="photo/{$post->thumbnail}/50x50" style="float: left; padding: 7px 0 7px 44px;" />
+              <div style="float: left; padding: 7px; width: 400px;">
                 <div>DT8 Project</div>
-                <div>Destination</div>
+                <div style="color: #777;">Destination</div>
               </div>
+              <a style="display: block; float: left; padding-left: 10px;" class="next" href="#" onClick="return false;">Play</a>
             </div>
             <div style="background: #0c0c0c; margin-bottom: 7px; overflow: auto;">
-              <div style="float: left; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: -2px 12px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">2</div>
-              <img src="photo/{$post->thumbnail}/50x50" style="float: left; padding: 7px 0;" />
-              <div style="float: left; padding: 7px">
+              <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: -2px 12px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">2</div>
+              <img src="photo/{$post->thumbnail}/50x50" style="float: left; padding: 7px 0 7px 44px;" />
+              <div style="float: left; padding: 7px; width: 400px;">
                 <div>Atlantis vs. Avatar</div>
-                <div>Fiji (Lange Remix)</div>
+                <div style="color: #777;">Fiji (Lange Remix)</div>
               </div>
+              <a style="display: block; float: left; padding-left: 10px;" class="next" href="#" onClick="return false;">Play</a>
+            </div>
+            <div style="background: #0f0f0f; margin-bottom: 7px; overflow: auto;">
+              <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: -2px 12px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">3</div>
+              <img src="photo/{$post->thumbnail}/50x50" style="float: left; padding: 7px 0 7px 44px;" />
+              <div style="float: left; padding: 7px; width: 400px;">
+                <div>Terradia feat. Demona</div>
+                <div style="color: #777;">Drowning In Dreams</div>
+              </div>
+              <a style="display: block; float: left; padding-left: 10px;" class="next" href="#" onClick="return false;">Play</a>
             </div>
           </div>
           

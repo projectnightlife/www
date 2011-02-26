@@ -29,7 +29,7 @@
             {if $isContributor}
               <div style="overflow: auto;">
                 <h1 class="postHeading left" style="width: 540px;">{$post->title}</h1>
-                <a class="edit right" style="margin-top: 5px;" href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit Post &#8364;</a>
+                <a class="edit right" style="margin-top: 5px;" href="pages/blogs/editblog.php?v=edit&p={$post->id}">Edit Post</a>
               </div>
             {else}
               <h1 class="postHeading word-wrap">{$post->title}</h1>
