@@ -40,8 +40,12 @@
             </div>
           </div>
           <div class="topspcr">
-            <div style="height: 60px; background: #111; margin-bottom: 10px;">
-              <div style="display: inline-block; background: url(/images/core/icons/blue_ribbon.png) no-repeat; width: 19px; height: 28px; margin: -2px 10px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px;>1</div>
+            <div style="height: 60px; background: #0f0f0f; margin-bottom: 10px;">
+              <div style="display: inline-block; background: url(/images/core/icons/blue_ribbon.png) no-repeat; width: 19px; height: 28px; margin: -2px 10px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px;">1</div>
+              <div>Blah blah blah</div>
+            </div>
+            <div style="height: 60px; background: #0f0f0f; margin-bottom: 10px;">
+              <div style="display: inline-block; background: url(/images/core/icons/blue_ribbon.png) no-repeat; width: 19px; height: 28px; margin: -2px 10px 0 10px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px;">2</div>
               <div>Blah blah blah</div>
             </div>
           </div>
