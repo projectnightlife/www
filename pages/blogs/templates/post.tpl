@@ -101,7 +101,7 @@
               <tbody>
                 <tr>
                   <th><a href="http://twitter.com/share" class="twitter-share-button" data-via="pnightlife" data-text="{$post->title}">Tweet</a></th>
-                  <th><a name="fb_share" type="icon_link">Share this post</a></th>
+                  <th><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fpost%2F{$post->id}&amp;layout=button_count&amp;show_faces=false&amp;width=180&amp;action=recommend&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:180px; height:21px; display: block; padding-top: 10px;" allowTransparency="true"></iframe></th>
                 </tr>
               </tbody>
             </table>
@@ -159,5 +159,4 @@
 {include file='../../includes/templates/critical_js.tpl'}
 <script type="text/javascript" src="{$pageData['jsFile']}"></script>
 {include file='../../includes/templates/js.tpl'}
-<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
 <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
