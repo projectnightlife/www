@@ -29,10 +29,9 @@
               <div class="clear left">
                 <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=80x80" width="80" height="80" /></a>
               </div>
-              <div class="info thin">
+              <div class="info thin" style="width: 83px; margin-bottom: 8px;">
                 <h3>{$blog->name}</h3>
-                <p style="margin-bottom: 10px;">By <a href="http://www.facebook.com/profile.php?id={$post->authorId}" target="_blank">{$post->firstname} {$post->lastname}</a></p>
-                <div class="fblike">
+                <div class="fblike" style="width: 83px;">
                   <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
                 </div>
               </div>
@@ -60,7 +59,7 @@
             <div style="background: #0f0f0f; margin-bottom: 7px; overflow: auto; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
               <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: -2px 17px 0 15px; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">1</div>
               <img src="photo/{$post->thumbnail}/50x50" style="float: left; padding: 7px 0 7px 54px;" />
-              <div style="float: left; padding: 7px; width: 404px;">
+              <div style="float: left; padding: 7px; width: 374px;">
                 <div>DT8 Project</div>
                 <div style="color: #777;">Destination</div>
               </div>
@@ -71,7 +70,7 @@
             <div style="background: #0c0c0c; margin-bottom: 7px; overflow: auto;">
               <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: -2px 17px 0 15px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">2</div>
               <img src="photo/{$post->thumbnail}/50x50" style="float: left; padding: 7px 0 7px 54px;" />
-              <div style="float: left; padding: 7px; width: 404px;">
+              <div style="float: left; padding: 7px; width: 374px;">
                 <div>Atlantis vs. Avatar</div>
                 <div style="color: #777;">Fiji (Lange Remix)</div>
               </div>
@@ -82,7 +81,7 @@
             <div style="background: #0f0f0f; margin-bottom: 7px; overflow: auto;">
               <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: -2px 17px 0 15px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">3</div>
               <img src="photo/{$post->thumbnail}/50x50" style="float: left; padding: 7px 0 7px 54px;" />
-              <div style="float: left; padding: 7px; width: 404px;">
+              <div style="float: left; padding: 7px; width: 374px;">
                 <div>Terradia feat. Demona</div>
                 <div style="color: #777;">Drowning In Dreams</div>
               </div>
@@ -129,7 +128,7 @@
           {if isset($relatedBlogs)}
           <div class="UIpanel UIcontainer">
             <div class="UIheading">
-              <h3>Similar Blogs</h3>
+              <h3>Similar</h3>
             </div>
             <ul class="UItileview single">
             {foreach from=$relatedBlogs item=relatedBlog name=blogs}
