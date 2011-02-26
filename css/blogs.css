@@ -32,7 +32,7 @@
 
 #blogs .comments .comment { overflow: auto; padding: 7px; color: #bbb; background: #111; margin-bottom: 2px; border: #0f0f0f solid 1px; }
 
-#blogs .comments .comment .photo { display: block; float: left; margin: 0; width: 54px; padding-right: 7px; }
+#blogs .comments .comment .photo { display: block; float: left; width: 54px; margin: 0 7px 0 0 !important; }
 
 #blogs .comments .comment .body { overflow: auto; float: left; width: 455px; }
 
