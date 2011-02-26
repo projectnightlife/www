@@ -32,21 +32,19 @@
 
 #blogs .comments .comment { overflow: auto; padding: 7px; color: #bbb; background: #111; margin-bottom: 2px; border: #0f0f0f solid 1px; }
 
-#blogs .comments .comment .photo { display: block; float: left; width: 54px; margin: 0 7px 0 0 !important; }
+#blogs .comments .comment .photo { display: block; float: left; width: 50px; margin: 0 !important; }
 
-#blogs .comments .comment .body { overflow: auto; float: left; width: 455px; }
-
-#blogs .comments .comment .meta { font-weight: bold; display: block; width: 200px; float: left; line-height: normal; margin-bottom: 2px; }
+#blogs .comments .comment .body { overflow: auto; float: right; width: 453px; }
 
 #blogs .comments .comment .remove { font-size: 11px; float: right; display: block; width: 75px; line-height: normal; }
 
 #blogs .comments .comment .remove a { padding-left: 10px; }
 
-#blogs .comments .comment .user a { color: #a56efd; }
+#blogs .comments .comment .user { color: #a56efd; font-weight: bold; display: block; width: 300px; float: left; line-height: normal; margin-bottom: 2px; }
 
 #blogs .comments .comment .posted { display: block; color: #666; font-size: 11px; clear: both; }
 
-#blogs .comments .comment .body { display: block; margin-top: 10px; }
+#blogs .comments .comment .content { display: block; margin-top: 10px; }
 
 
 #blogs .blogvitals { display: inline-block; width: 100%; } /* overflow: auto; was removed to prevent ie 8 spazzing */
