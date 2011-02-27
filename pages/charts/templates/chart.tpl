@@ -45,7 +45,9 @@
             <div class="UIheading">
               <h3>Chart Description</h3>
             </div>
-            <div>A selection of February's hottest beats.</div>
+            <p>A selection of February's hottest beats.</p>
+            <p>Conor Owen is an exciting maturing UK singer song-writer who combines an acoustic melodic style with a powerfully rawedge. The singer's key influences are both contemporary and classic including John Martyn, Damien Rice, Nick Drake and Ray LaMontagne.</p>
+<p>Conor began his musical journey growing upon the Midlands borders experimenting with various band line ups before taking off to live life on the road touring the USA and Europe.</p>
           </div>
           
         </div> <!-- span200 -->
@@ -77,6 +79,28 @@
             </div>
             <div style="background: #111; margin-bottom: 7px; overflow: auto; border-radius: 4px;">
               <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: 7px 17px 0 15px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">3</div>
+              <img src="photo/{$post->thumbnail}/50x50" style="float: left; margin: 7px 0 7px 54px; padding: 1px; border: 1px solid #222;" />
+              <div style="float: left; padding: 7px; width: 374px;">
+                <div>Terradia feat. Demona</div>
+                <div style="color: #777;">Drowning In Dreams</div>
+              </div>
+              <div style="display: block; float: left; padding: 20px 10px;">
+                <a class="listen" href="#" onClick="return false;">Listen</a>
+              </div>
+            </div>
+            <div style="background: #0d0d0d; margin-bottom: 7px; overflow: auto; border-radius: 4px;">
+              <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: 7px 17px 0 15px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">4</div>
+              <img src="photo/166/50x50" style="float: left; margin: 7px 0 7px 54px; padding: 1px; border: 1px solid #222;" />
+              <div style="float: left; padding: 7px; width: 374px;">
+                <div>Atlantis vs. Avatar</div>
+                <div style="color: #777;">Fiji (Lange Remix)</div>
+              </div>
+              <div style="display: block; float: left; padding: 20px 10px;">
+                <a class="listen" href="#" onClick="return false;">Listen</a>
+              </div>
+            </div>
+            <div style="background: #111; margin-bottom: 7px; overflow: auto; border-radius: 4px;">
+              <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: 7px 17px 0 15px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">5</div>
               <img src="photo/{$post->thumbnail}/50x50" style="float: left; margin: 7px 0 7px 54px; padding: 1px; border: 1px solid #222;" />
               <div style="float: left; padding: 7px; width: 374px;">
                 <div>Terradia feat. Demona</div>
