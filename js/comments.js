@@ -89,7 +89,7 @@ $(document).ready(function()
     	animateDuration: 10,
 		limit : 250,
 		minimum : 40,
-    	extraSpace : 0
+    	extraSpace : 10
 	});
 
 	$('.commentInput').bind('focus', function()
