@@ -835,6 +835,8 @@ function API()
   };
   
   this.sendForm = function(form) {
+	  if (form.getAttribute('onformsubmit'))
+	    this.executeFunctionByName(form.getAttribute('onformsubmit'), window, null);
 	  var xml = '<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">';
 	  //try {
 	  for (var i = 0; i < form.elements.length; i++)
@@ -889,8 +891,6 @@ function API()
 	  var errorCallback = this.getErrorCallback(form);
 	  var spinner = this.getSpinner(form);
 	  var suppress = this.getErrorSuppression(form);
-	  if (form.getAttribute('onformsubmit'))
-	    this.executeFunctionByName(form.getAttribute('onformsubmit'), window, null);
 	  //alert(xml);
 	  this.sendXmlRequest(form.action, xml, callback, errorCallback, spinner, suppress);
 	  //}

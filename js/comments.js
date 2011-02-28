@@ -3,6 +3,8 @@ function addComment(response)
 	var container = document.getElementById('commentsContainer');
 	var form = document.getElementById('commentForm');
 	form.elements['comment'].value = '';
+	form.elements['comment'].style.height = '18px';
+	$('#commentForm').children('.submit').toggle();
 	document.getElementById('submitComment').disabled = false;
 	var comments = new Array();
 	for (var i = container.children.length - 1; i >= 1; i--)
