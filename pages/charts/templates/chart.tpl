@@ -173,7 +173,7 @@
               <form id="commentForm" action="backend/ajax.php" ajaxify="1" callback="addComment" spinner="commentBox" errorcallback="commentError" onformsubmit="commentSubmit">
                 <input type="hidden" name="params" value='{ "service":"blog","method":"AddComment","postId":"{$post->id}" }' autocomplete="off" />
                 <textarea id="commentBox" class="commentInput" name="content" serializable="api.dummySerialization:api.serializeStringFormatting" validator="api.validation.nonEmpty" autocomplete="off" onKeyDown="api.limitText(this,1500);" onKeyUp="api.limitText(this,1500);" onChange="api.limitText(this,1500);"></textarea>
-                <input id="submitComment" class="hidden" type="submit" value="Comment" />
+                <input id="submitComment" type="submit" value="Comment" />
               </form>
             </div>
             {else}
