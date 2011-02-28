@@ -5,7 +5,7 @@ function addComment(response)
 	form.elements['comment'].value = '';
 	document.getElementById('submitComment').disabled = false;
 	var comments = new Array();
-	for (var i = container.children.length - 1; i >= 1; i--)
+	for (var i = container.children.length - 1; i >= 0; i--)
 	{
   	  comments.push(container.removeChild(container.children[i]));
 	}
