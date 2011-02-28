@@ -90,7 +90,7 @@ $(document).ready(function()
 	$('textarea.commentInput').autoResize({
     	animate : false,
 		limit : 250,
-		minimum : 60,
+		minimum : 40,
     	extraSpace : 0
 	});
 
@@ -98,7 +98,7 @@ $(document).ready(function()
 	{
 		if ($(this).val() == "")
 		{
-			$(this).css("height", 50);
+			$(this).css("height", 40);
 			$(this).siblings('input[type="submit"]').css("display", "block");
 		}
 	});
