@@ -166,7 +166,24 @@
               </div>
             </div>
           </div>
-          
+          <div class="comments" id="commentsContainer">
+              {foreach from=$comments item=comment name=comments}
+              <div class="comment" id="comment[{$comment->id}]">
+                <a href="http://www.facebook.com/profile.php?id={$comment->userId}" class="fbSquareProfilePic photo" target="_blank"><img src="https://graph.facebook.com/{$comment->userId}/picture" width="50" height="50" /></a>
+                <div class="body">
+                  <a class="meta user" href="http://www.facebook.com/profile.php?id={$comment->userId}" target="_blank">{$comment->firstname} {$comment->lastname}</a>
+                  {if $session['userId'] == $comment->userId}
+                  <span class="remove"><a href="backend/ajax.php?service=blog&method=RemoveComment&id={$comment->id}" ajaxify="1" callback="removeComment" spinner="comment{$comment->id}Spinner" class="right">delete</a><div class="ajaxSpinner" id="comment{$comment->id}Spinner"></div></span>
+                {/if}
+                  <span class="posted">{$comment->created}</span>
+                  <span class="content word-wrap">{$comment->body}</span>
+                </div>
+              </div>
+              {/foreach}
+              {if $post->numComments > 10}
+              <div class="viewAll" id="viewAllComments"><a style="float: left;" href="backend/ajax.php?service=blog&method=GetComments&id={$post->id}&num=0&start=0" callback="viewAllComments" spinner="viewAllCommentsSpinner" ajaxify="1">View all {$post->numComments} comments</a><div class="ajaxSpinner" id="viewAllCommentsSpinner"></div></div>
+              {/if}
+            </div>
           <!--<div class="UIpanel UIcontainer topspcr" id="comments">
             <h1 class="postHeading">Comments</h1>
             {if $session['loggedIn']}
