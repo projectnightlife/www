@@ -1,0 +1,30 @@
+.comments { 
+	overflow: auto; 
+	/*margin: 0 auto;*/ 
+	padding: 20px 0 15px; 
+	width: 530px; 
+	/*min-height: 400px;  Greenhill - 10/02/2011 - Added to stop a slidebar rendering bug on blog comment forms */
+	font-family: Tahoma, Geneva, sans-serif; 
+	overflow-x: hidden;
+	float: right;
+}
+
+.comments .viewAll { font-size: 11px; }
+
+.comments .comment { overflow: auto; padding: 7px; color: #bbb; background: #111; margin-bottom: 2px; }
+
+.comments .comment textarea { background: #0c0c0c; border: #191919 1px solid; color: #ccc; height: 20px; width: 504px; padding: 5px; font-family: Tahoma, Geneva, sans-serif; font-size: 12px; }
+
+.comments .comment .photo { display: block; float: left; width: 50px; margin: 0 !important; }
+
+.comments .comment .body { overflow: auto; float: right; width: 453px; }
+
+.comments .comment .remove { font-size: 11px; float: right; display: block; width: 75px; line-height: normal; }
+
+.comments .comment .remove a { padding-left: 10px; }
+
+.comments .comment .user { color: #a56efd; font-weight: bold; display: block; width: 300px; float: left; line-height: normal; margin-bottom: 2px; }
+
+.comments .comment .posted { display: block; color: #666; font-size: 11px; clear: both; }
+
+.comments .comment .content { display: block; padding-top: 7px; }
