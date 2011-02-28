@@ -143,13 +143,14 @@ $resourceManager = new ResourceDependancyManager('blogs/post', 'css');
 require_once($globalDir.'pages\\includes\\core_css.php');
 if (!$ismobile) { // tidied code - marcus
 	$resourceManager->addResource('blogs.css');
+	$resourceManager->addResource('comments.css');
 }
 $pageData['cssFile'] = $resourceManager->build();
 
 $resourceManager = new ResourceDependancyManager('blogs/post', 'js');
 require_once($globalDir.'pages\\includes\\core_js.php');
 $resourceManager->addResource('ba-linkify.min.js');
-$resourceManager->addResource('jquery.textarea-expander.js');
+$resourceManager->addResource('autoresize.jquery.min.js');
 $resourceManager->addResource('comments.js');
 $pageData['jsFile'] = $resourceManager->build();
 
