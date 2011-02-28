@@ -150,7 +150,7 @@ $resourceManager = new ResourceDependancyManager('blogs/post', 'js');
 require_once($globalDir.'pages\\includes\\core_js.php');
 $resourceManager->addResource('ba-linkify.min.js');
 $resourceManager->addResource('jquery.textarea-expander.js');
-$resourceManager->addResource('blogs/post.js');
+$resourceManager->addResource('comments.js');
 $pageData['jsFile'] = $resourceManager->build();
 
 $smarty->assign('post', $post);
