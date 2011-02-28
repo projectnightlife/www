@@ -96,18 +96,18 @@ $(document).ready(function()
 
 	$('.commentInput').bind('focus', function()
 	{
-		//if ($(this).val() == "")
-		//{
-			$(this).siblings('input[type="submit"]').toggle();
+		if ($(this).val() == "")
+		{
+			$(this).siblings('.postComment').toggle();
 			$(this).css("height", 40);
-		//}
+		}
 	});
 	
 	$('.commentInput').bind('blur', function()
 	{
 		if ($(this).val() == "")
 		{
-			$(this).siblings('input[type="submit"]').toggle();
+			$(this).siblings('.postComment').toggle();
 			$(this).css("height", 20);
 		}
 	});
