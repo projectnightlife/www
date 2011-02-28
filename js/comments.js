@@ -99,6 +99,7 @@ $(document).ready(function()
 		if ($(this).val() == "")
 		{
 			$(this).siblings('.submit').toggle();
+			$(this).css("paddingTop", 5);
 			$(this).css("height", 40);
 		}
 	});
@@ -108,7 +109,9 @@ $(document).ready(function()
 		if ($(this).val() == "")
 		{
 			$(this).siblings('.submit').toggle();
-			$(this).css("height", 15);
+			$(this).css("paddingTop", 8);
+			$(this).css("height", 20);
+			
 		}
 	});
 });
