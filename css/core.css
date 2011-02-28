@@ -19,6 +19,7 @@ body { background: url(/images/core/brick.jpg) repeat #444; font-family: Arial, 
 
 p:last-child { margin-bottom: 0 !important; } /* css3 selector */
 p.last-child { margin-bottom: 0 !important; } /* non css3 compliant */
+.hidden { display: none; }
 hr { margin: 0; }
 .italic { font-style: italic; }
 .bold { font-weight: bold; }
