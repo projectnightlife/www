@@ -17,6 +17,7 @@ function addComment(response)
   	innerComment += '<span class="remove"><a href="/backend/ajax.php?service=blog&method=RemoveComment&id='+ response.local.id +'" ajaxify="1" callback="removeComment" spinner="comment'+response.local.id+'Spinner" class="right">delete</a><div class="ajaxSpinner" id="comment'+response.local.id+'Spinner"></div></span>';
 	response.local.body = linkify(response.local.body);
 	innerComment += '<span class="posted">a few seconds ago</span><span class="content word-wrap">'+ api.deserializeString(response.local.body); +'</span></div>';
+	alert("blah");
 	comment.innerHTML = innerComment;
 	container.appendChild(comment);
 	for (var i = comments.length - 1; i >= 0; i--)
