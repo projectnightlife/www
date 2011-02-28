@@ -93,6 +93,7 @@ $(document).ready(function()
 		minimum : 40,
     	extraSpace : 0
 	});
+});
 
 	$('.commentInput').bind('focus', function()
 	{
@@ -111,5 +112,3 @@ $(document).ready(function()
 			$(this).css("height", 20);
 		}
 	});
-});
-
