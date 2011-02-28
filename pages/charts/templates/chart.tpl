@@ -37,17 +37,17 @@
           </div>
           
           <div class="UIpanel UIcontainer topspcr">
-            <a href="http://twitter.com/share" class="twitter-share-button" data-via="pnightlife" data-text="{$post->title}">Tweet</a>
-            <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fexample.com%2Fpage%2Fto%2Flike&amp;layout=button_count&amp;show_faces=false&amp;width=180&amp;action=recommend&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:180px; height:21px; display: block; padding-top: 10px;" allowTransparency="true"></iframe>
-          </div>
-          
-          <div class="UIpanel UIcontainer topspcr">
             <div class="UIheading">
               <h3>Chart Description</h3>
             </div>
             <p>A selection of February's hottest beats.</p>
             <p>Conor Owen is an exciting maturing UK singer song-writer who combines an acoustic melodic style with a powerfully rawedge. The singer's key influences are both contemporary and classic including John Martyn, Damien Rice, Nick Drake and Ray LaMontagne.</p>
 <p>Conor began his musical journey growing upon the Midlands borders experimenting with various band line ups before taking off to live life on the road touring the USA and Europe.</p>
+          </div>
+          
+          <div class="UIpanel UIcontainer topspcr">
+            <a href="http://twitter.com/share" class="twitter-share-button" data-via="pnightlife" data-text="{$post->title}">Tweet</a>
+            <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fexample.com%2Fpage%2Fto%2Flike&amp;layout=button_count&amp;show_faces=false&amp;width=180&amp;action=recommend&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:180px; height:21px; display: block; padding-top: 10px;" allowTransparency="true"></iframe>
           </div>
           
         </div> <!-- span200 -->
@@ -110,9 +110,64 @@
                 <a class="listen" href="#" onClick="return false;">Listen</a>
               </div>
             </div>
+            <div style="background: #0d0d0d; margin-bottom: 7px; overflow: auto; border-radius: 4px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+              <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: 7px 17px 0 15px; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">1</div>
+              <img src="photo/216/50x50" style="float: left; margin: 7px 0 7px 54px; padding: 1px; border: 1px solid #222;" />
+              <div style="float: left; padding: 7px; width: 374px;">
+                <div>DT8 Project</div>
+                <div style="color: #777;">Destination</div>
+              </div>
+              <div style="display: block; float: left; padding: 20px 10px;">
+                <a class="listen" href="#" onClick="return false;">Listen</a>
+              </div>
+            </div>
+            <div style="background: #111; margin-bottom: 7px; overflow: auto; border-radius: 4px;">
+              <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: 7px 17px 0 15px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">2</div>
+              <img src="photo/166/50x50" style="float: left; margin: 7px 0 7px 54px; padding: 1px; border: 1px solid #222;" />
+              <div style="float: left; padding: 7px; width: 374px;">
+                <div>Atlantis vs. Avatar</div>
+                <div style="color: #777;">Fiji (Lange Remix)</div>
+              </div>
+              <div style="display: block; float: left; padding: 20px 10px;">
+                <a class="listen" href="#" onClick="return false;">Listen</a>
+              </div>
+            </div>
+            <div style="background: #0d0d0d; margin-bottom: 7px; overflow: auto; border-radius: 4px;">
+              <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: 7px 17px 0 15px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">3</div>
+              <img src="photo/{$post->thumbnail}/50x50" style="float: left; margin: 7px 0 7px 54px; padding: 1px; border: 1px solid #222;" />
+              <div style="float: left; padding: 7px; width: 374px;">
+                <div>Terradia feat. Demona</div>
+                <div style="color: #777;">Drowning In Dreams</div>
+              </div>
+              <div style="display: block; float: left; padding: 20px 10px;">
+                <a class="listen" href="#" onClick="return false;">Listen</a>
+              </div>
+            </div>
+            <div style="background: #111; margin-bottom: 7px; overflow: auto; border-radius: 4px;">
+              <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: 7px 17px 0 15px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">4</div>
+              <img src="photo/166/50x50" style="float: left; margin: 7px 0 7px 54px; padding: 1px; border: 1px solid #222;" />
+              <div style="float: left; padding: 7px; width: 374px;">
+                <div>Atlantis vs. Avatar</div>
+                <div style="color: #777;">Fiji (Lange Remix)</div>
+              </div>
+              <div style="display: block; float: left; padding: 20px 10px;">
+                <a class="listen" href="#" onClick="return false;">Listen</a>
+              </div>
+            </div>
+            <div style="background: #0d0d0d; margin-bottom: 7px; overflow: auto; border-radius: 4px;">
+              <div style="position: absolute; background: url(/images/core/icons/blue_ribbon.png) no-repeat; padding-top: 3px; width: 22px; height: 37px; margin: 7px 17px 0 15px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color: #fff; font-size: 16px; line-height: 20px; text-align: center;">5</div>
+              <img src="photo/{$post->thumbnail}/50x50" style="float: left; margin: 7px 0 7px 54px; padding: 1px; border: 1px solid #222;" />
+              <div style="float: left; padding: 7px; width: 374px;">
+                <div>Terradia feat. Demona</div>
+                <div style="color: #777;">Drowning In Dreams</div>
+              </div>
+              <div style="display: block; float: left; padding: 20px 10px;">
+                <a class="listen" href="#" onClick="return false;">Listen</a>
+              </div>
+            </div>
           </div>
           
-          <div class="UIpanel UIcontainer topspcr" id="comments">
+          <!--<div class="UIpanel UIcontainer topspcr" id="comments">
             <h1 class="postHeading">Comments</h1>
             {if $session['loggedIn']}
             <div class="comments">
@@ -145,7 +200,7 @@
               <div class="viewAll" id="viewAllComments"><a style="float: left;" href="backend/ajax.php?service=blog&method=GetComments&id={$post->id}&num=0&start=0" callback="viewAllComments" spinner="viewAllCommentsSpinner" ajaxify="1">View all {$post->numComments} comments</a><div class="ajaxSpinner" id="viewAllCommentsSpinner"></div></div>
               {/if}
             </div>
-          </div>
+          </div>-->
         </div> <!-- span630 -->
       
         <div class="span140 leftspcr">

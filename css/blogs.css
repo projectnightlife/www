@@ -5,13 +5,11 @@
 #blogs .advert { width: 300px; margin: 15px auto; background: #666; height: 250px; }
 
 
-#blogs .postMeta { padding-bottom: 3px; overflow: auto; }
+#blogs .postMeta { padding-bottom: 4px; overflow: auto; }
 
 #blogs .postMeta .posted { display: block; float: left; }
 
 #blogs .postMeta .numComments { display: block; float: right; background: url(/images/core/icons/comments.png) left no-repeat; padding-left: 19px; }
-
-#blogs .post { padding-top: 12px; border-top: 3px solid #555; }
 
 #blogs .post img { border: 1px solid #555; margin: 0 auto 15px; display: block; }
 
