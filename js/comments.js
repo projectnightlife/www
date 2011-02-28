@@ -9,15 +9,14 @@ function addComment(response)
 	{
   	  comments.push(container.removeChild(container.children[i]));
 	}
-	var comment = document.createElement('div');
-	comment.className = 'comment';
-	comment.id = 'comment['+ response.local.id +']';
-	comment.style.display = 'none';
 	var innerComment = '<a href="http://www.facebook.com/profile.php?id='+response.local.userId+'" class="fbSquareProfilePic photo" target="_blank"><img src="https://graph.facebook.com/'+response.local.userId+'/picture" width="50" height="50" /></a><div class="body"><a class="user" href="http://www.facebook.com/profile.php?id='+response.local.userId+'">'+ response.local.firstname +' '+ response.local.lastname +'</a>';
   	innerComment += '<span class="remove"><a href="/backend/ajax.php?service=blog&method=RemoveComment&id='+ response.local.id +'" ajaxify="1" callback="removeComment" spinner="comment'+response.local.id+'Spinner" class="right">delete</a><div class="ajaxSpinner" id="comment'+response.local.id+'Spinner"></div></span>';
 	response.local.body = linkify(response.local.body);
 	innerComment += '<span class="posted">a few seconds ago</span><span class="content word-wrap">'+ api.deserializeString(response.local.body); +'</span></div>';
-	alert("blah");
+	var comment = document.createElement('div');
+	comment.className = 'comment';
+	comment.id = 'comment['+ response.local.id +']';
+	comment.style.display = 'none';
 	comment.innerHTML = innerComment;
 	container.appendChild(comment);
 	for (var i = comments.length - 1; i >= 0; i--)
@@ -27,8 +26,8 @@ function addComment(response)
 	var numComments = document.getElementById('commentCount');
 	var commentCount = parseInt(numComments.value, 10) + 1;
 	numComments.value = commentCount;
-	document.getElementById('numComments').innerHTML = commentCount == 1 ? commentCount + ' comment' : commentCount + ' comments';
-	$('#viewAllComments > a').html('View all '+commentCount+' comments');
+	//document.getElementById('numComments').innerHTML = commentCount == 1 ? commentCount + ' comment' : commentCount + ' comments';
+	//$('#viewAllComments > a').html('View all '+commentCount+' comments');
 	$(".comment").fadeIn("normal");
 }
 
@@ -38,8 +37,8 @@ function removeComment(response)
     var numComments = document.getElementById('commentCount');
     var commentCount = parseInt(numComments.value, 10) - 1;
     numComments.value = commentCount;
-    document.getElementById('numComments').innerHTML = commentCount == 1 ? commentCount + " comment" : commentCount + " comments";
-    $('#viewAllComments > a').html("View all "+commentCount+" comments");
+    //document.getElementById('numComments').innerHTML = commentCount == 1 ? commentCount + " comment" : commentCount + " comments";
+    //$('#viewAllComments > a').html("View all "+commentCount+" comments");
 }
 
 function viewAllComments(response)
