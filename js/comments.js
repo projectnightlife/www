@@ -83,7 +83,7 @@ function commentError()
 $(document).ready(function()
 {
 	$('textarea.commentInput').autoResize({
-    	animate : false,
+    	animateDuration: 10,
 		limit : 250,
 		minimum : 40,
     	extraSpace : 0
