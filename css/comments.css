@@ -15,7 +15,7 @@
 
 .comments .comment #commentForm textarea { background: #0c0c0c; border: #191919 1px solid; color: #ccc; height: 20px; width: 504px; padding: 5px; font-family: Tahoma, Geneva, sans-serif; font-size: 12px; }
 
-.comments .comment #commentForm input[type="submit"] { display: none; float: right; margin: 10px 0 3px; }
+.comments .comment #commentForm .submit { display: none; margin: 10px 0 3px; }
 
 .comments .comment .photo { display: block; float: left; width: 50px; margin: 0 !important; }
 
