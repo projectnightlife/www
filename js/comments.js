@@ -110,7 +110,7 @@ $(document).ready(function()
 		{
 			$(this).siblings('.submit').toggle();
 			$(this).css("paddingTop", 9);
-			$(this).css("height", 20);
+			$(this).css("height", 18);
 			
 		}
 	});
