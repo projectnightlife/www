@@ -96,7 +96,7 @@ $(document).ready(function()
 
 	$('.commentInput').bind('focus', function()
 	{
-		if (!api.validation.nonEmpty($(this).val()))
+		if ($(this).val() == "")
 		{
 			$(this).css("height", 50);
 			$(this).siblings('input[type="submit"]').css("display", "block");
