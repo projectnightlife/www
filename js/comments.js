@@ -2,15 +2,10 @@ function addComment(response)
 {
 	var container = document.getElementById('commentsContainer');
 	var form = document.getElementById('commentForm');
-	form.elements['content'].value = '';
-	form.elements['content'].style.height = '25px';
-	form.elements['content'].onfocus = function(e) {
-  	  e = e || window.event;
-      e.srcElement.style.height = '80px';
-	};
+	form.elements['comment'].value = '';
 	document.getElementById('submitComment').disabled = false;
 	var comments = new Array();
-	for (var i = container.children.length - 1; i >= 0; i--)
+	for (var i = container.children.length - 1; i >= 1; i--)
 	{
   	  comments.push(container.removeChild(container.children[i]));
 	}
@@ -24,7 +19,7 @@ function addComment(response)
 	innerComment += '<span class="posted">a few seconds ago</span><span class="content word-wrap">'+ api.deserializeString(response.local.body); +'</span></div>';
 	comment.innerHTML = innerComment;
 	container.appendChild(comment);
-	for (var i = comments.length - 1; i >= 0; i--)
+	for (var i = comments.length - 1; i >= 1; i--)
 	{
   	  container.appendChild(comments[i]);
 	}
