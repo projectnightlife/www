@@ -98,8 +98,8 @@ $(document).ready(function()
 	{
 		if ($(this).val() == "")
 		{
-			$(this).css("height", 40);
 			$(this).siblings('input[type="submit"]').css("display", "block");
+			$(this).css("height", 40);
 		}
 	});
 	
@@ -107,8 +107,8 @@ $(document).ready(function()
 	{
 		if ($(this).val() == "")
 		{
-			$(this).css("height", 20);
 			$(this).siblings('input[type="submit"]').css("display", "none");
+			$(this).css("height", 20);
 		}
 	});
 });
