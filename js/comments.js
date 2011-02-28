@@ -88,8 +88,8 @@ $(document).ready(function()
 	$('textarea.commentInput').autoResize({
     	animate: false,
 		limit : 250,
-		minimum : 33,
-    	extraSpace : 7
+		minimum : 32,
+    	extraSpace : 8
 	});
 
 	$('.commentInput').bind('focus', function()
