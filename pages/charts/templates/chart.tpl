@@ -30,7 +30,7 @@
                 <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=50x50" width="50" height="50" /></a>
               </div>
               <div class="info thin" style="width: 113px !important; font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
-                <h3 style="margin-bottom: 5px;">{$blog->name}</h3>
+                <h3 style="margin-bottom: 5px; color: #ABA0C0;">{$blog->name}</h3>
                 <p style="font-size: 11px;">{$pageData['postCreated']}</p>
               </div>
             </div>
