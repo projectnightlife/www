@@ -13,7 +13,7 @@
 
 .comments .comment { overflow: auto; padding: 7px; color: #bbb; background: #111; margin-bottom: 2px; }
 
-.comments .comment #commentForm textarea { background: #0c0c0c; border: #191919 1px solid; color: #ccc; height: 20px; width: 504px; padding: 5px; font-family: Tahoma, Geneva, sans-serif; font-size: 12px; padding-top: 8px; }
+.comments .comment #commentForm textarea { background: #0c0c0c; border: #191919 1px solid; color: #ccc; height: 20px; width: 504px; padding: 9px 5px 5px; font-family: Tahoma, Geneva, sans-serif; font-size: 12px; }
 
 .comments .comment #commentForm .submit { display: none; margin: 10px 0 3px; overflow: auto; }
 

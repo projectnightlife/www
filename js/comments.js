@@ -109,7 +109,7 @@ $(document).ready(function()
 		if ($(this).val() == "")
 		{
 			$(this).siblings('.submit').toggle();
-			$(this).css("paddingTop", 8);
+			$(this).css("paddingTop", 9);
 			$(this).css("height", 20);
 			
 		}
