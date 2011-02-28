@@ -4,7 +4,7 @@ function addComment(response)
 	var form = document.getElementById('commentForm');
 	form.elements['comment'].value = '';
 	form.elements['comment'].style.height = '18px';
-	form.elements['comment'].style.paddingTop = '9px';
+	form.elements['comment'].style.paddingTop = '7px';
 	$('#commentForm').children('.submit').toggle();
 	document.getElementById('submitComment').disabled = false;
 	var comments = new Array();
@@ -108,7 +108,7 @@ $(document).ready(function()
 		if ($(this).val() == "")
 		{
 			$(this).siblings('.submit').toggle();
-			$(this).css("paddingTop", 9);
+			$(this).css("paddingTop", 7);
 			$(this).css("height", 18);
 			
 		}
