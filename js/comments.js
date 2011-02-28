@@ -98,7 +98,7 @@ $(document).ready(function()
 	{
 		if ($(this).val() == "")
 		{
-			$('#submitComment').css("display", "block");
+			$(this).siblings('input[type="submit"]').toggle();
 			$(this).css("height", 40);
 		}
 	});
@@ -107,7 +107,7 @@ $(document).ready(function()
 	{
 		if ($(this).val() == "")
 		{
-			$('#submitComment').css("display", "none");
+			$(this).siblings('input[type="submit"]').toggle();
 			$(this).css("height", 20);
 		}
 	});
