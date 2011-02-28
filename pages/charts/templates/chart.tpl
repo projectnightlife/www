@@ -166,20 +166,19 @@
               </div>
             </div>
           </div>
-         {if $session['loggedIn']}
-            <div class="comments">
+         
+          <div class="comments" id="commentsContainer">
+            {if $session['loggedIn']}
+            <div class="comment">
               <form id="commentForm" action="backend/ajax.php" ajaxify="1" callback="addComment" spinner="commentBox" errorcallback="commentError" onformsubmit="commentSubmit">
                 <input type="hidden" name="params" value='{ "service":"blog","method":"AddComment","postId":"{$post->id}" }' autocomplete="off" />
-                <textarea id="commentBox" class="expand70-250" name="content" serializable="api.dummySerialization:api.serializeStringFormatting" validator="api.validation.nonEmpty" autocomplete="off" onKeyDown="api.limitText(this,1500);" onKeyUp="api.limitText(this,1500);" onChange="api.limitText(this,1500);"></textarea>
+                <textarea id="commentBox" name="content" serializable="api.dummySerialization:api.serializeStringFormatting" validator="api.validation.nonEmpty" autocomplete="off" onKeyDown="api.limitText(this,1500);" onKeyUp="api.limitText(this,1500);" onChange="api.limitText(this,1500);"></textarea>
                 <input id="submitComment" class="right" type="submit" value="Comment" />
               </form>
             </div>
             {else}
-            <div class="comments">
-              <div class="comment">In order to post comments, you must be logged in.</div>
-            </div>
+            <div class="comment">In order to post comments, you must be logged in.</div>
             {/if}
-          <div class="comments" id="commentsContainer">
               {foreach from=$comments item=comment name=comments}
               <div class="comment" id="comment[{$comment->id}]">
                 <a href="http://www.facebook.com/profile.php?id={$comment->userId}" class="fbSquareProfilePic photo" target="_blank"><img src="https://graph.facebook.com/{$comment->userId}/picture" width="50" height="50" /></a>
@@ -220,7 +219,7 @@
               </div>
               {/foreach}
               {if $post->numComments > 10}
-              <div class="viewAll" id="viewAllComments"><a style="float: left;" href="backend/ajax.php?service=blog&method=GetComments&id={$post->id}&num=0&start=0" callback="viewAllComments" spinner="viewAllCommentsSpinner" ajaxify="1">View all {$post->numComments} comments</a><div class="ajaxSpinner" id="viewAllCommentsSpinner"></div></div>
+              <div class="comment viewAll" id="viewAllComments"><a style="float: left;" href="backend/ajax.php?service=blog&method=GetComments&id={$post->id}&num=0&start=0" callback="viewAllComments" spinner="viewAllCommentsSpinner" ajaxify="1">View all {$post->numComments} comments</a><div class="ajaxSpinner" id="viewAllCommentsSpinner"></div></div>
               {/if}
             </div>
           <!--<div class="UIpanel UIcontainer topspcr" id="comments">
