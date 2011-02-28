@@ -19,7 +19,7 @@ function addComment(response)
 	innerComment += '<span class="posted">a few seconds ago</span><span class="content word-wrap">'+ api.deserializeString(response.local.body); +'</span></div>';
 	comment.innerHTML = innerComment;
 	container.appendChild(comment);
-	for (var i = comments.length - 1; i >= 1; i--)
+	for (var i = comments.length - 1; i >= 0; i--)
 	{
   	  container.appendChild(comments[i]);
 	}
