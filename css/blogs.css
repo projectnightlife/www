@@ -14,37 +14,6 @@
 #blogs .post img { border: 1px solid #555; margin: 0 auto 15px; display: block; }
 
 
-#blogs .comments { 
-	overflow: auto; 
-	margin: 0 auto; 
-	padding: 20px 0 15px; 
-	width: 530px; 
-	/*min-height: 400px;  Greenhill - 10/02/2011 - Added to stop a slidebar rendering bug on blog comment forms */
-	font-family: Tahoma, Geneva, sans-serif; 
-	overflow-x: hidden;
-}
-
-#blogs .comments .viewAll { padding: 7px; color: #bbb; font-size: 11px; background: #111; margin-bottom: 2px; border: #0f0f0f solid 1px; overflow: auto; }
-
-#blogs .comments textarea { background: #0f0f0f; border: #191919 1px solid; color: #ccc; height: 60px; width: 518px; padding: 5px; font-family: Tahoma, Geneva, sans-serif; margin: 10px 0 10px; font-size: 12px; }
-
-#blogs .comments .comment { overflow: auto; padding: 7px; color: #bbb; background: #111; margin-bottom: 2px; border: #0f0f0f solid 1px; }
-
-#blogs .comments .comment .photo { display: block; float: left; width: 50px; margin: 0 !important; }
-
-#blogs .comments .comment .body { overflow: auto; float: right; width: 453px; }
-
-#blogs .comments .comment .remove { font-size: 11px; float: right; display: block; width: 75px; line-height: normal; }
-
-#blogs .comments .comment .remove a { padding-left: 10px; }
-
-#blogs .comments .comment .user { color: #a56efd; font-weight: bold; display: block; width: 300px; float: left; line-height: normal; margin-bottom: 2px; }
-
-#blogs .comments .comment .posted { display: block; color: #666; font-size: 11px; clear: both; }
-
-#blogs .comments .comment .content { display: block; padding-top: 7px; }
-
-
 #blogs .blogvitals { display: inline-block; width: 100%; } /* overflow: auto; was removed to prevent ie 8 spazzing */
 
 #blogs .blogvitals .info { margin-left: 7px; width: 420px; float: left; overflow: auto; }
