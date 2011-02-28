@@ -86,10 +86,10 @@ function commentError()
 $(document).ready(function()
 {
 	$('textarea.commentInput').autoResize({
-    	animateDuration: 10,
+    	animate: false,
 		limit : 250,
 		minimum : 40,
-    	extraSpace : 10
+    	extraSpace : 1
 	});
 
 	$('.commentInput').bind('focus', function()
