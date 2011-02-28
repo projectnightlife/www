@@ -108,7 +108,7 @@ $(document).ready(function()
 		if ($(this).val() == "")
 		{
 			$(this).siblings('.submit').toggle();
-			$(this).css("height", 20);
+			$(this).css("height", 15);
 		}
 	});
 });
