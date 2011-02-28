@@ -25,14 +25,12 @@
       
         <div id="leftColumn" class="span200">
           <div class="UIpanel UIcontainer">
-            <div class="blogvitals">
-              <div class="clear left">
-                <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=80x80" width="50" height="50" /></a>
-              </div>
-              <div class="right" style="width: 113px !important; font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
-                <h3 style="margin: 0 0 5px; color: #ABA0C0;">{$blog->name}</h3>
-                <p style="font-size: 11px;">{$pageData['postCreated']}</p>
-              </div>
+            <div class="left">
+              <a class="thumb" href="pages/blogs/blog.php?id={$blog->id}"><img src="pages/getphoto/GetPhoto.php?id={$blog->thumbnail}&size=80x80" width="50" height="50" /></a>
+            </div>
+            <div class="right" style="width: 113px !important; font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
+              <h3 style="margin: 0 0 5px; color: #ABA0C0;">{$blog->name}</h3>
+              <p style="font-size: 11px;">{$pageData['postCreated']}</p>
             </div>
           </div>
           
