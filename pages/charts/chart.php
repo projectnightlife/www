@@ -123,6 +123,7 @@ $pageData['cssFile'] = $resourceManager->build();
 $resourceManager = new ResourceDependancyManager('chart', 'js');
 require_once($globalDir.'pages\\includes\\core_js.php');
 $resourceManager->addResource('ba-linkify.min.js');
+$resourceManager->addResource('autoresize.jquery.min.js');
 $resourceManager->addResource('comments.js');
 $pageData['jsFile'] = $resourceManager->build();
 

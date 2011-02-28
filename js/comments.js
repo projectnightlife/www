@@ -87,40 +87,19 @@ function commentError()
 
 $(document).ready(function()
 {
-	//Prototype
-	$('.commentInput').each(function(textarea){ //The 100 textareas
+	$('textarea.commentInput').autoResize({
+    	animate : false,
+		limit : 250,
+		minimum : 60,
+    	extraSpace : 0
+	});
 
-  var interval,
-      oldValue = textarea.value,
-
-      //The observer function is the same, only we're assigning
-      //it to a variable to be re-used
-      observer = function(){
-        var newValue = textarea.value;
-        if (newValue != oldValue) {//Value has changed
-          //Set the "rows" attribute to the number of lines + 2
-          textarea.writeAttribute('rows', newValue.split("\n").length+2);
-          oldValue = newValue;
-        }
-      };
-
-  //When the user focuses the textarea, create the observer interval
-  textarea.observe('focus', function(){
-    //Assign the interval to a variable so it can be removed later
-    interval = setInterval(observer, 500);//Check every 0.5s
-  });
-
-  //When the user is finished editing, remove the interval
-  textarea.observe('blur', function(){
-    clearInterval(interval);
-  });
-
-});
 	$('.commentInput').bind('focus', function()
 	{
 		if (!api.validation.nonEmpty(this.val()))
 		{
-			//this.TextAreaExpander(70, 250);
+			this.css("height", 50);
+			this.siblings('input[type="submit"]').css("display", "block");
 		}
 	});
 	
@@ -128,7 +107,8 @@ $(document).ready(function()
 	{
 		if (!api.validation.nonEmpty(this.val()))
 		{
-			
+			this.css("height", 20);
+			this.siblings('input[type="submit"]').css("display", "none");
 		}
 	});
 });
