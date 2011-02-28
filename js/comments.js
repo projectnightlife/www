@@ -93,15 +93,14 @@ $(document).ready(function()
 		minimum : 40,
     	extraSpace : 0
 	});
-});
 
 	$('.commentInput').bind('focus', function()
 	{
-		if ($(this).val() == "")
-		{
+		//if ($(this).val() == "")
+		//{
 			$(this).siblings('input[type="submit"]').toggle();
 			$(this).css("height", 40);
-		}
+		//}
 	});
 	
 	$('.commentInput').bind('blur', function()
@@ -112,3 +111,5 @@ $(document).ready(function()
 			$(this).css("height", 20);
 		}
 	});
+});
+
