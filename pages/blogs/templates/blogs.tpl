@@ -21,7 +21,6 @@
         
       <div class="canvas">
         
-		{if $ismobile == "false"}
         <div id="mainFeaturedApp">
           <div id="descriptionWindow">
             <div id="descriptionReel">
@@ -55,7 +54,6 @@
             <a href="#" rel="4">4</a>-->
           </div>
         </div>
-		{/if}
         
         <div class="span650 topspcr15">
           <div class="UIpanel UIcontainer">

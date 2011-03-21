@@ -1,7 +1,7 @@
 {include file='../../includes/templates/page.tpl'}
 <meta property="og:title" content="{$blog->name}"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:url" content="http://www.projectnightlife.co.uk/blog/{$blog->id}"/>
+<meta property="og:type" content="musician"/>
+<meta property="og:url" content="http://www.projectnightlife.co.uk/conorowen"/>
 <meta property="og:image" content="http://www.projectnightlife.co.uk/photo/{$blog->thumbnail}/80x80"/>
 <meta property="og:site_name" content="Project Nightlife"/>
 <meta property="fb:app_id" content="131359770249054"/>
