@@ -302,9 +302,9 @@ function API()
 			  var position = ""; // the position within the list of notifications
 			  if (notification == 0)
 			    position = " first";
-			  response += '<div class="notification'+position+'"><a href="'+this.data[notification].url+'"><img src="'+this.hostname+'/photo/'+this.data[notification].thumbnail+'/50x50" /></a><div class="details"><h3 class="text-overflow"><a href="'+this.data[notification].url+'">'+this.data[notification].title+'</a></h3><p class="text-overflow">'+this.data[notification].excerpt+'</p><div class="datetime">'+this.data[notification].time+'</div></div></div>';
+			  response += '<div class="notification'+position+'"><a href="'+this.data[notification].url+'"><img src="/photo/'+this.data[notification].thumbnail+'/50x50" /></a><div class="details"><h3 class="text-overflow"><a href="'+this.data[notification].url+'">'+this.data[notification].title+'</a></h3><p class="text-overflow">'+this.data[notification].excerpt+'</p><div class="datetime">'+this.data[notification].time+'</div></div></div>';
 			}
-			response += '<div class="notification last" style="text-align: center;"><a href="'+this.hostname+'/notifications">View all</a></div>';
+			response += '<div class="notification last" style="text-align: center;"><a href="/notifications">View all</a></div>';
 			response += '</div>';
 			return response;
 		  }
@@ -989,7 +989,7 @@ document.documentElement.onclick = function(event)
 	{
 	  api.launchDialog("Notifications", api.notifications.get(), 350);
 	  target.innerHTML = "Notifications";
-	  api.sendSimpleRequest(this.hostname+'/backend/ajax.php?service=notification&method=ClearUserHasPending', null, null, true);
+	  api.sendSimpleRequest('/backend/ajax.php?service=notification&method=ClearUserHasPending', null, null, true);
 	}
 	else
 	{
