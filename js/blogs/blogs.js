@@ -128,10 +128,10 @@ $(document).ready(function()
       //Slider Animation
       $("#mainFeaturedApp #imageWindow #imageReel").animate({
           left: -image_reelPosition
-      }, 1200 );
+      }, 1100 );
 	  $('#mainFeaturedApp #descriptionWindow #descriptionReel').animate({
 	      top: '-'+(triggerID * 312)
-	  }, 1200);
+	  }, 1100);
   };
   
   rotateSwitch = function(){
