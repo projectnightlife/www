@@ -49,8 +49,8 @@
           </div>
           <div id="pagingWindow">
             <a href="#" rel="1">1</a>
-            <!--<a href="#" rel="2">2</a>
-            <a href="#" rel="3">3</a>
+            <a href="#" rel="2">2</a>
+            <!--<a href="#" rel="3">3</a>
             <a href="#" rel="4">4</a>-->
           </div>
         </div>

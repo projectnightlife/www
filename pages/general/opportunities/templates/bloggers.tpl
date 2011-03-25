@@ -135,19 +135,19 @@ select { font-size: 12px; font-family: 'Lucida Sans Unicode', 'Lucida Grande', s
       </form>
           
         <div class="span310 topspcr15">
-          <div class="UIpanel" style="height: 170px; border-color: #111; font-family: Tahoma, Geneva, sans-serif;">
+          <div class="UIpanel UIcontainer" style="height: 170px; border-color: #111; font-family: Tahoma, Geneva, sans-serif;">
             <h3 style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 24px; color: #ABA0C0; margin-bottom: 16px; line-height: 26px;">Who Should Apply</h3>
 		    <p>Project Nightlife are always on the lookout for talented new bloggers.</p><p class="last-child">Are you passionate about an area we haven't got covered? Maybe you're studying to be a journalist? Or do you simply want to share your knowledge and opinions with others?</p>
           </div>
         </div>
         <div class="span310 leftspcr15 topspcr15">
-          <div class="UIpanel" style="height: 170px; border-color: #111; font-family: Tahoma, Geneva, sans-serif;">
+          <div class="UIpanel UIcontainer" style="height: 170px; border-color: #111; font-family: Tahoma, Geneva, sans-serif;">
             <h3 style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 24px; color: #ABA0C0; margin-bottom: 16px; line-height: 26px;">Rewards</h3>
             <p>To make up for the time you dedicate to us, we'll give you the chance to go backstage at your favorite gigs and events or attend the hottest nights - absolutely free!<sup class="terms">1</sup></p><p class="last-child">And... to top it all off, we'll even pay you to write for us!<sup class="terms">2</sup></p>
           </div>
         </div>
         <div class="span310 leftspcr15 topspcr15">
-          <div class="UIpanel" style="height: 170px; border-color: #111; font-family: Tahoma, Geneva, sans-serif;">
+          <div class="UIpanel UIcontainer" style="height: 170px; border-color: #111; font-family: Tahoma, Geneva, sans-serif;">
             <h3 style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 24px; color: #ABA0C0; margin-bottom: 16px; line-height: 26px;">Current Openings</h3>
             <p>We're currently looking to expand the music and fashion areas of our blogs.</p><p class="last-child">To become one of our bloggers, simply click Join Now</p><!--<p>If you want to know more, simply register your interest by click 'Apply Now' and we'll be in touch shortly.</p>-->
           </div>

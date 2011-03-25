@@ -128,10 +128,10 @@ $(document).ready(function()
       //Slider Animation
       $("#mainFeaturedApp #imageWindow #imageReel").animate({
           left: -image_reelPosition
-      }, 1500 );
+      }, 1200 );
 	  $('#mainFeaturedApp #descriptionWindow #descriptionReel').animate({
 	      top: '-'+(triggerID * 312)
-	  }, 1500);
+	  }, 1200);
   };
   
   rotateSwitch = function(){
@@ -141,7 +141,7 @@ $(document).ready(function()
               $active = $('#mainFeaturedApp #pagingWindow a:first'); //go back to first
           }
           rotate();
-      }, 10000); //Timer speed in milliseconds (7 seconds)
+      }, 9000); //Timer speed in milliseconds (7 seconds)
   };
   
   rotateSwitch()
