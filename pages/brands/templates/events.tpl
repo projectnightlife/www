@@ -106,8 +106,8 @@
                 <h3>Gallery</h3>
                 <div class="UIcontrol">
                   <ul class="filter" id="postFilter">
-                    <li class="selected rnd8px" style="color: #222;">Photos</li>
-                    <li class="notSelected rnd8px last" style="color: #222;">Videos</li>
+                    <li class="selected rnd8px" style="color: #222;"><a href="#" onclick="return false;">Photos</a></li>
+                    <li class="notSelected rnd8px last" style="color: #222;"><a href="#" onclick="return false;">Videos</a></li>
                   </ul>
                 </div>
               </div>
