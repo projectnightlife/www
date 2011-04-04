@@ -60,6 +60,8 @@
                 <div>Leeds, United Kingdom</div>
               </div>
               <div style="float: right; width:108px; text-align: right;">Buy Tickets</div>
+              <div style="color: #ABA0C0; font-size: 26px;">95</div>
+              <div>days to go</div>
             </div>
           </div>
           
@@ -117,6 +119,7 @@
             <div class="UIheading">
                 <h3>Music</h3>
               </div>
+              <object height="285" width="100%"><param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F675090&show_comments=true&show_playcount=true&color=ff6600&show_artwork=true"></param><param name="allowscriptaccess" value="always"></param><embed allowscriptaccess="always" height="285" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F675090&show_comments=true&show_playcount=true&color=ff6600&show_artwork=true" type="application/x-shockwave-flash" width="100%"></embed></object>
             </div>
             
             <div class="UIcontainer" id="tabs-5" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
