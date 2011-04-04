@@ -74,13 +74,9 @@
             </ul>
             <div class="UIcontainer" id="tabs-1">
               <div class="UIheading">
-                <h3>Latest updates</h3>
-                <div class="UIcontrol">
-                  <ul class="filter" id="postFilter">
-                    <li class="selected rnd8px last" style="color: #222;">Most recent</li>
-                  </ul>
-                </div>
+                <h3>Event Information</h3>
               </div>
+              <img src="pages/brands/templates/2.jpg" style="border: 1px solid #555; display: block;" />
               <p>Cocoon in the Park 2011 returns to Temple Newsam, Leeds, for our third spectacular open-air festival, the only one of it's kind in the UK.</p>
 
 <p>Set a stone's throw from Leeds city centre the Cocoon in the Park festival site lies within the grounds of a 450-year-old mansion house surrounded by forests and lakes in a celebrated area of outstanding natural beauty. The historic estate of Temple Newsam once again plays host to an exclusive lineup over one stage led by Cocoon ringmaster Sven Väth with support from Ricardo Villalobos, Reboot and Seth Troxler.</p>
