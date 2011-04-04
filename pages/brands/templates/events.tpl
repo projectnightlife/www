@@ -31,8 +31,8 @@
           <div id="eventPrev" style="position: absolute; z-index: 100; bottom: 15px; left: 15px; width: 21px; height: 21px;">
             <a href="" class="previousIcon">Previous</a>
           </div>
-    <div style="left: 493px; position: absolute; width: 13px; height: 8px; background: url(/images/core/UIpanel_caret.png) no-repeat; bottom: -1px; -webkit-transform: scale(2);"></div>
-    <div style="overflow: hidden; width: 1000px; -webkit-transform-origin: center bottom;">
+    <div style="left: 493px; position: absolute; width: 13px; height: 8px; background: url(/images/core/UIpanel_caret.png) no-repeat; bottom: -1px; -webkit-transform: scale(2); -webkit-transform-origin: center bottom;"></div>
+    <div style="overflow: hidden; width: 1000px;">
     <div id="eventReel" style="left: 0; position: absolute; width: 1800px; height: 100%;">
       <img id="event1" style="display: block; float: left; margin: 35px 28px 35px 56px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
       <img id="event2" style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
