@@ -25,6 +25,12 @@
     </div>
     
     <div style="width: 100%; border-bottom: 1px solid #111; position: relative; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#141414), to(#0c0c0c)); margin-top: 10px; margin-bottom: 5px; overflow: hidden;">
+    <div id="heroNext" style="position: absolute; display: none; z-index: 100; bottom: 20px; right: 20px; width: 21px; height: 21px;">
+            <a href="" class="nextIcon">Next</a>
+          </div>
+          <div id="heroPrev" style="position: absolute; display: none; z-index: 100; bottom: 20px; left: 20px; width: 21px; height: 21px;">
+            <a href="" class="previousIcon">Previous</a>
+          </div>
     <div style="left: 493px; position: absolute; width: 13px; height: 8px; background: url(/images/core/UIpanel_caret.png) no-repeat; bottom: -2px; -webkit-transform: scale(1.75);"></div>
     <img style="display: block; float: left; margin: 35px 27px 35px 54px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
     <img style="display: block; float: left; margin: 35px 27px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
@@ -37,7 +43,7 @@
       
       <div class="canvas">
       
-        <div class="span960 btmspcr" style="position: relative;">
+        <!--<div class="span960 btmspcr" style="position: relative;">
           <div id="imageWindow" style="width: 960px; height: 431px;">
             <div id="imageReel" style="width: 2880px; left: -960px;">
               <img src="images/conor2.jpg" />
@@ -57,9 +63,8 @@
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">City: London</span></div>
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Listening to: The Swell Season</span></div>
             <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Supports: Liverpool</span></div>
-            <!--<div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Random: James Corden stripped me of my shirt on the dancefloor at the Mayfair Hotel the other weekend!</span></div>-->
           </div>
-        </div>
+        </div>-->
         
         <div class="span600">
           <div class="UIpanel">
