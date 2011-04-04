@@ -6,7 +6,7 @@
 <meta property="og:site_name" content="Project Nightlife"/>
 <meta property="fb:app_id" content="131359770249054"/>
 <meta property="og:description" content="{$blog->slogan}"/>
-<title>{$blog->name}'s Events | Project Nightlife</title>
+<title>Cocoon's Events | Project Nightlife</title>
 <link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
 </head>
 
