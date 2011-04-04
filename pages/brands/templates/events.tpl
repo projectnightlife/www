@@ -50,29 +50,6 @@
     <div class="container">
       
       <div class="canvas" id="event">
-      
-        <!--<div class="span960 btmspcr" style="position: relative;">
-          <div id="imageWindow" style="width: 960px; height: 431px;">
-            <div id="imageReel" style="width: 2880px; left: -960px;">
-              <img src="images/conor2.jpg" />
-              <img src="images/conor.png" />
-              <img src="images/conor3.jpg" />
-            </div>
-          </div>
-          <img id="hero_mask" src="images/core/hero_mask.png" style="position: absolute; z-index: 10; top: 0; left: 0;" />
-          <div id="heroNext" style="position: absolute; display: none; z-index: 100; bottom: 20px; right: 20px; width: 21px; height: 21px;">
-            <a href="" class="nextIcon">Next</a>
-          </div>
-          <div id="heroPrev" style="position: absolute; display: none; z-index: 100; bottom: 20px; left: 20px; width: 21px; height: 21px;">
-            <a href="" class="previousIcon">Previous</a>
-          </div>
-          <div id="overlay" style="position: absolute; z-index: 100; top: 50px; right: 30px; width: 200px; background: url(http://www.projectnightlife.co.uk/images/core/transparency/75.png) repeat; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 10px; font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
-            <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Age: 22</span></div>
-            <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">City: London</span></div>
-            <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Listening to: The Swell Season</span></div>
-            <div><img src="images/core/icons/single_blue_chevron.png" /><span style="padding-left: 5px;">Supports: Liverpool</span></div>
-          </div>
-        </div>-->
         
         <div class="span600">
           <div class="UIpanel">
@@ -80,8 +57,9 @@
               <div style="width: 520px; float: left;">
                 <h3 style="line-height: 1em; padding-bottom: 5px; color: #ABA0C0;">System_Presents_Cocoon In The Park - 2011</h3>
                 <span>Saturday 9th July, 11.00 - 23.00</span>
-                <div>Temple Newsam / LS15 0AE<br />Off Selby Road<br />Leeds, United Kingdom</div>
+                <div>Leeds, United Kingdom</div>
               </div>
+              <div style="float: right; width:80px;">Buy Tickets</div>
             </div>
           </div>
           
