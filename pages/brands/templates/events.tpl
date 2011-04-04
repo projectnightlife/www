@@ -24,11 +24,11 @@
       </div>
     </div>
     
-    <div style="width: 100%; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#141414), to(#0f0f0f)); margin-top: 10px; margin-bottom: 5px; overflow: auto;">
-    <img style="display: block; float: left; margin: 35px 30px 35px 60px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 3px 3px #0F0F0F;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-    <img style="display: block; float: left; margin: 35px 30px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 3px 3px #0F0F0F;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-    <img style="display: block; float: left; margin: 35px 30px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 3px 3px #0F0F0F;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-    <img style="display: block; float: left; margin: 35px 60px 35px 30px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 3px 3px #0F0F0F;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+    <div style="width: 100%; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#151515), to(#0e0e0e)); margin-top: 10px; margin-bottom: 5px; overflow: auto;">
+    <img style="display: block; float: left; margin: 35px 40px 35px 80px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 3px 3px #0F0F0F;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+    <img style="display: block; float: left; margin: 35px 40px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 3px 3px #0F0F0F;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+    <img style="display: block; float: left; margin: 35px 40px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 3px 3px #0F0F0F;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+    <img style="display: block; float: left; margin: 35px 80px 35px 40px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 3px 3px #0F0F0F;" src="pages/brands/templates/1.jpg" width="135" height="200" />
     </div>
     
     <div class="container">
