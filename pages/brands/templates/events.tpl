@@ -25,10 +25,10 @@
     </div>
     
     <div style="height: 200px; width: 100%; background: #131313; margin-top: 10px; margin-bottom: 5px;">
-    <img style="display: block; float: left; padding: 15px 30px;" src="1.jpg" />
-    <img style="display: block; float: left; padding: 15px 30px;" src="1.jpg" />
-    <img style="display: block; float: left; padding: 15px 30px;" src="1.jpg" />
-    <img style="display: block; float: left; padding: 15px 30px;" src="1.jpg" />
+    <img style="display: block; float: left; padding: 15px 30px;" src="pages/brands/templates/1.jpg" />
+    <img style="display: block; float: left; padding: 15px 30px;" src="pages/brands/templates/1.jpg" />
+    <img style="display: block; float: left; padding: 15px 30px;" src="pages/brands/templates/1.jpg" />
+    <img style="display: block; float: left; padding: 15px 30px;" src="pages/brands/templates/1.jpg" />
     </div>
     
     <div class="container">
