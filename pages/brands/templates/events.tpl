@@ -25,10 +25,10 @@
     </div>
     
     <div style="width: 100%; border-bottom: 1px solid #111; position: relative; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#141414), to(#0c0c0c)); margin-top: 10px; margin-bottom: 5px; overflow: hidden;">
-    <div id="heroNext" style="position: absolute; display: none; z-index: 100; bottom: 20px; right: 20px; width: 21px; height: 21px;">
+    <div id="heroNext" style="position: absolute; z-index: 100; bottom: 15px; right: 15px; width: 21px; height: 21px;">
             <a href="" class="nextIcon">Next</a>
           </div>
-          <div id="heroPrev" style="position: absolute; display: none; z-index: 100; bottom: 20px; left: 20px; width: 21px; height: 21px;">
+          <div id="heroPrev" style="position: absolute; z-index: 100; bottom: 15px; left: 15px; width: 21px; height: 21px;">
             <a href="" class="previousIcon">Previous</a>
           </div>
     <div style="left: 493px; position: absolute; width: 13px; height: 8px; background: url(/images/core/UIpanel_caret.png) no-repeat; bottom: -2px; -webkit-transform: scale(1.75);"></div>
