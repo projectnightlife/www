@@ -24,7 +24,7 @@
       </div>
     </div>
     
-    <div style="width: 100%; border-bottom: 1px solid #111; position: relative; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#141414), to(#0c0c0c)); margin-top: 10px; margin-bottom: 5px; overflow: hidden;">
+    <div style="width: 100%; border-bottom: 1px solid #111; position: relative; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#151515), to(#0b0b0b)); margin-top: 10px; margin-bottom: 5px; overflow: hidden;">
     <div id="heroNext" style="position: absolute; z-index: 100; bottom: 15px; right: 15px; width: 21px; height: 21px;">
             <a href="" class="nextIcon">Next</a>
           </div>
