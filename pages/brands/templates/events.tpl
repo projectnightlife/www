@@ -54,12 +54,12 @@
         <div class="span600">
           <div class="UIpanel">
             <div class="UIcontainer" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
-              <div style="width: 520px; float: left;">
+              <div style="width: 450px; float: left;">
                 <h3 style="line-height: 1em; padding-bottom: 5px; color: #ABA0C0;">System_Presents_Cocoon In The Park - 2011</h3>
                 <span>Saturday 9th July, 11.00 - 23.00</span>
                 <div>Leeds, United Kingdom</div>
               </div>
-              <div style="float: right; width:80px;">Buy Tickets</div>
+              <div style="float: right; width:150px;">Buy Tickets</div>
             </div>
           </div>
           
