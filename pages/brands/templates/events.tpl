@@ -81,31 +81,15 @@
                   </ul>
                 </div>
               </div>
-              <ul id="posts" class="UIobjectlist listw580">
-                {if $posts|@count == 0}
-                  <div style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 16px; padding: 20px 0; color: #ABA0C0;">No updates yet</div>
-                {/if}
-                {foreach from=$posts item=post name=posts}
-                <li {if $smarty.foreach.posts.first && $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="first last"{else}{if $smarty.foreach.posts.first}class="first"{elseif $smarty.foreach.posts.last && $smarty.foreach.posts.total lt 8}class="last"{/if}{/if}>
-                  <div class="thumb"><a class="thumb" href="pages/blogs/post.php?id={$post->id}" onClick="window.location = this.href;"><img src="pages/getphoto/GetPhoto.php?id={$post->thumbnail}&size=80x80" width="80" height="80" /></a></div>
-                  <div class="description">
-                    <div class="heading">
-                      <h4 class="left text-overflow"><a href="pages/blogs/post.php?id={$post->id}" onClick="window.location = this.href;">{$post->title}</a></h4>
-                      <span class="datetime right">{$post->created}</span>
-                    </div>
-                    <p class="word-wrap">{$post->excerpt}</p>
-                  </div>
-                </li>
-                {/foreach}
-                {if $smarty.foreach.posts.total eq 8}
-                <li class="last">
-                  <div style="width: 500px; margin: 0 auto; padding: 5px; text-align: center;">
-                    <a href="backend/ajax.php?service=blog&method=GetPostsByBlog&id={$blog->id}&amount=8&start=8" ajaxify="1" callback="injectPosts" onClick="this.style.display = 'none'; document.getElementById('morePostsSpinner').style.display = 'inline-block';" spinner="morePostsSpinner" offset="8" pagesize="8">View more</a>
-                    <div id="morePostsSpinner" class="ajaxSpinner" style="display: none; float: none; margin: 1px;"></div>
-                  </div> 
-                </li>
-              {/if}
-              </ul>
+              <p>Cocoon in the Park 2011 returns to Temple Newsam, Leeds, for our third spectacular open-air festival, the only one of it's kind in the UK.</p>
+
+<p>Set a stone's throw from Leeds city centre the Cocoon in the Park festival site lies within the grounds of a 450-year-old mansion house surrounded by forests and lakes in a celebrated area of outstanding natural beauty. The historic estate of Temple Newsam once again plays host to an exclusive lineup over one stage led by Cocoon ringmaster Sven Väth with support from Ricardo Villalobos, Reboot and Seth Troxler.</p>
+
+<p>The site includes various food outlets and bars, a chill-out area and a VIP platform where VIP ticketholders can enjoy views across the site and main stage with access to separate toilets and a bar. The main stage, nestled in front of a tree-lined verge of woodland, is powered by a Funktion-One PA custom-built by festival sound specialists Audio-Plus, state of the art pyrotechnics, a live VJ projecting on to two huge LCD screens either side of the stage, and of course the Cocoon dance troupe will perform on a purpose-built runway surrounding the stage.</p>
+
+<p>Expect nothing less than the usual breathtaking Cocoon production, attention to detail and top quality soundtrack to one of the biggest and talked about events in the North of England.</p>
+
+<p>Join Cocoon, System and thousands of like-minded souls for what promises to be the ultimate boutique festival experience.</p>
             </div> <!-- UIcontainer -->
             <div class="UIcontainer" id="tabs-2" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
               <div class="UIheading">
