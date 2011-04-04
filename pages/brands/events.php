@@ -101,6 +101,7 @@ $resourceManager->addResource('corners.js');
 $resourceManager->addResource('brands/event.js');
 $resourceManager->addResource('artists/artist.js');
 $resourceManager->addResource('comments.js');
+$resourceManager->addResource('autoresize.jquery.min.js');
 $pageData['jsFile'] = $resourceManager->build();
 
 $smarty->assign('blog', $blog);
