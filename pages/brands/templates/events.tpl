@@ -69,7 +69,7 @@
               <li><a href="#tabs-1">Info</a></li>
               <li><a href="#tabs-2">Photos</a></li>
               <li><a href="#tabs-3">Video</a></li>
-              <li><a href="#tabs-3">Comments</a></li>
+              <li><a href="#tabs-4">Comments</a></li>
             </ul>
             <div class="UIcontainer" id="tabs-1">
               <div class="UIheading">
