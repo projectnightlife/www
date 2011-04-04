@@ -59,7 +59,7 @@
                 <span>Saturday 9th July, 11.00 - 23.00</span>
                 <div>Leeds, United Kingdom</div>
               </div>
-              <div style="float: right; width:150px;">Buy Tickets</div>
+              <div style="float: right; width:130px;">Buy Tickets</div>
             </div>
           </div>
           
