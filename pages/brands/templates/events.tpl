@@ -51,7 +51,7 @@
       
       <div class="canvas" id="event">
       
-      <div class="span960 btmspcr" style="position: relative;">
+      <!--<div class="span960 btmspcr" style="position: relative;">
           <div id="imageWindow" style="width: 960px; height: 431px;">
             <div id="imageReel" style="width: 2880px; left: -960px;">
               <img src="images/conor2.jpg" />
@@ -66,7 +66,7 @@
           <div id="heroPrev" style="position: absolute; display: none; z-index: 100; bottom: 20px; left: 20px; width: 21px; height: 21px;">
             <a href="" class="previousIcon">Previous</a>
           </div>
-        </div>
+        </div>-->
         
         <div class="span600">
           <div class="UIpanel">
