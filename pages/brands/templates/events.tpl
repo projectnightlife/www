@@ -155,7 +155,6 @@
               </div>
               <img src="http://maps.google.com/maps/api/staticmap?size=330x330&amp;maptype=roadmap\&amp;markers=size:mid%7Ccolor:red%7C53.78433,-1.45971&amp;zoom=12&amp;sensor=false">
             </div>
-            </div>
             
             
           </div>
