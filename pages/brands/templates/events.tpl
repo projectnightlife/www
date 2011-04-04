@@ -67,16 +67,16 @@
             <ul class="UItabs">
               <div class="UIcaret"></div>
               <li><a href="#tabs-1">Info</a></li>
-              <li><a href="#tabs-2">Photos</a></li>
-              <li><a href="#tabs-3">Video</a></li>
-              <li><a href="#tabs-4">Comments</a></li>
+              <li><a href="#tabs-2">Feed</a></li>
+              <li><a href="#tabs-3">Gallery</a></li>
+              <li><a href="#tabs-4">Music</a></li>
               <li><a href="#tabs-5">Location</a></li>
             </ul>
             <div class="UIcontainer" id="tabs-1">
               <div class="UIheading">
-                <h3>Event Information</h3>
+                <h3>Event Description</h3>
               </div>
-              <img src="pages/brands/templates/2.jpg" style="border: 1px solid #555; display: block; margin-bottom: 15px;" />
+              <!--<img src="pages/brands/templates/2.jpg" style="border: 1px solid #555; display: block; margin-bottom: 15px;" />-->
               <p>Cocoon in the Park 2011 returns to Temple Newsam, Leeds, for our third spectacular open-air festival, the only one of it's kind in the UK.</p>
 
 <p>Set a stone's throw from Leeds city centre the Cocoon in the Park festival site lies within the grounds of a 450-year-old mansion house surrounded by forests and lakes in a celebrated area of outstanding natural beauty. The historic estate of Temple Newsam once again plays host to an exclusive lineup over one stage led by Cocoon ringmaster Sven Väth with support from Ricardo Villalobos, Reboot and Seth Troxler.</p>
@@ -89,36 +89,9 @@
             </div> <!-- UIcontainer -->
             <div class="UIcontainer" id="tabs-2" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
               <div class="UIheading">
-                <h3>The Observationalist</h3>
+                <h3>Feed</h3>
               </div>
-              <p>Singer/songwriter Conor Owen invites you to see and hear the world from his point of view. Step into a world of passion,love and raw emotion in his moving and inspiring sensational debut album – The Observationalist.</p>
-              <p>Here are four tracks taken from Conor's debut album</p>
-              <p><object height="225" width="100%"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F511919&amp;show_comments=true&amp;auto_play=false&amp;show_playcount=true&amp;show_artwork=true&amp;color=601c85"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="225" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F511919&amp;show_comments=true&amp;auto_play=false&amp;show_playcount=true&amp;show_artwork=true&amp;color=601c85" type="application/x-shockwave-flash" width="100%"></embed> </object>   <span><a href="http://soundcloud.com/conor-owen/sets/the-observationalist">The Observationalist</a> by <a href="http://soundcloud.com/conor-owen">Conor Owen</a></span></p>
-            </div> <!-- UIcontainer -->
-            <div class="UIcontainer" id="tabs-3" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
-              <div class="UIheading">
-                <h3>Park Up and Play Tour March 2011</h3>
-              </div>
-<p>This tour is about taking music to the people of the U.K. From March 21st – 31st, Conor Owen will be embarking on a nationwide tour in his yellow van "Penelope" as they go on a one man/van mission to enlighten the ears of boys, girls, women and men around the country.</p>
-<p>This is a unique experience. This is a chance for live music lovers be part of a form of touring and entertainment that has never been done before. The location of the show could be anywhere, cobbled side streets, car parks, uni campus', city centres or abandoned warehouses.</p>
-<p>Conor will play at 17:30 everyday at a secret location in the city. Only to be announced at 14:00 on the day of the show via facebook, myspace and twitter. As well as the afternoon performance, Conor will also play an unplugged private set at fans house the same evening.</p>
-<p>The Dates</p>
-<p>
-21/03 – Brighton<br />
-22/03 – London<br />
-23/03 – Oxford<br />
-24/03 – Cambridge<br />
-25/03 – Norwich<br />
-26/03 – Peterborough<br />
-27/03 – Nottingham<br />
-28/03 – Sheffield<br />
-29/03 – Leeds<br />
-30/03 – Manchester<br />
-31/03 – Liverpool</p>
-            </div> <!-- UIcontainer -->
-            
-            <div class="UIcontainer" id="tabs-4" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
-            <div class="comments" style="margin: 0 auto; float: none;">
+              <div class="comments" style="margin: 0 auto; float: none;">
             <div class="comment">
               <form id="commentForm" action="backend/ajax.php" ajaxify="1" callback="addComment" spinner="commentBox" errorcallback="commentError" onformsubmit="commentSubmit">
                 <input type="hidden" name="params" value='{ "service":"blog","method":"AddComment","postId":"{$post->id}" }' autocomplete="off" />
@@ -127,12 +100,30 @@
               </form>
             </div>
             </div>
+            </div> <!-- UIcontainer -->
+            <div class="UIcontainer" id="tabs-3" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
+            <div class="UIheading">
+                <h3>Gallery</h3>
+                <div class="UIcontrol">
+                  <ul class="filter" id="postFilter">
+                    <li class="selected rnd8px" style="color: #222;">Photos</li>
+                    <li class="rnd8px last" style="color: #222;">Videos</li>
+                  </ul>
+                </div>
+              </div>
+            </div> <!-- UIcontainer -->
+            
+            <div class="UIcontainer" id="tabs-4" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
+            <div class="UIheading">
+                <h3>Music</h3>
+              </div>
             </div>
             
             <div class="UIcontainer" id="tabs-5" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
             <div class="UIheading">
                 <h3>Map and Directions</h3>
               </div>
+              <p>Temple Newsam / LS15 0AE<br />Off Selby Road<br />Leeds, United Kingdom</p>
               <img src="http://maps.google.com/maps/api/staticmap?size=330x330&amp;maptype=roadmap\&amp;markers=size:mid%7Ccolor:red%7C53.78433,-1.45971&amp;zoom=12&amp;sensor=false">
             </div>
             
