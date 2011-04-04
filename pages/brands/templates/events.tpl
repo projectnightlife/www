@@ -25,10 +25,10 @@
     </div>
     
     <div style="height: 230px; width: 100%; background: #131313; margin-top: 10px; margin-bottom: 5px;">
-    <img style="display: block; float: left; margin: 15px 30px 15px 60px; -webkit-box-shadow: 0 0 3px 3px #111;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-    <img style="display: block; float: left; margin: 15px 30px; -webkit-box-shadow: 0 0 3px 3px #111;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-    <img style="display: block; float: left; margin: 15px 30px; -webkit-box-shadow: 0 0 3px 3px #111;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-    <img style="display: block; float: left; margin: 15px 60px 15px 30px; -webkit-box-shadow: 0 0 3px 3px #111;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+    <img style="display: block; float: left; margin: 15px 30px 15px 60px; -webkit-box-shadow: 0 0 3px 3px #161616;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+    <img style="display: block; float: left; margin: 15px 30px; -webkit-box-shadow: 0 0 3px 3px #161616;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+    <img style="display: block; float: left; margin: 15px 30px; -webkit-box-shadow: 0 0 3px 3px #161616;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+    <img style="display: block; float: left; margin: 15px 60px 15px 30px; -webkit-box-shadow: 0 0 3px 3px #161616;" src="pages/brands/templates/1.jpg" width="135" height="200" />
     </div>
     
     <div class="container">
