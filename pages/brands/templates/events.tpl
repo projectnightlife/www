@@ -24,11 +24,11 @@
       </div>
     </div>
     
-    <div style="height: 200px; width: 100%; background: #131313; margin-top: 10px; margin-bottom: 5px;">
-    <img style="display: block; float: left; padding: 15px 30px;" src="pages/brands/templates/1.jpg" />
-    <img style="display: block; float: left; padding: 15px 30px;" src="pages/brands/templates/1.jpg" />
-    <img style="display: block; float: left; padding: 15px 30px;" src="pages/brands/templates/1.jpg" />
-    <img style="display: block; float: left; padding: 15px 30px;" src="pages/brands/templates/1.jpg" />
+    <div style="height: 220px; width: 100%; background: #131313; margin-top: 10px; margin-bottom: 5px;">
+    <img style="display: block; float: left; padding: 15px 30px;" src="pages/brands/templates/1.jpg" width="60%" height="60%" />
+    <img style="display: block; float: left; padding: 15px 30px;" src="pages/brands/templates/1.jpg" width="60%" height="60%" />
+    <img style="display: block; float: left; padding: 15px 30px;" src="pages/brands/templates/1.jpg" width="60%" height="60%" />
+    <img style="display: block; float: left; padding: 15px 30px;" src="pages/brands/templates/1.jpg" width="60%" height="60%" />
     </div>
     
     <div class="container">
