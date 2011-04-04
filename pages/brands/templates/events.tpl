@@ -50,6 +50,23 @@
     <div class="container">
       
       <div class="canvas" id="event">
+      
+      <div class="span960 topspcr btmspcr" style="position: relative;">
+          <div id="imageWindow" style="width: 960px; height: 431px;">
+            <div id="imageReel" style="width: 2880px; left: -960px;">
+              <img src="images/conor2.jpg" />
+              <img src="images/conor.png" />
+              <img src="images/conor3.jpg" />
+            </div>
+          </div>
+          <img id="hero_mask" src="images/core/hero_mask.png" style="position: absolute; z-index: 10; top: 0; left: 0;" />
+          <div id="heroNext" style="position: absolute; display: none; z-index: 100; bottom: 20px; right: 20px; width: 21px; height: 21px;">
+            <a href="" class="nextIcon">Next</a>
+          </div>
+          <div id="heroPrev" style="position: absolute; display: none; z-index: 100; bottom: 20px; left: 20px; width: 21px; height: 21px;">
+            <a href="" class="previousIcon">Previous</a>
+          </div>
+        </div>
         
         <div class="span600">
           <div class="UIpanel">
