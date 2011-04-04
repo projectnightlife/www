@@ -574,8 +574,8 @@ function API()
   };
   
   this.sendMessage = function() {
-	  api.getElem('sendMsg').disabled = true;
-	  api.getElem('messageBody').disabled = true;
+	  //api.getElem('sendMsg').disabled = true;
+	  //api.getElem('messageBody').disabled = true;
 	  $('#msgErrorNotification').fadeOut('normal').delay(300, function() { $('#'+api.msgDialog+' form > .content > .last').empty().remove(); $('#'+api.msgDialog+' form > .content > div:last').addClass('last'); });
   };
   

@@ -1,5 +1,6 @@
 {include file='../../includes/templates/page.tpl'}
 <title>Blogs | Project Nightlife</title>
+<meta property="fb:admins" content="595510094" />
 <link rel="alternate" type="application/rss+xml" title="Project Nightlife | Blogs (RSS 2.0)" href="blogs/rss" />
 <link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
 </head>
