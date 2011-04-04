@@ -28,5 +28,6 @@ $('#eventNext').bind('click', function()
 	selectedEvent--;
 	api.getElem("event"+selectedEvent).style.webkitTransform = 'scale(1.175)';
 	$('#event').fadeIn("fast");
+	
 	return false;
   });
