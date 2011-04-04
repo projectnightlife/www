@@ -70,6 +70,7 @@
               <li><a href="#tabs-2">Photos</a></li>
               <li><a href="#tabs-3">Video</a></li>
               <li><a href="#tabs-4">Comments</a></li>
+              <li><a href="#tabs-5">Location</a></li>
             </ul>
             <div class="UIcontainer" id="tabs-1">
               <div class="UIheading">
@@ -148,6 +149,14 @@
             </div>
             </div>
             
+            <div class="UIcontainer" id="tabs-5" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
+            <div class="UIheading">
+                <h3>Map and Directions</h3>
+              </div>
+              <img src="http://maps.google.com/maps/api/staticmap?size=330x330&amp;maptype=roadmap\&amp;markers=size:mid%7Ccolor:red%7C53.78433,-1.45971&amp;zoom=12&amp;sensor=false">
+            </div>
+            </div>
+            
             
           </div>
           
@@ -178,9 +187,8 @@
           <div class="UIpanel topspcr" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
             <div class="UIcontainer">
               <div class="UIheading">
-                <h3>Map and Directions</h3>
+                <h3>Similar Events</h3>
               </div>
-              <img src="http://maps.google.com/maps/api/staticmap?size=330x330&amp;maptype=roadmap\&amp;markers=size:mid%7Ccolor:red%7C53.78433,-1.45971&amp;zoom=12&amp;sensor=false">
             </div>
           </div>
         
