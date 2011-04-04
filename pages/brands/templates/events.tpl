@@ -24,10 +24,10 @@
       </div>
     </div>
     
-    <div style="width: 100%; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#151515), to(#0e0e0e)); margin-top: 10px; margin-bottom: 5px; overflow: auto;">
+    <div style="width: 100%; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#151515), to(#0e0e0e)); margin-top: 10px; margin-bottom: 5px; overflow: hidden;">
     <img style="display: block; float: left; margin: 35px 40px 35px 80px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 3px 3px #0F0F0F;" src="pages/brands/templates/1.jpg" width="135" height="200" />
     <img style="display: block; float: left; margin: 35px 40px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 3px 3px #0F0F0F;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-    <img style="display: block; float: left; margin: 35px 40px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 3px 3px #0F0F0F;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+    <img style="display: block; float: left; margin: 35px 40px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 3px 3px #0F0F0F; -webkit-transform: scale(1.2);" src="pages/brands/templates/1.jpg" width="135" height="200" />
     <img style="display: block; float: left; margin: 35px 80px 35px 40px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 3px 3px #0F0F0F;" src="pages/brands/templates/1.jpg" width="135" height="200" />
     </div>
     
