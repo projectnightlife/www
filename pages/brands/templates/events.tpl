@@ -181,8 +181,8 @@
               <div class="UIheading">
                 <h3>Similar Events</h3>
               </div>
-              <img style="margin: 10px 20px 10px 40px;" src="pages/brands/templates/3.jpg" />
-              <img style="margin: 10px 40px 10px 20px;" src="pages/brands/templates/4.jpg" />
+              <img style="margin: 10px 5px 10px 10px;" src="pages/brands/templates/3.jpg" />
+              <img style="margin: 10px 10px 10px 5px;" src="pages/brands/templates/4.jpg" />
             </div>
           </div>
         
