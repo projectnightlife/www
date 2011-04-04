@@ -8,9 +8,11 @@ $('#eventNext').bind('click', function()
         	left: -191 + offset
    		}, 300);
 	}
+	$('#event').fadeOut("fast");
 	api.getElem("event"+selectedEvent).style.webkitTransform = 'scale(1)';
 	selectedEvent++;
 	api.getElem("event"+selectedEvent).style.webkitTransform = 'scale(1.175)';
+	$('#event').fadeIn("fast");
 	return false;
   });
   $('#eventPrev').bind('click', function()
@@ -21,8 +23,10 @@ $('#eventNext').bind('click', function()
             left: 191 + offset
    	 	}, 300);
 	}
+	$('#event').fadeOut("fast");
 	api.getElem("event"+selectedEvent).style.webkitTransform = 'scale(1)';
 	selectedEvent--;
 	api.getElem("event"+selectedEvent).style.webkitTransform = 'scale(1.175)';
+	$('#event').fadeIn("fast");
 	return false;
   });

@@ -47,7 +47,7 @@
     
     <div class="container">
       
-      <div class="canvas">
+      <div class="canvas" id="event">
       
         <!--<div class="span960 btmspcr" style="position: relative;">
           <div id="imageWindow" style="width: 960px; height: 431px;">
@@ -172,7 +172,7 @@
           <div class="UIpanel">
             <div class="UIcontainer">
               <div class="UIheading">
-                <h3>Conor's Subscribers</h3>
+                <h3>Who's going</h3>
                 <div class="UIcontrol">
                   {if $blog->subscribed == "false" && $session['userId'] != 0 && !$isContributor}
                   <a class="plus subscription" href="backend/ajax.php?service=blog&method=Subscribe&blogId={$blog->id}" rel="subscribe" ajaxify="1" callback="subscription" title="Subscribe">Subscribe</a>
