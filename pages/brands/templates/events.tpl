@@ -33,15 +33,15 @@
           </div>
     <div style="left: 493px; position: absolute; width: 13px; height: 8px; background: url(/images/core/UIpanel_caret.png) no-repeat; bottom: -2px; -webkit-transform: scale(1.75);"></div>
     <div id="eventReel" style="left: 0; position: absolute; width: 1800px; height: 100%; overflow: hidden;">
-      <img style="display: block; float: left; margin: 35px 27px 35px 54px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-      <img style="display: block; float: left; margin: 35px 27px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-      <img style="display: block; float: left; margin: 35px 27px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010; -webkit-transform: scale(1.175);" src="pages/brands/templates/1.jpg" width="135" height="200" />
-      <img style="display: block; float: left; margin: 35px 27px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-      <img style="display: block; float: left; margin: 35px 27px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-      <img style="display: block; float: left; margin: 35px 27px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-      <img style="display: block; float: left; margin: 35px 27px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-      <img style="display: block; float: left; margin: 35px 27px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-      <img style="display: block; float: left; margin: 35px 54px 35px 27px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+      <img style="display: block; float: left; margin: 35px 28px 35px 56px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+      <img style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+      <img style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010; -webkit-transform: scale(1.175);" src="pages/brands/templates/1.jpg" width="135" height="200" />
+      <img style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+      <img style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+      <img style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+      <img style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+      <img style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+      <img style="display: block; float: left; margin: 35px 56px 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
       </div>
     </div>
     
