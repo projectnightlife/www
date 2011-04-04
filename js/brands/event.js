@@ -9,7 +9,7 @@ $('#eventNext').bind('click', function()
    		}, 300);
 	}
 	api.getElem("event"+selectedEvent).style.webkitTransform = 'scale(1)';
-	selectedEvent--;
+	selectedEvent++;
 	api.getElem("event"+selectedEvent).style.webkitTransform = 'scale(1.175)';
 	return false;
   });
@@ -22,7 +22,7 @@ $('#eventNext').bind('click', function()
    	 	}, 300);
 	}
 	api.getElem("event"+selectedEvent).style.webkitTransform = 'scale(1)';
-	selectedEvent++;
+	selectedEvent--;
 	api.getElem("event"+selectedEvent).style.webkitTransform = 'scale(1.175)';
 	return false;
   });
