@@ -124,7 +124,7 @@
                 <h3>Map and Directions</h3>
               </div>
               <p>Temple Newsam / LS15 0AE<br />Off Selby Road<br />Leeds, United Kingdom</p>
-              <img src="http://maps.google.com/maps/api/staticmap?size=500x578&amp;maptype=roadmap\&amp;markers=size:mid%7Ccolor:red%7C53.78433,-1.45971&amp;zoom=14&amp;sensor=false">
+              <img src="http://maps.google.com/maps/api/staticmap?size=578x500&amp;maptype=roadmap\&amp;markers=size:mid%7Ccolor:red%7C53.78433,-1.45971&amp;zoom=13&amp;sensor=false">
             </div>
             
             
