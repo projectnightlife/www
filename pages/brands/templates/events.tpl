@@ -39,9 +39,9 @@
       <img id="event4" style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
       <img id="event5" style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
       <img id="event6" style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-      <img id="event1" style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
       <img id="event7" style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-      <img id="event8" style="display: block; float: left; margin: 35px 56px 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+      <img id="event8" style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+      <img id="event9" style="display: block; float: left; margin: 35px 56px 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
       </div>
     </div>
     
