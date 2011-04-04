@@ -137,7 +137,7 @@
             </div> <!-- UIcontainer -->
             
             <div class="UIcontainer" id="tabs-4" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
-            <div class="comments">
+            <div class="comments" style="margin: 0 auto; float: none;">
             <div class="comment">
               <form id="commentForm" action="backend/ajax.php" ajaxify="1" callback="addComment" spinner="commentBox" errorcallback="commentError" onformsubmit="commentSubmit">
                 <input type="hidden" name="params" value='{ "service":"blog","method":"AddComment","postId":"{$post->id}" }' autocomplete="off" />
@@ -180,7 +180,7 @@
               <div class="UIheading">
                 <h3>Location</h3>
               </div>
-              <img src="http://maps.google.com/maps/api/staticmap?size=320x320&amp;maptype=roadmap\&amp;markers=size:mid%7Ccolor:red%7C52.5957974,-0.2920067&amp;sensor=false">
+              <img src="http://maps.google.com/maps/api/staticmap?size=330x330&amp;maptype=roadmap\&amp;markers=size:mid%7Ccolor:red%7C53.78433,-1.45971&amp;zoom=14&amp;sensor=false">
             </div>
           </div>
         
