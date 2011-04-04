@@ -137,12 +137,14 @@
             </div> <!-- UIcontainer -->
             
             <div class="UIcontainer" id="tabs-4" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
+            <div class="commentContainer">
             <div class="comment">
               <form id="commentForm" action="backend/ajax.php" ajaxify="1" callback="addComment" spinner="commentBox" errorcallback="commentError" onformsubmit="commentSubmit">
                 <input type="hidden" name="params" value='{ "service":"blog","method":"AddComment","postId":"{$post->id}" }' autocomplete="off" />
                 <textarea id="commentBox" placeholder="Leave a comment..." class="commentInput" name="comment" serializable="api.dummySerialization:api.serializeStringFormatting" validator="api.validation.nonEmpty" autocomplete="off" onKeyDown="api.limitText(this,1500);" onKeyUp="api.limitText(this,1500);" onChange="api.limitText(this,1500);"></textarea>
                 <div class="submit"><input id="submitComment" class="right" type="submit" value="Comment" /></div>
               </form>
+            </div>
             </div>
             </div>
             
@@ -176,9 +178,9 @@
           <div class="UIpanel topspcr" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
             <div class="UIcontainer">
               <div class="UIheading">
-                <h3>Bio</h3>
+                <h3>Location</h3>
               </div>
-              {$blog->description}
+              <p>blah</p>
             </div>
           </div>
         
