@@ -24,15 +24,16 @@
       </div>
     </div>
     
-    <div style="height: 270px; width: 100%; border-bottom: 1px solid #111; position: relative; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#151515), to(#0b0b0b)); margin-top: 10px; margin-bottom: 5px; overflow: hidden;">
+    <div style="height: 270px; width: 100%; border-bottom: 1px solid #111; position: relative; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#151515), to(#0b0b0b)); margin-top: 10px; margin-bottom: 5px;">
     <div id="eventNext" style="position: absolute; z-index: 100; bottom: 15px; right: 15px; width: 21px; height: 21px;">
             <a href="" class="nextIcon">Next</a>
           </div>
           <div id="eventPrev" style="position: absolute; z-index: 100; bottom: 15px; left: 15px; width: 21px; height: 21px;">
             <a href="" class="previousIcon">Previous</a>
           </div>
-    <div style="left: 493px; position: absolute; width: 13px; height: 8px; background: url(/images/core/UIpanel_caret.png) no-repeat; bottom: -2px; -webkit-transform: scale(1.75);"></div>
-    <div id="eventReel" style="left: 0; position: absolute; width: 1800px; height: 100%; overflow: hidden;">
+    <div style="left: 493px; position: absolute; width: 13px; height: 8px; background: url(/images/core/UIpanel_caret.png) no-repeat; bottom: -1px; -webkit-transform: scale(2);"></div>
+    <div style="overflow: hidden;">
+    <div id="eventReel" style="left: 0; position: absolute; width: 1800px; height: 100%;">
       <img id="event1" style="display: block; float: left; margin: 35px 28px 35px 56px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
       <img id="event2" style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
       <img id="event3" style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010; -webkit-transform: scale(1.175);" src="pages/brands/templates/1.jpg" width="135" height="200" />
@@ -42,6 +43,7 @@
       <img id="event7" style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
       <img id="event8" style="display: block; float: left; margin: 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
       <img id="event9" style="display: block; float: left; margin: 35px 56px 35px 28px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+      </div>
       </div>
     </div>
     
