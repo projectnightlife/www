@@ -59,9 +59,11 @@
                 <span>Saturday 9th July, 11.00 - 23.00</span>
                 <div>Leeds, United Kingdom</div>
               </div>
-              <div style="float: right; width:108px; text-align: right;">Buy Tickets</div>
-              <div style="color: #ABA0C0; font-size: 26px;">95</div>
-              <div>days to go</div>
+              <div style="float: right; width:108px;">
+                <div style="text-align: right;">Buy Tickets</div>
+                <div style="color: #ABA0C0; font-size: 26px; text-align: center;">95</div>
+                <div style="text-align: center;">days to go</div>
+              </div>
             </div>
           </div>
           
