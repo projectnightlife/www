@@ -21,6 +21,7 @@
         </div>
         <hr />
         <div class="breadcrumbs"><a href="">Home</a> > <a href="pages/blogs/blogs.php">Blogs</a> > <a href="pages/artists/artist.php">{$blog->name}</a></div>
+        <div style="float: right">Home | Photos | Events</div>
       </div>
     </div>
     
