@@ -51,7 +51,7 @@
       
       <div class="canvas" id="event">
       
-      <div class="span960 topspcr btmspcr" style="position: relative;">
+      <div class="span960 btmspcr" style="position: relative;">
           <div id="imageWindow" style="width: 960px; height: 431px;">
             <div id="imageReel" style="width: 2880px; left: -960px;">
               <img src="images/conor2.jpg" />
