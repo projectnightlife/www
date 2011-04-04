@@ -24,7 +24,7 @@
       </div>
     </div>
     
-    <div style="height: 200px; width: 100%; background: #0b0b0b;"></div>
+    <div style="height: 200px; width: 100%; background: #131313; margin-top: 15px;"></div>
     
     <div class="container">
       
