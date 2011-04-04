@@ -25,11 +25,11 @@
     </div>
     
     <div style="width: 100%; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#141414), to(#0e0e0e)); margin-top: 10px; margin-bottom: 5px; overflow: hidden;">
-    <img style="display: block; float: left; margin: 35px 30px 35px 60px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-    <img style="display: block; float: left; margin: 35px 30px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-    <img style="display: block; float: left; margin: 35px 30px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010; -webkit-transform: scale(1.175);" src="pages/brands/templates/1.jpg" width="135" height="200" />
-    <img style="display: block; float: left; margin: 35px 60px 35px 30px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
-    <img style="display: block; float: left; margin: 35px 60px 35px 30px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+    <img style="display: block; float: left; margin: 30px 30px 30px 60px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+    <img style="display: block; float: left; margin: 30px 30px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+    <img style="display: block; float: left; margin: 30px 30px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010; -webkit-transform: scale(1.175);" src="pages/brands/templates/1.jpg" width="135" height="200" />
+    <img style="display: block; float: left; margin: 30px 30px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
+    <img style="display: block; float: left; margin: 30px 60px 30px 30px; -webkit-transition: 0.15s linear; -webkit-box-shadow: 0 0 2px 2px #101010;" src="pages/brands/templates/1.jpg" width="135" height="200" />
     </div>
     
     <div class="container">
