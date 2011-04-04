@@ -91,6 +91,7 @@ require_once($globalDir.'pages\\includes\\core_css.php');
 if (!$ismobile) {
 	$resourceManager->addResource('blogs.css');
 	$resourceManager->addResource('featureApps.css');
+	$resourceManager->addResource('comments.css');
 }
 $pageData['cssFile'] = $resourceManager->build();
 
@@ -99,6 +100,7 @@ require_once($globalDir.'pages\\includes\\core_js.php');
 $resourceManager->addResource('corners.js');
 $resourceManager->addResource('brands/event.js');
 $resourceManager->addResource('artists/artist.js');
+$resourceManager->addResource('comments.js');
 $pageData['jsFile'] = $resourceManager->build();
 
 $smarty->assign('blog', $blog);

@@ -20,7 +20,7 @@
           <h1 class="left">Cocoon</h1><h1 class="right">Events</h1>
         </div>
         <hr />
-        <div class="breadcrumbs"><a href="">Home</a> > <a href="pages/blogs/blogs.php">Blogs</a> > <a href="pages/artists/artist.php">{$blog->name}</a><div style="float: right"><a href="">Home</a> | <a href="">Photos</a> | <a href="">Events</a></div></div>
+        <div class="breadcrumbs"><a href="">Home</a> > <a href="pages/blogs/blogs.php">Brands</a> > <a href="pages/artists/artist.php">Cocoon</a> > <a href="pages/blogs/blogs.php">Events</a><div style="float: right"><a href="">Home</a> | <a href="">Photos</a> | <a href="">Events</a></div></div>
       </div>
     </div>
     
@@ -135,6 +135,18 @@
 30/03 – Manchester<br />
 31/03 – Liverpool</p>
             </div> <!-- UIcontainer -->
+            
+            <div class="UIcontainer" id="tabs-4" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
+            <div class="comment">
+              <form id="commentForm" action="backend/ajax.php" ajaxify="1" callback="addComment" spinner="commentBox" errorcallback="commentError" onformsubmit="commentSubmit">
+                <input type="hidden" name="params" value='{ "service":"blog","method":"AddComment","postId":"{$post->id}" }' autocomplete="off" />
+                <textarea id="commentBox" placeholder="Leave a comment..." class="commentInput" name="comment" serializable="api.dummySerialization:api.serializeStringFormatting" validator="api.validation.nonEmpty" autocomplete="off" onKeyDown="api.limitText(this,1500);" onKeyUp="api.limitText(this,1500);" onChange="api.limitText(this,1500);"></textarea>
+                <div class="submit"><input id="submitComment" class="right" type="submit" value="Comment" /></div>
+              </form>
+            </div>
+            </div>
+            
+            
           </div>
           
         </div> <!-- span630 -->
