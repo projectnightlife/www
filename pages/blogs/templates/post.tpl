@@ -3,6 +3,10 @@
 <meta property="og:title" content="{$post->title}"/>
 <meta property="og:image" content="http://www.projectnightlife.co.uk/photo/{$post->thumbnail}/80x80"/>
 <meta property="og:description" content="{$post->excerpt}"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="http://www.projectnightlife.co.uk/post/{$post->id}"/>
+<meta property="og:site_name" content="Project Nightlife"/>
+<meta property="fb:app_id" content="131359770249054"/>
 <meta name="medium" content="blog" />
 <link rel="stylesheet" href="{$pageData['cssFile']}" type="text/css" media="screen, projection">
 </head>
