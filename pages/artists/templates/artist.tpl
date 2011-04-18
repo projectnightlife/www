@@ -63,11 +63,11 @@
                 {/foreach}
                 </div>
               </div>
-              <div class="left">
+              <div class="left" style="padding-top: 10px;">
                 <a href="http://twitter.com/share" class="twitter-share-button" data-via="pnightlife" data-text="Check out Conor Owen on Project Nightlife">Tweet</a>
               </div>
-              <div class="left">
-                <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=dark" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px;" allowTransparency="true"></iframe>
+              <div class="left" style="height: 20px; width: 120px; padding-top: 10px;">
+                <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=button_count&amp;show_faces=false&amp;width=120&amp;height=20&amp;action=like&amp;colorscheme=dark" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height: 20px;" allowTransparency="true"></iframe>
               </div>
             </div>
           </div>
