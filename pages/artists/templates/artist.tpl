@@ -58,9 +58,11 @@
                 <span>{$blog->slogan}</span>
                 {/if}
                 <div class="stylesIconList">
+                <div class="left">
                 {foreach from=$genres item=genre name=genres}
                   <a href="pages/blogs/blogs.php?filter={$genre->name}" title="{$genre->name} homepage"><img src="images/genres/{$genre->id}.png" alt="{$genre->name}" style="margin-right: 3px;" height="19" /></a>
                 {/foreach}
+                </div>
               <div class="right" style="height: 20px; width: 90px;">
                 <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;height=20&amp;action=like" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height: 20px;" allowTransparency="true"></iframe>
               </div>
