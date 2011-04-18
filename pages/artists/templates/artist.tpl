@@ -52,7 +52,7 @@
         <div class="span600">
           <div class="UIpanel">
             <div class="UIcontainer" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">
-              <div style="width: 440px; float: left;">
+              <div>
                 <h3 style="line-height: 1em; padding-bottom: 5px; color: #ABA0C0;">{$blog->name}</h3>
                 {if isset($blog->slogan)}
                 <span>{$blog->slogan}</span>
@@ -63,11 +63,11 @@
                 {/foreach}
                 </div>
               </div>
-              <div class="right fblike fblikecount">
+              <div class="left">
                 <a href="http://twitter.com/share" class="twitter-share-button" data-via="pnightlife" data-text="Check out Conor Owen on Project Nightlife">Tweet</a>
               </div>
-              <div class="right fblike fblikecount">
-                <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=button_count&amp;show_faces=false&amp;width=55&amp;action=like&amp;colorscheme=dark&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:65px;" allowTransparency="true"></iframe>
+              <div class="left">
+                <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=dark" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px;" allowTransparency="true"></iframe>
               </div>
             </div>
           </div>
