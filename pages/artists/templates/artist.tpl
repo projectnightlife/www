@@ -61,13 +61,13 @@
                 {foreach from=$genres item=genre name=genres}
                   <a href="pages/blogs/blogs.php?filter={$genre->name}" title="{$genre->name} homepage"><img src="images/genres/{$genre->id}.png" alt="{$genre->name}" style="margin-right: 3px;" height="19" /></a>
                 {/foreach}
-                </div>
-              </div>
-              <div class="left" style="padding-top: 10px;">
-                <a href="http://twitter.com/share" class="twitter-share-button" data-via="pnightlife" data-text="Check out Conor Owen on Project Nightlife">Tweet</a>
-              </div>
-              <div class="left" style="height: 20px; width: 120px; padding-top: 10px;">
+              <div class="right" style="height: 20px; width: 120px;">
                 <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=button_count&amp;show_faces=false&amp;width=120&amp;height=20&amp;action=like&amp;colorscheme=dark" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height: 20px;" allowTransparency="true"></iframe>
+              </div>
+                  <div class="right">
+                    <a href="http://twitter.com/share" class="twitter-share-button" data-via="pnightlife" data-text="Check out Conor Owen on Project Nightlife">Tweet</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
