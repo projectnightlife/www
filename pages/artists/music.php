@@ -115,5 +115,5 @@ if ($subscribers->count() != 0)
 }
 $smarty->assign('pageData', $pageData);
 $smarty->loadFilter('output', 'trimwhitespace');
-$smarty->display('templates/artist.tpl');
+$smarty->display('templates/music.tpl');
 ?>
