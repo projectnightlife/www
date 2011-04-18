@@ -63,10 +63,10 @@
                 {/foreach}
                 </div>
               </div>
-              <div class="right fblike fblikeCount">
+              <div class="right fblike fblikecount">
                 <a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="pnightlife" data-text="Check out Conor Owen on Project Nightlife">Tweet</a>
               </div>
-              <div class="right fblike fblikeCount">
+              <div class="right fblike fblikecount">
                 <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.projectnightlife.co.uk%2Fblog%2F{$blog->id}&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;action=like&amp;colorscheme=dark&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:65px;" allowTransparency="true"></iframe>
               </div>
             </div>
