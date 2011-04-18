@@ -20,7 +20,7 @@
           <h1 class="left">{$blog->name}</h1><h1 class="right">Artist</h1>
         </div>
         <hr />
-        <div class="breadcrumbs"><a href="">Home</a> > <a href="pages/blogs/blogs.php">Blogs</a> > <a href="pages/artists/artist.php">{$blog->name}</a></div>
+        <div class="breadcrumbs"><a href="">Home</a> > <a href="pages/blogs/blogs.php">Blogs</a> > <a href="pages/artists/artist.php">{$blog->name}</a><div style="float: right"><a href="">Home</a> | <a href="">Photos</a> | <a href="">Music</a></div></div>
       </div>
       
       <div class="canvas">
